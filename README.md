@@ -1,0 +1,2 @@
+# genome-effects
+Genome features are an important component to understanding genomic diversities and to understand gene behavior. With the advent of high throughput sequencing and the explosion of genome features discovery, the efficiency, the accuracy of computational methods ,bioinformatics tools and databases to discover and annotate these genome features become crucial. The need for Bioinformatics tools that can multitask and process these fast growing datasets in a timely manner is becoming equally important as the process of discovering these features.
