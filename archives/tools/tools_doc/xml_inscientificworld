@@ -1,0 +1,11 @@
+XML In Scientific Computing
+
+I work for a Research Institution in the Computational And Systems Biology group . One of my multiple tasks is to develop software tools that facilitate genome data analysis. In July 2008 (this year), I was assigned the task to develop a web application that facilitates the EST(Expressed Sequence Tag) Library Analysis of any organism, any Library, any Organ, any tissue.The database contains data for more than 1,500 organisms, more than 60,000,000 sequences(ESTs),more than 23,000 Libraries, and more. 
+Some of the tables in the database are large and complex and have bad indices.
+The application is to connect to the EST database,and generate statistics based on the user's complex query.
+In short, I found out that, even with the right indices, the use of stored procedures, and database views,
+generating these statistics which require joining multiple large tables and calling aggregate functions takes a long time to return the results.
+The performance was not good.The database is modified weekly so I decided to create Cron jobs that run weekly after
+the database update to generate XML files for each organism, each Library, .... 
+These XML files are then used in my application. By doing this, I noticed a performance improvement of more than 10 times. 
+

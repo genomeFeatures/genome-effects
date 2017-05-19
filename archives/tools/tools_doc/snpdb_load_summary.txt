@@ -1,0 +1,227 @@
+##################################################################
+Imputed SNPs for 88 inbred strains and the 17 Sanger strains.
+Imputed by Leonard McMillan's
+105 Strains; 65,243,635 SNPs
+Unique chr/bp_position SNPs: 65,027,153
+possible 27,152 duplicates,
+Confidence score: 0,1,2 [low,medium,high]
+################################################################
++--------------------+----------------------+
+| Data Base Name     | Data Base Size in GB |
++--------------------+----------------------+
+| cgdsnpdb           |     440.371126354672 |
+
+
+mysql> select count(*) from snp_imputed;
++------------   +
+| count(*)      |
++------------   +
+| 3,135,278,584 | 
++------------   +
+
+Db schema updates:
+1. Created snp_position table to generate unique identifier for SNPs based on
+   chromosome/Bp_position/ref_strain combination
+
+2. got rid of all not needed fields and tables:
+   a. removed:
+      i.) Fields: is_public,chromosome_id,black6_allele,is_duplicate,and is_public from snp_main
+      ii.)Tables: snp_strain_new,snp_position_by_source,snp_is_conflict,snp_duplicates,
+                  snp_data_log*,snp_chromosome,snp_c2pSites
+   b.Added:
+     i.)  Fieds:  ref_allele(snp_main),loc_rank(snp_transcript)
+     ii.) Tables: snp_mutation,snp_position,snp_CpGSites
+   
+Data:
+issues:
+1. Strains name/synonyms mapping and new strains insert
+  a. manual step and automation
+
+2. Some snps do not have an accession id of any sort
+   solution: total=52,081,637
+   a. make up an accession id= source_abrev+chr+bpPos
+      example:
+3.Some SNP alleles have more than one geneotype allele
+  Solution : total: 1,393,872. two alleles:1362310; three alleles:31562 
+  a. created a table snp_multiAlleles to store the original snp multi genotypes
+  b. compute the representative snp allele: most popular allele
+  c. set the error flag=16 for those snps in snp_error_log table
+4. There is no strand information
+   solution:
+   a. Check ref_allele against the reference strain genome build 37
+   b. if match: strand=+ and every is as is
+   c. no match?
+        1. Check if match on the reverse strand (error_flag=2)
+                 reverse both the SNP_allele and genotype alleles and set strand=+
+        2. if no match on the reverse strand, check local_ref_allele==other_allele
+                 then if match swap the two alleles (we call this allele swap: error_flag=5)
+        3. if no match on the reverse strand and local_ref_allele=complement(other_allele)
+                 then if match swap the two alleles and flag this as reverse strand(error_flag=2) 
+        4. if no match on reverse strand and not allele swap, tag this SNP
+                 as bad allele call (errog_flag=3)
+      //our reference allele does not match either the complement of the specified
+     // source reference allele or the other allele
+Load steps:
+1. Update config files
+2. run insert_new_snps.pl
+ This script generates unique database id for every new SNP
+ process new snps in chunks of 500,000 rows (this is needed for very large files
+ in order to avoid mysql inserts running out of memory)
+ this script also insert new accession ids, and snp_by_source table
+  a. insert into snp_accession (snp_local_id,accession(submitter_is,rs_id),id_type,source_id)
+     if(a given snp does not have an accession id, make one= "source_abrev chr-pos"
+     For example" Sang1-65972208
+      Note: this file contains as many lines as the number of ids per SNP multiplied by the number of SNPs
+  b. insert  snp_by_source (snp_localid,source_id)
+
+3. run reformat_snps.pl
+ This script reformats the original input snps files to 
+ generate the SNPs files to be used in the pipeline
+ the program also generates chromosome ids for X (20), Y(21), and Mt(22) ,and UN(23) 
+  and tags all the cases where there is more than one genotype allele for the other allele.
+  We call these multi-allele SNPs and we choose the most popular allele to represent the other allele.
+  a.Load  snp_multialleles database table with cases a SNP has more than one genotype allele
+  b.generate SNPs Main file contains: snp_localid,alleles,error_flag,and the original fields
+
+4. run snp_validator
+  this program maps the REFERENCE allele to the corresponding position on the reference genome of the same assembly build
+  and does the following:
+  I) sets the flags:
+     a. Check ref_allele against the reference strain genome of same genomic build
+     b. if match: strand=+ and every is as is
+     c. no match?
+        1. Check if match on the reverse strand (error_flag=2)
+                 reverse both the SNP_allele and genotype alleles and set strand=+
+        2. if no match on the reverse strand, check local_ref_allele==other_allele
+                 then if match swap the two alleles (we call this allele swap: error_flag=5)
+        3. if no match on the reverse strand and local_ref_allele=complement(other_allele)
+                 then if match swap the two alleles and flag this as reverse strand(error_flag=2) 
+        4. if no match on reverse strand and not allele swap, tag this SNP
+                 as bad allele call (errog_flag=3)
+      //our reference allele does not match either the complement of the specified
+      // source reference allele or the other allele
+  II) Tags CpG sites (a function in my gSequence class): 
+      Total= 12,791,300 (19%)
+  III)tags mutation type (transition or transversion) (a function in my gSequence class)
+       Total:66026581
+      +---------------+-----------------------+--------+
+      | mutation_type | SNP Count             |Expected|
+      +---------------+-----------------------+--------+
+      | Transition    |    42,742,901(65%)    | 67%   
+      | Transversion  |    23,283,701 (35%)   | 33%
+      +---------------+-----------------------+---------+
+
+  IV) Tags cases of fields count missmatch between header and data lines(error_flag=17)
+      Total:52,309,667
+     +--------------------------------------+-----------------------+
+     | source_name                          | count(distinct snpid) |
+     +--------------------------------------+-----------------------+
+     | Diversity Array - Yang et al.2011    |                 20,104 | 
+     | Imputed - Jeremy R. Wang et al. 2012 |              52,289,563 | 
+     +--------------------------------------+-----------------------+
+
+   V) Tags cases found in step I).c.2
+       ref_allele!=local_ref_allele and no match on the reverse strand of local_ref_allele, and local_ref_allele==other_allele
+               if it is the case, swap the two alleles (we call this allele swap: error_flag=5)
+      +-----------------------------------+-----------------------+
+      | source_name                       | count(distinct snpid) |
+      +-----------------------------------+-----------------------+
+      | NIEHS                             |                    96 | 
+      | Imputed - Szatkiewicz et al.2008  |                    99 | 
+      | Diversity Array - Yang et al.2011 |                   538 | 
+      +-----------------------------------+-----------------------+
+   
+   VI) Tags cases found in step I).c.4
+       ref_allele!=local_ref_allele and no match on the reverse strand of local_ref_allele, and local_ref_allele!=other_allele
+               tag this SNP as bad allele call (errog_flag=3)
+     +-----------------------------------+-----------------------+
+     | source_name                       | count(distinct snpid) |
+     +-----------------------------------+-----------------------+
+     | NIEHS                             |                     8 | 
+     | Imputed - Szatkiewicz et al.2008  |                   147 | 
+     | Diversity Array - Yang et al.2011 |                   139 | 
+     +-----------------------------------+-----------------------+
+
+  VII). Load snp_main and snp_CpGSites tables and flag all cases a given SNP has different other allele calls 
+      either from the same source or from different sources (error_flag=6)
+    +--------------------------------------+-----------------------+
+    | source_name                          | count(distinct snpid) |
+    +--------------------------------------+-----------------------+
+    | NIEHS                                |                    21 |
+    | Diversity Array - Yang et al.2011    |                    26 |
+    | Imputed - Jeremy R. Wang et al. 2012 |                 37,344 |
+    +--------------------------------------+-----------------------+
+
+  VIII). Load the genotype tables and tag strains with genotype conflict (error_flag=7)
+    +--------------------------------------+-----------------------+
+    | source_name                          | count(distinct snpid) |
+    +--------------------------------------+-----------------------+
+    | NIEHS                                |                   570 |  
+    | Diversity Array - Yang et al.2011    |                 16,703 | 
+    | Imputed - Jeremy R. Wang et al. 2012 |                635,292 | 
+    +--------------------------------------+-----------------------+
+
+5.Run snpAnnotator :
+  a.Intergenic : 59%
+  b.On transcript:27,108,233 (41%)
+  c. Introns : 26,101,150(96% of SNPs on trnascript)
+  d. Exons : 1,577,816 (4% of SNPs on transcript)
+     d.1. Exon Coding Synonymous :289,999 (18% of SNPs on exons)
+     d.2. Exon Coding Non Synonymous:161,441 (10% of SNPs on exons)
+
+6.run load_annotator.pl
+This script load SNP annotator generated files into the database.
+
++--------------------------+
+| Tables_in_cgdsnpdb       |
++--------------------------+
+| cgd_aminoacid            | 
+| cgd_blosum62NCBI         | 
+| cgd_mouse_codonFrequency | 
+| cgd_organism_codonCount  | 
+| cgd_externaldb           | 
+
+| cgd_ensembl_protein      | 
+| cgd_exons_desc           | 
+| cgd_genes                | 
+| cgd_genes_desc           | 
+| cgd_genes_ensembl_entrez | 
+| cgd_genes_ensembl_mgi    |
+| cgd_transcript_exons     | 
+| cgd_transcripts          | 
+| cgd_transcripts_desc     | 
+
+| cgd_items                | 
+| cgd_items_type           | 
+| cgd_mutation_type        | 
+
+
+| snp_chromosome           | 
+| snp_error_flag           | 
+| snp_frame                | 
+| snp_id_type              |
+| snp_loc_func             | 
+| snp_source               | 
+| snp_strain               | 
+| snp_strain_by_group      | 
+| snp_strain_groups        | 
+| snp_strain_synonym       | 
+
+| snp_imputed              | 
+| snp_main                 | 
+| snp_main_allele_conflict | 
+| snp_multiAlleles         | 
+| snp_position             | 
+| snp_strain_by_source     | 
+| snp_transcript           | 
+| snp_genotype             | 
+| snp_genotype_conflict    | 
+| snp_error_log            | 
+| snp_CpGSites             | 
+| snp_accession            | 
+| snp_aminoacid            | 
+| snp_by_source            | 
+| snp_by_strain            | 
++--------------------------+
+
+

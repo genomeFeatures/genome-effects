@@ -1,0 +1,14 @@
+prediction_name	prediction_id
+ccdsGene	ccdsGene
+ensGene	ensGene
+knownGene	knownGene
+knownToVisiGene	knownToVisiGene
+nscanEstGene	nscanEstGene
+nscanGene	nscanGene
+refGene	refGene
+sgpGene	sgpGene
+vegaGene	vegaGene
+vegaPseudoGene	vegaPseudoGene
+xenoRefGene
+	xenoRefGene
+

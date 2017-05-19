@@ -1,0 +1,9 @@
+prediction_name	prediction_id
+ccdsGene	ccdsGene
+ensGene	ensGene
+knownGene	knownGene
+knownToVisiGene	knownToVisiGene
+refGene	refGene
+xenoRefGene
+	xenoRefGene
+

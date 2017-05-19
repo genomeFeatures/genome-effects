@@ -1,0 +1,15 @@
+prediction_name	prediction_id
+atlasOncoGene	atlasOncoGene
+encodeGencodeGene	encodeGencodeGene
+ensEstGene	ensEstGene
+ensGene	ensGene
+knownGene	knownGene
+refGene	refGene
+rnaGene	rnaGene
+sgpGene	sgpGene
+softberryGene	softberryGene
+vegaGene	vegaGene
+vegaPseudoGene	vegaPseudoGene
+xenoRefGene
+	xenoRefGene
+

@@ -1,0 +1,14 @@
+prediction_name	prediction_id
+NIAGene	NIAGene
+ccdsGene	ccdsGene
+contrastGene	contrastGene
+ensGene	ensGene
+knownGene	knownGene
+knownToVisiGene	knownToVisiGene
+nscanGene	nscanGene
+refGene	refGene
+sgpGene	sgpGene
+sibGene	sibGene
+xenoRefGene
+	xenoRefGene
+

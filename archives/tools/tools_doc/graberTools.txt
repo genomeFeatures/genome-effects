@@ -1,0 +1,263 @@
+Draft
+
+*****************************************************
+The database -- Graber Transcript Database
+*****************************************************
+a. Different datasets
+  1. mgi --> anotations   (done)
+  2. ucsc --> annotations (transcriptome, ESTs alignments)
+  3. ensembl -->{annotations, repeats} (done)
+  4. uniprot -->{protein domains,} (done) -- Should I keep using uniprot or should I switch to using ensembl protein annotations?
+  5. ebi --> miRNA (done) -- retiring (replacing it with mirbase)
+  6. CC founder strains --> annotations (done)
+  7. rnaSeq --> annotations {Nazira generates these annotations} --> in progress
+  8. novel --> annotations {could be from some local research labs) --> maybe 
+
+b. Database loads
+   The database load script expect the annotation file to be in gene Prediction format, 
+   the annotation source and organism version known. Also the coordinates base, 0-base or 1-base, 
+   of features start and end known.The following steps
+   are taken in order to load a new dataset into the database.
+   1. run fileConverter if needed --gtf2genePred, or --gff2genePred, or --gff32genePred  (in progress)
+      currently done as a perl script specific to every dataset (ensembl, mgi)
+      but will convert this into one standard program
+   2. run load_annotations.pl  -> (done)
+  
+c. Load scheduling
+ 1.mgi - a cron job that runs monthly is already in place . It runs on the 7th, mgi generates new updates on the 3-4th
+ 2.ucsc - monthly? need this to set a cron job - from their site : not really specified - some updates are daily, some weekly
+ 3.ensembl - monthly or every two months? or check manually ensembl site for the next
+            scheduled release? (maybe on the 9th?)
+
+ 4.uniprot - monthy? (uniprot updates its UniProtKB/Swiss-Prot -fully annotated curated entries - every four weeks)
+             so maybe a cron job that runs on the 15th?
+             I would rather load protein domains from ensembl for consistency (data by organism version). Also protein domains from uniprot
+             are organism specific.I need the organism version of the data.
+
+ 5.miRNA - Note: I'm Changing data source from http://www.ebi.ac.uk/ to http://www.mirbase.org/ftp.shtml 
+            the reason being mirbase has updates,more organisms (32 vs 20), and there are organism versions (a plus).
+           so maybe run updates as available?
+
+ 6.CC founder strains -- as available
+ 7.rnaSeq - as available
+ 
+d. Database maintenance
+  1. How many versions (K) of a given organism should we keep 
+     a. annotations in the database
+     b. genome sequence on our server
+  2. Write a cleanup script (cron job?) that runs after the last database update
+     to collect all organisms with K versions
+  3. What actions should we take if more than K found:
+     i. generate archives (annotations and genome)?
+     ii.reconstruct database indices, and update config files?
+
+e. Database access
+  1. web services - one exists already -need to have more? or one with multiple functionalities?
+  2. perl apis    - some perl scripts exist,....
+  3. mysql public server?
+  4. cpp libraries 
+  5. ...
+
+******************************************************
+Graber Tools & Libraries (ggenome)
+******************************************************
+Note:
+ a. running any of the tools with -s option displays the list 
+    of all organisms and the organism versions we currently have in the database
+     example ./program -s
+
+ b. running any of the tools with -l option displays the list 
+     of current gene predictions for the specified organism version
+   example ./program -v mm9 -l  (will list all the annotation sources we have for mm9)
+
+ c. running any of the tools with --genomes option should display the list
+    of organism versions we have the genome (chromosome ) data -- > in progress
+
+######################################################
+a. snpAnnotator (cpp),snpValidator(cpp) --> uses ggenome c++ libraries
+######################################################
+Who're the target users of snpAnnotator? or How will snpAnnotator be used?
+   1. On the web -- small/medium datasets, single SNP
+      a. By other researchers
+      b. By students
+      c. Software developers
+   2. Standalone -- large/very large datasets, single SNP
+      a. By other researchers
+      b. Software developers  
+      c. pipelines
+
+   Each SNP source comes with information describing each SNP assay. 
+   The SNP file is tab-delimited and contains each SNP's [label (e.g. dbSNP rs#)], chromosome, position, strand, and alleles. 
+   recognized input types:
+   1. Infinium SNP support file
+      example: SNP        CHROMOSOME   POSITION     STRAND   ALLELES
+               rs123456        6       26020613        +       A/T
+   2. Affymetrix SNP support file
+      example: SNP      CHROMOSOME POSITION STRAND  ALLELE
+              rs123456      7     78244234    +       G 
+   3. A signal file.
+      example: AFFYID         RSID   pos   AlleleA AlleleB
+              SNP_A-0123456  rs001  10000 C       T
+  Note:
+   a. Another recognized chromosome field label is: chr
+   b. Other recognized position field labels are (case incensitive): bpPos,bpPosition,location
+   c. Other recognized ALLELE field labels are (case incensitive): ref_allele,reference_allele,refAllele,referenceAllele,
+        ref_base,reference_base,refBase,referenceBase,
+   c. Other recognized ALLELEB field labels are (case incensitive): consensus_base,snp_Allele,
+                                    other_Allele,consensusBase,snpAllele,otherAllele,
+
+ Note: This program is being modified to accept gene annotation files (gtf, genePred formats) 
+      and gene annotation sources in addition to SNP input file. If the gene annotation file is not provided, then the program will
+      check if an annotation source was specified or defaults to  gene annotation sources (all?) from grabber transcript database 
+      for the selected organism version. grabber transcript annotation file is generated using 
+      the script getCoordinates.pl (this will be a function call).The default organism is mouse current version.
+      If the result file is not specified, the output will be standard out.
+      The program validates all single position SNPs (novel and existing) from an input against the specified  
+      reference genome assembly build.The program also checks for reference allele  and snp allele consistency and sets the 
+      flags accordingly.Also tags CpG Sites, and Mutation types (transition or transversion).
+
+The result includes:
+  1.) oginal fields list
+  2. QA report fields
+     a. QA_tag
+        0-> normal, no action taken; 
+        2-> ref_allele call matches reverse strand - then Alleles are complemented
+        3-> Bad ref_allele call, does not match allele on ref genome (both + and -) and does not match snp_allele; 
+        4-> ref_allele matches (N) on reference genome
+        5-> ref_allele matches the other_allele (allele swap)
+     b. CpG_flag
+     c. mutation type (present only if snp_allele was provided)
+     d. Fields count missmatch between header and data
+  3.) In addition to fields in 1.) an 2.), the result of the simple version will have the following fields appended to it:
+           Exon,ExonID(s),Intron,Intergenic,TranscriptID(s),GeneSymbol,geneStrand,annotationSorceDbSchema
+      Where:
+         Exon: Yes/No -- Yes if SNP is locate on exon
+         ExonID(s): a commas separated list of all the exons containing the SNP
+         Intron: Yes/No -- Yes if SNP is locate on intron
+         Intergenic: Yes/No -- Yes if SNP is locate on intergenic region
+         Function_class: a commas separated list of all the functional implications of this SNP on this gene
+         TranscriptID(s): a commas separated list of all the transcripts containing the SNP
+         GeneSymbol: gene symbol 
+ 
+  4.) In addition to fields in 1.) an 2.),the result of the SNP coding version will have the following fields appended to it:
+           Exon,ExonID(s),Intron,Intergenic,codingClass,TranscriptID(s),GeneSymbol,geneStrand,ensemblDbSchema
+      Where:
+         Exon: Yes/No -- Yes if SNP is locate on exon
+         ExonID(s): a commas separated list of all the exons of this gene containing the SNP
+                where each exon has additional information including: snpFrame,CDS_len,snpPosInCDS,codonPosInProtein    
+         Intron: Yes/No -- Yes if SNP is locate on intron
+         Intergenic: Yes/No -- Yes if SNP is locate on intergenic region
+         Function_class: a commas separated list of all the functional implications of this SNP on this gene
+         TranscriptID(s): a commas separated list of all the transcripts of this gene containing the SNP
+         GeneSymbol: gene symbol 
+
+  5. Should we include additional info for the genomic region the SNP is found? 
+     for example:
+     a. Add a "repeat" column in the results that is set to [yes or no]
+     b. Add a "miRNA" column in the results that is set to [yes,no, NA]
+     b. Add a "qtl" column in the results that is set to [yes,no]
+
+######################################################
+b. getCordinates (perl)
+######################################################
+Genome cordinates extraction tool.This tool extracts the genome coordinates of all
+the transcripts/features within the query term of the specified organism version and annotation source
+ or all the feature coordinates of a given organism version if no query term specified.
+The features are stored into the database using the zero-based cordinates standard for feature starts
+  and 1-based cordinate standard for feature ends.The result coordinates are in 1-base for both starts and ends.
+The result file of this program can be used by other programs, for example snpAnnotator, getTxFastaSeq,...
+The script generates a gene prediction file or a gtf file depending on the features type and the -F flag.
+1. current feature types
+   a. tx -> transcripts (genePred or gtf formats)
+   b. ex -> exons (gtf format)
+   c. lex -> last exon (3'exon) (gtf format)
+   d. fex -> first exon (5'exon) (gtf format)
+   e. tex -> terminal exons (3' and 5' exons) (gtf format)
+
+2. current recognized search terms:
+   a. gene name
+   b. gene accession id
+   c. transcript accession id
+   d. genomic region, format - chr:chrStart-chrEnd
+Note: we could add features like
+  a.intExJuction [with flanking=K] (gtf format)
+  b.exIntJunction [with flanking=K] (gtf format)
+  c.repeat  --> from ensembl (gtf format)
+  e.introns (gtf format)
+  d.qtl  --> from ensembl (gtf format)
+  f.est  --> from ucsc (gtf format)
+  g.mirna --> mirbase (gtf format)
+
+Note: 
+1. If the option -T is not specified, the program will generate all the feature coordinates
+  for the specified organism version and feature type
+
+2. if the -a option is not specified, features from all the annotation sources are generated
+   the features are displayed by annotation source
+
+      
+#################################################
+c.getFeatureFastaSeq  --> uses ggenome c++ libraries
+#################################################
+Note:coordinates in the input annotations file are in 1-base cordinates standard.
+Take a gtf,a bed, or a genePred file with feature coordinates and generates the associated fasta sequence.
+The default input stream is stdin (reading lines from a pipe).
+The generated sequences vary depending on the input (--transcript) and the type of the query (-t) and the codon type (-c).
+If the --transcript option is set, then 
+   -t cds -> CDS sequence,
+   -t tx -> exons+introns, 
+   -t ex -> exons sequence default)
+   -c dna -> DNA sequence default,
+   -c rna -> RNA sequence [T=U]
+   -c aa -> one letter amino acid
+Note: the -c option is used only when -t cds is selected (coding sequence)
+If the --transcript option is not set then just return the sequence without any further processing
+
+The header line of each sequence starts with the feature accession id if exists 
+
+#################################################
+d. fileConverter (cpp) --> uses ggenome c++ libraries
+#################################################
+  Converting one genome coordinates file type into another type.
+  Some of the arguments 
+  1. converter type
+     a. --gtf2genePred,  -> convert a gtf file to a gene Prediction file 
+     b. --genePred2gtf,
+     c. --gff32genePred,
+     d. --genePred2gff3,
+     e. --gff2genePred,
+     f. --genePred2gff,
+     g. --sam2fastq
+     h. --fastq2sam
+     .....
+  2. Input file (the from file)
+  3. Output file (the To file)
+
+Note: One would ask why the need to write this converter when you can download and run any one of the converter types
+from UCSC. The problems are:
+ 1. I downloaded gtf2genePred from UCSC and noticed that the converted file did not include some of the important fields
+    from the original gtf file. For example the gene field was missing in the gene prediction file when present in the original file
+ 2. currently you need to download a converter specific to every type of conversion.
+    In fileConverter, this will be just a function call.
+ 3. Some of these converters work good with small/average sized (<=1G) but on large files do not seem to work.
+    (for example I read that on small SAM files (730MB), samtofastq of Picard tools does a wonderful job.
+     But on large SAM files (33G), samtofastq does not seem to work)
+
+#################################################
+e. The web service graberTranscriptdb/webservice/? a php script
+#################################################
+Used to fetch small chunck of data from the database. Similar functionalities with getCordinates.pl
+with one exception that the webservice is only query term base tool.
+1.current recognized search terms:
+   a. gene name
+   b. gene accession id
+   c. transcript accession id
+   d. genomic region, format - chr:chrStart-chrEnd
+
+2.current result formats
+  a. json
+  b. xml
+
+
+
+

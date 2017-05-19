@@ -1,0 +1,6 @@
+prediction_name	prediction_id
+simpleRepeat	simpleRepeat
+miRNA	miRNA
+microsat	microsat
+snp128	snp128
+

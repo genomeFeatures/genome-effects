@@ -1,0 +1,53 @@
+
+Dear Lucie,
+
+I am sorry for the late answer.
+
+The sensitivity of the program is closely correlated to the structure
+of the seed pattern.
+By default the seed pattern is set to 1111110111111 and produces
+more rows compared to the 11 contiguous bases pattern 11111111111.
+Therefore with a seed pattern 111110111111 the result file could be
+greater.
+
+Then there is another question ... the length of the query.
+The program executes some approximations and sometimes closer values
+of fid% are considered as the same set.
+For short reads of 20 bases, for example, 1 mismatch decreases about 5%
+the %identity of the alignment and only 2% (90 to 92) is not enough.
+
+
+Sincerely,
+Davide
+
+
+> Hello,
+>
+> My name is Lucie Hutchins, I work  at the Jackson Laboratory in Bar Harbor
+> Maine(USA)
+> in the Computational Biology group.
+>
+> Few weeks ago we downloaded pass program to try it on a set of short read
+> DNA sequences (20-25 base pair long).
+> We ran it first with only the -fid and -t parameters set :
+> Run#1:  -fid 90 -t 2 -gff -info_gff -no_qual
+> Run#2: -fid 92 -t 2 -gff -info_gff -no_qual
+> and got the same number of rows in the result files
+>
+> We then added the -p with the goal to set the seed to 11
+> Run#3: -fid 90 -t 2 -gff -info_gff -no_qual -p '11111111111'
+> Run#4: -fid 92 -t 2 -gff -info_gff -no_qual -p '11111111111'
+>
+> Both Run#3 and Run#4 produce the same number of rows in the result files
+> but this number is less that what was produced in Run#1 and Run#2.
+> We have not yet compared the alignment quality between the runs but
+> we are very impressed by alignment quality of  the program.
+>
+> The question we have is to know if we are setting the parameters right for
+> this set of sequences(20-25bp long)
+> for the best alignment.
+>
+> Another question:  is the -p parameter the right one to set for seed
+> variation (or how do you set the seed parameter?)
+>
+>

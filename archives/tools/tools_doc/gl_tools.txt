@@ -1,0 +1,94 @@
+   IL,CA,NY, GA, TX, PA, DC, MO, AZ, FL, IN, NV,NC, WA
+
+
+Graber Lab tools
+
+C++ classes:
+ ggenome class (c++) --> base class (Documentation at http://demon/project_doc/genome/html/index.html)
+   a. genomeSequence class  --> functional
+   b. genomeFile class      --> functional 
+   c. genomeFeature class  -> work in progress
+
+ Applications:
+  a.) Genome manipulation
+    1. snp_validator
+       This program will validate all SNPs (novel and existing) from an input file against
+       our reference genome of the same assembly build.
+       The program will also check for reference allele  and snp allele consistency and sets the 
+       flags accordingly. Could also tag CpG Sites, and Mutation types (transition or transversion)
+    2. snpAnnotator -->featuresAnnotator 
+    3. getFastaSeq
+    
+
+ b.) transcript database:
+  1. webservices: http://demon/transcriptdb/web-services/
+     This web service generates gene annotations that overlap with a given genomic range or genomic feature.
+     The feature can be a gene or a transcript.The result is either in json or xml format(default xml) By default,
+     the web service returns the aggregate view of the result. If you call the service with the isoform flag set to 1,
+     the service returns the isoform view of the result. 
+
+
+  2. getFeatureCordinates.pl
+ #  This script generates genome features for a given organism version and gene prediction source
+ #  The default gene predictions are knownGene and ensGene
+ #   
+ #   Usage: perl getFeatureCordinates.pl -f <output format> -t <feature type> 
+ #                  -o <output file name> -v <organism version> -a <gene prediction list> -d db_host
+ #
+#   Where: -f is output file format 1->tab-delimitted, 2->commas separated (default tab-delimitted)
+#          -o  is the output file name (default standard out)
+#          -t  feature type: 
+#                         1. ie  -> Intron-Exon junction
+#                         2. iel -> Intron-Exon junction only from last exons  
+#                         3. ei  -> Exon-Intron junction
+#                         4. eif -> Exon-Intron junction only from first exon
+#                         5. tss -> transcription start sites (beginning of the first exon)
+#                         6. tes-pa -> polyA sites (ending of last exon)   
+#                         7. pdom -> protein domains
+#                         8. miRNA -> miRNAs 
+#                         9. exon --> exon listing
+#                         10.intron -> intron listing
+#                         11 transcript -> transcript listing            
+#          -v  is the ucsc organism version (default mm9)
+#          -a  a commas separated list of gene prediction names (default knowGene,ensGene)
+#          -l  display the list of current gene predictions for the specified organism version
+#          -u  specifies whether to eliminate duplicates or not 0 -> include duplicates,
+#                                                               1-> get rid of duplicates (default)
+#          -r  term -> genomic term (gene, transcript,...)
+#                     or genomic region (format chr:start:end:strand)       
+
+====================================== Current genome viewers ==========================================
+Current Genome viewers:
+1. Elsevier Genome Viewer
+http://www.applications.sciverse.com/action/gallery?searchText=Genome%20viewer
+The Genome View provides a range of functionality for exploring the sequence data, based on recommendations of domain experts interviewed as part of the application development. See specific information about each strand by hovering over it; flip the strands; zoom in/out; zoom to a sequence; go to a specific position to define a track of interest within the sequence; and "drag" to another location in the sequence. Another important feature of the Genome Viewer is the "Export data" link, which allows you to download a complete list of genes and/or genomes referred in the article along with their respective accession numbers.
+
+2. Integrative Genomics Viewer
+http://www.broadinstitute.org/igv/
+The Integrative Genomics Viewer (IGV) is a high-performance visualization tool for interactive exploration of large, integrated genomic datasets. It supports a wide variety of data types, including array-based and next-generation sequence data, and genomic annotations.
+
+3. Artemis: Genome Browser and Annotation Tool
+http://www.sanger.ac.uk/resources/software/artemis/
+Artemis allows visualisation of sequence features, next generation data and the results of analyses within the context of the sequence, and also its six-frame translation... Its a java based tool with a 3-paned interface window that depicts the genome at various resolutions... There is a also search tool that allows your to track down the particular feature that you’re looking for.
+
+User comment: 
+A great feature of Artemis is that it allows you to edit the sequence annotations and features. Although the tool isn’t perfect and is a bit finicky at times, it gets the job done.
+The best thing I like about Artemis is that there is a web version as well as an offline version, which means once you get used to it you can run it on or offline on any computer anywhere that has java.
+
+4. Apollo genome viewer
+http://apollo.berkeleybop.org/current/index.html
+It is a part of the Gmod project which runs most of the online genome viewers. The tool came out of a collaboration between the Berkeley Drosophila Genome Project and The Sanger Institute.
+
+User comment:
+Apollo has a similar set of features to Artemis provides, but I found the interface to be less user-friendly.
+Apollo is a Java application that can be downloaded and run on Windows, Mac OS X, or any Unix-type system (including Linux).
+
+5. NCBI Genome Workbench
+http://www.ncbi.nlm.nih.gov/tools/gbench/
+The NCBI Genome Workbench is far more than just a genome viewer. As the name suggests, it is a complete and customizable workbench of tools that allow you to organize sequence data, which you can retrieve from NCBI databases or from your own files, for a project then view and manipulate them in a variety of ways. There is no online version available but downloading and installing NCBI genome workbench is quite simple.
+The software allows you to view sequences as flat sequence files, phylogenetic trees, alignments and more.
+
+User comment:
+The tool supports quite a number of file formats, and I had no problems working with FASTA and most other file formats however when I tried to import the complete 1st chromosome of Dicyostelium which is in a GFF3 format the program kept crashing repeatedly, so clearly some bugs still need to be ironed out.
+The NCBI genome workbench is a great idea, and provides a number of useful tools that make the program a must-have but the interface is a bit clunky and takes some getting used to. However, the site has a comprehensive set of instructions/tutorials to help you get up the learning curve quickly.
+

@@ -1,0 +1,7 @@
+prediction_name	prediction_id
+ensGene	ensGene
+nscanGene	nscanGene
+refGene	refGene
+xenoRefGene
+	xenoRefGene
+

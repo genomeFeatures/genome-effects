@@ -1,0 +1,12 @@
+prediction_name	prediction_id
+ensGene	3
+refGene	6
+nscanGene	8
+sgpGene	9
+mgcGenes	10
+ccdsGene	12
+knownGene	13
+orfeomeGenes	14
+vegaGene	15
+xenoRefGene	5
+hg19-ensGene	23

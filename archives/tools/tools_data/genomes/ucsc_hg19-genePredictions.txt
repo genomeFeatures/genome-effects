@@ -1,0 +1,18 @@
+prediction_name	prediction_id
+allenBrainGene	allenBrainGene
+ccdsGene	ccdsGene
+ensGene	ensGene
+geneReviewsRefGene	geneReviewsRefGene
+hinv70PseudoGene	hinv70PseudoGene
+knownGene	knownGene
+knownToVisiGene	knownToVisiGene
+nscanGene	nscanGene
+pubsMarkerGene	pubsMarkerGene
+refGene	refGene
+sgpGene	sgpGene
+sibGene	sibGene
+vegaGene	vegaGene
+vegaPseudoGene	vegaPseudoGene
+xenoRefGene
+	xenoRefGene
+

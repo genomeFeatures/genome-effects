@@ -1,0 +1,54 @@
+mammal,Human,hg19,ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes
+mammal,Human,hg18,ftp://hgdownload.cse.ucsc.edu/goldenPath/hg18/chromosomes
+mammal,Human,hg17,ftp://hgdownload.cse.ucsc.edu/goldenPath/hg17/chromosomes
+mammal,Human,hg16,ftp://hgdownload.cse.ucsc.edu/goldenPath/hg16/chromosomes
+mammal,Chimp,panTro2,ftp://hgdownload.cse.ucsc.edu/goldenPath/panTro2/chromosomes
+mammal,Chimp,panTro1,ftp://hgdownload.cse.ucsc.edu/goldenPath/panTro1/chromosomes
+mammal,Orangutan,ponAbe2,ftp://hgdownload.cse.ucsc.edu/goldenPath/ponAbe2/chromosomes
+mammal,Mouse,mm10,ftp://hgdownload.cse.ucsc.edu/goldenPath/mm10/chromosomes
+mammal,Mouse,mm9,ftp://hgdownload.cse.ucsc.edu/goldenPath/mm9/chromosomes
+mammal,Mouse,mm8,ftp://hgdownload.cse.ucsc.edu/goldenPath/mm8/chromosomes
+mammal,Mouse,mm7,ftp://hgdownload.cse.ucsc.edu/goldenPath/mm7/chromosomes
+mammal,Rat,rn4,ftp://hgdownload.cse.ucsc.edu/goldenPath/rn4/chromosomes
+mammal,Rat,rn3,ftp://hgdownload.cse.ucsc.edu/goldenPath/rn3/chromosomes
+mammal,Pig,susScr2,ftp://hgdownload.cse.ucsc.edu/goldenPath/susScr2/chromosomes
+mammal,Cow,bosTau4,ftp://hgdownload.cse.ucsc.edu/goldenPath/bosTau4/chromosomes
+mammal,Cow,bosTau3,ftp://hgdownload.cse.ucsc.edu/goldenPath/bosTau3/chromosomes
+mammal,Cow,bosTau2,ftp://hgdownload.cse.ucsc.edu/goldenPath/bosTau2/chromosomes
+mammal,Horse,equCab2,ftp://hgdownload.cse.ucsc.edu/goldenPath/equCab2/chromosomes
+mammal,Horse,equCab1,ftp://hgdownload.cse.ucsc.edu/goldenPath/equCab1/chromosomes
+mammal,Dog,canFam2,ftp://hgdownload.cse.ucsc.edu/goldenPath/canFam2/chromosomes
+mammal,Dog,canFam1,ftp://hgdownload.cse.ucsc.edu/goldenPath/canFam1/chromosomes
+mammal,Opossum,monDom5,ftp://hgdownload.cse.ucsc.edu/goldenPath/monDom5/chromosomes
+mammal,Opossum,monDom4,ftp://hgdownload.cse.ucsc.edu/goldenPath/monDom4/chromosomes
+vertebrate,Chicken,galGal3,ftp://hgdownload.cse.ucsc.edu/goldenPath/galGal3/chromosomes
+vertebrate,Chicken,galGal2,ftp://hgdownload.cse.ucsc.edu/goldenPath/galGal2/chromosomes
+vertebrate,Zebra finch,taeGut1,ftp://hgdownload.cse.ucsc.edu/goldenPath/taeGut1/chromosomes
+vertebrate,Tetraodon,tetNig2,ftp://hgdownload.cse.ucsc.edu/goldenPath/tetNig2/chromosomes
+vertebrate,Tetraodon,tetNig1,ftp://hgdownload.cse.ucsc.edu/goldenPath/tetNig1/chromosomes
+vertebrate,Fugu,fr2,ftp://hgdownload.cse.ucsc.edu/goldenPath/fr2/chromosomes
+vertebrate,Stickleback,gasAcu1,ftp://hgdownload.cse.ucsc.edu/goldenPath/gasAcu1/chromosomes
+vertebrate,Medaka,oryLat2,ftp://hgdownload.cse.ucsc.edu/goldenPath/oryLat2/chromosomes
+vertebrate,Zebrafish,danRer6,ftp://hgdownload.cse.ucsc.edu/goldenPath/danRer6/chromosomes
+vertebrate,Zebrafish,danRer5,ftp://hgdownload.cse.ucsc.edu/goldenPath/danRer5/chromosomes
+vertebrate,Zebrafish,danRer4,ftp://hgdownload.cse.ucsc.edu/goldenPath/danRer4/chromosomes
+vertebrate,Zebrafish,danRer3,ftp://hgdownload.cse.ucsc.edu/goldenPath/danRer3/chromosomes
+deuterostome,Lancelet,braFlo1,ftp://hgdownload.cse.ucsc.edu/goldenPath/braFlo1/chromosomes
+insect,D. melanogaster,dm3,ftp://hgdownload.cse.ucsc.edu/goldenPath/dm3/chromosomes
+insect,D. simulans,droSim1,ftp://hgdownload.cse.ucsc.edu/goldenPath/droSim1/chromosomes
+insect,D. yakuba,droYak2,ftp://hgdownload.cse.ucsc.edu/goldenPath/droYak2/chromosomes
+insect,D. yakuba,droYak1,ftp://hgdownload.cse.ucsc.edu/goldenPath/droYak1/chromosomes
+insect,A. gambiae,anoGam1,ftp://hgdownload.cse.ucsc.edu/goldenPath/anoGam1/chromosomes
+worm,C. elegans,ce10,ftp://hgdownload.cse.ucsc.edu/goldenPath/ce10/chromosomes
+worm,C. elegans,ce6,ftp://hgdownload.cse.ucsc.edu/goldenPath/ce6/chromosomes
+worm,C. elegans,ce4,ftp://hgdownload.cse.ucsc.edu/goldenPath/ce4/chromosomes
+worm,C. elegans,ce2,ftp://hgdownload.cse.ucsc.edu/goldenPath/ce2/chromosomes
+worm,C. brenneri,caePb2,ftp://hgdownload.cse.ucsc.edu/goldenPath/caePb2/chromosomes
+worm,C. brenneri,caePb1,ftp://hgdownload.cse.ucsc.edu/goldenPath/caePb1/chromosomes
+worm,C. briggsae,cb3,ftp://hgdownload.cse.ucsc.edu/goldenPath/cb3/chromosomes
+worm,C. remanei,caeRem3,ftp://hgdownload.cse.ucsc.edu/goldenPath/caeRem3/chromosomes
+worm,C. remanei,caeRem2,ftp://hgdownload.cse.ucsc.edu/goldenPath/caeRem2/chromosomes
+worm,C. japonica,caeJap1,ftp://hgdownload.cse.ucsc.edu/goldenPath/caeJap1/chromosomes
+worm,P. pacificus,priPac1,ftp://hgdownload.cse.ucsc.edu/goldenPath/priPac1/chromosomes
+other,S. cerevisiae,sacCer3,ftp://hgdownload.cse.ucsc.edu/goldenPath/sacCer3/chromosomes
+other,S. cerevisiae,sacCer2,ftp://hgdownload.cse.ucsc.edu/goldenPath/sacCer2/chromosomes

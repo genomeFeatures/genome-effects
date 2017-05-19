@@ -1,0 +1,9 @@
+prediction_name	prediction_id
+contrastGene	contrastGene
+ensGene	ensGene
+nscanGene	nscanGene
+refGene	refGene
+sgpGene	sgpGene
+xenoRefGene
+	xenoRefGene
+

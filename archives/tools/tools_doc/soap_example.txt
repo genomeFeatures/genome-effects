@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+
+# Fetch genomes to which fRNAdbID:FR000003 maps
+
+use SOAP::Lite;
+
+$wsdl = "http://www.ncrna.org/frnadb/doc/soap.wsdl";
+$serv = SOAP::Lite
+  ->service($wsdl)
+  ->outputxml(1);
+
+$query_string = "FR000003";
+$genome = "";
+
+$d = SOAP::Custom::XML::Deserializer->deserialize($serv->entry_mapinfo($query_string,$genome));
+if ($d->valueof('//Fault/faultcode')) {
+  print "### SOAP FAULT !!!\n";
+  print " faultcode:   ", $d->valueof('//Fault/faultcode'), "\n";
+  print " faultstring: ", $d->valueof('//Fault/faultstring'), "\n";
+  print " detail:      ", $d->valueof('//Fault/detail'), "\n";
+} else {
+  for $t ($d->valueof('//result/entry_list/entry/genome_list/genome')) {
+    print "genome.name = ", $t->attr->{'name'}, "\n";
+  }
+}
+
+exit(0);

@@ -1,0 +1,10 @@
+prediction_name	prediction_id
+GRCm38-ensGene68	41
+mgcGenes	10
+orfeomeGenes	14
+refGene	6
+xenoRefGene	5
+GRCm38-ensGene	21
+GRCm38-mgiGene	22
+ccdsGene	12
+knownGene	13
