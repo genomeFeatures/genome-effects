@@ -1,0 +1,77 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+The RSA host key for basilisk has changed,
+and the key for the according IP address 209.222.197.180
+is unknown. This could either mean that
+DNS SPOOFING is happening or the IP address for the host
+and its host key have changed at the same time.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that the RSA host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+09:59:44:8d:6c:cc:69:3b:33:d3:d8:43:d1:30:7f:80.
+Please contact your system administrator.
+Add correct host key in /home/lnh/.ssh/known_hosts to get rid of this message.
+Offending key in /home/lnh/.ssh/known_hosts:17
+RSA host key for basilisk has changed and you have requested strict checking.
+Host key verification failed.
+
+solution: 
+1. open the .ssh/known_hosts file
+2. locate and delete entries for the requested remote host(basilisk) from this file then save
+
+Problem: changing file/directory group ownership
+cmd: chown :groupname file/directoryname
+Example: chown :jaxgraber rnaseq   => change the rnaseq directory group ownership to jaxgraber
+
+Problem: changing both the file/directory's owner and group
+Through the chown command, the group (that a file belongs to) can also be changed.
+cmd: chown lnh:jaxgraber rnaseq  => changes the owner to lnh and group to jaxgraber
+
+
+
+cmd: head -1 musdiv_noSNPallele.txt | perl -ne "s/\t/\n/g; print" | more
+will display the header line as a list of x fields.
+
+
+Problem: how to check if a given perl module (Tie::Hash) is installed
+Solution : perl -MTie::Hash -e 1
+
+uname -a (info on your server)
+uname -m machine number (i.e. - i686)
+uname -r kernel version
+
+Problem how to change user password
+Solution: use the passwd cmd
+  
+Use of awk utility:
+To manipulate data.
+nh@phoenix:~/work/coodep> awk '/Drug/' coodep_colleges_Security_111007.txt |head
+100654  Arrests - On-Campus     Drug law violations     24      2003    14      2004    13      2005
+100654  Arrests - On-Campus Residence Halls     Drug law violations     4       2003    6       2004    3       2005
+100663  Arrests - On-Campus     Drug law violations     10      2003    17      2004    6       2005
+100663  Arrests - On-Campus Residence Halls     Drug law violations     10      2003    10      2004    1       2005
+100690  Arrests - On-Campus     Drug law violations     0       2003    0       2004    0       2005
+100706  Arrests - On-Campus     Drug law violations     0       2003    0       2004    4       2005
+100706  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    1       2005
+100724  Arrests - On-Campus     Drug law violations     4       2003    2       2004    1       2005
+100724  Arrests - On-Campus Residence Halls     Drug law violations     1       2003    0       2004    0       2005
+100760  Arrests - On-Campus     Drug law violations     0       2003    0       2004    0       2005
+
+nh@phoenix:~/work/coodep> awk '/Drug/' coodep_colleges_Security_111007.txt |awk '/Residence/'|head
+100654  Arrests - On-Campus Residence Halls     Drug law violations     4       2003    6       2004    3       2005
+100663  Arrests - On-Campus Residence Halls     Drug law violations     10      2003    10      2004    1       2005
+100706  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    1       2005
+100724  Arrests - On-Campus Residence Halls     Drug law violations     1       2003    0       2004    0       2005
+100812  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    0       2005
+100830  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    6       2004    1       2005
+100858  Arrests - On-Campus Residence Halls     Drug law violations     4       2003    5       2004    5       2005
+100937  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    0       2005
+
+Problem: how to list every other line (nth line) from a file
+Solution:
+cmd: gawk 'NR%n==0 {print}' file_name
+where n is the line ranking { n=2 -> every other line; n=3 -> every third line, ...}
+Example: gawk 'NR%2==0 {print}' hg19-ensGene-knownGene-exonIntronJuction.fa |head -4000 |cut -b "201-202"|sort|uniq -c

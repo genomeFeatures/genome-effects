@@ -1,0 +1,206 @@
+Perlegen:
+8,228,050 unique chr/bp_position snps
+8,239,397 total (-23)
+
+16478748 accessions/2=8 239 374
+
+Imputed SNPs for 88 inbred strains and the 17 Sanger strains.
+Imputed by Leonard McMillan's
+105 Strains; 65,243,635 SNPs
+Unique chr/bp_position SNPs: 65,027,153
+possible 27,152 duplicates,
+Confidence score: 0,1,2 [low,medium,high]
+
+Db schema updates:
+1. Created snp_position table to generate unique identifier for SNPs based on
+   chromosome/Bp_position/ref_strain combination
+
+2. got rid of all not needed fields and tables:
+   a. removed:
+      i.) Fields: is_public,chromosome_id,black6_allele,is_duplicate,and is_public from snp_main
+      ii.)Tables: snp_strain_new,snp_position_by_source,snp_is_conflict,snp_duplicates,
+                  snp_data_log*,snp_chromosome,snp_c2pSites
+   b.Added:
+     i.)  Fieds:  ref_allele(snp_main),loc_rank(snp_transcript)
+     ii.) Tables: snp_mutation,snp_position,snp_CpGSites
+   
+Table row: 6 067 658 055 rows
+1. snpid [int unsigned] --> 4bytes -- max value=4,294,967,295
+2. strain_id [smallint] --> 2 bytes -- max value=32,767
+3. ref_strain_id [smallint] --> 2 bytes -- max value=32,767
+4. genotype_alle [char(1)] -> 1 byte -- max
+5. confidence_score[tinyint] -> 1 byte -- 127
+6. source_id [smallint] --> 2 bytes -- max value=32,767
+
+insert_new_snps.pl,reformat_snps.pl
+Data:
+issues to resolve:
+1. Strains name and synonyms insert new strains
+  a. manual step and automation
+
+2. Some snps do not have an accession id of any sort
+   solution: total=52,081,637
+   a. make up an accession id= source_abrev+chr+bpPos
+      example:
+3.Some SNP alleles have more than one geneotype allele
+  Solution : total: 1,393,872. two alleles:1362310; three alleles:31562 
+  a. create a table snp_multiAlleles to store
+     the original snp multi genotypes
+  b. compute the representative snp allele: most popular allele
+  c. set the error flag=16 for those snps in snp_error_log table
+
+4. There is no strand information
+   solution:
+   a. Check ref_allele against the reference strain genome build 37
+   b. if match: strand=+ and every is as is
+   c. no match?
+        1. Check if match on the reverse strand (error_flag=2)
+                 reverse both the SNP_allele and genotype alleles and set strand=+
+        2. if no match on the reverse strand, check local_ref_allele==other_allele
+                 then if match swap the two alleles (we call this allele swap: error_flag=5)
+        3. if no match on the reverse strand and local_ref_allele=complement(other_allele)
+                 then if match swap the two alleles and flag this as reverse strand(error_flag=2) 
+        4. if no match on reverse strand and not allele swap, tag this SNP
+                 as bad allele call (errog_flag=3)
+      //our reference allele does not match either the complement of the specified
+      // source reference allele or the other allele
+steps:
+3.Genotype Field display modification: for strains with multiple genotype allele calls, display all (in progress)
+
+1. Update config files
+2. run insert_new_snps.pl
+ This script generates unique database id for every new SNP
+ process new snps in chunks of 500,000 rows (this is needed for very large files
+ in order to avoid mysql inserts running out of memory)
+ this script also insert new accession ids, and snp_by_source table
+  a. insert into snp_accession (snp_local_id,accession(submitter_is,rs_id),id_type,source_id)
+     if(a given snp does not have an accession id, make one= "source_abrev chr-pos"
+     For example" Sang1-65972208
+      Note: this file contains as many lines as the number of ids per SNP multiplied by the number of SNPs
+  b. insert  snp_by_source (snp_localid,source_id)
+
+3. run reformat_snps.pl
+ This script reformats the original input snps files to 
+ generate the SNPs files to be used in the pipeline
+ the program also generates chromosome ids for X (20), Y(21), and Mt(22) ,and UN(23) 
+  and tags all the cases where there is more than one genotype allele for the other allele.
+  We call these multi-allele SNPs and we choose the most popular allele to represent the other allele.
+
+  a.Load  snp_multialleles database table with cases a SNP has more than one genotype allele
+  c.generate SNPs Main file contains: snp_localid,alleles,error_flag,and the original fields
+
+4. run snp_validator
+  this program maps the REFERENCE allele to the corresponding position on the reference genome
+  and does the following:
+  I) sets the flags:
+     a. Check ref_allele against the reference strain genome of same genomic build
+     b. if match: strand=+ and every is as is
+     c. no match?
+        1. Check if match on the reverse strand (error_flag=2)
+                 reverse both the SNP_allele and genotype alleles and set strand=+
+        2. if no match on the reverse strand, check local_ref_allele==other_allele
+                 then if match swap the two alleles (we call this allele swap: error_flag=5)
+        3. if no match on the reverse strand and local_ref_allele=complement(other_allele)
+                 then if match swap the two alleles and flag this as reverse strand(error_flag=2) 
+        4. if no match on reverse strand and not allele swap, tag this SNP
+                 as bad allele call (errog_flag=3)
+      //our reference allele does not match either the complement of the specified
+      // source reference allele or the other allele
+  II) Tags CpG sites (a function in my gSequence class): 
+      Total= 12,791,300 (19%)
+  III)tags mutation type (transition or transversion) (a function in my gSequence class)
+       Total:66026581
+      +---------------+-----------------------+--------+
+      | mutation_type | SNP Count             |Expected|
+      +---------------+-----------------------+--------+
+      | Transition    |    42,742,901(65%)    | 67%   
+      | Transversion  |    23,283,701 (35%)   | 33%
+      +---------------+-----------------------+
+
+  IV) Tags cases of fields count missmatch between header and data (error_flag=17)
+      Total:52,309,667
+      +-----------+-----------------------+
+      | source_id | count(distinct snpid) |
+      +-----------+-----------------------+
+      |        20 |                20,104 |
+      |        21 |            52,289,563 |
+      +-----------+-----------------------+
+
+ V). Load snp_main and snp_CpGSites tables
+  a.Flag all cases a given SNP has different allele calls 
+    either from the same source or from different sources (error_flag=6)
+  b.update both the snp_main_allele_conflict and snp_error_log tables
+  select s.source_name , count(distinct snpid) from snp_main_allele_conflict a, 
+  snp_source s where a.source_id=s.source_id group by a.source_id;
++--------------------------------------+-----------------------+
+| source_name                          | count(distinct snpid) |
++--------------------------------------+-----------------------+
+| NIEHS                                |                    21 |
+| Diversity Array - Yang et al.2011    |                    26 |
+| Imputed - Jeremy R. Wang et al. 2012 |                 37344 |
++--------------------------------------+-----------------------+
+
+ VI). Load the genotype tables (snp_genotype/snp_imputed, snp_genotype_conflict,snp_error_log)
+   tag strains with genotype conflict (error_flag=7)
+   +--------------------------------------+-----------------------+
+| source_name                          | count(distinct snpid) |
++--------------------------------------+-----------------------+
+| NIEHS                                |                   570 |  
+| Diversity Array - Yang et al.2011    |                 16703 | 
+| Imputed - Jeremy R. Wang et al. 2012 |                635292 | 
++--------------------------------------+-----------------------+
+
+7.Run snpAnnotator :
+  a.Intergenic : 59%
+  b.On transcript:27,108,233 (41%)
+  c. Introns : 26,101,150(96% of SNPs on trnascript)
+      intron rank  SNPCount
+ select loc_rank,(count(distinct snpid)/(select count(distinct snpid) from snp_transcript where _loc_func_key!=0))*100  as "Percent Exonic SNPs" from snp_transcript where _loc_func_key!=0 group by loc_rank 
+
+  d. Exons : 1,577,816 (4% of SNPs on trnascript)
+       e. UTR: 699,638 (44% of SNPs on exons)
+       F. Exon Coding Synonymous :289,999 (18% of SNPs on exons)
+       g. Exon Coding Non Synonymous:161,441 (10% of SNPs on exons)
+       h. 
+select loc_rank,(count(distinct snpid)/(select count(distinct snpid) from snp_transcript where _loc_func_key!=0))*100  as "Percent Exonic SNPs" from snp_transcript where _loc_func_key!=0 group by loc_rank ;     
+  h. Total: 66026581
+  i. CpG Sites
+     1.Introns:
+     2.Exon
+     3.UTR
+     4.Coding Synonymous
+     5.Coding Non Synonymous
+  j.Transition
+     1.Introns:
+     2.Exon
+     3.UTR
+     4.Coding Synonymous
+     5.Coding Non Synonymous 
+  h.Transversion
+     1.Introns:
+     2.Exon
+     3.UTR
+     4.Coding Synonymous
+     5.Coding Non Synonymous 
+
+run load_annotator.pl
+This script load SNP annotator generated files into the database.
+
+Database testing:
+1.jax logo changed to cgd logo --> Imogen
+2.update strain default strain selection to match the radio cc founder
+3.Need to set NOD/ShiLtJ(129) and NOD/LtJ(13) to be the same strain (NOD/ShiLtJ-> NOD/LtJ(Changed: 23-FEB-07 ) )
+  update (snp_strain_synonym,snp_genotype, snp_genotype_conflict,snp_strain_by_group,snp_strain_by_source)
+
+
+4.Need to set NON/ShiLtJ(268) and NON/LtJ(208) to be the same strain (NON/ShiLtJ-> NON/LtJ(Changed: 23-FEB-07 ) )
+  update (snp_strain_synonym,snp_genotype, snp_genotype_conflict,snp_strain_by_group,snp_strain_by_source)
+
+5. source selection first (radio or check boxes)
+   if(check) what if strain provided by two sources. One with score low/medium and the other no score
+   should I use the default (high) for the display?
+
+6. strain groups: 
+   CC founders; Classical;Wild Derived;Wild;
+
+

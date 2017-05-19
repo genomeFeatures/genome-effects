@@ -1,0 +1,13 @@
+1. cd to your home directory
+2. > vi .bash_profile
+3. add the envronment variables you like to add example
+PERL5LIB=${PERL5LIB}:${HOME}/src/bioperl-live
+PERL5LIB=${PERL5LIB}:${HOME}/src/ensembl/modules
+PERL5LIB=${PERL5LIB}:${HOME}/src/ensembl-compara/modules
+PERL5LIB=${PERL5LIB}:${HOME}/src/ensembl-variation/modules
+PERL5LIB=${PERL5LIB}:${HOME}/src/ensembl-functgenomics/modules
+export PERL5LIB
+
+4. save the file and chmod 700
+5. execute the file : . .bash_profile
+

@@ -1,0 +1,47 @@
+What are ETags?
+
+Entity tags (ETags) are a mechanism that web servers and browsers use to determine whether the component in the browser’s cache matches the one on the origin server. ETag is a validator which can be used instead of, or in addition to, the Last-Modified header. By sending a ETag, the server promises that the content is not changed until the ETag changes for a specific resource.
+How ETags works:
+
+The origin server specifies the component’s ETag using the ETag response header.
+
+    The client requests a static resource (for ex: /a/test.gif) from server. Following is the header of a file client will receive from the server:
+
+    1
+    2
+    3
+    4
+    	
+    HTTP/1.1 200 OK
+    Last-Modified: Tue, 12 Dec 2006 03:03:59 GMT
+    ETag: "10c24bc-4ab-457e1c1f"
+    Content-Length: 12195
+
+    Later, when the client requests same file from the server and browser has to validate a component, it uses the If-None-Match header to pass the ETag back to the origin server. If the ETag match, a 304 status code is returned reducing the response by 12195 bytes for this example.
+
+    Following is the header of the file requested again from the same server:
+
+    1
+    2
+    3
+    4
+    5
+    	
+    GET /a/test.gif HTTP/1.1
+    Host: www.geekride.com
+    If-Modified-Since: Tue, 12 Dec 2006 03:03:59 GMT
+    If-None-Match: "10c24bc-4ab-457e1c1f"
+    HTTP/1.1 304 Not Modified
+
+    *** 304 status code means that the file you are requesting for, is the same which is present in the cache of the browser. (For more details about apache status codes please refer to: http-apache-status-error-codes)
+
+Where not to use:
+
+The problem with the ETags is that they are generated with attributes that make them unique to a server. By default, Apache will generate an Etag based on the file’s inode number, last-modified date, and size. So, if you have one file on multiple servers with same file size, permissions, timestamp, etc., even after that their ETag won’t be same as they can’t have the same inode number.
+
+So, This creates the problem in the scenarios where you are having a cluster of web servers to serve the same content. When a file is served from one server and later on validated from another server then the ETags for that file won’t match and hence complete file will be fetched again. That means if you are having a cluster serving as a web server, then you shouldn’t use ETags.
+Configure ETags:
+
+ETags are configured by default, so you don’t need to do anything to configure them.
+
+

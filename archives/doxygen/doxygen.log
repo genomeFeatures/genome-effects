@@ -1,0 +1,113 @@
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:68: Warning: Compound exonCord is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:63: Warning: Compound chromData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:78: Warning: Compound organismData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:73: Warning: Member codonList (variable) of class aminoacid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:74: Warning: Member symbol (variable) of class aminoacid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:74: Warning: Member acidity (variable) of class aminoacid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:74: Warning: Member polarity (variable) of class aminoacid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:75: Warning: Member oneLetterSymbol (variable) of class aminoacid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:76: Warning: Member hydropathyIndex (variable) of class aminoacid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:76: Warning: Member mass (variable) of class aminoacid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:76: Warning: Member volume (variable) of class aminoacid is not documented.
+Error: Problems running epstopdf. Check your TeX installation!
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:399: Warning: Member displayTable() (function) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:405: Warning: Member getAminoacidData(string codon, struct aminoacid &aa) (function) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:473: Warning: Member name2OneChar (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:474: Warning: Member oneChar2Symbol (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:474: Warning: Member oneLetter2Name (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:474: Warning: Member polarity (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:474: Warning: Member acidity (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:475: Warning: Member hydropathyIndex (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:475: Warning: Member mass (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:475: Warning: Member volume (variable) of class aminoAcid is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:142: Warning: Member organism_version_id (variable) of class exonData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:143: Warning: Member chromosome_id (variable) of class exonData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:144: Warning: Member exon_start (variable) of class exonData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:145: Warning: Member exon_end (variable) of class exonData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:146: Warning: Member strand (variable) of class exonData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:147: Warning: Member transcriptIdList (variable) of class exonData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:107: Warning: Member chromosomeFilePrefix (variable) of class genomeConfigFile is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:108: Warning: Member chromosomeFileSufix (variable) of class genomeConfigFile is not documented.
+Error: Problems running epstopdf. Check your TeX installation!
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:496: Warning: Member getChromosomeData(string chromosome, string organismVersion, struct chromData &chrom) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:498: Warning: Member getExons(string transcript) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:499: Warning: Member getExons(string chrom, long chromStart, long chromEnd) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:500: Warning: Member getTranscripts(string transcript) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:501: Warning: Member getTranscripts(string chrom, long chromStart, long chromEnd) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:502: Warning: Member getGenePredictions(string organismBuild) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:503: Warning: Member displayGenePredictions(string organismBuild) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:516: Warning: Member setAnnotatedOrg() (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:519: Warning: Member setOrgChromosomes(string organismVersion) (function) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:507: Warning: Member webServiceUrl (variable) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:508: Warning: Member annotations_text_file (variable) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:508: Warning: Member annotations_xml_file (variable) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:509: Warning: Member organismInDB (variable) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:510: Warning: Member organismIdMap (variable) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:511: Warning: Member chromosomeIdMap (variable) of class genomeFeature is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:512: Warning: Member chrMap (variable) of class genomeFeature is not documented.
+Error: Problems running epstopdf. Check your TeX installation!
+Error: Problems running epstopdf. Check your TeX installation!
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:321: Warning: Member loadConfigData(string gseqConfigFilename) (function) of class genomeSequence is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:332: Warning: Member gseqConfigFile (variable) of class genomeSequence is not documented.
+Error: Problems running epstopdf. Check your TeX installation!
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:238: Warning: Member filterChrom(string chr) (function) of class ggenome is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:253: Warning: Member listAllGenomes() (function) of class ggenome is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:170: Warning: Member genomeData (variable) of class ggenome is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:171: Warning: Member organisms (variable) of class ggenome is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:172: Warning: Member organismAll (variable) of class ggenome is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:156: Warning: Member month (variable) of class lastModified is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:156: Warning: Member year (variable) of class lastModified is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:156: Warning: Member day (variable) of class lastModified is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:86: Warning: Member organism (variable) of class organismBuildData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:87: Warning: Member chromosomeDataDir (variable) of class organismBuildData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:88: Warning: Member organismGroup (variable) of class organismBuildData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:92: Warning: Member organism (variable) of class organismInDbStructure is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:93: Warning: Member organism_id (variable) of class organismInDbStructure is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:93: Warning: Member organismVersion_id (variable) of class organismInDbStructure is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:97: Warning: Member matches (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:97: Warning: Member misMatches (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:97: Warning: Member repMatches (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:97: Warning: Member nCount (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:97: Warning: Member qNumberInsert (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:97: Warning: Member qBaseInsert (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:98: Warning: Member tNumberInsert (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:98: Warning: Member tBaseInsert (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:98: Warning: Member blockCount (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:98: Warning: Member qSize (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:98: Warning: Member qStart (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:98: Warning: Member qEnd (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:99: Warning: Member tSize (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:99: Warning: Member tStart (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:99: Warning: Member tEnd (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:100: Warning: Member strand (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:100: Warning: Member qName (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:100: Warning: Member blockSizes (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:100: Warning: Member qStarts (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:100: Warning: Member tStarts (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:100: Warning: Member tName (variable) of class pslData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:133: Warning: Member submitterID (variable) of class snpData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:134: Warning: Member chrom (variable) of class snpData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:135: Warning: Member pos (variable) of class snpData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:135: Warning: Member snp_localID (variable) of class snpData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:136: Warning: Member strand (variable) of class snpData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:137: Warning: Member referenceBase (variable) of class snpData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:137: Warning: Member consensusBase (variable) of class snpData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:120: Warning: Member chrom (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:121: Warning: Member chromStart (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:121: Warning: Member chromEnd (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:122: Warning: Member score (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:123: Warning: Member name (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:123: Warning: Member organism (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:123: Warning: Member organismVersion (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:123: Warning: Member gene (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:123: Warning: Member probe_set (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:124: Warning: Member strand (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:125: Warning: Member exonStarts (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:125: Warning: Member exonEnds (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:125: Warning: Member cdsStarts (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:125: Warning: Member cdsEnds (variable) of class tabularData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:151: Warning: Member cdsStart (variable) of class translationData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:152: Warning: Member cdsEnd (variable) of class translationData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:153: Warning: Member transcript_name (variable) of class translationData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:153: Warning: Member transcript_id (variable) of class translationData is not documented.
+/scratch/data/ucsc/genome_class/src/cpp/ggenome.h:153: Warning: Member gene_prediction_id (variable) of class translationData is not documented.

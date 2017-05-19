@@ -1,0 +1,56 @@
+gff format:
+
+seqname - The name of the sequence. Must be a chromosome or scaffold.
+source - The program that generated this feature.
+feature - The name of this type of feature. Some examples of standard feature types are "CDS", "start_codon", "stop_codon", and "exon".
+start - The starting position of the feature in the sequence. The first base is numbered 1.
+end - The ending position of the feature (inclusive).
+score - A score between 0 and 1000. If the track line useScore attribute is set to 1 for this annotation data set, the score value will determine the level of gray in which this feature is displayed (higher numbers = darker gray). If there is no score value, enter ".".
+strand - Valid entries include '+', '-', or '.' (for don't know/don't care).
+frame - If the feature is a coding exon, frame should be a number between 0-2 that represents the reading frame of the first base. If the feature is not a coding exon, the value should be '.'.
+group - All lines with the same group are linked together into a single item. 
+
+frid - The feature accession id if exists or "."
+frrank - feature rank
+
+gtf format:
+GTF (Gene Transfer Format) is a refinement to GFF that tightens the specification. The first eight GTF fields are the same as GFF. The group field has been expanded into a list of attributes. Each attribute consists of a type/value pair. Attributes must end in a semi-colon, and be separated from any following attribute by exactly one space.
+
+The attribute list must begin with the two mandatory attributes:
+
+    gene_id value - A globally unique identifier for the genomic source of the sequence.
+    transcript_id value - A globally unique identifier for the predicted transcript. 
+
+I could add protein ID,
+
+Feature could be :
+exon
+CDS
+intron
+repeats
+ESTS
+
+proteinDomains
+miRNAs
+
+sequence (dna_sequence,rna_sequence,protein_sequence)
+
+Hi Joel,
+
+I'm working on the gtf format .
+GTF (Gene Transfer Format) is a feature base format, a standard way to display all the features on a given gene transcript.
+The first eight GTF fields are the same as GFF. The group field has been expanded
+into a list of attributes with two mandatory attributes gene_id, and transcript_id.
+Some examples of standard feature types are "CDS", "start_codon", "stop_codon", and "exon".
+Where CDS is for coding exon coordinates.
+
+my question is:
+In our data we have features other than the above standard feature types. For example we have:
+repeats, ESTs  coordinates associated with every organism version (at least for Mouse and Human) - intron coordinates can be computed.
+We also have proteinDomains, and miRNAs data for most of the  organisms we currently have in the database.
+The question is should I generate just the generic gtf file with only standard feature types or should I add more?
+What would you like our gtf file to include?
+
+
+
+

@@ -1,0 +1,19 @@
+We consider:
+a. Isoform or transcript:  refer to a distinct RNA molecule transcribed from a gene locus
+b. gene: refer to the set of isoforms transcribed from the same genomic region and from the same strand
+, sharing some exonic sequence -
+Note: Complexity - what if two different genes share the same exonic region?
+Do they become isoforms of the same gene? this is where defining gene as uniq aggregate genomic region
+could come handy.
+
+c. gene locus: refer to gene genomic region
+d. splicing event: refer to the exonic region of a gene that shows variability across two or more of its isoforms
+Note: splicing events generally include:
+1. exon skipping
+2. alternative 5' and 3' splice-sites
+3. mutually exclusive exons
+5. retained introns
+6. alternative first exons and alternative last exons
+7. or a combination of two or more of the above
+
+

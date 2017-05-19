@@ -1,0 +1,17 @@
+The program logic:
+The program generates a fasta file for each leader sequence alignment.
+for each SL(1-5)-EST-genome alignment:
+    1. found the alignment Start (tStart) on the genome
+    2.get the sequence data from the genome around tStart (tStart+-200)
+    3.get the list of genes on this strand of the chromosome
+    4.for each gene, check if the align data (tStart) is within +-50 bp of the transcript of this gene with min start (+) or max end(-) 
+          return not Nogene_found if failure   otherwise return transcript data (accession_id,strand,start(+) or end(-))=>target gene found
+    5. get the nearest upstream gene from target gene (return transcript data (accession_id,strand,start(+) or end(-))
+ 
+Each data item consists of two lines:
+1. The first line is the header line with 7 fields (fields are separated with "_" )
+  for positive strand the format is : >chr#_strand_ESTID_upstreamGeneTranscriptID(strand)_upstreamGeneEnd_targetGeneTranscriptID_targetGeneStart
+  for negative strand the format is : >chr#_strand_ESTID_upstreamGeneTranscriptID(strand)_upstreamGeneStart_targetGeneTranscriptID_targetGeneEnd
+2. The second line is a fasta sequence extracted from tStart+-200bp
+
+

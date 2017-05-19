@@ -1,0 +1,161 @@
+stopping/starting mysql server:
+init.d/mysql stop
+init.d/mysql start
+-----------------------------------------------------
+error: Access denied for user ''@'localhost' to database 'dbname' (Unable to select database "dbname" on "hostname")
+Solution:
+This means you are trying to establish a connection to the database  hosted on "localhost" with an empty user.
+This will only work an empty user account exists on localhost
+On your connection script.
+1. make sure you establish your database connection as follow:
+   a. create a function called getConnection()
+   b. add the following code to it
+       $con = mysql_connect("$servername", "$username", "$passwd");
+       if (!$con) connectionError(mysql_error());
+       if (!mysql_select_db("$database", $con)){ databaseError($database,mysql_error());}
+       return $con;
+ Here connectionError and databaseError are local functions I've created to handle the connection
+ error. $servername, $username ,$passwd are the host name (or localhost), user name, and password to establish the connection
+ .Make sure this user has an account on this server. Also ensure the user has privileges to execute
+ what ever command your srcipt will execute.
+
+******************************
+
+adding new users
+
+Supper user
+grant all on *.* to 'x'@'%' identified by 'xpass';
+grant all on *.* to 'x'@'localhost' identified by 'xpass';
+grant grant option  on *.* to 'x'@'localhost' identified by 'xpass';
+grant grant option  on *.* to 'x'@'%' identified by 'xpass';
+Where x is the user name and xpass is the password for x
+Regular user with only select permission:
+grant select on *.* to 'x'@'%' identified by 'xpass';
+grant select on *.* to 'x'@'localhost' identified by 'xpass';
+Where x is the user name and xpass is the password for x
+
+Assigning root Account Passwords 
+ The root account passwords can be set several ways. The following discussion demonstrates three methods: 
+ Use the SET PASSWORD statement 
+ Use the UPDATE statement 
+ Use the mysqladmin command-line client program 
+ To assign passwords using SET PASSWORD, connect to the server as root and issue a SET PASSWORD statement for each root account listed in the mysql.user table. Be sure to encrypt the password using the PASSWORD() function. 
+ For Windows, do this: 
+shell> mysql -u root
+mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpwd');
+mysql> SET PASSWORD FOR 'root'@'127.0.0.1' = PASSWORD('newpwd');
+mysql> SET PASSWORD FOR 'root'@'%' = PASSWORD('newpwd');
+
+The last statement is unnecessary if the mysql.user table has no root account with a host value of %. 
+ For Unix, do this: 
+shell> mysql -u root
+mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpwd');
+mysql> SET PASSWORD FOR 'root'@'127.0.0.1' = PASSWORD('newpwd');
+mysql> SET PASSWORD FOR 'root'@'host_name' = PASSWORD('newpwd');
+
+ You can also use a single statement that assigns a password to all root accounts by using UPDATE to modify the mysql.user table directly. This method works on any platform: 
+shell> mysql -u root
+mysql> UPDATE mysql.user SET Password = PASSWORD('newpwd')
+    ->     WHERE User = 'root';
+mysql> FLUSH PRIVILEGES;
+
+ The FLUSH statement causes the server to reread the grant tables. Without it, the password change remains unnoticed by the server until you restart it. 
+ To assign passwords to the root accounts using mysqladmin, execute the following commands: 
+shell> mysqladmin -u root password "newpwd"
+shell> mysqladmin -u root -h host_name password "newpwd"
+
+ Those commands apply both to Windows and to Unix. The double quotation marks around the password are not always necessary, but you should use them if the password contains spaces or other characters that are special to your command interpreter.
+--------------------------------------------------------------------
+## The load data local infile does not work
+## solution:
+awesome! that did it-
+=========================================================== 
+ Here's what I did:
+ 
+ edit my.cnf in /etc/:
+ ----------------------------------------
+ [mysqld]
+ ...(other stuff)
+ local-infile=1
+ [mysql]
+ ...(other stuff)
+ local-infile=1
+ 
+ then shutdown, then start mysql:
+ ----------------------------------------
+ shell> mysqladmin shutdown
+ shell> cd /usr/libexec
+ shell> mysqld
+ 
+ then I have to close that shell connection and open a new one, then:
+=== the above did not work for me so I tried the following
+ERROR 1148 (42000): The used command is not allowed with this MySQL version
+
+1. From mysql command
+   mysql -hmyhost_name -p --local-infile
+  then once connected run the command
+  mysql> load data local infile "/local-path-to-the-file/file_name" into table my-table-name;
+
+2. from a perl script
+   my $dbh = DBI->connect("DBI:mysql:database=$dbname;host=$host;mysql_local_infile=1",$user, $pass);
+
+And it works!!!
+ --------------------------------------------------------------------------------
+ shell> mysql
+Logon to cgddb.jax.org with username 'cgdmysql' and password 'Ch4p5t1k'. This is also the mysql account. The server is running on port 44444.
+
+lnh@demon:/data/db_backups/cgdsnpdb> mysql -hcgddb.jax.org -ucgdmysql -p -P44444 cgdsnpdb < cgd_annotation_tables.sql
+
+..................................................
+Copying databases across servers
+nohup mysqldump -plucie graber_transcriptdb | mysql -hdemon-new -plucie98 -C graber_transcriptdb &
+Note: the above does not work well for very large databases. So run the above command in two steps
+1. mysqldump -plucie graber_transcriptdb > graber_transcriptdb.sql
+2. mysql -hdemon-new -plucie98 graber_transcriptdb < graber_transcriptdb.sql
+
+Copying multiple databases:
+on demon : mysqldump -plucie --databases bugs drupal_graber_public galaxy wikidb www > software_tools.sql
+on demon-new: mysql -plucie98 <software_tools.sql
+
+on demon : 
+mysqldump -plucie --databases pacdb pacdb_spermato psl pwc uploads mpss h3udb mousespermato genome gene db3pr cerbo> othes.sql
+on demon-new: mysql -plucie98 <software_tools.sql
+
+copying multiple tables using mysqldump
+mysqldump -hcgd -p cgdsnpdb cgd_aminoacid cgd_blosum62NCBI cgd_items_type cgd_mouse_codonFrequency cgd_mutation_type cgd_organism_codonCount snp_chromosome  snp_frame snp_id_type snp_loc_func snp_strain snp_strain_synonym snp_strain_by_group snp_strain_groups > till_snp_loc.sql
+
+
+If you run the query which is given below in MySQL Query Browser then you will get the two columns first will display the Data Base Name and the second will display the Data Base Size in MB. 
+ 
+ SELECT table_schema "Data Base Name", sum( data_length + index_length )/1024/1024/1024 "Data Base Size in GB" 
+ FROM information_schema.TABLES GROUP BY table_schema ; 
+ 
+ If you have question in your mind like "How to view the Free space available for my Data Base in MySQL", then run the below query: 
+ 
+ SELECT table_schema "Data Base Name", 
+ sum( data_length + index_length ) /1024/1024/1024 "Data Base Size in GB", 
+ sum( data_free )/1024 /1024/1024"Free Space in GB" 
+ FROM information_schema.TABLES 
+ GROUP BY table_schema ; 
++--------------------+----------------------+------------------+
+| Data Base Name     | Data Base Size in GB | Free Space in GB |
++--------------------+----------------------+------------------+
+| cgdsnpdb           |     440.371126354672 |   0.000000000000 | 
+| information_schema |       0.000003814697 |   0.000000000000 | 
+
+
+SELECT sum( data_length + index_length ) /1024/1024/1024 "Data Base Size in GB"  FROM information_schema.TABLES ;
++----------------------+
+| Data Base Size in GB |
++----------------------+
+|     227.000154754147 |
++----------------------+
+
+Demon:
+SELECT table_schema "Data Base Name",   sum( data_length + index_length ) /1024/1024/1024 "Data Base Size in GB",   sum( data_free )/1024 /1024/1024"Free Space in GB"   FROM information_schema.TABLES   GROUP BY table_schema;
+
+Load Started: 5:27pm
+
+
+
+

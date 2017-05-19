@@ -1,0 +1,13 @@
+Multi-Organisms alignment tool
+Output:
+1. SeqID
+2. organisms_list (commas separated)
+3. chromosome_list/starnd
+4. seq_align_starts
+5. seq_align_ends
+6. genome_align_starts
+7. genome_align_ends
+8. associated_genes
+9. associated_GOs
+10.SNP density
+11.Regulatory elements 

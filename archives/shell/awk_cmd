@@ -1,0 +1,23 @@
+Use of awk utility:
+To manipulate data.
+nh@phoenix:~/work/coodep> awk '/Drug/' coodep_colleges_Security_111007.txt |head
+100654  Arrests - On-Campus     Drug law violations     24      2003    14      2004    13      2005
+100654  Arrests - On-Campus Residence Halls     Drug law violations     4       2003    6       2004    3       2005
+100663  Arrests - On-Campus     Drug law violations     10      2003    17      2004    6       2005
+100663  Arrests - On-Campus Residence Halls     Drug law violations     10      2003    10      2004    1       2005
+100690  Arrests - On-Campus     Drug law violations     0       2003    0       2004    0       2005
+100706  Arrests - On-Campus     Drug law violations     0       2003    0       2004    4       2005
+100706  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    1       2005
+100724  Arrests - On-Campus     Drug law violations     4       2003    2       2004    1       2005
+100724  Arrests - On-Campus Residence Halls     Drug law violations     1       2003    0       2004    0       2005
+100760  Arrests - On-Campus     Drug law violations     0       2003    0       2004    0       2005
+
+nh@phoenix:~/work/coodep> awk '/Drug/' coodep_colleges_Security_111007.txt |awk '/Residence/'|head
+100654  Arrests - On-Campus Residence Halls     Drug law violations     4       2003    6       2004    3       2005
+100663  Arrests - On-Campus Residence Halls     Drug law violations     10      2003    10      2004    1       2005
+100706  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    1       2005
+100724  Arrests - On-Campus Residence Halls     Drug law violations     1       2003    0       2004    0       2005
+100812  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    0       2005
+100830  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    6       2004    1       2005
+100858  Arrests - On-Campus Residence Halls     Drug law violations     4       2003    5       2004    5       2005
+100937  Arrests - On-Campus Residence Halls     Drug law violations     0       2003    0       2004    0       2005

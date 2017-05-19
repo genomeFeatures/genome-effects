@@ -1,0 +1,7 @@
+# runs every 4:30pm  
+#30 16 * * * perl /home/lnh/ensembl_load/getEnsemblAnnotations.pl -o /cgd/data1/cgdsnpdb/ensembl_annotations/ > /home/lnh/run_logs.log
+#run this cron job to update graber transcript database with mgi current gene annotations : check every 7th of the month at 5:30
+30 5 7 * * perl /home/lnh/work/projects/graber_transcriptdb/src/pl/download_mgiAnnotations.pl -o /scratch/data/downloads/mgi > /scratch/data/downloads/mgi/run_logs.log
+#run this cron job to update the ESTs database every 11th of the month at 5:30 am
+
+
