@@ -1,0 +1,126 @@
+#!/bin/sh
+
+################################################################################
+# Principal Investigator : Joel Graber
+# Author : Lucie Ndzana Hutchins
+# Title  : Scientific Software Engineer
+# Company : Computational Science and System Biology, The Jackson Laboratory 
+# 
+# The setup script is expected to be under the nnmf directory
+# at the same level with the configuration file
+################################################################################
+TOP=`pwd`
+
+#
+# Check that the directory/file structure under NNMFHOME is as expected
+# (bin, data, src)
+# make bin directory to store executables
+cd ../
+
+if [ ! -d bin ]; then
+	echo "Making 'bin' directory in `pwd`"
+	mkdir bin
+fi
+
+if [ ! -d data ]; then
+	echo "Making 'data' directory in `pwd`"
+	mkdir data
+fi
+
+if [ ! -d src ]; then
+	echo "Can't setup the nnmf.Missing the src directory in `pwd`. Make sure that the package contains all the files (see readme.txt)"
+	exit 1
+fi
+#
+# now that we have the expected structure,
+# check the structure of the src directory (lib, Makefile, pipeline_build)
+#
+cd src/
+SRC=`pwd`
+if [ ! -d pipeline_build ]; then
+	echo "Making 'pipeline_build' directory in `pwd`"
+	mkdir pipeline_build   #create the pipeline directory
+fi
+if [ ! -d lib ]; then
+	echo "Can't setup the nnmf. Missing the 'lib' directory in `pwd`.Make sure that the package contains all the files (see readme.txt)"
+	exit 1
+fi
+#
+# now generate executable for each supporting program ( fa2Stats,WindowCount,nmfSmoothAndPseudoCounts,
+# nmfSortMatrix,nmfBuildMotifs,nmfMotifsToModels,pwmToExamples,nmfWebPage)
+#
+cd pipeline_build      #create symbolics link for all the required programs
+
+if [ ! -h lib ]; then
+     echo "Linking  to the lib directory  in `pwd`"
+     ln -s $SRC/lib lib
+fi
+if [ ! -h fa2Stats.cpp ]; then
+    echo "Linking  to fa2Stats.cpp  in `pwd`"
+    ln -s $SRC/lib/fa2Stats.cpp fa2Stats.cpp
+fi
+
+if [ ! -h WindowCount.cpp ]; then
+     echo "Linking  to WindowCount.cpp  in `pwd`"
+     ln -s $SRC/lib/WindowCount.cpp WindowCount.cpp
+fi
+
+if [ ! -h nmfSmoothAndPseudoCounts.cpp ]; then
+    echo "Linking  to nmfSmoothAndPseudoCounts.cpp  in `pwd`"
+    ln -s $SRC/lib/nmfSmoothAndPseudoCounts.cpp nmfSmoothAndPseudoCounts.cpp
+fi
+
+if [ ! -h nmfSortMatrix.cpp ]; then
+    echo "Linking  to nmfSortMatrix.cpp  in `pwd`"
+    ln -s $SRC/lib/nmfSortMatrix.cpp nmfSortMatrix.cpp
+fi
+
+if [ ! -h buildMotifs.cpp ]; then
+    echo "Linking  to buildMotifs.cpp  in `pwd`"
+    ln -s $SRC/lib/buildMotifs.cpp buildMotifs.cpp
+fi
+
+if [ ! -h nmfMotifsToModels.cpp ]; then
+    echo "Linking  to nmfMotifsToModels.cpp  in `pwd`"
+    ln -s $SRC/lib/nmfMotifsToModels.cpp nmfMotifsToModels.cpp
+fi
+
+if [ ! -h pwmToExamples.cpp ]; then
+    echo "Linking  to pwmToExamples.cpp  in `pwd`"
+    ln -s $SRC/lib/pwmToExamples.cpp pwmToExamples.cpp
+fi
+
+if [ ! -h nmfWebPage.cpp ]; then
+    echo "Linking  to nmfWebPage.cpp  in `pwd`"
+    ln -s $SRC/lib/nmfWebPage.cpp nmfWebPage.cpp
+fi
+
+# Now generate the executables for each of these programs
+ make
+
+if [ ! -f libcpp_core.a ]; then
+   echo "Could not generate libcpp_core.a library needed to build the nmf program"
+   exit 1
+fi
+# remove all the symbolinks and object files
+rm *.cpp
+rm *.o
+#move the libcpp_core.a to nmf/src/
+mv libcpp_core.a ../lib/
+# move all the executable to nmf/bin
+#mv nmf* ../../bin/cpp/
+#mv fa2Stats  ../../bin/cpp/
+#mv pwmToExamples  ../../bin/cpp/
+#mv WindowCount  ../../bin/cpp/
+
+cd ../
+# generate the the nnmf program and store it under the bin directory
+make
+if [ ! -f nnmf ]; then
+  echo "Could not build the nmf program"
+  exit 1
+fi
+mv nnmf ../bin/cpp/
+rm *.o
+cd $TOP
+echo "The nmf package is now installed. Read the pipeline.readme.txt for details on how to run the pipeline"

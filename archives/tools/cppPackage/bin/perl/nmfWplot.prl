@@ -1,0 +1,94 @@
+#!/usr/bin/perl
+
+#my ($bsz,$pad,$imwid,$pTh,$dTh,$genome,$prefix,$outdir,$x2sc,$dotw,$blockfile,$blocks,$syn,$synfile,$invert);
+my ($prefix,$nModels,$xStart,$xStop,$yMax,$nyMax,$title,$xlabel,$ylabel1,$ylabel2,$prefix,$iHeight,$iWidth,$bfSize);
+
+&GetOptions("o=s"=>\$prefix,
+	    "r=i"=>\$nModels,
+	    "x0=i"=>\$xStart,
+	    "x1=i"=>\$xStop,
+	    "yM=i"=>\$yMax,
+	    "nM=f"=>\$nyMax,
+	    "T=s"=>\$title,
+	    "xL=s"=>\$xlabel,
+	    "yL1=s"=>\$ylabel1,
+	    "yL2=s"=>\$ylabel2,
+	    "iH=i"=>\$iHeight,
+	    "iW=i"=>\$iWidth,
+	    "f=i"=>\$bfSize
+	   );
+
+use Getopt::Long;
+use strict;
+#use GD;
+
+$prefix    = $prefix    ? $prefix    : "snp";
+$xlabel    = $xlabel    ? $xlabel    : "Position relative to 3'-processing site (nt)";
+$ylabel1   = $ylabel1   ? $ylabel1   : "Relative element activity (arb.)";
+$ylabel2   = $ylabel2   ? $ylabel2   : "Positional probability density";
+$nModels   = $nModels   ? $nModels   : 8;
+$iHeight   = $iHeight   ? $iHeight   : 480;
+$iWidth    = $iWidth    ? $iWidth    : 800;
+$bfSize    = $bfSize    ? $bfSize    : 10;
+my $lfSize = $bfSize+2;
+my $tfSize = $bfSize+4;
+#no defaults on the xStart, xStop, yMax, nyMax; if unset let gnuplot generate them automatically
+
+print "############### Start  Parameters #################\n";
+print "#  prefix    = $prefix\n#  nModels   = $nModels\n#  xlabel    = $xlabel\n#  ylabel1   = $ylabel1\n#  ylabel2   = $ylabel2\n";
+print "#  title     = $title \n#  xStart    = $xStart \n#  xStop     = $xStop \n#  yMax      = $yMax   \n#  nyMax     = $nyMax\n";
+print "###############  End  Parameters  #################\n\n";
+
+my $iprefix= $ARGV[0];
+my $wifname = $iprefix . ".weights.txt";
+my $nifname = $iprefix . ".nweights.txt";
+my $woname = $prefix . "wgp.txt";
+my $noname = $prefix . "ngp.txt";
+my $wpfname = $prefix . ".w.png";
+my $npfname = $prefix . ".n.png";
+
+print "############### Start derived data ################\n";
+print "# using $wifname to generate gnuplot script $woname and png file $wpfname\n";
+print "# using $nifname to generate gnuplot script $noname and png file $npfname\n";
+print "###############  End derived data  ################\n\n";
+
+print "set terminal png font \"arial\" size $iWidth,$iHeight\n";
+print "set output \"$wpfname\"\n";
+print "set rmargin 10\nset lmargin 10\n";
+
+print "set xlabel \"$xlabel\" font \"arial,$lfSize,bold\"\n"  if $xlabel;
+print "set ylabel \"$ylabel1\" font \"arial,$lfSize,bold\"\n" if $ylabel1;
+print "set title \"$title\" font \"arial,$tfSize,bold\"\n"    if $title;
+print "set xtics font \"arial,$bfSize\"\nset ytics font \"arial,$bfSize\"\n";
+print "set xrange [$xStart:$xStop]\n"                    if $xStart && $xStop;
+print "set grid lt 0\nshow grid\nset key outside right title \"Elements\" box linestyle -1\n";
+
+print "plot \\\n";
+my @ltArray = (0,-1,8,3,2,7,9,6,4,5,10,11,12,13,14,15,16 );
+my $i;
+for($i = 1; $i<=$nModels; ++$i) {
+  print "     \"$wifname\" using 1:",$i+1," axes x1y1 with l lt $ltArray[$i] lw 2 title \"$i\" ";
+  if($i<$nModels) {
+    print ", \\";
+  }
+  print "\n";
+}
+
+print "set output \"$npfname\"\n";
+print "set rmargin 10\n";
+
+print "set xlabel \"$xlabel\" font \"arial,$lfSize,bold\"\n"  if $xlabel;
+print "set ylabel \"$ylabel2\" font \"arial,$lfSize,bold\"\n" if $ylabel2;
+print "set title \"$title\" font \"arial,$tfSize,bold\"\n"    if $title;
+print "set xtics font \"arial,$bfSize\"\nset ytics font \"arial,$bfSize\"\n";
+print "set xrange [$xStart:$xStop]\n"                    if $xStart && $xStop;
+print "set grid lt 0\nshow grid\nset key outside right title \"Elements\" box linestyle -1\n";
+
+print "plot \\\n";
+for($i = 1; $i<=$nModels; ++$i) {
+  print "     \"$nifname\" using 1:",$i+1," axes x1y1 with l lt $ltArray[$i] lw 2 title \"$i\" ";
+  if($i<$nModels) {
+    print ", \\";
+  }
+  print "\n";
+}

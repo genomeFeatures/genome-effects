@@ -1,0 +1,123 @@
+#!/bin/sh
+
+################################################################################
+# Principal Investigator : Joel Graber
+# Author : Lucie Ndzana Hutchins
+# Title  : Scientific Software Engineer
+# Company : Computational Science and System Biology, The Jackson Laboratory 
+# 
+# The run_pipeline script is expected to be under the nnmf directory
+# at the same level with the configuration file
+################################################################################
+TOP=`pwd`
+
+# variable definitions (edit as needed)
+
+CONFIGURATION=pipeline_arg_config
+# ensure that the config file exists
+if test ! -r $CONFIGURATION
+then
+	echo "Missing configuration file.  Please create $CONFIGURATION."
+	exit 1
+fi
+
+# read variables from the config file
+exec 4<&0 ## Makes fd 4 a copy of fd 0 (standard input).
+exec < $CONFIGURATION
+while read name value junk
+do
+	case "$name" in
+		NMF_PATH)
+			NMF_PATH=$value;;
+                INPUT_FILE)
+                        INPUT_FILE=$value;;
+                WORD_LEN)
+                        WORD_LEN=$value;;
+                OUTPUT_PREFIX)
+                        OUTPUT_PREFIX=$value;;
+                A)
+                        A=$value;;
+                _R)
+                        _R=$value;;
+                _K)
+                        _K=$value;;
+                _W)
+                        _W=$value;;
+                _Z)
+                        _Z=$value;;
+                ARG_D)
+                        ARG_D=$value;;
+                _P)
+                        _P=$value;;
+                _SMN)
+                        _SMN=$value;;
+                SMR)
+                        SMR=$value;;
+                SMP)
+                        SMP=$value;;
+                _E)
+                        _E=$value;;
+                NMFI)
+                        NMFI=$value;;
+                NMFS)
+                        NMFS=$value;;
+                XLAB)
+                        XLAB=$value;;
+                BMS)
+                        BMS=$value;;
+                BMMINW)
+                        BMMINW=$value;;
+                BMMAXW)
+                       BMMAXW=$value;;
+                BMI)
+                        BMI=$value;;
+                BMN)
+                        BMN=$value;;
+                BMP)
+                        BMP=$value;;
+                BMX)
+                        BMX=$value;;
+                BMFF)
+                       BMFF=$value;;
+                MMMINIC)
+                       MMMINIC=$value;;
+                MMMINW)
+                        MMMINW=$value;;
+                NEX)
+                        NEX=$value;;
+                NWD)
+                        NWD=$value;;
+		[A-z]*)
+			;;	# other parms are not needed by Install
+	esac
+done
+exec 0<&4 ## restore standard input.
+#
+# cd to pipeline and run the run_pipeline script
+#
+#echo "-r $_R -k $_K -w $_W -z $_Z -d $ARG_D -p $_P -smN $_SMN -smr $SMR -smp $SMP -e $_E -nmfI $NMFI "
+#-nmfS $NMFS -xLab $XLAB -bmS $BMS -bmMinW $BMMINW -bmMaxW $BMMAXW -bmP $BMP \
+# -bmN $BMN -bmI $BMI -bmx $BMX -bmff $BMFF -mmMinIC $MMMINIC -mmMinW $MMMINW -nEx $NEX -nWd $NWD  "
+ 
+cd $NMF_PATH/pipeline
+if [ ! -f run_nmf_pipeline.prl ]; then
+	echo "Missing pipeline script (run_nmf_pipeline.prl) in `pwd`"
+	exit 1
+fi
+echo "Running pipeline in `pwd`"
+#
+# now that we have the expected structure,
+# run the script
+
+      
+perl run_nmf_pipeline.prl -i data/$INPUT_FILE -o $OUTPUT_PREFIX -L $WORD_LEN -a $A  >& $NMF_PATH/logs/pipeline_run.log 
+mv *.err $NMF_PATH/logs/
+mv *.log $NMF_PATH/logs/
+mv *.png result/
+mv *.txt result/
+mv *.stat result/
+mv *.motifs result/
+mv *.html result/
+
+cd $TOP
+echo "Pipeline complete"

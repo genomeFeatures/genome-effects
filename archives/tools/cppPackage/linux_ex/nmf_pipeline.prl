@@ -1,0 +1,213 @@
+#! /usr/bin/perl
+
+my($startAction,$stopAction,$infile,$prefix,$dryRun,$wc_L,$wc_z,$wc_w,$wc_k); # fa2Stats and WindowCount (wc) arguments
+my($sm_r,$sm_pc,$sm_N); #nmfSmoothAndPseudo arguments
+my($nmf_r,$nmf_t,$nmf_S,$nmf_I); # nmf arguments
+my($bm_m,$bm_M,$bm_I,$bm_S,$bm_x,$bm_P,$bm_ff,$bm_N,$pwm_nEx); #nmfBuildMotif arguments
+my($mm_m,$mm_t,$pwm_nEx); #nmfMotifsToModels and pwmToExamples arguments
+my($site_lab);            #functional site label for x-axis plot on  positioning
+my($ht_nw); #nmfWebPage option
+
+open (RUNLOG, ">>run.log") || die "Can't open run.log\n";
+my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdist);
+($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdist)= localtime(time);
+my $numArgs= $#ARGV +1; my $argnum;
+print RUNLOG "nmf_pipeline.prl ";
+foreach $argnum (0 .. $#ARGV) {
+  print RUNLOG " $ARGV[$argnum]";
+}
+#my $inputLine= join(@ARGV);
+###print RUNLOG @ARGV;
+printf RUNLOG ": %4d-%02d-%02d %02d:%02d:%02d\n",$year+1900,$mon+1,$mday,$hour,$min,$sec;
+close RUNLOG;
+
+
+#run options
+&GetOptions("a=i"=>\$startAction,  #start action in the analysis
+	    "p=i"=>\$stopAction,   #stop action in the analysis
+	    "o=s"=>\$prefix,       #prefix for all output files
+	    "i=s"=>\$infile,       #input fasta-formatted files
+	    "d=s"=>\$dryRun,       #flag variable that makes commands print out, but not run
+
+	    "k=i"=>\$wc_k,         #k-mer size for the PWC matrix
+	    "w=i"=>\$wc_w,         #window size for the PWC matrix
+	    "L|l=i"=>\$wc_L,       #max line length 
+	    "z|Z=i"=>\$wc_z,       #zero point in the sequences
+
+	    "smr=i"=>\$sm_r,       #smoothing window size
+	    "smp=f"=>\$sm_pc,      #smoothing pseudo count size
+	    "smN=i"=>\$sm_N,       #smoothing max output k-mers
+
+	    "r=i"=>\$nmf_r,        #nmf number of patterns
+	    "e=f"=>\$nmf_t,        #nmf stopping threshold
+	    "nmfI=i"=>\$nmf_I,     #nmf max Iterations
+	    "nmfS=i"=>\$nmf_S,     #nmf number of restarts
+
+	    "xLab=s"=>\$site_lab,  #label of zero point in all sequences
+
+	    "bmS=i"=>\$bm_S,       #buildMotifs number of restarts for each motif
+	    "bmMinW=i"=>\$bm_m,    #buildMotifs min motif size
+	    "bmMaxW=i"=>\$bm_M,    #buildMotifs max motif size
+	    "bmP=i"=>\$bm_P,       #buildMotifs stopping plateau size
+	    "bmN=i"=>\$bm_N,       #buildMotifs number of motifs to build
+	    "bmI=i"=>\$bm_I,       #buildMotifs max iterations per motif
+	    "bmx=i"=>\$bm_x,       #buildMotifs min overlap of k-mer with motif
+	    "bmff=f"=>\$bm_ff,     #buildMotifs fudge-factor - exponent for all k-mer weights
+
+	    "mmMinIC=f"=>\$mm_t,   #motifsToModels trimming threshold.  Min IC for inclusion in final motif
+	    "mmMinW=i"=>\$mm_m,    #motifsToModels min final size
+	    "nEx=i"=>\$pwm_nEx,    #pwmToExamples number of examples
+	    "nWd=i"=>\$ht_nw       #nmfWebPage number of motifs
+	   );
+# force explicit naming (no defaults) of the following arguments:
+#    -i  (infile),
+#    -L  (sequence length),
+#    -o  (output prefix),
+#    -st (startAction)
+#$prefix      = $prefix      ? $prefix      : "NMFout";
+$stopAction  = $stopAction  ? $stopAction : 12;
+$dryRun      = $dryRun      ? 1           : 0;
+$site_lab    = $site_lab    ? $site_lab   : "3'-processing site";
+#
+$wc_k        = $wc_k        ? $wc_k     : 4;
+$wc_w        = $wc_w        ? $wc_w     : 5;
+$wc_z        = $wc_z        ? $wc_z     : 0;
+
+#no defaults for the smoothing parameters $sm_pc and $sm_r 
+$nmf_r       = $nmf_r       ? $nmf_r    : 8;
+$nmf_t       = $nmf_t       ? $nmf_t    : 1.0e-6;
+$nmf_S       = $nmf_S       ? $nmf_S    : 300;
+$nmf_I       = $nmf_I       ? $nmf_I    : 1000;
+
+$bm_I        = $bm_I        ? $bm_I     : 2000;
+$bm_m        = $bm_m        ? $bm_m     : 4;
+$bm_M        = $bm_M        ? $bm_M     : 8;
+$bm_N        = $bm_N        ? $bm_N     : 1000;
+$bm_x        = $bm_x        ? $bm_x     : 2;
+$bm_P        = $bm_P        ? $bm_P     : 200;
+$bm_S        = $bm_S        ? $bm_S     : 300;
+$bm_ff       = $bm_ff       ? $bm_ff    : 1.0;
+
+$mm_m        = $mm_m        ? $mm_m     : 4;
+$mm_t        = $mm_t        ? $mm_t     : 0.2;
+$pwm_nEx     = $pwm_nEx     ? $pwm_nEx  : 100;
+$ht_nw       = $ht_nw       ? $ht_nw    : 10;
+use strict;
+use Getopt::Long;
+
+if(! $infile) {
+  print "You must specify an input file with the -i option\n";
+  exit;
+}
+if(! $prefix) {
+  print "You must specify the output file prefix with the -o option\n";
+  exit;
+}
+if(! $wc_L) {
+  print "You must specify the length of the sequences in the input file with the -L option\n";
+  exit;
+}
+if(! $startAction) {
+  print "You must specify the analysis starting point with the -a option\n";
+  exit;
+}
+
+my $prefix1 = $prefix . ".w" . $wc_w . "k" . $wc_k;
+my $prefix2 = $prefix . ".sw" . $wc_w . "k" . $wc_k;
+my $prefix3 = $prefix . ".sw" . $wc_w . "k" . $wc_k . "r" . $nmf_r;
+#print "k = $k\n\$w = $w\nL = $L\nZ = $Z\nprefix = $prefix\ninfile = $infile\nr = $r\nth = $th\n";
+
+#################################################################################
+#  Important-  $binDir must point to the directory with all nmf executables in it.  Default is '.', the current dir
+my $binDir  = ".";
+#################################################################################
+#  Important- the generatino of sequence logos requires the presence of weblogo from the Brenner lab.  $logoDir 
+#  must be set to point to this directory
+my $logoDir = "$binDir/weblogo";
+if($startAction <= 1) {
+  my $statComm = "$binDir/fa2Stats $infile -r 1 -o $prefix";
+  print "#######################################################################################################\n";
+  print "# (1) stat file build: $statComm\n";
+  system($statComm) if(! $dryRun);
+}
+
+if($startAction <= 2 && $stopAction > 1) {
+  print "\n#######################################################################################################\n";
+  my $wcComm = "$binDir/WindowCount $infile -L $wc_L -z $wc_z -o $prefix1 -w $wc_w -k $wc_k -s2";
+  print "# (2) WindowCount call: $wcComm\n";
+  system($wcComm) if(! $dryRun);
+}
+
+if($startAction <= 3 && $stopAction > 2) {
+  print "\n#######################################################################################################\n";
+  my $smComm = "$binDir/nmfSmoothAndPseudoCounts $prefix1 -o $prefix2";
+  $smComm = $smComm . " -r $sm_r"  if ($sm_r);
+  $smComm = $smComm . " -p $sm_pc" if ($sm_pc);
+  $smComm = $smComm . " -N $sm_N"  if ($sm_N);
+  print "# (3) Smooth call: $smComm\n";
+  system($smComm) if(! $dryRun);
+}
+
+if($startAction <= 4 && $stopAction > 3) {
+  print "\n#######################################################################################################\n";
+  my $nmfComm = "$binDir/nnmf $prefix2.counts.txt -t $nmf_t -r $nmf_r -I $nmf_I -S $nmf_S -o $prefix3";
+  print "# (4) NMF call: $nmfComm\n";
+  system($nmfComm) if(! $dryRun);
+}
+
+if($startAction <= 5 && $stopAction > 4) {
+  print "\n#######################################################################################################\n";
+  my $srtComm = "$binDir/nmfSortMatrix $prefix3 -o $prefix3";
+  print "# (5) nmfSortMatrix call: $srtComm\n";
+  system($srtComm) if(! $dryRun);
+}
+
+if($startAction <= 6 && $stopAction > 5) {
+  print "\n#######################################################################################################\n";
+  my $wpComm = "perl $binDir/nmfWplot.prl $prefix3 -o $prefix3 -r $nmf_r -xL \"Position relative to $site_lab (nt) \" | gnuplot";
+  print "# (6) nmfWplot call: $wpComm\n";
+  system($wpComm) if(! $dryRun);
+}
+
+if($startAction <= 7 && $stopAction > 6) {
+  print "\n#######################################################################################################\n";
+  my $bmComm = "$binDir/nmfBuildMotifs $prefix3.bases.txt -m $bm_m -M $bm_M -S $bm_S -I $bm_I -x $bm_x -P $bm_P -f $bm_ff -B $prefix.stat -o $prefix3 -N $bm_N -multinomial";
+  print "# (7) buildMotifs call: $bmComm\n";
+  system($bmComm) if(! $dryRun);
+}
+
+if($startAction <= 8 && $stopAction > 7) {
+  print "\n#######################################################################################################\n";
+  my $mmComm = "$binDir/nmfMotifsToModels $prefix3 -o $prefix3 -m $mm_m -t $mm_t";
+  print "# (8) nmfMotifsToModels call: $mmComm\n";
+  system($mmComm) if(! $dryRun);
+}
+
+if($startAction <= 9 && $stopAction > 8) { 
+  print "\n#######################################################################################################\n";
+  my $pwmComm = "$binDir/pwmToExamples $prefix3.models.txt -n $pwm_nEx -o $prefix3 -sep";
+  print "# (9) pwmToExamples call: $pwmComm\n";
+  system($pwmComm) if(! $dryRun);
+}
+
+if($startAction <= 10 && $stopAction > 9) {
+  print "\n#######################################################################################################\n";
+  print "# (10) seqlogo calls:   \n";
+  my $i;
+  my $base= "A";
+  for($i=0; $i<$nmf_r; $i++) {
+    my $slCall= "$logoDir/seqlogo -f $prefix3.$base.logoEx.txt -F PNG -o $prefix3.$base -Y -c -a -e -p -n -w 12 -h 6 -x position -y bits";
+    print "#   $slCall\n";
+    #print "would run\n" if(! $dryRun);
+    system($slCall) if(! $dryRun);
+    $base++;
+  }
+}
+
+if($startAction <= 11 && $stopAction > 10) {
+  print "\n#######################################################################################################\n";
+  my $wpComm = "$binDir/nmfWebPage $prefix3 $prefix1 $prefix -r $nmf_r -nw $ht_nw -i $infile";
+  print "# (11) nmfWeb call: $wpComm\n\n";
+  #print "would run\n" if(! $dryRun);
+  system($wpComm) if(! $dryRun);
+}

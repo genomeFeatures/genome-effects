@@ -1,0 +1,149 @@
+<!--************************************************************************
+* Project: Packaging the Nonnegative Matrix Factorization Algorithm
+* Paper: Position-Dependent Motif Characterization Using Nonnegative 
+*        Matrix Factorization 
+* Publication: Bioinformatics (Oxford, England) (13 October 2008)
+* Date: December 2008
+* Authors: Joel Graber, Lucie Hutchins,Sean M M Murphy, Priyam Singh
+* Organization : The Jackson Laboratory, Bar-Harbor Maine, USA.
+*************************************************************************
+-->
+<html>
+<head><title>Nonnegative Matrix Factorization Pipeline</title>
+  <link  href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+      <div id="header">
+       <h1>Position-dependent motif characterization using nonnegative matrix factorization</h1>
+        <span>Lucie N. Hutchins, Sean Murphy, Priyam Singh, Joel H. Graber</span>
+       
+      </div>
+     
+      <div id="navband">
+           <ul><li><a href="index.html">Readme</a></li>
+               <li><a href="howtorun.html">How To Run</a> </li>
+               <li><a href="docs/nmfOutputFiles.txt">Results Files</a></li>
+               <li><a href="docs/nmfPipelineArguments.txt">Pipeline Arguments</a></li>
+                </ul>
+      </div>
+     <div id="maindiv"><div id="lp">
+  <h3>In press at <a href="http://bioinformatics.oxfordjournals.org/">Bioinformatics</a></h3>
+<span><h2>Supplemental Data And Programs</h2></span>
+<table id="supt" border="1" >
+<tr><th colspan="3">Fasta-formatted sequence files</th></tr>
+<tr>
+<th width="33%">Random sequences with<br />implanted patterns</th>
+<th width="34%">3'-processing<br />(polyadenylation) sites</th>
+<th width="33%"><i>D. melanogaster</i><br />transcription start sites</th>
+</tr>
+<tr><td>Random sequences, no patterns<br />
+T = <a href="sequenceFiles/N30.fa">30</a>, <a href="sequenceFiles/N100.fa">100</a>,<a href="sequenceFiles/N300.fa">300</a>,
+<a href="sequenceFiles/N1000.fa">1000</a>,<a href="sequenceFiles/N3000.fa">3000</a>,<a href="sequenceFiles/N10000.fa">10000</a></td>
+<td><a href="sequenceFiles/hs.fa">Human (10059 sequences)</a></td>
+<td><a href="sequenceFiles/uniqSeqs.fa">All Unique Sequences</a></td>
+</tr>
+
+<tr>
+<td>Random bg, six inserted patterns<br />
+T = <a href="sequenceFiles/N30.6Sig.fa">30</a>, <a href="sequenceFiles/N100.6sig.fa">100</a>,<a href="sequenceFiles/N300.6sig.fa">300</a>,
+<a href="sequenceFiles/N1000.6Sig.fa">1000</a>,<a href="sequenceFiles/N3000.6sig.fa">3000</a>,<a href="sequenceFiles/N10000.6sig.fa">10000</a></td>
+<td><a href="sequenceFiles/mm.fa">Mouse (8542 sequences)</a></td>
+<td><a href="sequenceFiles/ngSet1.fa">Supplement set 1</a></td>
+</tr>
+<tr><td><h2>nmf Downloads</h2></td><td colspan="2"><b><a href="downloads/nmf.tar.gz">nmf.tar.gz</a></b></td></tr>
+
+</table>
+
+ <p>
+ <h1>Abstract</h1>
+  MOTIVATION: Cis-acting regulatory elements are frequently constrained by both 
+  sequence content and positioning relative to a functional site, such as a splice or 
+  polyadenylation site. We describe an approach to regulatory motif analysis based on 
+  nonnegative matrix factorization (NMF). Whereas existing pattern recognition algorithms
+  commonly focus primarily on sequence content, our method simultaneously characterizes 
+  both positioning and sequence content of putative motifs. RESULTS: Tests on artificially
+  generated sequences show that NMF can faithfully reproduce both positioning and content 
+  of test motifs. We show how the variation of the residual sum of squares can be used 
+  to give a robust estimate of the number of motifs or patterns in a sequence set. 
+  Our analysis distinguishes multiple motifs with significant overlap in sequence 
+  content and/or positioning. Finally, we demonstrate the use of the NMF approach 
+  through characterization of biologically interesting data sets. Specifically, 
+  an analysis of mRNA 3'-processing (cleavage and polyadenylation) sites from a broad 
+  range of higher eukaryotes reveals a conserved core pattern of three elements
+  </p>
+  <h2> Software and System Requirements</h2>
+  <table id="req"><tr><td> System requirements </td><td> Lunix/Unix</td></tr>
+   <tr><td>Operating System </td><td>A reasonably modern 32/64-bit Linux environment is required. 
+                      </td></tr> 	 
+  <tr><td>Computer Processor</td><td> 1.5 GHz or better</td></tr>
+  <tr><td>Computer Memory</td><td> 1 GB or more</td></tr>
+  <tr><td>Software requirements</td><td><ol><li> gsl package Installed</li><li>g++ compiler</li>
+      <li>gnuplot installed and included in your command line path</li></ol>
+  </td></tr></table>
+  
+  <h2>Files included in this package</h2>
+  <ol>
+  <li> setup script (to compile the nmf )</li>
+ <li> Configuration file(pipeline_arg_config) </li>
+ <li> Install shell script file (check_libraries)</li>
+ <li> source code files of:
+     <ol>
+    <li> fa2Stats </li>
+     <li> WindowCount</li>
+     <li> nmfSmoothAndPseudoCounts</li> 
+     <li> nnmf</li>
+    <li> nmfSortMatrix</li>
+     <li> nmfBuildMotifs  </li>
+     <li> nmfMotifsToModels </li>
+    <li> pwmToExamples </li>
+     <li>seqlogo </li>
+    <li> nmfWebPage </li></ol></li>
+  <li>html main page (index.html)</li>
+  </ol>
+ <h2>Third-Party Software</h2>
+<table><tr><td class="cheader">weblogo package </td></tr>
+ <tr><td>WebLogo is a web based application designed to make the generation of 
+ sequence logos as easy and painless as possible. 
+ Sequence logos are a graphical representation of an amino acid or 
+ nucleic acid multiple sequence alignment developed by Tom Schneider
+ and Mike Stephens. Each logo consists of stacks of symbols, one stack 
+ for each position in the sequence. The overall height of the stack indicates 
+ the sequence conservation at that position, while the height of symbols 
+ within the stack indicates the relative frequency of each amino or
+ nucleic acid at that position. In general, a sequence logo provides a richer
+ and more precise description of, for example, a binding site, than would a 
+ consensus sequence. <p>
+
+ WebLogo requires a recent version of gs (ghostscript) 
+     <http://www.cs.wisc.edu/~ghost/> to create PNG and PDF output, and 
+  ImageMagic's convert <http://www.imagemagick.org/> to create GIFs.
+   <u><li>./seqlogo -F PDF -f globin.fasta > globin.pdf </li>
+   <li>./seqlogo -F PNG -f globin.fasta > globin.png</li>
+   <li>./seqlogo -F GIF -f globin.fasta > globin.png </li></ul></p>
+</td></tr>
+ <tr><td class="cheader">gsl package</td></tr>
+ <tr><td>GSL package ( http://directory.fsf.org/project/gsl/ ) 
+ The GNU Scientific Library (GSL) is a collection of routines for numerical 
+ computing.The routines are written from scratch by the GSL team in ANSI C, 
+ and present a modern API for C programmers, while allowing wrappers to be 
+ written for very high-level languages.The library is stable and available
+ for general us</td></tr>
+
+ <tr><td class="cheader">gnuplot </td></tr>
+ <tr><td>gnuplot package (http://sourceforge.net/project/showfiles.php?group_id=2055)
+ Gnuplot  is a portable command-line driven interactive data and function plotting 
+ utility for UNIX, IBM OS/2, MS Windows, DOS, Macintosh, VMS, Atari and many other platforms.
+ The software is copyrighted but freely distributed (i.e., you don't have to pay for it). 
+ It was originally intended as to allow scientists and students to visualize 
+ mathematical functions and data. </td></tr></table>
+ </div>
+ <div id="rnav">
+       <div class="cheader">Directories</div>
+       <ul><li><a href="index.html">home</a></li>
+             <li><a href="http://harlequin.jax.org/contact.html">Contact</a></li>
+              <li><b>nmf download</b> : <a href="downloads/nmf.tar.gz">nmf.tar.gz</a></li>
+            </ul>
+  </div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+#!/bin/sh
+
+################################################################################
+# Principal Investigator : Joel Graber
+# Author : Lucie Ndzana Hutchins
+# Title  : Scientific Software Engineer
+# Company : Computational Science and System Biology, The Jackson Laboratory 
+# 
+# The install script is expected to be under the nnmf directory
+# at the same level with the configuration file
+###############################################################################
+TOP=`pwd`
+
+GSLLIB_FLAG=1   #This flag is toggled to 0 if the gsl libraries not found
+
+GNUPLOT_FLAG=1  #This flag is toggled to 0 if gnuplot command is a failure
+#
+# Check if the gsl libraries are installed
+# send all standard output error to /dev/null
+#
+ ./../bin/cpp/fa2Stats  >&  ../logs/gsl_test.log
+ if [ -f ../logs/gsl_test.log ]; then
+     grep  "error" ../logs/gsl_test.log >& /dev/null
+     if [ $? -eq 0 ]; then 
+         #echo "Missing gsl libraries"
+         GSLLIB_FLAG=0
+     fi
+fi
+#
+################################################################################
+# Check if gnuplot is accessible
+# if not set the GNUPLOT_FLAG to 0
+#
+perl ../bin/perl/nmfWplot.prl mouse400.s2.sw5k4r8 -o mouse400.s2.sw5k4r8 -r 8 -xL\
+    "Position relative to 3'-processing site (nt) " | gnuplot  >& ../logs/gnuplot_test.log
+ if [ -f ../logs/gnuplot_test.log ]; then
+     grep  'unable to open display'  ../logs/gnuplot_test.log >& /dev/null
+     if [ $? -eq 0 ]; then 
+         GNUPLOT_FLAG=0
+     fi
+     grep  "command not found" ../logs/gnuplot_test.log >& /dev/null
+     if [ $? -eq 0 ]; then
+        GNUPLOT_FLAG=0
+     fi
+fi
+
+rm *.png
+if [ $GSLLIB_FLAG -eq 0 -o $GNUPLOT_FLAG -eq 0 ]; then
+   echo "-------------------------------------------------------------"
+   echo "Unable to install the nmf due to:"
+   if [ $GSLLIB_FLAG -eq 0 ]; then
+      echo "The gsl libraries are missing, see logs/gsl_test.log file"
+      echo "Please install or have your system administrator install the gsl libraries"
+      echo "You can use our gsl package under bin/libpck/gsl-1.8.tar.gz "
+      echo "-----------------------------------------------------------"
+   fi
+   if [ $GNUPLOT_FLAG -eq 0 ]; then
+       echo "Can't open gnuplot (gnuplot not installed or not included in your path), see logs/gnuplot_test.log file "
+       echo "Please Make sure that you are not running gnuplot remotely, or install or have your system administrator install the gnuplot libraries"
+       echo "You can use our gnuplot package under bin/libpck/gnuplot-4.2.4.tar.gz "
+       echo "-----------------------------------------------------------"
+   fi
+   exit 
+fi
+echo "gsl and gnuplot are installed.You can run the pipeline"

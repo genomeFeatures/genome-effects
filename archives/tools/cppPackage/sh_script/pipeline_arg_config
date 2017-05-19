@@ -1,0 +1,125 @@
+#************************************************************************
+#* Project: Packaging the Nonnegative Matrix Factorization Algorithm
+#* Paper: Position-Dependent Motif Characterization Using Nonnegative 
+#*        Matrix Factorization 
+#* Publication: Bioinformatics (Oxford, England) (13 October 2008)
+#* Date: December 2008
+#* Authors: Joel Graber, Lucie Hutchins,Sean M M Murphy, Priyam Singh
+#* Organization : The Jackson Laboratory, Bar-Harbor Maine, USA.
+#*************************************************************************
+# nmf path setting
+#
+# Absolute path to nmf package
+NMF_PATH  /home/lnh/prototype/lnh_cgd/nmf
+
+#
+# Do not change these four variables (DATA_PATH,RESULTS_PATH,LOG_PATH,BIN_PATH)
+#
+# Absolute path to nmf's input data 
+#DATA_PATH   /home/lnh/prototype/lnh_cgd/nmf/data 
+
+# path to nmf pipeline run results
+#RESULTS_PATH   /home/lnh/prototype/lnh_cgd/nmf/pipeline/result
+
+# path to logs
+#LOG_PATH     /home/lnh/prototype/lnh_cgd/nmf/logs
+
+# path to perl and cpp executables
+#BIN_PATH  /home/lnh/prototype/lnh_cgd/nmf/bin
+
+#******************************************************************************
+# Required arguments (with no default values)#******************************************************************************
+
+#
+# -i argument
+# Pipeline Input file name: required to be a valid name of a fasta-formatted sequence file
+# (myinput_file.txt is the name of your input file stored under data/
+#
+INPUT_FILE	test.fa
+
+#
+# -L argument
+# The length of all sequences found in myinput_file.txt specified by -i argument. 
+# All sequences are to be the same length.  The net behavior is unpredictable if 
+# either the sequences are not the same length, or if L is incorrectly specified.
+#
+WORD_LEN  400
+
+#
+# -o argument
+# output prefix
+# The prefix that will be appended to output files from all programs.  
+# The remainder of the output filenames are generated automatically according to run parameters.  
+# The string specified by -o must be capable of being part of legal filenames.
+#
+OUTPUT_PREFIX	test 
+
+# -a argument
+# start action (integer between 1 and 11)# The step number at which the pipeline is to start.
+A	1
+
+#
+# Optional arguments (including default values in square brackets)
+#
+# number of patterns to generate  (integer [8])#    This is the critical setting for obtaining good results, 
+#    the choice of the number of patterns (basis vectors) in the analysis.  
+_R	2
+
+# k: k-mer size (integer [4])#     Size of k-mers to use in the analysis;  constrained between 3 and 8.
+_K	4
+
+# w: window size (integer [5])#     The window size used in the analysis; upper limit is 100.
+_W	5
+
+# z: zero point (integer [0])#     Reference point in the sequences: word-counting windows will be set up in a non-overlapping manner based on this zero position
+_Z	0
+
+# d: dry run control (integer [0])#     Use of any non-zero value will cause the pipe to only print out all command lines with arguments without actually executing
+ARG_D  0
+
+# p: stop action (integer between 1 and 11, [11]#     The step number at which the pipeline is to stop.  Must be greater than or equal to the value set by a
+_P	11
+_SMN	65536
+# smN:  maximum number of words to use in the analysis (integer [65536])#        The nmf analysis can be focused and made to execute more quickly with an upper limit on the number of k-mers to be used. 
+#        If the number specified is less than 4^k, then the word list is truncated according to ranking based on 
+#        the ratio of variance to mean of the k-mer counts across the windows
+
+# smr:  smoothing radius on the rows of the word count matrix. (integer [1])#	The smoothing is a polynomial smoothing that preserves the sum of the counts of the word across all windows.  
+#	Larger values provide greater smoothing  Negative numbers provide undefined results.
+SMR	1
+SMP	0.0# -smp: pseudocounts (float [0.0])#      Pseudocount value to add to each element in the word count matrix prior to nmf analysis.
+_E	1.0e-6
+# e: nmf convergence tolerance (float [1.0e-6])#     The tolerance for determining convergence in each nmf restart.  
+#     Smaller numbers result in longer run times, and can prevent convergence
+# -nmfI:  max iterations in each restart (integer [1000])#	The maximum number of update steps to attempt in each restart of the nmf analysis.  
+#	Larger values for k or smaller values for w can result in the necessity to increase nmfI.
+NMFI	1000
+# -nmfS:  number of times to restart nmf analysis (integer [300])#	Larger numbers increase the confidence of finding a global best solution. 
+#	 Small numbers such as 20-30 are useful in determining optimum values of r.NMFS	300
+# -xLab: label for the reference point (string [Ò3Õ-processing siteÓ]#	A label for the position on which all sequences are aligned, as specified by Ðz option.XLAB	3'-processing site
+# -bmS: number of times to restart the motif build process (integer [300])#	The motif builder is a Monte Carlo Markov Chain (MCMC) process with random starting motif.   
+#	Larger number of restarts improves the likelihood of finding a global best solution.BMS	300
+# -bmMinW:  minimum size motif to consider (integer [4])
+BMMINW	4
+# -bmMaxW:  maximum size motif to consider (integer [8])BMMAXW	8
+# -bmI: maximum number of iterations in each restart of the motif building MCMC (integer [2000])BMI	2000
+# -bmN: assumed number of models in model evaluation (integer [1000])#	This value primarily affects the scale of the changes made to motif models in each iteration.  
+#	Larger numbers make the changes smaller, making a smoother, but slower convergence to a solution.BMN	1000
+# -bmP: MCMC plateau value (integer [200])#	The required number of iterations with no improvement in the motif at which convergence is declared.BMP	200
+#-bmx:  min overlap in k-mer and motif  (integer [2])#	Used in generating the probability of observing a given k-mer from a motif, 
+#	specifically the start and stop offsets at which the probability will be calculated.  
+#	The number must be smaller than k-1.  Larger numbers will focus the probability distribution into the motif; 
+#	smaller numbers allow greater contribution from the surrounding background.BMX	2
+# -bmff:  empirical focus factor (float [1.0])#	An exponential coefficient helping to skew the probability distribution of all k-mers generated by a motif.  
+#	A factor of 1.0 makes no change.  Empirical studies of artificial known sequence patterns showed 
+#	that results improved significantly for smaller sequence sets with increasing values of bmff.  
+#	Roughly, a sequence set of T=30 or less should have bmff ~2.0 or greater,  
+#         T=100: bmff ~1.6-1.8,  T=300:   bmff ~ 1.2-1.4BMFF	1.0
+# -mmMinIC:  minimum information content (float [0.2])#      After convergence, motifs are trimmed from each end, eliminating any positions with information content less than the value set by this argumentMMMINIC	0.2
+     # -mmMinW:  minimum motif width  (integer [4])#	Minimum motif width to carry forward after trimming.MMMINW	4
+# -nEx:  number of examples for Sequence Logo generation (integer [100]) #      Sequence logos are generated by using the final motif to generate a set 
+#      of examples that are fed to the sequence logo code.  This argument controls the number generated.NEX	100
+# -nWd:  number of words in html (integer [10])#	The top number of k-mers displayed for each pattern in the html output page.NWD	10
+
+
+
