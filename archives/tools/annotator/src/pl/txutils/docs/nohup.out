@@ -1,0 +1,114 @@
+Program complete
+Porgram complete
+danRer7 -- mgcGenes loaded
+Porgram complete
+danRer7 -- refGene loaded
+Porgram complete
+danRer7 -- xenoRefGene loaded
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-exon.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript_by_annotation.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript_translation.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript_exon.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-exonids.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-gene_by_annotation.txt: No such file or directory
+Porgram complete
+danRer7 -- all_est loaded
+Porgram complete
+danRer7 -- estOrientInfo loaded
+Porgram complete
+danRer7 -- all_mrna loaded
+Porgram complete
+danRer6 -- mgcGenes loaded
+Porgram complete
+danRer6 -- refGene loaded
+Porgram complete
+danRer6 -- xenoRefGene loaded
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-exon.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript_by_annotation.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript_translation.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-transcript_exon.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-exonids.txt: No such file or directory
+wc: /scratch/data/ucsc/vertebrate/zebrafish/_tempfile-all_est-gene_by_annotation.txt: No such file or directory
+Porgram complete
+danRer6 -- all_est loaded
+Porgram complete
+danRer6 -- estOrientInfo loaded
+Porgram complete
+danRer6 -- all_mrna loaded
+Porgram complete
+dm3 -- refGene loaded
+Porgram complete
+dm3 -- xenoRefGene loaded
+Porgram complete
+dm3 -- contrastGene loaded
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-exon.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript_by_annotation.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript_translation.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript_exon.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-exonids.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-gene_by_annotation.txt: No such file or directory
+Porgram complete
+dm3 -- all_est loaded
+Porgram complete
+dm3 -- estOrientInfo loaded
+Porgram complete
+dm3 -- all_mrna loaded
+Porgram complete
+dm2 -- nscanGene loaded
+Porgram complete
+dm2 -- refGene loaded
+Porgram complete
+dm2 -- xenoRefGene loaded
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-exon.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript_by_annotation.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript_translation.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-transcript_exon.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-exonids.txt: No such file or directory
+wc: /scratch/data/ucsc/insect/d.melanogaster/_tempfile-all_est-gene_by_annotation.txt: No such file or directory
+Porgram complete
+dm2 -- all_est loaded
+Porgram complete
+dm2 -- estOrientInfo loaded
+Porgram complete
+dm2 -- all_mrna loaded
+Porgram complete
+ce10 -- refGene loaded
+Porgram complete
+ce10 -- xenoRefGene loaded
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-exon.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript_by_annotation.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript_translation.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript_exon.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-exonids.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-gene_by_annotation.txt: No such file or directory
+Porgram complete
+ce10 -- all_est loaded
+Porgram complete
+ce10 -- estOrientInfo loaded
+Porgram complete
+ce10 -- all_mrna loaded
+Porgram complete
+ce6 -- refGene loaded
+Porgram complete
+ce6 -- xenoRefGene loaded
+Porgram complete
+ce6 -- sangerGene loaded
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-exon.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript_by_annotation.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript_translation.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-transcript_exon.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-exonids.txt: No such file or directory
+wc: /scratch/data/ucsc/worm/c.elegans/_tempfile-all_est-gene_by_annotation.txt: No such file or directory
+Porgram complete
+ce6 -- all_est loaded
+Porgram complete
+ce6 -- estOrientInfo loaded
+Porgram complete
+ce6 -- all_mrna loaded
+Program complete

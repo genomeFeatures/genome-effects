@@ -1,0 +1,19 @@
+
+http://genome.ucsc.edu/FAQ/FAQtracks#tracks1
+UCSC cordinates:  zero-based start and a one-based end (Database/browser start coordinates differ by 1 base)	
+Our internal database representations of coordinates always have a zero-based start and a one-based end. We add 1 to the start before displaying coordinates in the Genome Browser. Therefore, they appear as one-based start, one-based end in the graphical display. The refGene.txt file is a database file, and consequently is based on the internal representation.
+
+We use this particular internal representation because it simplifies coordinate arithmetic, i.e. it eliminates the need to add or subtract 1 at every step. Unfortunately, it does create some confusion when the internal representation is exposed or when we forget to add 1 before displaying a start coordinate. However, it saves us from much trickier bugs. If you use a database dump file but would prefer to see the one-based start coordinates, you will always need to add 1 to each start coordinate.
+
+If you submit data to the browser in position format (chr#:##-##), the browser assumes this information is 1-based. If you submit data in any other format (BED (chr# ## ##) or otherwise), the browser will assume it is 0-based. You can see this both in our liftOver utility and in our search bar, by entering the same numbers in position or BED format and observing the results. Similarly, any data returned by the browser in position format is 1-based, while data returned in BED, wiggle, etc is 0-based. 
+
+http://www.sequenceontology.org/gff3.shtml
+GFF3: (MGI) "start" and "end" 
+The start and end of the feature, in 1-based integer coordinates, relative to the landmark given in column 1.
+Start is always less than or equal to end. For features that cross the origin of a circular feature (e.g. most bacterial genomes, plasmids, and some viral genomes), the requirement for start to be less than or equal to end is satisfied by making end = the position of the end + the length of the landmark feature. 
+
+So to convert mgi to ucsc,
+set all mgi starts to start=start-1
+This will affect: transcript start, exon start, cds start 
+
+

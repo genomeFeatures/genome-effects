@@ -1,0 +1,70 @@
+From: Lucie Hutchins <Lucie.Hutchins@jax.org>
+Date: Wednesday, September 12, 2012 2:53 PM
+To: Joel Graber <joel.graber@jax.org>
+Subject: zero-base cordinate as standard
+
+Hi Joel,
+
+I reviewed  UCSC  and MGI cordinates and here is what I found:
+UCSC  internal database representations of coordinates always have a zero-based start and a one-based end.They add 1 to the start before displaying coordinates in the Genome Browser. Therefore, they appear as one-based start, one-based end in the graphical display.
+
+MGI GFF3: has the start and end of the feature  in 1-based integer coordinates.
+
+Knowing this makes it easier to integreate new datasets into our transcript database and adjust the cordinates to UCSC standard.
+The reason being UCSC  has more organisms than any other source we currently load.
+So this is what I intend to do:
+For every new transcript source other than UCSC, set every start= start-1, keep the end as is.
+This will include: transcript, exon, and CDS
+
+Here are some examples of the raw data from UCSC and MGI :
+grep ENSMUST00000033737 /scratch/data/ucsc/mammal/mouse/mm9_ensGene_8-2012
+1124    ENSMUST00000033737    chrX    -    70682653    70704383    70682833    70704278    10    70682653,70691148,70692266,70693298,70693530,70694149,70698337,70700205,70703312,70704173,    70682904,70691263,70692476,70693395,70693689,70694241,70698399,70700273,70703428,70704383,    0    ENSMUSG00000031371    cmpl    cmpl    1,0,0,2,2,0,1,2,0,0,
+grep ENSMUST00000033737  /scratch/data/ucsc/mammal/mouse/mm9-mgiGene.txt
+ENSMUST00000033737    X    -    70682654    70704383    70682834    70704278    10    70704174,70703313,70700206,70698338,70694150,70693531,70693299,70692267,70691149,70682654,    70704383,70703428,70700273,70698399,70694241,70693689,70693395,70692476,70691263,70682904,    0,0,1,2,0,1,1,0,0,2,    Haus7    MGI:1920988    mRNA    protein coding gene
+
+and
+grep ENSMUST00000019701 /scratch/data/ucsc/mammal/mouse/mm9_ensGene_8-2012
+1125    ENSMUST00000019701    chrX    +    70884757    70888853    70885566    70887748    4    70884757,70885531,70886685,70887422,    70884980,70886143,70887141,70888853,    0    ENSMUSG00000031383    cmpl    cmpl    -1,0,1,1,
+grep ENSMUST00000019701 /scratch/data/ucsc/mammal/mouse/mm9-mgiGene.txt
+ENSMUST00000019701    X    +    70884758    70888853    70885567    70887748    4    70884758,70885532,70886686,70887423,    70884980,70886143,70887141,70888853,    -1,0,2,2,    Dusp9    MGI:2387107    mRNA    protein coding gene
+
+What do you think?
+
+Lucie
+=========================================================
+From: Joel Graber
+Sent: Wednesday, September 12, 2012 2:57 PM
+To: Lucie Hutchins
+Subject: Re: zero-base cordinate as standard
+
+This sounds reasonable to me, but let me be explicit again with what I'd like to see.  I would like to verify absolutely (which I think you already have) that the UCSC data is loading correctly and reliably.
+
+Assuming that this is true, then all other data should be converted to a compatible input file that can be run through exactly the same program that loads it to the database.  This way we have only one, validated and checked program that can update the db.  The only new things ever created are "translators" to take other data and represent it in the format that is expected.  
+
+jhg
+-- 
+***********************************************************************
+** Joel H. Graber *** Associate Professor *** The Jackson Laboratory **
+***********************************************************************
+** joel.graber@jax.org *** 207-288-6782 ** http://harlequin.jax.org/ **
+***********************************************************************
+
+==========================================================
+
+Hi Joel,
+
+We are already doing that. We have scripts that download a new dataset then convert it into  ucsc format before calling scripts that do the actual database load and load check. It is a little pipeline.
+
+The only think I need now is to write a load test script ,generate some test cases during the load.
+Then use the script to reproduce the test cases from the database and compare.
+So far I check the bulk load if it was a success meaning the number of rows loaded into the database= the number of lines in the original file.
+
+I will probably need to write a documentation for the pipeline.
+
+
+Lucie
+--------------------------------------------------------------------
+
+
+
+

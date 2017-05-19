@@ -1,0 +1,275 @@
+
+*************************************************************
+Starting getCurrentOrganisms.pl program : 16/11/2014
+
+*************************************************************
+getCurrentOrganisms.pl program complete : /16/2014
+
+*************************************************************
+Starting download_ucsc_annotations.pl program : 16/11/2014 @ 16:22:11
+
+*************************************************************
+
+*************************************************************
+download_ucsc_annotations.pl program complete: 16/11/2014 @ 17:50:6
+
+*************************************************************
+
+*************************************************************
+Starting download_ucsc_annotations.pl program : 16/11/2014 @ 23:0:7
+
+*************************************************************
+
+*************************************************************
+download_ucsc_annotations.pl program complete: 16/11/2014 @ 23:10:7
+
+*************************************************************
+
+
+Starting laod_Static_tables.pl program:  17/11/2014 @ 16:38:9
+Organism	job_type	job_starts	job_ends
+Processing :insect,anoGam1,A.gambiae
+Processing :,,A.gambiae
+Processing :insect,apiMel1,A.mellifera
+Processing :,,A.mellifera
+Processing :insect,apiMel2,A.mellifera
+Processing :,,A.mellifera
+Processing :mammal,vicPac1,Alpaca
+Processing :,,Alpaca
+Processing :mammal,dasNov3,Armadillo
+Processing :,,Armadillo
+Processing :vertebrate,gadMor1,Atlantic cod
+Processing :,,Atlantic cod
+Processing :mammal,papAnu2,Baboon
+Processing :,,Baboon
+Processing :mammal,papHam1,Baboon
+Processing :,,Baboon
+Processing :vertebrate,melUnd1,Budgerigar
+Processing :,,Budgerigar
+Processing :mammal,otoGar3,Bushbaby
+Processing :,,Bushbaby
+Processing :worm,caePb2,C.brenneri
+Processing :,,C.brenneri
+Processing :worm,caePb1,C.brenneri
+Processing :,,C.brenneri
+Processing :worm,cb3,C.briggsae
+Processing :,,C.briggsae
+Processing :worm,cb1,C.briggsae
+Processing :,,C.briggsae
+Processing :worm,ce10,C.elegans
+Processing :,,C.elegans
+Processing :worm,ce6,C.elegans
+Processing :,,C.elegans
+Processing :deuterostome,ci1,C.intestinalis
+Processing :,,C.intestinalis
+Processing :deuterostome,ci2,C.intestinalis
+Processing :,,C.intestinalis
+Processing :worm,caeJap1,C.japonica
+Processing :,,C.japonica
+Processing :worm,caeRem3,C.remanei
+Processing :,,C.remanei
+Processing :worm,caeRem2,C.remanei
+Processing :,,C.remanei
+Processing :mammal,felCat5,Cat
+Processing :,,Cat
+Processing :mammal,felCat4,Cat
+Processing :,,Cat
+Processing :vertebrate,galGal4,Chicken
+Processing :,,Chicken
+Processing :vertebrate,galGal3,Chicken
+Processing :,,Chicken
+Processing :mammal,panTro3,Chimp
+Processing :,,Chimp
+Processing :mammal,panTro4,Chimp
+Processing :,,Chimp
+Processing :vertebrate,latCha1,Coelacanth
+Processing :,,Coelacanth
+Processing :mammal,bosTau7,Cow
+Processing :,,Cow
+Processing :mammal,bosTau6,Cow
+Processing :,,Cow
+Processing :insect,droAna1,D.ananassae
+Processing :,,D.ananassae
+Processing :insect,droAna2,D.ananassae
+Processing :,,D.ananassae
+Processing :insect,droEre1,D.erecta
+Processing :,,D.erecta
+Processing :insect,droGri1,D.grimshawi
+Processing :,,D.grimshawi
+Processing :insect,dm3,D.melanogaster
+Processing :,,D.melanogaster
+Processing :insect,dm2,D.melanogaster
+Processing :,,D.melanogaster
+Processing :insect,droMoj2,D.mojavensis
+Processing :,,D.mojavensis
+Processing :insect,droMoj1,D.mojavensis
+Processing :,,D.mojavensis
+Processing :insect,droPer1,D.persimilis
+Processing :,,D.persimilis
+Processing :insect,dp2,D.pseudoobscura
+Processing :,,D.pseudoobscura
+Processing :insect,dp3,D.pseudoobscura
+Processing :,,D.pseudoobscura
+Processing :insect,droSec1,D.sechellia
+Processing :,,D.sechellia
+Processing :insect,droSim1,D.simulans
+Processing :,,D.simulans
+Processing :insect,droVir2,D.virilis
+Processing :,,D.virilis
+Processing :insect,droVir1,D.virilis
+Processing :,,D.virilis
+Processing :insect,droYak1,D.yakuba
+Processing :,,D.yakuba
+Processing :insect,droYak2,D.yakuba
+Processing :,,D.yakuba
+Processing :mammal,canFam2,Dog
+Processing :,,Dog
+Processing :mammal,canFam3,Dog
+Processing :,,Dog
+Processing :mammal,turTru2,Dolphin
+Processing :,,Dolphin
+Processing :mammal,loxAfr3,Elephant
+Processing :,,Elephant
+Processing :vertebrate,fr3,Fugu
+Processing :,,Fugu
+Processing :vertebrate,fr2,Fugu
+Processing :,,Fugu
+Processing :mammal,nomLeu1,Gibbon
+Processing :,,Gibbon
+Processing :mammal,nomLeu2,Gibbon
+Processing :,,Gibbon
+Processing :mammal,gorGor3,Gorilla
+Processing :,,Gorilla
+Processing :mammal,cavPor3,Guinea pig
+Processing :,,Guinea pig
+Processing :mammal,eriEur1,Hedgehog
+Processing :,,Hedgehog
+Processing :mammal,equCab1,Horse
+Processing :,,Horse
+Processing :mammal,equCab2,Horse
+Processing :,,Horse
+Processing :mammal,hg19,Human
+Processing :,,Human
+Processing :mammal,hg18,Human
+Processing :,,Human
+Processing :mammal,dipOrd1,Kangaroo rat
+Processing :,,Kangaroo rat
+Processing :vertebrate,petMar1,Lamprey
+Processing :,,Lamprey
+Processing :vertebrate,petMar2,Lamprey
+Processing :,,Lamprey
+Processing :deuterostome,braFlo1,Lancelet
+Processing :,,Lancelet
+Processing :vertebrate,anoCar1,Lizard
+Processing :,,Lizard
+Processing :vertebrate,anoCar2,Lizard
+Processing :,,Lizard
+Processing :mammal,triMan1,Manatee
+Processing :,,Manatee
+Processing :mammal,calJac1,Marmoset
+Processing :,,Marmoset
+Processing :mammal,calJac3,Marmoset
+Processing :,,Marmoset
+Processing :vertebrate,oryLat2,Medaka
+Processing :,,Medaka
+Processing :vertebrate,geoFor1,Medium ground finch
+Processing :,,Medium ground finch
+Processing :mammal,pteVam1,Megabat
+Processing :,,Megabat
+Processing :mammal,myoLuc2,Microbat
+Processing :,,Microbat
+Processing :mammal,mm9,Mouse
+Processing :,,Mouse
+Processing :mammal,mm10,Mouse
+Processing :,,Mouse
+Processing :mammal,micMur1,Mouse lemur
+Processing :,,Mouse lemur
+Processing :mammal,hetGla2,Naked mole-rat
+Processing :,,Naked mole-rat
+Processing :mammal,hetGla1,Naked mole-rat
+Processing :,,Naked mole-rat
+Processing :vertebrate,oreNil2,Nile tilapia
+Processing :,,Nile tilapia
+Processing :mammal,monDom5,Opossum
+Processing :,,Opossum
+Processing :mammal,monDom4,Opossum
+Processing :,,Opossum
+Processing :mammal,ponAbe2,Orangutan
+Processing :,,Orangutan
+Processing :worm,priPac1,P.pacificus
+Processing :,,P.pacificus
+Processing :vertebrate,chrPic1,Painted turtle
+Processing :,,Painted turtle
+Processing :mammal,ailMel1,Panda
+Processing :,,Panda
+Processing :mammal,susScr2,Pig
+Processing :,,Pig
+Processing :mammal,susScr3,Pig
+Processing :,,Pig
+Processing :mammal,ochPri2,Pika
+Processing :,,Pika
+Processing :mammal,ornAna1,Platypus
+Processing :,,Platypus
+Processing :mammal,oryCun2,Rabbit
+Processing :,,Rabbit
+Processing :mammal,rn5,Rat
+Processing :,,Rat
+Processing :mammal,rn4,Rat
+Processing :,,Rat
+Processing :mammal,rheMac3,Rhesus
+Processing :,,Rhesus
+Processing :mammal,rheMac2,Rhesus
+Processing :,,Rhesus
+Processing :mammal,proCap1,Rock hyrax
+Processing :,,Rock hyrax
+Processing :other,sacCer3,S.cerevisiae
+Processing :,,S.cerevisiae
+Processing :other,sacCer2,S.cerevisiae
+Processing :,,S.cerevisiae
+Processing :deuterostome,strPur2,S.purpuratus
+Processing :,,S.purpuratus
+Processing :deuterostome,strPur1,S.purpuratus
+Processing :,,S.purpuratus
+Processing :other,aplCal1,Sea hare
+Processing :,,Sea hare
+Processing :mammal,oviAri1,Sheep
+Processing :,,Sheep
+Processing :mammal,sorAra1,Shrew
+Processing :,,Shrew
+Processing :mammal,choHof1,Sloth
+Processing :,,Sloth
+Processing :mammal,speTri2,Squirrel
+Processing :,,Squirrel
+Processing :mammal,saiBol1,Squirrel monkey
+Processing :,,Squirrel monkey
+Processing :vertebrate,gasAcu1,Stickleback
+Processing :,,Stickleback
+Processing :mammal,tarSyr1,Tarsier
+Processing :,,Tarsier
+Processing :mammal,sarHar1,Tasmanian devil
+Processing :,,Tasmanian devil
+Processing :mammal,echTel1,Tenrec
+Processing :,,Tenrec
+Processing :vertebrate,tetNig2,Tetraodon
+Processing :,,Tetraodon
+Processing :vertebrate,tetNig1,Tetraodon
+Processing :,,Tetraodon
+Processing :mammal,tupBel1,Tree shrew
+Processing :,,Tree shrew
+Processing :vertebrate,melGal1,Turkey
+Processing :,,Turkey
+Processing :mammal,macEug2,Wallaby
+Processing :,,Wallaby
+Processing :mammal,cerSim1,White rhinoceros
+Processing :,,White rhinoceros
+Processing :vertebrate,xenTro3,X.tropicalis
+Processing :,,X.tropicalis
+Processing :vertebrate,xenTro2,X.tropicalis
+Processing :,,X.tropicalis
+Processing :vertebrate,taeGut1,Zebra finch
+Processing :,,Zebra finch
+Processing :vertebrate,danRer7,Zebrafish
+Processing :,,Zebrafish
+Processing :vertebrate,danRer6,Zebrafish
+Processing :,,Zebrafish
+End Static tables updates : 11/17/2014 :16:38:37

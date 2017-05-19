@@ -1,0 +1,100 @@
+1	Activator
+2	Complete proteome
+3	Reference proteome
+4	Transcription
+5	
+6	Transcription regulation
+7	Host membrane
+8	Membrane
+9	Transmembrane
+10	Transmembrane helix
+11	Signal
+12	Coiled coil
+13	ATP-binding
+14	Helicase
+15	Hydrolase
+16	Nucleotide-binding
+17	Kinase
+18	Serine/threonine-protein kinase
+19	Transferase
+20	Oxidoreductase
+21	Lipoprotein
+22	Myristate
+23	Magnesium
+24	Manganese
+25	Metal-binding
+26	Elongation factor
+27	Protein biosynthesis
+28	Zinc
+29	Zinc-finger
+30	Disulfide bond
+31	FAD
+32	Flavoprotein
+33	Metalloprotease
+34	Protease
+35	Secreted
+36	Zymogen
+37	Endonuclease
+38	Host nucleus
+39	Nuclease
+40	Cell membrane
+41	Glycoprotein
+42	GPI-anchor
+43	Repeat
+44	Sporozoite
+45	NADP
+46	Early protein
+47	Malaria
+48	Seed storage protein
+49	Storage protein
+50	3D-structure
+51	Direct protein sequencing
+52	Pyrrolidone carboxylic acid
+53	Protein phosphatase
+54	GTP-binding
+55	Bile acid catabolism
+56	Lipid degradation
+57	Lipid metabolism
+58	Steroid metabolism
+59	Auxin signaling pathway
+60	Endoplasmic reticulum
+61	Microsome
+62	Allergen
+63	Alternative splicing
+64	Phosphoprotein
+65	Cytoplasm
+66	Nucleus
+67	Stress response
+68	Acetylation
+69	Alternative initiation
+70	Polymorphism
+71	Nitration
+72	Host-virus interaction
+73	Developmental protein
+74	Differentiation
+75	Neurogenesis
+76	Cell wall
+77	Cell inner membrane
+78	Electron transport
+79	Respiratory chain
+80	Transport
+81	Lectin
+82	Virulence
+83	Host cytoplasm
+84	Cell outer membrane
+85	Palmitate
+86	Methyltransferase
+87	Nucleotidyltransferase
+88	RNA-binding
+89	RNA-directed RNA polymerase
+90	Viral RNA replication
+91	Immunity
+92	MHC I
+93	Immunoglobulin domain
+94	Sulfation
+95	Ubl conjugation
+96	Aminotransferase
+97	Pyridoxal phosphate
+98	Ethylene biosynthesis
+99	Fruit ripening
+100	Lyase

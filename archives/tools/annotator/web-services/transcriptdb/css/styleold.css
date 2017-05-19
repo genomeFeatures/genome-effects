@@ -1,0 +1,272 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+        background: url(images/newlogo.jpg) repeat-x left top;
+	font-family: verdana, Arial, Helvetica, sans-serif;
+	color:#333;font-size: 74%;
+}
+/***************************************************************** 
+   Initiate all the containers with zero margin and padding 
+   This is important because some browsers add padding and margin 
+ ****************************************************************/
+* {
+   margin:0;
+   padding:0;
+  }
+/* Header */
+
+#header {
+    width:100%;
+    height: 68px;
+    margin:0 auto;
+    text-align:center;
+}
+#header h1 {
+	padding-top: 10px;
+	text-transform: uppercase;
+	font-size: 2.2em;
+}
+/* Menu */
+
+.container {
+   padding:0;background: #90BF4D;
+   margin:0; height:40px;margin-bottom:1em;
+   background:rgb(6,8,68);
+    color:#fff;
+
+}
+.container #menu{
+   width:80%;margin:auto;height:40px;
+ }
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	float: left;border-left:solid 1px #eee; height:40px;
+}
+#menu li:hover {
+    background:#eee;
+}
+
+#menu a,#menu a:link,#menu a:visited {
+	margin-right: 3px;
+	padding: 5px 10px 5px 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #555; color:#CC3300;color:#eee;width:99%;height:99%;
+	
+}
+
+#menu a:hover, #menu .current_page_item a {
+	background:#fff;
+	color: red;
+}
+
+#menu a:hover {
+	text-decoration: none;
+}
+
+/* Page */
+
+#page , #sumdata {
+	/*width: 1090px;*/
+	padding-left:20px;
+	padding-right:2px;
+	margin: 0 auto;
+	margin-top:-8px;
+	padding-top:0;
+}
+
+/* Content */
+#team {
+	padding-right:1em;
+	border-right:solid 2px #eee;
+	background:#eee;
+}
+#team h2 {
+	padding:5px;
+        text-transform:uppercase;
+	font-size: 0.95em;
+	font-weight:normal;
+        color:#CC3300;
+        }
+#team #rfilter {
+      width:98%;
+      margin:auto; padding:0;
+  }
+ #team li{
+	line-height: 20px;
+}
+#team .links  {
+ margin-top:20px;
+ padding:0;
+/* padding-right:20px;*/
+ min-width:180px;
+ border-top:solid 2px #fff;
+ border-bottom:solid 2px #CC3300;
+}
+.links {
+  color:#fff;
+  font-size: 1.4em;
+/* background: #90BF4D url(images/hd_bg2.jpg) repeat;*/
+ background:#CC3300;
+}
+#team .links h1 {
+  color:#800;
+  font-size: 1.1em;
+}
+#team .links a {
+  color:#333;
+  }
+#team  li{
+   border-bottom:solid 1px #eee;
+   }
+ #team li:hover {
+    background: #90BF4D url(images/hd_bg2.jpg) repeat;
+    background:rgb(6,14,68);
+    background:#ddd;
+    color:#fff;
+  }
+#content {
+    padding-top:1em;
+    padding-left:5px;padding-right:2px;
+    /*width:55%;*/
+   display: block;
+}
+.lp{
+ /* width:380px;*/
+  float:left;
+  padding:1em 1em 0 0.5em;
+  }
+.rp{
+  /*width:380px;*/
+  padding:1em 1em 0 0;
+  float:right;
+  }
+  .lp tr,.rp tr{background:#eee;}
+.hist{background:#CC3300;}
+#navBrowse { font-size:0.85em; color:#333;}
+.post #qsummary h2{
+    color:#CC3300;
+ }
+ .bggray {
+   background:#eee;
+ }
+ .bgwhite {
+  background:#fff;
+ }
+ /*#sumdata {padding:1em;min-width:680px;}*/
+.post .entry {
+	padding: 6px;
+	text-align: justify;
+	min-width:680px;
+	border-bottom:solid 3px rgb(6,8,68);
+}
+#sumdata td{
+   text-align: justify;
+   padding:4px;
+}
+#rsum p{
+   text-align: left;
+  padding:1em;
+   font-style:italic;
+   line-height:1.2em;
+}
+#breadcrumb{text-align:center;font-size:1.2em;padding:2em;}
+.post .sb{
+    background:rgb(6,8,68);
+    color:#fff;
+}
+ #q{background:#fff;color:rgb(6,8,68); height:20px;margin-bottom:1em;
+  border:solid 1px #777; 
+}
+.post #filter{
+ min-width:680px;
+}
+/* Sidebar */
+
+#rpanel {	width: 20%;
+	color: #787878;
+	background:#fff;
+	border-left:solid 2px #eee; /*rgb(6,8,68);*/
+	padding-left:1em;
+	
+}
+.sumh,sumd{
+  color:rgb(6,8,68);
+}
+#rpanel tr{
+  border-bottom: solid 1px #eee;
+  }
+/* Footer */
+
+#footer {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+	padding-top : 20px;
+	background: #90BF4D url(images/hd_bg2.jpg) repeat;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ddd;
+}
+
+#footer p {
+	margin: 0;
+	line-height: normal;
+	font-size: 9px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#footer a {
+	color: #FFFFFF;
+}
+h1, h2, h3 {
+	margin: 0;
+	text-transform: uppercase;
+	
+	}
+
+h1 {
+	font-size: 1.5em;
+	color:#CC3300;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1em;
+	color:#CC3300;
+	border-bottom:solid 1px #eee;
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+ul, ol {
+}
+
+a {
+	text-decoration: none;
+	color:#333;
+}
+
+a:hover {
+	background: none;
+	color:red;
+}

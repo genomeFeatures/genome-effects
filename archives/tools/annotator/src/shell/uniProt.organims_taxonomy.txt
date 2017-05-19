@@ -1,0 +1,1000 @@
+654924	isolate Goorha
+654924	FV-3
+345201	IIV-3
+345201	Mosquito iridescent virus
+176652	IIV-6
+176652	Chilo iridescent virus
+561445	isolate Pig/Kenya/KEN-50/1950
+561445	ASFV
+10500	isolate Tick/Malawi/Lil 20-1/1983
+10500	ASFV
+561443	isolate Tick/South Africa/Pretoriuskop Pr4/1996
+561443	ASFV
+561444	isolate Warthog/Namibia/Wart80/1980
+561444	ASFV
+10498	strain Badajoz 1971 Vero-adapted
+10498	Ba71V
+10498	ASFV
+5875	East coast fever infection agent
+4081	Tomato
+4081	Lycopersicon esculentum
+4058	Madagascar periwinkle
+4058	Vinca rosea
+4182	Oriental sesame
+4182	Sesamum orientale
+4232	Common sunflower
+3661	Pumpkin
+3661	Winter squash
+7227	Fruit fly
+1507	strain C 48-50
+3747	Strawberry
+7830	Small-spotted catshark
+7830	Squalus canicula
+30494	Banded houndshark
+30494	Hemigaleus pingi
+3617	Common buckwheat
+3617	Polygonum fagopyrum
+3702	Mouse-ear cress
+4577	Maize
+39947	Rice
+3357	Douglas-fir
+3357	Abies menziesii
+6183	Blood fluke
+4113	Potato
+4513	Barley
+3847	Soybean
+3847	Glycine hispida
+4097	Common tobacco
+3906	Broad bean
+3906	Faba vulgaris
+9913	Bovine
+9031	Chicken
+9606	Human
+9541	Crab-eating macaque
+9541	Cynomolgus monkey
+10090	Mouse
+9601	Sumatran orangutan
+9601	Pongo pygmaeus abelii
+10116	Rat
+9940	Sheep
+8364	Western clawed frog
+8364	Silurana tropicalis
+9986	Rabbit
+8355	African clawed frog
+7159	Yellowfever mosquito
+7159	Culex aegypti
+7091	Silk moth
+237561	strain SC5314 / ATCC MYA-2876
+237561	Yeast
+3055	Chlamydomonas smithii
+44689	Slime mold
+5802	Coccidian parasite
+284813	strain GB-M1
+284813	Microsporidian parasite
+49266	Bladder wrack
+4690	Trumpet lily
+3544	Common ice plant
+3544	Cryophytum crystallinum
+29176	Coccidian parasite
+85636	Hooker's evening primrose
+85636	Oenothera hookeri
+3888	Garden pea
+75702	Euphrates poplar
+3562	Spinach
+5544	Hypocrea lixii
+8022	Rainbow trout
+8022	Salmo gairdneri
+7955	Zebrafish
+7955	Brachydanio rerio
+4039	Carrot
+233413	strain ATCC BAA-935 / AF2122/97
+1063	Rhodopseudomonas sphaeroides
+430066	strain S19
+359391	strain 2308
+262698	strain 9-941
+483179	strain ATCC 23365 / NCTC 10854
+224914	strain 16M / ATCC 23456 / NCTC 10094
+444178	strain ATCC 25840 / 63/290 / NCTC 10512
+470137	strain ATCC 23445 / NCTC 10510
+204722	strain 1330
+439375	strain ATCC 49188 / DSM 6882 / NCTC 12168
+6304	Peanut root-knot nematode
+6305	Root-knot nematode worm
+6306	Southern root-knot nematode
+6303	Root-knot nematode worm
+336407	strain RML369-C
+272944	strain ATCC VR-613 / Malish 7
+315456	strain ATCC VR-1525 / URRWXCal2
+315456	Rickettsia azadi
+652620	strain ATCC VR-1363 / YH
+272947	strain Madrid E
+257363	strain ATCC VR-144 / Wilmington
+272631	strain TN
+12298	strain SYM
+9595	Lowland gorilla
+9598	Chimpanzee
+9600	Bornean orangutan
+9490	Cotton-top tamarin
+3663	Vegetable marrow
+3663	Summer squash
+39946	Rice
+102107	Japanese apricot
+102107	Armeniaca mume
+3570	Carnation
+3570	Clove pink
+3750	Apple
+3750	Pyrus malus
+3916	Mung bean
+3916	Phaseolus aureus
+397945	strain AAC00-1
+397945	Acidovorax avenae subsp. citrulli
+535289	strain TPSY
+535289	Diaphorobacter sp. (strain TPSY
+311403	strain K84 / ATCC BAA-868
+311402	strain S4 / ATCC BAA-846
+311402	Rhizobium vitis (strain S4
+224911	strain USDA 110
+288000	strain BTAi1 / ATCC BAA-1182
+114615	strain ORS278
+398577	strain MC40-6
+331271	strain AU 1054
+406425	strain MC0-3
+331272	strain HI2424
+216591	strain J2315 / LMG 16656
+216591	Burkholderia cenocepacia (strain J2315
+339670	strain ATCC BAA-244 / AMMD
+339670	Burkholderia cepacia (strain AMMD
+395019	strain ATCC 17616 / 249
+320389	strain NCTC 10247
+412022	strain NCTC 10229
+243160	strain ATCC 23344
+320388	strain SAVP1
+357348	strain 1106a
+320372	strain 1710b
+320373	strain 668
+398527	strain DSM 17436 / PsJN
+272560	strain K96243
+269483	strain 383
+269483	Burkholderia cepacia (strain ATCC 17760 / NCIB 9086 / R18194
+271848	strain E264 / ATCC 700388 / DSM 13276 / CIP 106301
+269482	strain G4 / LMG 22486
+269482	Burkholderia cepacia (strain R1808
+266265	strain LB400
+214684	strain JEC21 / ATCC MYA-565
+214684	Filobasidiella neoformans
+381666	strain ATCC 17699 / H16 / DSM 428 / Stanier 337
+381666	Ralstonia eutropha
+907340	Yeast
+907340	Williopsis saturnus
+460265	strain ORS2060 / LMG 21967
+420662	strain PM1
+426117	strain 4-46
+264730	strain 1448A / Race 6
+303	Arthrobacter siderocapsulatus
+29439	strain 6G5
+223283	strain DC3000
+205918	strain B728a
+74568	strain ACP
+272844	strain GE5 / Orsay
+186497	strain ATCC 43587 / DSM 3638 / JCM 8422 / Vc1
+70601	strain ATCC 700860 / DSM 12428 / JCM 9974 / NBRC 100139 / OT-3
+402626	strain 12J
+267608	strain GMI1000
+267608	Pseudomonas solanacearum
+266835	strain MAFF303099
+266835	Mesorhizobium loti
+358	Agrobacterium tumefaciens
+358	Agrobacterium radiobacter
+284812	strain 972 / ATCC 24843
+284812	Fission yeast
+243274	strain ATCC 43589 / MSB8 / DSM 3109 / JCM 10099
+543728	strain S110
+31033	Japanese pufferfish
+31033	Fugu rubripes
+36774	Broccoli
+12322	strain 425 / isolate Leiden
+12302	BMV
+12303	CCMV
+12307	strain FNY
+12307	CMV
+117113	strain Iizuka
+117113	CMV
+117114	strain Ixora
+117114	CMV
+117124	strain NT9
+117124	CMV
+12309	strain O
+12309	CMV
+12310	strain Q
+12310	CMV
+12312	strain Y
+12312	CMV
+650489	isolate Italy
+650489	OLV-2
+12314	strain J
+12314	PSV
+650488	isolate Tomato/Italy/1982
+650488	PZSV
+650488	Pelargonium zonate spot virus (isolate Tomato
+12315	TAV
+12318	strain WC
+12318	TSV
+6287	Canine heartworm
+4565	Wheat
+4573	Goatgrass
+4573	Triticum speltoides
+37682	Tausch's goatgrass
+37682	Aegilops squarrosa
+629273	Patagonian grass
+52714	Chinese lyme grass
+52714	Elymus chinensis
+4572	Red wild einkorn
+4572	Crithodium urartu
+9544	Rhesus macaque
+555217	strain ATCC 10988 / DSM 424 / LMG 404 / NCIMB 8938 / NRRL B-806 / ZM1
+1422	Bacillus stearothermophilus
+7386	Flesh fly
+7386	Boettcherisca peregrina
+56690	Trichomonas foetus
+56690	Tritrichomonas suis
+280265	South American fishing spider
+559292	strain ATCC 204508 / S288c
+559292	Baker's yeast
+9823	Pig
+5482	Yeast
+7957	Goldfish
+12299	strain TCM
+224308	strain 168
+1004253	Yeast
+1004253	Williopsis mrakii
+367110	strain ATCC 24698 / 74-OR23-1A / CBS 708.71 / DSM 1257 / FGSC 987
+208964	strain ATCC 15692 / PAO1 / 1C / PRS 101 / LMG 12228
+359787	strain JH1
+367830	strain USA300
+93061	strain NCTC 8325
+359786	strain JH9
+93062	strain COL
+426430	strain Newman
+158879	strain N315
+282458	strain MRSA252
+282459	strain MSSA476
+451516	strain USA300 / TCH1516
+196620	strain MW2
+279808	strain JCSC1435
+342451	strain ATCC 15305 / DSM 20229
+608538	strain DSM 6534 / IAM 12695 / TK-6
+18101	Daisy
+3645	Brazil nut
+3708	Rape
+3714	Chinese kale
+3714	Brassica alboglabra
+93385	Pak-choi
+13395	Mabinlang
+3330	White spruce
+3330	Pinus glauca
+3988	Castor bean
+3662	Winter crookneck squash
+3662	Cucurbita pepo var. moschata
+3277	European ostrich fern
+3277	Osmunda struthiopteris
+50225	Common dandelion
+50225	Leontodon taraxacum
+132888	Parasitic wasp
+262316	strain ATCC BAA-968 / K-10
+419947	strain ATCC 25177 / H37Ra
+10499	isolate Portugal/Lis 57/1957
+10499	ASFV
+3712	Wild cabbage
+285	Pseudomonas testosteroni
+10036	Golden hamster
+587200	isolate Human/India/Ind3/1967
+587200	VARV
+587200	Smallpox virus
+9615	Dog
+9615	Canis lupus familiaris
+928301	strain NVSL
+928301	FPV
+9796	Horse
+126794	strain Ankara
+126794	VACV
+10249	strain Copenhagen
+10249	VACV
+10254	strain Western Reserve
+10254	VACV
+10254	Vaccinia virus (strain WR
+3329	Norway spruce
+3329	Picea excelsa
+3332	Sitka spruce
+3332	Pinus sitchensis
+72594	strain SP9440
+451804	strain CEA10 / CBS 144.89 / FGSC A1163
+451804	Aspergillus fumigatus
+332952	strain ATCC 200026 / FGSC A1120 / NRRL 3357 / JCM 12722 / SRRC 167
+330879	strain ATCC MYA-4609 / Af293 / CBS 101355 / FGSC A1100
+330879	Aspergillus fumigatus
+341663	strain NIH 2624 / FGSC A1156
+660122	strain 77-13-4 / ATCC MYA-4622 / FGSC 9596 / MPVI
+660122	Fusarium solani subsp. pisi
+331117	strain ATCC 1020 / DSM 3700 / FGSC A1164 / NRRL 181
+331117	Aspergillus fischerianus
+62977	strain ADP1
+344612	strain ATCC 1007 / CBS 513.65 / DSM 816 / NCTC 3887 / NRRL 1
+510516	strain ATCC 42149 / RIB 40
+510516	Yellow koji mold
+332648	strain B05.10
+332648	Noble rot fungus
+332648	Botrytis cinerea
+573826	strain CD36 / ATCC MYA-646 / CBS 7987 / NCPF 3949 / NRRL Y-17841
+573826	Yeast
+294747	strain ATCC MYA-3404 / T1
+294747	Yeast
+306902	strain ATCC 42720
+306902	Yeast
+306902	Candida lusitaniae
+284592	strain ATCC 36239 / CBS 767 / JCM 1990 / NBRC 0083 / IGC 2968
+284592	Yeast
+284592	Torulaspora hansenii
+227321	strain FGSC A4 / ATCC 38163 / CBS 112.46 / NRRL 194 / M139
+227321	Aspergillus nidulans
+242507	strain 70-15 / ATCC MYA-4617 / FGSC 8958
+242507	Rice blast fungus
+242507	Pyricularia oryzae
+500485	strain ATCC 28089 / DSM 1075 / Wisconsin 54-1255
+500485	Penicillium notatum
+441960	strain ATCC 18224 / CBS 334.59 / QM 7333
+321614	strain SN15 / ATCC MYA-4574 / FGSC 10173
+321614	Glume blotch fungus
+321614	Septoria nodorum
+294746	strain ATCC 6260 / CBS 566 / DSM 6381 / JCM 1539 / NBRC 10279 / NRRL Y-324
+294746	Yeast
+294746	Candida guilliermondii
+322104	strain ATCC 58785 / CBS 6054 / NBRC 10063 / NRRL Y-11545
+322104	Yeast
+322104	Pichia stipitis
+515849	strain S / ATCC MYA-4624 / DSM 980 / FGSC 10383
+515849	Pleurage anserina
+426418	strain Pt-1C-BFP
+426418	Wheat tan spot fungus
+426418	Drechslera tritici-repentis
+665079	strain ATCC 18683 / 1980 / Ss-1
+665079	White mold
+665079	Whetzelinia sclerotiorum
+771870	strain ATCC MYA-333 / DSM 997 / K(L3346
+441959	strain ATCC 10500 / CBS 375.48 / QM 6759 / NRRL 1006
+441959	Penicillium stipitatum
+237631	strain 521 / FGSC 9021
+237631	Corn smut fungus
+526221	strain VaMs.102 / ATCC MYA-4576 / FGSC 10136
+526221	Verticillium wilt
+64182	Desert black snake
+284811	strain ATCC 10895 / CBS 109.51 / FGSC 9923 / NRRL Y-1056
+284811	Yeast
+284811	Eremothecium gossypii
+425011	strain CBS 513.88 / FGSC A1513
+412694	strain Al Hakam
+222523	strain ATCC 10987
+572264	strain 03BB102
+306901	strain ATCC 6205 / CBS 148.51 / DSM 1962 / NBRC 6347 / NRRL 1970
+306901	Soil fungus
+246410	strain RS
+246410	Valley fever fungus
+283643	strain B-3501A
+283643	Filobasidiella neoformans
+264198	strain JMP134 / LMG 1197
+264198	Alcaligenes eutrophus
+264198	Ralstonia eutropha
+290400	strain CCS1
+379508	strain ATCC 11503 / CBS 2605 / JCM 1781 / NBRC 1676 / NRRL YB-4239
+379508	Yeast
+379508	Saccharomyces elongisporus
+45351	Starlet sea anemone
+266264	strain CH34 / ATCC 43123 / DSM 2839
+392500	strain ATCC 51908 / MS32
+246200	strain ATCC 700808 / DSM 15171 / DSS-3
+190486	strain 306
+316273	strain 85-10
+314565	strain 8004
+509169	strain B100
+190485	strain ATCC 33913 / NCPPB 528 / LMG 568
+342109	strain MAFF 311018
+291331	strain KACC10331 / KXO85
+284591	strain CLIB 122 / E 150
+284591	Yeast
+284591	Candida lipolytica
+196627	strain ATCC 13032 / DSM 20300 / JCM 1318 / LMG 3730 / NCIMB 10025
+365044	strain CJ2
+101596	Pinnate dahlia
+101596	Dahlia variabilis
+83333	strain K12
+71421	strain ATCC 51907 / DSM 11121 / KW20 / Rd
+272557	strain ATCC 700893 / DSM 11879 / JCM 9820 / NBRC 100138 / K1
+176299	strain C58 / ATCC 33970
+350688	strain OhILAs
+350688	Clostridium oremlandii (strain OhILAs
+455488	strain 2CP-1 / ATCC BAA-258
+290397	strain 2CP-C
+404589	strain Fw109-5
+447217	strain K
+326423	strain FZB42
+592021	strain A0248
+568206	strain CDC 684 / NRRL 3495
+405535	strain AH820
+405531	strain G9842
+405532	strain B4264
+405534	strain AH187
+315749	strain NVH 391-98
+361100	strain Q1
+226900	strain ATCC 14579 / DSM 31
+288681	strain ZK / E33L
+281309	strain 97-27
+279010	strain DSM 13 / ATCC 14580
+66692	strain KSM-K16
+315730	strain KBAB4
+264462	strain ATCC 15356 / DSM 50701 / NCIB 9529 / HD100
+390236	strain PKo
+224326	strain ATCC 35210 / B31 / CIP 102532 / DSM 4680
+445985	strain ZS7
+290434	strain PBi
+391038	strain DSM 17167 / STM815
+246194	strain Z-2901 / DSM 6008
+218497	strain S26/3
+340177	strain CaD3
+227941	strain GPIC
+264202	strain Fe/C-56
+517417	strain NCIB 8327
+517417	Chlorobium vibrioforme subsp. thiosulfatophilum (strain DSM 263 / NCIB 8327
+331678	strain BS1
+290317	strain DSM 266
+83558	Chlamydophila pneumoniae
+194439	strain ATCC 49652 / DSM 12025 / TLS
+272562	strain ATCC 824 / DSM 792 / JCM 1419 / LMG 5710 / VKM B-1787
+441770	strain ATCC 19397 / Type A
+515621	strain 657 / Type Ba4
+290402	strain ATCC 51743 / NCIMB 8052
+290402	Clostridium acetobutylicum
+508767	strain Alaska E43 / Type E3
+508765	strain Eklund 17B / Type B
+441771	strain Hall / ATCC 3502 / NCTC 13319 / Type A
+536232	strain Kyoto / Type A2
+498213	strain Okra / Type B1
+441772	strain Langeland / NCTC 10281 / Type F
+498214	strain Loch Maree / Type A3
+272563	strain 630
+386415	strain NT
+195103	strain ATCC 13124 / NCTC 8237 / Type A
+195102	strain 13 / Type A
+289380	strain SM101 / Type A
+212717	strain Massachusetts / E88
+196164	strain DSM 44549 / YS-314 / AJ 12310 / JCM 11189 / NBRC 100395
+340322	strain R
+306537	strain K411
+269798	strain ATCC 33406 / NCIMB 9469
+319795	strain DSM 11300
+243230	strain ATCC 13939 / DSM 20539 / JCM 16871 / LMG 4051 / NBRC 15346 / NCIMB 9279 / R1 / VKM B-1422
+138119	strain Y51
+349161	strain MI-1
+269484	strain Jake
+205920	strain Arkansas
+302409	strain Gardel
+779	Cowdria ruminantium
+254945	strain Welgevonden
+226185	strain ATCC 700802 / V583
+106370	strain CcI3
+393115	strain FSC 198
+458234	strain FTNF002-00 / FTA
+376619	strain LVS
+393011	strain OSU18
+177416	strain SCHU S4 / Schu 4
+418136	strain WY96-3418
+251221	strain PCC 7421
+391165	strain ATCC BAA-1260 / CGDNIH1
+316274	strain ATCC 23779 / DSM 785
+204669	strain Ellin345
+272621	strain ATCC 700396 / NCK56 / N2 / NCFM
+390333	strain ATCC 11842 / DSM 20081
+321956	strain ATCC BAA-365
+405566	strain DPC 4571
+257314	strain CNCM I-12250 / La1 / NCC 533
+220668	strain ATCC BAA-793 / NCIMB 8826 / WCFS1
+314315	strain 23K
+297246	strain Paris
+400673	strain Corby
+272624	strain Philadelphia 1 / ATCC 33152 / DSM 7513
+297245	strain Lens
+281090	strain CTCB07
+272626	strain CLIP 11262
+568819	strain CLIP80459
+265669	strain F2365
+552536	strain HCC23
+169963	strain ATCC BAA-679 / EGD-e
+386043	strain ATCC 35897 / DSM 20650 / SLCC5334
+266779	strain BNC1
+481448	isolate V4
+481448	Methylokorus infernorum (strain V4
+368407	strain ATCC 35101 / DSM 1498 / JR1
+410289	strain BCG / Pasteur 1173P2
+561275	strain BCG / Tokyo 172 / ATCC 35737 / TMC 1019
+561304	strain Br4923
+189918	strain KMS
+164756	strain MCS
+246197	strain DK 1622
+457570	strain ATCC BAA-1301 / DSM 18059 / JW/NM-WN-LF
+323097	strain X14 / DSM 10229
+323848	strain ATCC 25196 / NCIMB 11849
+323261	strain ATCC 19707 / NCIMB 11848
+323098	strain Nb-255 / ATCC 25391
+247156	strain IFM 10152
+221109	strain DSM 14371 / JCM 11309 / KCTC 3954 / HTE831
+319225	strain DSM 273
+319225	Chlorobium luteolum (strain DSM 273
+290512	strain DSM 271 / SK 413
+267747	strain KPA171202 / DSM 16379
+290318	strain DSM 265
+290318	Chlorobium vibrioforme subsp. thiosulfatophilum (strain DSM 265
+290318	Chlorobium phaeovibrioides (strain DSM 265
+557722	strain LESB58
+208963	strain UCBPP-PA14
+205922	strain Pf0-1
+335284	strain K5
+347834	strain CFN 42 / ATCC 51251
+216596	strain 3841
+266834	strain 1021
+266834	Ensifer meliloti
+266834	Sinorhizobium meliloti
+243090	strain SH1
+316058	strain HaA2
+258594	strain ATCC BAA-98 / CGA009
+316056	strain BisB18
+316057	strain BisB5
+272943	strain ATCC 17023 / 2.4.1 / NCIB 8253 / DSM 158
+101510	strain RHA1
+347255	strain ESF-5
+391896	strain OSU 85-389
+562019	strain Rustic
+452659	strain Iowa
+392021	strain Sheila Smith
+266117	strain DSM 9941 / NBRC 16129
+309807	strain DSM 13855 / M31
+418127	strain Mu3 / ATCC 700698
+273036	strain bovine RF122 / ET3-1
+158878	strain Mu50 / ATCC 700699
+396513	strain TM300
+176279	strain ATCC 35984 / RP62A
+176280	strain ATCC 12228
+227882	strain ATCC 31267 / DSM 46492 / JCM 5070 / NCIMB 12804 / NRRL 8165 / MA-4680
+100226	strain ATCC BAA-471 / A3(2
+455632	strain JCM 4626 / NBRC 13350
+1140	strain PCC 7942
+1140	Anacystis nidulans R2
+321327	strain JA-3-3Ab
+321327	Cyanobacteria bacterium Yellowstone A-Prime
+321332	strain JA-2-3B'a(2-13
+321332	Cyanobacteria bacterium Yellowstone B-Prime
+269084	strain ATCC 27144 / PCC 6301 / SAUG 1402/1
+269084	Anacystis nidulans
+64471	strain CC9311
+203124	strain IMS101
+570417	strain wPip
+292805	strain TRS
+246196	strain ATCC 700084 / mc(2
+37919	Nocardia opaca
+1587	Lactobacillus suntoryeus
+6203	Sheep tapeworm
+4043	Parsley
+4043	Petroselinum hortense
+3352	Loblolly pine
+51239	Vanilla
+72586	strain CBS-3
+431943	strain ATCC 8527 / DSM 555 / NCIMB 10680
+3442	Japanese goldthread
+316	Pseudomonas perfectomarina
+79676	strain CF600
+257310	strain ATCC BAA-588 / NCTC 13252 / RB50
+257310	Alcaligenes bronchisepticus
+257311	strain 12822 / ATCC BAA-587 / NCTC 13253
+257313	strain Tohama I / ATCC BAA-589 / NCTC 13251
+75320	Bacteriophage KVP40
+66797	Bacillus phage SPBc2
+66797	Bacteriophage SP-beta
+212035	APMV
+49450	Foxglove
+49451	Coyote tobacco
+4072	Bell pepper
+9627	Red fox
+10141	Guinea pig
+10029	Chinese hamster
+10029	Cricetulus barabensis griseus
+9267	North American opossum
+9267	Didelphis marsupialis virginiana
+9685	Cat
+9685	Felis silvestris catus
+30637	Middle East blind mole rat
+30637	Nannospalax ehrenbergi
+47145	Green pufferfish
+47145	Chelonodon fluviatilis
+6500	California sea hare
+7102	Tobacco budworm moth
+6523	Great pond snail
+180675	Scarlet sage
+6941	Cattle tick
+7785	Electric ray
+7200	Sand fly
+243276	strain Nichols
+243277	strain ATCC 39315 / El Tor Inaba N16961
+223926	strain RIMD 2210633
+216895	strain CMCP6
+7244	Fruit fly
+176298	strain Ach5
+190386	strain 15955
+373	Rhizobium vitis
+161934	Sugar beet
+5547	Hypocrea rufa
+160488	strain KT2440
+714	Actinobacillus actinomycetemcomitans
+714	Haemophilus actinomycetemcomitans
+107806	strain APS
+107806	Acyrthosiphon pisum symbiotic bacterium
+198804	strain Sg
+224915	strain Bp
+5476	Yeast
+7213	Mediterranean fruit fly
+7213	Tephritis capitata
+243161	strain MoPn / Nigg
+272561	strain D/UW-3/Cx
+7240	Fruit fly
+233412	strain 35000HP / ATCC 700724
+272623	strain IL1403
+272623	Streptococcus lactis
+416870	strain MG1363
+575	Klebsiella planticola
+577	Klebsiella terrigena
+99287	strain LT2 / SGSC1412 / ATCC 700720
+1111708	strain PCC 6803 / Kazusa
+291272	strain BPEN
+563178	strain 5A
+561501	strain Tuc7
+190650	strain ATCC 19089 / CB15
+290338	strain ATCC BAA-895 / CDC 4225-83 / SGSC4696
+290339	strain ATCC BAA-894
+290339	Enterobacter sakazakii
+331111	strain E24377A / ETEC
+574521	strain E2348/69 / EPEC
+585035	strain S88 / ExPEC
+585055	strain 55989 / EAEC
+444450	strain EC4115 / EHEC
+585057	strain IAI39 / ExPEC
+585397	strain ED1a
+585034	strain IAI1
+595496	strain K12 / MC4100 / BW2952
+316385	strain K12 / DH10B
+331112	strain HS
+362663	strain 536 / UPEC
+199310	strain CFT073 / ATCC 700928 / UPEC
+481805	strain ATCC 8739 / DSM 1576 / Crooks
+585056	strain UMN026 / ExPEC
+409438	strain SE11
+439855	strain SMS-3-5 / SECEC
+364106	strain UTI89 / UPEC
+399742	strain 638
+218491	strain SCRI 1043 / ATCC BAA-672
+218491	Pectobacterium atrosepticum
+338565	strain DSM 17950 / Et1/99
+585054	strain ATCC 35469 / DSM 13698 / CDC 0568-73
+85963	strain J99
+85963	Campylobacter pylori J99
+85962	strain ATCC 700392 / 26695
+85962	Campylobacter pylori
+507522	strain 342
+272620	strain ATCC 700721 / MGH 78578
+122587	strain Z2491
+122586	strain MC58
+103690	strain PCC 7120 / UTEX 2576
+561230	strain PC1
+243265	strain TT01
+454166	strain SL483
+41514	strain ATCC BAA-731 / CDC346-86 / RSK2980
+321314	strain SC-B67
+439851	strain CT_02021853
+550537	strain P125109
+550538	strain 287/91 / NCTC 13346
+454169	strain SL476
+423368	strain SL254
+295319	strain ATCC 9150 / SARB42
+1016998	strain ATCC BAA-1250 / SPB7
+476213	strain RKS4594
+554290	strain AKU_12601
+439843	strain CVM19633
+399741	strain 568
+344609	strain CDC 3083-94 / BS512
+300268	strain Sb227
+300267	strain Sd197
+373384	strain 8401
+300269	strain Ss046
+343509	strain morsitans
+406817	strain ATCC 19061 / DSM 3370 / LMG 1036 / NCIB 9965 / AN6
+160492	strain 9a5c
+183190	strain Temecula1 / ATCC 700964
+393305	strain 8081
+349747	strain IP 31758
+360102	strain Antiqua
+502801	strain PB1/+
+377628	strain Nepal516
+386656	strain Pestoides F
+273123	strain IP32953
+502800	strain YPIII
+3879	Alfalfa
+7165	African malaria mosquito
+45417	strain Utrecht
+45417	RPV
+10253	strain Tian Tan
+10253	VACV
+203173	strain M-96
+203172	strain CMS
+265872	strain Brighton Red
+265872	CPV
+265871	strain GRI-90 / Grishak
+265871	CPV
+265874	strain Moscow
+265874	ECTV
+265874	Mousepox virus
+31530	strain Lausanne
+31530	MYXV
+10272	strain Kasza
+10272	RFV
+10272	Shope fibroma virus (strain Kasza
+132475	YLDV
+928314	strain VR587
+928314	YMTV
+10089	Ryukyu mouse
+10089	Ricefield mouse
+64664	Gray-bellied squirrel
+34839	Long-tailed chinchilla
+34839	Chinchilla villidera
+9534	Green monkey
+9534	Cercopithecus aethiops
+7962	Common carp
+9315	Tammar wallaby
+10047	Mongolian jird
+10047	Mongolian gerbil
+10094	Brown spiny mouse
+10094	Rock-loving mouse
+9555	Olive baboon
+9793	Donkey
+571525	Recluse spider
+6921	Brown recluse spider
+571530	Recluse spider
+58218	Spider
+58216	Spider
+321804	Brazilian brown spider
+321804	Loxosceles surata
+571518	Apache recluse spider
+196454	Arizona brown spider
+424440	Desert recluse spider
+571529	Tucson recluse spider
+283164	North American fiddleback spider
+571533	Recluse spider
+571528	Recluse spider
+571517	Recluse spider
+28321	AmEPV
+59509	LSDV
+10280	MOCV
+10280	MCVI
+265876	strain Uriarra
+265876	MYXV
+10269	strain KS-1
+10269	SPPV
+10269	Capripoxvirus (strain KS-1
+8801	Ostrich
+6706	American lobster
+6645	Common octopus
+6720	Signal crayfish
+58217	South American recluse spider
+58217	Scytodes laeta
+575961	strain 4 GJB-2008
+575961	Recluse spider
+8319	Iberian ribbed newt
+7225	Fruit fly
+7225	Scaptodrosophila lebanonensis
+10506	PBCV-1
+9521	Common squirrel monkey
+29073	Polar bear
+29073	Thalarctos maritimus
+7226	Fruit fly
+7238	Fruit fly
+487521	strain ATCC 13950 / DSM 43223 / JCM 6384 / NCTC 13025 / 3600
+5076	Penicillium notatum
+320483	strain Florida
+403778	strain Illinois
+234826	strain St. Maries
+403779	strain Virginia
+870	Bacteroides nodosus
+548	Aerobacter aerogenes
+582	Proteus morganii
+40324	Pseudomonas maltophilia
+40324	Xanthomonas maltophilia
+1352	Streptococcus faecium
+1906	Streptomyces roseoflavus
+5306	White-rot fungus
+5306	Sporotrichum pruinosum
+349746	strain Angola
+590409	strain Ech586
+579405	strain Ech703
+634503	strain 93-146
+718251	strain FL6-60
+716541	strain ATCC 13047 / DSM 30054 / NBRC 13535 / NCDC 279-56
+634500	strain Eb661
+706191	strain LMG 20103
+561231	strain WPP163
+741091	strain Y9602
+498217	strain EIB202
+712898	strain C9-1
+712898	Pantoea agglomerans (strain C9-1
+4060	Serpentwood
+4060	Devilpepper
+329875	Common devil-pepper
+329875	Dissolena verticillata
+35872	Buffelgrass
+35872	Pennisetum ciliare
+5400	Black poplar mushroom
+5400	Agaricus aegerita
+243232	strain ATCC 43067 / DSM 2661 / JAL-1 / JCM 10045 / NBRC 100440
+243232	Methanococcus jannaschii
+382	Ensifer meliloti
+382	Sinorhizobium meliloti
+3871	Narrow-leaved blue lupin
+224324	strain VF5
+72580	strain YM-2
+408	Methylobacterium dichloromethanicum
+408	Protomonas extorquens
+69014	strain ATCC BAA-918 / JCM 12380 / KOD1
+69014	Thermococcus kodakaraensis (strain KOD1
+330779	strain ATCC 33909 / DSM 639 / JCM 8929 / NBRC 15157 / NCIMB 11770
+273057	strain ATCC 35092 / DSM 1617 / JCM 11322 / P2
+273063	strain DSM 16993 / JCM 10545 / NBRC 100140 / 7
+300852	strain HB8 / ATCC 27634 / DSM 579
+471472	strain 434/Bu / ATCC VR-902B
+315277	strain HAR-13 / ATCC VR-571B
+471473	strain UCH-1/proctitis
+3760	Peach
+3760	Amygdalus persica
+6253	Pig roundworm
+6253	Ascaris lumbricoides
+8765	White-lipped pit viper
+8765	Trimeresurus albolabris
+4092	Leadwort-leaved tobacco
+4092	Tex-Mex tobacco
+36596	Apricot
+7460	Honeybee
+65598	Brown bumblebee
+10754	Bacteriophage P22
+9538	Red guenon
+9538	Cercopithecus patas
+9519	Brown woolly monkey
+9519	Humboldt's woolly monkey
+54600	Celebes black macaque
+54600	Crested black macaque
+9597	Pygmy chimpanzee
+9597	Bonobo
+78454	Red-chested mustached tamarin
+10034	Black-bellied hamster
+130081	Red alga
+55529	Cryptomonas phi
+2839	Marine centric diatom
+2839	Biddulphia sinensis
+210007	strain ATCC 700610 / UA159
+6661	Brine shrimp
+6661	Artemia sanfranciscana
+7176	Southern house mosquito
+7176	Culex pungens
+7130	Tobacco hawkmoth
+7130	Tobacco hornworm
+7010	Desert locust
+7070	Red flour beetle
+13616	Gray short-tailed opossum
+10030	Long-tailed dwarf hamster
+10030	Chinese hamster
+51453	Trichoderma reesei
+284590	strain ATCC 8585 / CBS 2359 / DSM 70799 / NBRC 1267 / NRRL Y-1140 / WM37
+284590	Yeast
+284590	Candida sphaerica
+4911	Yeast
+4911	Candida kefyr
+105351	Black koji mold
+1033177	strain NBRC 4308
+1033177	White koji mold
+1033177	Aspergillus awamori var. kawachi
+272558	strain ATCC BAA-125 / DSM 18197 / FERM 7344 / JCM 9153 / C-125
+1359	Streptococcus cremoris
+1360	Streptococcus lactis
+5341	Common mushroom
+7373	Blue blowfly
+7373	Calliphora erythrocephala
+11776	strain Hardy-Zuckerman 2
+5791	Slime mold
+41704	Bean bug
+34358	Yeast
+82316	David's lily
+9091	Common quail
+9091	Tetrao coturnix
+8030	Atlantic salmon
+3816	Indian licorice
+3816	Glycine abrus
+36329	isolate 3D7
+5835	isolate Camp / Malaysia
+5837	isolate FC27 / Papua New Guinea
+5838	isolate FCR-3 / Gambia
+10816	isolate West India
+10816	AbMV
+268960	strain California/Logan
+268960	BCTV
+222448	isolate Puerto Rico
+222448	BGYMV
+222448	Bean golden mosaic virus (isolate Puerto Rico
+345184	isolate Jamaica
+345184	CaLCuV
+10818	isolate West Kenyan 844
+10818	ACMV
+10818	Cassava latent virus (isolate West Kenyan 844
+222073	isolate Nigerian
+222073	ACMV
+222073	Cassava latent virus (isolate Nigerian
+31600	ICMV
+223295	strain Vigna
+223295	MYMV
+223303	PHYVV
+223303	Pepper huasteco virus
+223310	isolate Venezuela
+223310	PYMV
+10829	SLCV
+223341	strain Yellow vein
+223341	TGMV
+223353	strain Australia
+223353	ToLCV
+49267	TPCTV
+37139	isolate Spain-1
+37139	TYLCSV
+221538	isolate Spain-2
+221538	TYLCSV
+123735	TYLCSV
+185793	TYLCCNV
+66366	strain Israel
+66366	TYLCV
+85306	Udo longhorn beetle
+399549	strain ATCC 51363 / DSM 5348
+134676	strain ATCC 31044 / CBS 674.73 / SE50/110
+55189	Yeast
+27292	Lager yeast
+27292	Saccharomyces carlsbergensis
+8839	Domestic duck
+8839	Anas boschas
+29080	South American armadillo
+64177	Stinkbells
+3635	Upland cotton
+3635	Gossypium mexicanum
+232323	Water bear
+232323	Macrobiotus dujardini
+8406	Marsh frog
+8406	Rana ridibunda
+329726	strain MBIC 11017
+557600	strain AB307-0294
+480119	strain AB0057
+405416	strain ACICU
+509170	strain SDF
+400667	strain ATCC 17978 / NCDC KC 755
+509173	strain AYE
+349163	strain JF-5
+243159	strain ATCC 23270 / DSM 14882 / NCIB 8455
+243159	Ferrobacillus ferrooxidans (strain ATCC 23270
+380394	strain ATCC 53993
+380394	Leptospirillum ferrooxidans (ATCC 53993
+416269	strain L20
+537457	strain AP76
+434271	strain JL03
+339671	strain ATCC 55618 / 130Z
+393595	strain SK2 / ATCC 700651 / DSM 11573
+187272	strain MLHE-1
+316275	strain LFI1238
+316275	Vibrio salmonicida (strain LFI1238
+240292	strain ATCC 29413 / PCC 7937
+491915	strain DSM 21510 / WK1
+367737	strain RM4018

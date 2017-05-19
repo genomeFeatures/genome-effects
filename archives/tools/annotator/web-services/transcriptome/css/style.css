@@ -1,0 +1,117 @@
+/*
+ Author : Lucie N. Hutchins.
+ Title : Scientific Software Engineer
+ Company : The Jackson Laboratory
+ Department : Computational Biology
+ Date : March 2011
+
+ Project : Graber transcript database
+
+*/
+
+body {
+	margin: 0;padding:0;
+        background: url(images/newlogo.jpg) repeat-x left top;
+	font-family: verdana, Arial, Helvetica, sans-serif;
+	color:#333;font-size: 74%; 
+}
+/***************************************************************** 
+   Initiate all the containers with zero margin and padding 
+   This is important because some browsers add padding and margin 
+ ****************************************************************/
+* {
+   margin:0;
+   padding:0;
+  }
+
+h1, h2, h3 {margin: 0;text-transform: uppercase;}
+h1 {font-size: 1.5em;color:#CC3300; color:#BFD8D9;color:#5F9EA0;color:#CC3300;}
+h2 {font-size: 1.4em; }
+h3 {font-size: 1em;color:#CC3300;border-bottom:solid 1px #eee;}
+p, ul, ol{margin-top: 0;line-height: 180%;}
+a {text-decoration: none;color:#333;}
+a:hover {background: none;color:red;}
+
+/* Header */
+#header {
+    height: 68px;
+    text-align:center;
+}
+.data,.post{width:1000px;
+   margin:auto;
+}
+#header h1 {
+	font-size: 2.2em;
+        white-space:nowrap;
+       margin:0;
+}
+
+/* Menu */
+
+.navbar {
+   height:40px;
+   background:rgb(6,8,68);
+   color:#fff;
+
+}
+.navbar .data ul {list-style: none;line-height: normal;width:98%;}
+.navbar .data li {float: left;border-left:solid 1px #eee; height:40px;width:auto;}
+.navbar .data li:hover {background:#eee;}
+ a,a:link, a:visited {
+	margin-right: 3px;
+	padding: 5px 10px 5px 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #555; color:#CC3300;color:#eee;	
+}
+
+.navbar a:hover, .navbar .current_page_item a {
+	background:#fff;
+	color: red;
+}
+
+/* Page */
+
+#qtool ,#rsum,#footer{
+  background:#eee; width:100%;
+}
+/* Content 
+#qtool .post{
+      width:68%;
+      margin:auto; padding:0;
+  }
+*/
+td #qsumdata{ margin-top:1em;margin-bottom:1em;}
+.about p,.about ul{
+   padding-left:1em;margin:0;
+}
+#wrn {font-size:1.4em;}
+option {padding-left:0.5em;padding-right:0.6em;padding-bottom:0.4em;}
+/*.anntd{width:12em;};*/
+#content {
+    padding-top:1em;padding-left:5px;padding-right:2px;display: block;}
+.post table {text-align: justify;width:100%;border-bottom:solid 3px rgb(6,8,79);}
+.post td{padding:4px;background:#fff;}
+.post .sb{background:rgb(6,8,68);color:#fff;}
+
+#rsum{width:100%;}
+#rsum .data{background:#BFD8D9;background:rgb(6,8,68);background:#fff;}
+.data .about{text-align: justify;width:86%;padding-left:0.6em;color:rgb(6,8,68);}
+.about h2{padding:0;margin:0; color:#CC3300;}
+.about p,.about ul{text-align:left;margin-left:1.5em;padding:1em;font-style:italic;line-height:1.2em;}
+
+#q{background:#fff;color:rgb(6,8,68); height:20px;margin-bottom:1em;border:solid 1px #777; }
+
+/* Footer */
+
+#footer {
+	height: 50px;margin: 0 auto;padding-top : 20px;
+	font-family: Arial, Helvetica, sans-serif;}
+
+#footer p {margin: 0;line-height: normal;font-size: 9px;text-transform: uppercase;text-align: center;}
+#footer a {	color: #FFFFFF;}
+#footer .data{background:rgb(6,8,68);height:20px;color:#fff;padding-top:1em;padding:0.6em;}
+/*
+*/

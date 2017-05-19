@@ -1,0 +1,45 @@
+
+*************************************************************
+Starting load process :  22/6/2014 @ 22:8:48 
+
+*************************************************************
+loading danRer7 -- mgcGenes
+loading danRer7 -- refGene
+loading danRer7 -- xenoRefGene
+loading danRer7 -- all_est
+loading danRer7 -- estOrientInfo
+loading danRer7 -- all_mrna
+loading danRer6 -- mgcGenes
+loading danRer6 -- refGene
+loading danRer6 -- xenoRefGene
+loading danRer6 -- all_est
+loading danRer6 -- estOrientInfo
+loading danRer6 -- all_mrna
+loading dm3 -- refGene
+loading dm3 -- xenoRefGene
+loading dm3 -- contrastGene
+loading dm3 -- all_est
+loading dm3 -- estOrientInfo
+loading dm3 -- all_mrna
+loading dm2 -- nscanGene
+loading dm2 -- refGene
+loading dm2 -- xenoRefGene
+loading dm2 -- all_est
+loading dm2 -- estOrientInfo
+loading dm2 -- all_mrna
+loading ce10 -- refGene
+loading ce10 -- xenoRefGene
+loading ce10 -- all_est
+loading ce10 -- estOrientInfo
+loading ce10 -- all_mrna
+loading ce6 -- refGene
+loading ce6 -- xenoRefGene
+loading ce6 -- sangerGene
+loading ce6 -- all_est
+loading ce6 -- estOrientInfo
+loading ce6 -- all_mrna
+
+*************************************************************
+Program Ends:  22/6/2014 @ 22:51:36 
+
+*************************************************************

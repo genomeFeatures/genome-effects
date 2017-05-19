@@ -1,0 +1,33 @@
+Project:
+Generate SNPs counts within the founder strains(B6, A/J, NOD, NZO, 129S1,WSB,PWK,and CAST) 
+in each of these regions, counted in two different ways:  
+(a) total number of SNPs within any founder strain, and 
+Question: Is this the total number of SNP within the specified genomic region?
+Note: B6 will always have SNPs as it is the reference strain in the database
+
+(b) count of the SNPs in the strain of interest is different than all of the other 7 founder strains.
+Question: does this mean that within the specified genomic region for a given strain, only
+ count cases where this strain is the only one across all 8 cc founder strains with the SNP allele.
+ For example: for SNP[i].alleles=A/G  this strain has "G" and the rest of the 7 cc founders have "A"
+
+Input:
+ 1. Genomic loci from Narayanan  
+ 2. CGDSNPDB --> Imputed - Jeremy R. Wang et al. 2012 ?
+    or Ensembl SNPs?
+
+Output:
+Same intervals with the two SNP counts that I just defined.
+
+Question:
+Is it right to assume that the first count (a),is global and the second count(b) is strain specific.
+For example the output will have the following fields in addition to the original interval:
+1.SNP_count -> total SNP count from (a)
+2.B6        --> total SNP count within region where B6 is the only one with the SNP allele
+3.A/J       --> total SNP count within region where A/J is the only one with the SNP allele
+4.NOD       --> total SNP count within region where NOD is the only one with the SNP allele
+5.NZO       --> total SNP count within region where NZO is the only one with the SNP allele
+6.129S1     --> total SNP count within region where 129S1 is the only one with the SNP allele
+7.WSB       --> total SNP count within region where WSB is the only one with the SNP allele
+8.PWK       --> total SNP count within region where PWK is the only one with the SNP allele
+9.CAST      --> total SNP count within region where CAST is the only one with the SNP allele
+

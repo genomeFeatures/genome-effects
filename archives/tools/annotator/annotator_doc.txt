@@ -1,0 +1,129 @@
+Known snp annotator tools:
+1. http://www.snp-nexus.org/
+ only human (hg19-18)
+2.http://www.scandb.org/newinterface/index.html
+ gene/region/snp specific - organism unkonwn
+3. http://snp.gs.washington.edu/SeattleSeqAnnotation137/
+ Input Variation List File for Annotation (NCBI 37 / hg19)
+4.http://brainarray.mbni.med.umich.edu/Brainarray/Database/SearchSNP/snpfunc.aspx
+SNP Function Portal (dbSNP 126, Human Genome 36.1)
+
+5. http://useast.ensembl.org/info/docs/variation/vep/index.html
+Version 72 of the script requires at least version 72 of the Ensembl Core and Variation APIs and their relevant dependencies to be installed to use the script. A minimal subset of these can be installed using the supplied
+Version 73 of the script requires at least version 73 of the Ensembl Core and Variation APIs and their relevant dependencies to be installed to use the script. A minimal subset of these can be installed using the supplied
+
+NB: VEP users writing plugins should be aware that while the VEP code attempts to preserve the state of any plugin-specific cached data between separate forks, there may be situations where data is lost. If you find this is the case, you should disable forking in the new() method of your plugin by deleting the "fork" key from the $config hash. 
+
+
+6. http://snpeff.sourceforge.net/index.html
+Genetic variant annotation and effect prediction toolbox. 
+
+
+System requirements:
+perl modules: XML::Simple;use LWP 5.64;
+wget,
+
+
+*******************************************************************************
+To Do:
+1. Create the annotator mailing list for updates and feedbacks
+2. Create the annotator forum
+*******************************************************************************
+
+1. Developers Documentation
+2. Users Documentation
+Developers Documentation:
+Most recent notes -
+A. Who're the target users of snpAnnotator? or How will snpAnnotator be used?
+   1. On the web -- small/medium datasets, single SNP, file uploads ( snps, annotations?)
+      a. By other researchers
+      b. By students
+      c. Software developers
+   2. Standalone -- large/very large datasets
+      a. By other researchers
+      b. Software developers 
+
+B. For best performance:
+   0. replace string to char*  in: functions,variables, and containers (return types,arguments,local variables)
+   1. How do I process the SNP input file
+   2. How do I INDEX the annotations data
+   3. How to I INDEX the genome data
+......
+
+<chr><chrStart><strand>=<txidList> //this structure will be handy for genome range queries
+
+<sourceid>=sourceName ; <txid>={start,end); <exonid>={start,end);
+<organismVersion>=id; <txaccession>=<txidList>;<txid>=<txaccesionList>
+<txaccession><source>={<exonList>,<frameList>,cdsStart,cdsEnd}
+
+Note: This program is being modified to accept gene annotation file (genePrediction,or gtf format) 
+      and gene annotation source (mm9-ensGene,GRCm38-ensGene,GRCm38-mgiGene, ...)
+      in addition to SNP input file. If the gene annotation file is not provided, then the program will
+      check if a gene annotation source was specified or default to  gene annotations (all?) 
+      from grabber transcript database for the selected organism version.
+      grabber transcript annotation file is generated using the script getCoordinates.pl (this will be a function call)
+      The default organism is mouse current version.
+      If the result file is not specified, the output will be standard out.
+      The program validates all single position SNPs (novel and existing) from an input against the specified  
+      reference genome assembly build.The program also checks for reference allele  and snp allele consistency and sets the 
+      flags accordingly.Also tags CpG Sites, and Mutation types (transition or transversion).
+How it should work:
+1. download annorator (zip file) on local server
+2. unzip annotator
+3. cd to annotator main directory
+3. update the load_config.txt file 
+   
+The standalone version requires some configurations:
+1. a configuration file with: 
+   a. Paths to remote webservices and genomes config file
+   b. Paths to local data structures
+3. a subdirectory for supporting perl and shell scripts
+
+Maintenance:
+1. list of organism versions with chromosome data
+2. list of organism versions with gene annotations
+
+The result includes:
+  1.) oginal fields list
+  2. QA report fields
+     a. QA_tag
+        0-> normal, no action taken; 
+        2-> ref_allele call matches reverse strand - then Alleles are complemented
+        3-> Bad ref_allele call, does not match allele on ref genome (both + and -) and does not match snp_allele; 
+        4-> ref_allele matches (N) on reference genome
+        5-> ref_allele matches the other_allele (allele swap)
+     b. CpG_flag -->mutation within CG or GC dinucleotides 
+        CpG sites or CG sites are regions of DNA where a cytosine nucleotide occurs next to a guanine nucleotide 
+        in the linear sequence of bases along its length. "CpG" is shorthand for "—C—phosphate—G—", 
+        that is, cytosine and guanine separated by only one phosphate; phosphate links any two nucleosides together in DNA.
+        The "CpG" notation is used to distinguish this linear sequence from the CG base-pairing of cytosine and guanine. 
+        The CpG notation can also be interpreted as the cytosine being 5 prime to the guanine base
+     c. mutation type (present only if snp_allele was provided)
+     d. Fields count missmatch between header and data
+  3.) The result of the simple version will have the following fields appended to it:
+           Exon,ExonID(s),Intron,Intergenic,TranscriptID(s),GeneSymbol,geneStrand,annotationSorceDbSchema
+      Where:
+         Exon: Yes/No -- Yes if SNP is locate on exon
+         ExonID(s): a commas separated list of all the exons containing the SNP
+         Intron: Yes/No -- Yes if SNP is locate on intron
+         Intergenic: Yes/No -- Yes if SNP is locate on intergenic region
+         Function_class: a commas separated list of all the functional implications of this SNP on this gene
+         TranscriptID(s): a commas separated list of all the transcripts containing the SNP
+         GeneSymbol: gene symbol 
+ 
+  b.) The result of the SNP coding version will have the following fields appended to it:
+           Exon,ExonID(s),Intron,Intergenic,codingClass,TranscriptID(s),GeneSymbol,geneStrand,ensemblDbSchema
+      Where:
+         Exon: Yes/No -- Yes if SNP is locate on exon
+         ExonID(s): a commas separated list of all the exons of this gene containing the SNP
+                where each exon has additional information including: snpFrame,CDS_len,snpPosInCDS,codonPosInProtein    
+         Intron: Yes/No -- Yes if SNP is locate on intron
+         Intergenic: Yes/No -- Yes if SNP is locate on intergenic region
+         Function_class: a commas separated list of all the functional implications of this SNP on this gene
+         TranscriptID(s): a commas separated list of all the transcripts of this gene containing the SNP
+         GeneSymbol: gene symbol 
+Input: the program expects the input snp file to be a tab file
+        with with a header and at least the following two fields/labels:Chromosome,Position
+        if you want to include the coding information, your input file should contain
+        in addition the the Chromosome and position fields, the genotype allele for both
+        the reference and the concensus strains

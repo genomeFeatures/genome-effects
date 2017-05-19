@@ -1,0 +1,233 @@
+#!/usr/bin/perl
+
+######################################################################
+## This script generates SNPs file by chromosome
+## from the snp database
+#
+#   Author: Lucie Hutchins
+#   Department of Research, Bioinformatics
+#   Dr. Joel Graber's Lab
+#   The Jackson Laboratory
+#
+#   Implimentation date : April 2011
+#   last update : May 2013
+#   
+#
+#####################################################################
+use DBI;
+use vars qw ($opt_h $opt_d $opt_f);
+use Getopt::Std;
+use POSIX;
+use Time::localtime;
+$mbp=1000000;
+getopts('hd:f:');
+if($opt_h) {
+    print <<HELP;
+
+ This script generates SNPs file by chromosome for the specified SNP source.
+ The chromosome file names have the format: chrxx"."_SourceDate_snps.txt"
+  for example (chr1_Imputed2012-snps.txt)
+
+Usage:
+
+   perl dbSNPQuery.pl [-d resultPath]
+
+Arguments:
+   -h  displays this help message
+   -d  A directory where to store data. Default working directory
+
+Example: perl dbSNPQuery.pl [-d resultPath]
+
+HELP
+exit;
+}
+my $dbname ='cgdsnpdb';my $host ='cgd';my $user ='pup';my $pwd  ='puppass';
+my $dbh = DBI->connect("DBI:mysql:database=$dbname;host=$host",$user,$pwd)
+                            or die "Can't connect to database!\n";
+
+my $dbname2 ='graber_transcriptdb';my $host2 ='demon';my $user2 ='lnh';my $pwd2  ='lucie98';
+my $dbh2 = DBI->connect("DBI:mysql:database=$dbname2;host=$host2;mysql_local_infile=1",$user2,$pwd2)
+                            or die "Can't connect to database!\n";
+$qh_trunc=$dbh2->prepare("truncate table snps_temp");
+$query="create temporary table if not exists snps_temp(snpid int unsigned primary key,";
+$query.="chrom tinyint default 0,Pos int unsigned default 0,alleles varchar(4),";
+$query.="ref_Count int default 0,other_Count int default 0,uniqStrid smallint default 0,strains varchar(25),";
+$query.="index(chrom,Pos),index(Pos))";
+$qh_create=$dbh2->prepare($query);
+$qh_load=$dbh2->prepare("load data local infile ? into table snps_temp ignore 1 lines");
+$get_region=$dbh2->prepare("select* from snps_temp where chrom=? and Pos between ? and ?");
+
+my %strainmap;my $source_id= 21; #Imputed - Jeremy R. Wang et al. 2012 , default imputed source
+# get chromosomes list
+my $getChr ="select chromosome_id, chromosome_name from snp_chromosome where chromosome_id<22 ";
+#now get cc founder strains listing 
+my $getStrains="select strain_name,s.strain_id from snp_strain s, snp_strain_by_group sc ";
+   $getStrains .=" where group_id=4 and sc.strain_id=s.strain_id order by strain_name ";
+# get the SNPs list for the imputed source
+my $snplistQuery  ="select m.snpid,chromosome_id,bp_position ";
+   $snplistQuery .=" from snp_position m, snp_by_source s";
+   $snplistQuery .=" where chromosome_id=? and s.source_id=? and m.snpid=s.snpid ";
+
+my $snpdataQuery  ="select ref_allele,snp_allele";
+   $snpdataQuery .=" from snp_main where snpid=? ";
+#now get the list of accessions for this SNP  
+
+#Now get the Imputed genotype of this snp
+my $getGenotype= " select i.strain_id,genotype_allele from snp_imputed i, snp_strain s";
+   $getGenotype.=" where snpid=? and source_id=? and i.strain_id in(1,2,7,8,16,129,213,214) 
+                   and i.strain_id=s.strain_id order by strain_name";
+my $snpchr   = $dbh->prepare($getChr)or die "Couldn't prepare statement: " . $dbh->errstr;
+my $snpstr   = $dbh->prepare($getStrains)or die "Couldn't prepare statement: " . $dbh->errstr;
+
+my $snplist  = $dbh->prepare($snplistQuery)or die "Couldn't prepare statement: " . $dbh->errstr;
+my $snpdata  = $dbh->prepare($snpdataQuery)or die "Couldn't prepare statement: " . $dbh->errstr;
+my $snpac    = $dbh->prepare($getAccession)or die "Couldn't prepare statement: " . $dbh->errstr;
+my $snpgenoImp  = $dbh->prepare($getGenotype)or die "Couldn't prepare statement: " . $dbh->errstr;
+#Now get the Imputed genotype of this snp
+my $getGenotype= " select i.strain_id,genotype_allele from snp_genotype i, snp_strain s";
+   $getGenotype.=" where i.snpid=? and source_id=? and i.strain_id=s.strain_id order by strain_name";
+my $snpgeno  = $dbh->prepare($getGenotype)or die "Couldn't prepare statement: " . $dbh->errstr;
+
+$year=2012; %source_name=(20=>"DiversityArrayYang2011",21=>"ImputedJeremyR.Wang2012");
+$source_id=21; $source=$source_name{$source_id};
+#print "The source name is $source\n"; exit;
+# get the list of all the chromosomes
+$snpchr->execute() or die "Can't execute query: " . $dbh->errstr . "\n";
+$i=0;
+
+sub getRegionStat{ 
+ ($region_start,$region_end,$indexMap_ref,$snpmap_ref,$genos_ref,$total_ref)=@_;
+ while(($pos,$data)=each(%{$snpmap_ref})){
+     #last if($pos>$region_end);next if($pos<$region_start);
+     if(($pos>=$region_start) && ($pos<=$region_end)){
+       ($ref_count,$snp_count,$uniqId)=split(",",${$snpmap_ref}{"$pos"}); $$total_ref+=1;
+       if(($ref_count==1)||($snp_count==1)){ 
+         $index=${$indexMap_ref}{"$uniqId"};${$genos_ref}[$index]+=1;
+      }
+    }
+  }
+}
+my @strainIndex=();
+if($snpchr->rows > 0){ #process each chromosome 
+   #index strain positions
+   $snpstr->execute() or die "Can't execute query: ".$dbh->errstr . "\n";
+   while(($strain_name,$strain_id)=$snpstr->fetchrow_array()){ push(@strainIndex,"$strain_id:$strain_name");}
+   $straindata="";%indexMap=();@strains=();
+   for my $i (0 .. $#strainIndex) {
+      ($strain_id,$strain_name)=split(":",$strainIndex[$i]);$straindata.=",$strain_name";
+       $indexMap{"$strain_id"}=$i;$strains[$i]=$strain_name;
+       #print "$strain_name\t$strain_id\t$i\n";
+   } 
+   $straindata=~s/^,//; %chrmap=();%regionMap=();
+   while(($chromosome_id,$chromosome_name) = $snpchr->fetchrow_array()){
+       $chromosome_name=~s/^\s*//;$chromosome_name=~s/\s*$//;
+       $chrmap{"$chromosome_name"}=$chromosome_id;
+   }#index regions by chromosome_id
+  open(IN,"$opt_f");if(!IN){print "$!\n";exit;}open(LOG,">$opt_f-log.txt");
+  $region_headerline=<IN>;chomp($region_headerline);
+  while(<IN>){chomp($_); @fields=split("\t",$_);
+     if(@fields==15){ $line= join("\t",@fields);#++$count;
+        $lodDropL=$fields[5]; $lodDropR=$fields[6];$lodDropL=~s/^\s*//;$lodDropL=~s/\s*$//;
+        $chr=$fields[2];$chr=~s/^\s*//;$chr=~s/\s*$//;$lodDropR=~s/^\s*//;$lodDropR=~s/\s*$//;
+        $chrl=$fields[8];$region_start=$fields[9]*$mbp;$chrr=$fields[12];$region_end=$fields[13]*$mbp;
+        $chrl=~s/\s*$//;$chrl=~s/^\s*//;$chrr=~s/\s*$//;$chrr=~s/^\s*//;
+        if(($chr ne "$chrl")||($chr ne "$chrr")){
+            print LOG join("\t",@fields)."\t-- $chrl:$region_start\t$chrr:$region_end\n";next;}
+        $chr_id=$chrmap{"$chr"};
+        $regionMap{"$chr_id"}{"$."}=$_;
+     } 
+  }
+  $count=0;
+  while(($chromosome_name,$chromosome_id) =each(%chrmap)){ #$snpchr->fetchrow_array()
+     next if(($chromosome_id ==7)||($chromosome_id ==2)||($chromosome_id ==17)||($chromosome_id ==11)||($chromosome_id ==20));
+     $tm = localtime;
+     open(SNP,">$opt_f-chr$chromosome_name-SNPnew.txt");print SNP "$region_headerline\tTotal\t".join("\t",@strains)."\n";
+     my ($sec,$min,$hour,$mday, $mon, $yday) = ($tm->sec,$tm->min,$tm->hour,$tm->mday, 
+       ($tm->mon)+1, ($tm->year)+1900);
+     print "\n*************************************************************\n";
+     print "chrom $chromosome_name started:  $mday/$mon/$yday @ $hour:$min:$sec \n";
+     print "\n*************************************************************\n";
+     $filename="chr$chromosome_name"."_$source-snps2.txt";
+     print "Processing  $chromosome_name\n"; $count=0;%snpmap=();
+     if(-f "$filename"){open(fh,"$filename");$header=<fh>;
+        while(<fh>){chomp($_);
+           ($SNPID,$chrom,$bp_position,$alleles,$ref_count,$snp_count,$uniqStrid,$strains)=split("\t",$_);
+            $snpmap{"$bp_position"}="$ref_count,$snp_count,$uniqStrid";   
+        }
+        close(fh);
+      }else{
+       # now for each item category, open the data get kenroy listing
+       open(OUT ,">$filename") or die "can't open $filename\n";
+       print OUT "SNPID\tchrom\tPos\talleles\tref_alleleCount\tother_alleleCount\tuniqStrid\t";
+       print OUT "\t$straindata\n";$count=0;  #get the snp list
+       $snplist->execute($chromosome_id,$source_id) or die "Can't execute query: " . $dbh->errstr . "\n";
+       $Totalsnps=$snplist->rows; 
+       while(($snpid,$chromosome_id,$bp_position)=$snplist->fetchrow_array){ 
+           #get the snp data
+           $snpdata->execute($snpid);next if($snpdata->rows<=0);
+           ($black6_allele,$snp_allele)=$snpdata->fetchrow_array();
+           $black6_allele=uc($black6_allele);$snp_allele=uc($snp_allele);
+           $snpLine="$snpid\t$chromosome_id\t$bp_position\t$black6_allele/$snp_allele";$snpgenoh="";
+           #get the genotype of this snp
+           $snpgenoImp->execute($snpid,$source_id);next if($snpgenoImp->rows<=0);
+           $strain_id=7;$index=$indexMap{"$strain_id"};
+           %allele_freq=();#ref_allele stores the ref_allele and snp_allele frequencies for a given snp
+           $allele_freq{"$black6_allele"}{"strains"}="$strain_id,"; $allele_freq{"$black6_allele"}{"count"}=1;
+           $genodata=""; my %allelemap=(); $allelemap{$black6_allele}=0;$allelemap{$snp_allele}=0;@genolist=(0,0,0,0,0,0,0,0);
+           $genolist[$index]="$black6_allele";
+           while(($strain_id,$geno_allele)=$snpgenoImp->fetchrow_array()){
+                  $index=$indexMap{"$strain_id"}; $geno_allele=uc($geno_allele);
+                  $genolist[$index]=$geno_allele;
+                  $allele_freq{"$geno_allele"}{"strains"}.="$strain_id,";$allele_freq{"$geno_allele"}{"count"}+=1;
+           } #compute minor allele
+           next if(keys(%allele_freq)<=1); #all cc founders have the same genotype
+           next if(($allele_freq{"$black6_allele"}{"count"}+$allele_freq{"$snp_allele"}{"count"})!=8);
+           ++$count;print "$count processed \n" if($count%500000==0);
+           $genodata=join(",",@genolist);$uniqId="-";
+           if($allele_freq{"$black6_allele"}{"count"}==1){$uniqId=$allele_freq{"$black6_allele"}{"strains"};}
+           elsif($allele_freq{"$snp_allele"}{"count"}==1){$uniqId=$allele_freq{"$snp_allele"}{"strains"};}$uniqId=~s/,//;
+           $snpLine .="\t".$allele_freq{"$black6_allele"}{"count"}."\t".$allele_freq{"$snp_allele"}{"count"};
+           $snpLine.="\t$uniqId\t$genodata"; $ref_count=$allele_freq{"$black6_allele"}{"count"};
+           $snp_count=$allele_freq{"$snp_allele"}{"count"};
+           $snpmap{"$bp_position"}="$ref_count,$snp_count,$uniqId";      
+           print OUT "$snpLine\n"; #last if($count%10000==0);
+       }
+       close(OUT);
+       }$tm = localtime;
+      print "$chromosome_name- Total SNPs:$Totalsnps; TotalDifferent: ".keys(%snpmap)."\n";
+      print "Total regions:".keys(%{$regionMap{"$chromosome_id"}})."\n";
+      #next;
+      my ($sec,$min,$hour,$mday, $mon, $yday) = ($tm->sec,$tm->min,$tm->hour,$tm->mday, 
+       ($tm->mon)+1, ($tm->year)+1900);
+      print "\n*************************************************************\n";
+      print "parsing $chromosome_name from db ended:  $mday/$mon/$yday @ $hour:$min:$sec \n";
+      print "\n*************************************************************\n";
+      #now load the database
+      $qh_create->execute();$qh_trunc->execute();$qh_load->execute($filename);
+       #now for every interval on this chromosome, get the region stats
+      $newCount=0;
+      while(($linenumber,$line)=each(%{$regionMap{"$chromosome_id"}})){
+          @fields=split("\t",$line);$region_start=$fields[9]*$mbp;$region_end=$fields[13]*$mbp;
+          @genolist=(0,0,0,0,0,0,0,0);$total=0; $newCount+=1;
+          $get_region->execute($chromosome_id,$region_start,$region_end);
+          while(($snpid,$chrom,$Pos,$alleles,$ref_count,$snp_count,$uniqStrid,$strains)=
+                 $get_region->fetchrow_array()){$total+=1; 
+              if(($ref_count==1)||($snp_count==1)){$index=$indexMap{"$uniqStrid"};$genolist[$index]+=1;}
+          }
+          print "$newCount regions processed \n" if($newCount%100==0);
+          if($total>0){print SNP "$line\t$total\t".join ("\t",@genolist)."\n";}
+         
+       }
+      $tm = localtime;
+      my ($sec,$min,$hour,$mday, $mon, $yday) = ($tm->sec,$tm->min,$tm->hour,$tm->mday, 
+     ($tm->mon)+1, ($tm->year)+1900);
+     print "\n*************************************************************\n";
+     print "parsing regions on $chromosome_name ended:  $mday/$mon/$yday @ $hour:$min:$sec \n";
+     print "\n*************************************************************\n";
+   }
+ }
+ print "Program complete\n";
+ exit(0);
+           
+ 
+

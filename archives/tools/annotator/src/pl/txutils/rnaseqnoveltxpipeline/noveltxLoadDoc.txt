@@ -1,0 +1,81 @@
+ This script porcesses novel transcripts data to
+  1. assign/generate rsd[rna seq discovery] numbers 
+  2. generate genePrediction file and load novel transcripts in db
+  3. generate rnaseq_transcript file and load transcript-strain-sample mapping in db
+  4. generate aggregate transcripts file load novel_genes regions mapping in db 
+
+#
+# Note: 
+# Every novel transcript is given a rsd_ accession id (rsd_[number]) and 
+# every novel gene is given an rsd_g accession id (rsd_g[number])
+# where number is a positive integer value generated when a novel transcript is detected.
+# Transcript rsd_ numbers are organism version-strain specific
+# Aggregate transcript regions rsd_g numbers are organism version-strain specific
+#
+# Aggregate transcript regions are generated after all samples data of
+# a given strain have been loaded into the database 
+# 
+
+# The process:
+1. Get the database current max of rsd_[number] 
+     (the number part of the accession id) into a global variable(maxNumber)
+2. Get the database current max of rsd_g[number] 
+     (the number part of the accession id) into a global variable(gmaxNumber)
+2. Strore sample files by strain : $strainFiles{"$strain"}{"$sample"}=$file
+3. Foreach $strain:
+     i. loadCurrentTxRsd(novelMap,$orgv_id,$prediction_id);
+        identical transcripts across samples of same strain share the same accession number
+         $key="$chrom-$strand-$txstart-$txend";
+         $dbrsdmap{"$organism_version_id-$gene_pred_id"}{"$key"}{"$exons"}=$tx_name;
+     ii. Foreach sample
+          a. Index the new rnaSeq file into data structures to facilitate detection of identical transcripts      
+          b. foreach novel transcript (txNew -> {"$key"}{"$exons"} where $key="$chrom-$strand-$txstart-$txend")
+              from generated data structure, do:
+              b.1. assign the rsd number
+                   b.1.i if(Exists(dbrsdmap{txNew})) -> thisAccession=dbrsdmap{txNew}
+                   b.1.ii else{++maxNumber;  thisAccession=_rsd_[maxNumber];dbrsdmap{txNew}=thisAccession
+              b.2. generate organismversion-strain-sampleID-thisAccession record to be loaded to rnaseq_transcript table
+              b.3  generate genePrediction record to be integated into the current transcript structure in the database
+    iii. Load the  rnaseq_transcript table
+    iv.  Load the genePrediction file in the database
+    v.   Generate novel genes for this strain 
+          a. Load current aggregate regions for this strains
+              $currentNovGenes{"$chrom:$strand:$min-$max"}="$gene_name-$txids";
+          b. Generate new aggregate transcript regions - get all unique genomic regions for this strain
+              $uniqueRegion{"$chromStrand:$current_start-$current_end"}{"cord"}=$current_end;
+              $uniqueRegion{"$chromStrand:$current_start-$current_end"}{"tx"}=$tx_list;
+          c. Foreach uniqueRegionNew from $uniqueRegion map
+               c.1 if(Exists($currentNovGenes{uniqueRegionNew})) -> thisAccession=$currentNovGenes{uniqueRegionNew}
+                    c.1.i foreach transcript of this gene 
+                         write db record to gene_by_annotation file 
+                         write db record  novel_gene file 
+                   c.1.ii write db record to novel_genes_synonyms
+               c.2 elsif !(uniqueRegionNew overlaps two or more existing regions from $currentNovGenes (getOverlapGenes function))
+                      ++gmaxNumber;  thisAccession=_rsd_g[gmaxNumber];
+                     write db record to gene_by_annotation file 
+                     write db record  novel_gene file 
+              c.3. else (this uniqueRegionNew spans more than one existing gene in $currentNovGenes)
+                   c.3.i SET the region accession id to the accession of the region with max number of transcripts 
+                   c.3.ii generate a db record to gene_by_annotation file 
+                   c.3.iii generate a db record to novel_gene file 
+                   c.3.iv write db record to novel_genes_synonyms
+
+    vi. Now load novel_genes,gene_by_annotation, and  novel_genes_synonyms tables for this strain
+
+###################################################################################
+#getOverlapGenes($chromosome_id,$strand,$start,$end,$gene_map_ref,$result_map_ref)
+# returns list of genes(rsd_g) that overlap the current region of interest
+# Called when the new aggregate region not found in previousely defined aggregate regions. 
+#This happens in the following cases:
+# 1. new transcripts,whith coordinates lower or higher than a current novel gene, 
+#    overlap a current novel gene. In this case, the region will be assigned the rsd_g number
+#    of the current gene. History will store the previous definition of this gene 
+#    in the novel_genes_synonyms table
+#
+# 2. The novel aggregate region span two or more current aggregate transcripts
+# In this case, the region will be assigned the rsd_g number of one of the current aggregate transcripts.
+#    History will store the previous definitions of this region in the novel_genes_synonyms table
+#
+# Gene discovery should be run each time we load a new gene annotations set
+#  ${$result_map_ref}{"$gene_name"}=$txids;
+###################################################################################

@@ -1,0 +1,283 @@
+
+*************************************************************
+Starting load process :  4/12/2014 @ 13:48:38 
+
+*************************************************************
+loading hg19 -- ccdsGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_ccdsGene_11-2014 -a ccdsGene -v hg19 -s 0 -e 1
+hg19 -- ccdsGene loaded
+loading hg19 -- knownGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_knownGene_11-2014 -a knownGene -v hg19 -s 0 -e 1
+hg19 -- knownGene loaded
+loading hg19 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_mgcGenes_11-2014 -a mgcGenes -v hg19 -s 0 -e 1
+hg19 -- mgcGenes loaded
+loading hg19 -- nscanGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_nscanGene_11-2014 -a nscanGene -v hg19 -s 0 -e 1
+hg19 -- nscanGene loaded
+loading hg19 -- orfeomeGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_orfeomeGenes_11-2014 -a orfeomeGenes -v hg19 -s 0 -e 1
+hg19 -- orfeomeGenes loaded
+loading hg19 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_refGene_11-2014 -a refGene -v hg19 -s 0 -e 1
+hg19 -- refGene loaded
+loading hg19 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_xenoRefGene_11-2014 -a xenoRefGene -v hg19 -s 0 -e 1
+hg19 -- xenoRefGene loaded
+loading hg19 -- vegaGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_vegaGene_11-2014 -a vegaGene -v hg19 -s 0 -e 1
+hg19 -- vegaGene loaded
+loading hg19 -- sgpGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_sgpGene_11-2014 -a sgpGene -v hg19 -s 0 -e 1
+hg19 -- sgpGene loaded
+loading hg19 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg19_all_mrna_11-2014 -a all_mrna -v hg19 -s 0 -e 1
+hg19 -- all_mrna loaded
+loading hg18 -- ccdsGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_ccdsGene_11-2014 -a ccdsGene -v hg18 -s 0 -e 1
+hg18 -- ccdsGene loaded
+loading hg18 -- knownGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_knownGene_11-2014 -a knownGene -v hg18 -s 0 -e 1
+hg18 -- knownGene loaded
+loading hg18 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_mgcGenes_11-2014 -a mgcGenes -v hg18 -s 0 -e 1
+hg18 -- mgcGenes loaded
+loading hg18 -- nscanGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_nscanGene_11-2014 -a nscanGene -v hg18 -s 0 -e 1
+hg18 -- nscanGene loaded
+loading hg18 -- orfeomeGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_orfeomeGenes_11-2014 -a orfeomeGenes -v hg18 -s 0 -e 1
+hg18 -- orfeomeGenes loaded
+loading hg18 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_refGene_11-2014 -a refGene -v hg18 -s 0 -e 1
+hg18 -- refGene loaded
+loading hg18 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_xenoRefGene_11-2014 -a xenoRefGene -v hg18 -s 0 -e 1
+hg18 -- xenoRefGene loaded
+loading hg18 -- vegaGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_vegaGene_11-2014 -a vegaGene -v hg18 -s 0 -e 1
+hg18 -- vegaGene loaded
+loading hg18 -- sgpGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_sgpGene_11-2014 -a sgpGene -v hg18 -s 0 -e 1
+hg18 -- sgpGene loaded
+loading hg18 -- contrastGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_contrastGene_11-2014 -a contrastGene -v hg18 -s 0 -e 1
+hg18 -- contrastGene loaded
+loading hg18 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg18_all_mrna_11-2014 -a all_mrna -v hg18 -s 0 -e 1
+hg18 -- all_mrna loaded
+loading mm10 -- ccdsGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm10_ccdsGene_11-2014 -a ccdsGene -v mm10 -s 0 -e 1
+mm10 -- ccdsGene loaded
+loading mm10 -- knownGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm10_knownGene_11-2014 -a knownGene -v mm10 -s 0 -e 1
+mm10 -- knownGene loaded
+loading mm10 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm10_mgcGenes_11-2014 -a mgcGenes -v mm10 -s 0 -e 1
+mm10 -- mgcGenes loaded
+loading mm10 -- orfeomeGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm10_orfeomeGenes_11-2014 -a orfeomeGenes -v mm10 -s 0 -e 1
+mm10 -- orfeomeGenes loaded
+loading mm10 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm10_refGene_11-2014 -a refGene -v mm10 -s 0 -e 1
+mm10 -- refGene loaded
+loading mm10 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm10_xenoRefGene_11-2014 -a xenoRefGene -v mm10 -s 0 -e 1
+mm10 -- xenoRefGene loaded
+loading mm10 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm10_all_mrna_11-2014 -a all_mrna -v mm10 -s 0 -e 1
+mm10 -- all_mrna loaded
+loading mm9 -- ccdsGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_ccdsGene_11-2014 -a ccdsGene -v mm9 -s 0 -e 1
+mm9 -- ccdsGene loaded
+loading mm9 -- knownGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_knownGene_11-2014 -a knownGene -v mm9 -s 0 -e 1
+mm9 -- knownGene loaded
+loading mm9 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_mgcGenes_11-2014 -a mgcGenes -v mm9 -s 0 -e 1
+mm9 -- mgcGenes loaded
+loading mm9 -- nscanGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_nscanGene_11-2014 -a nscanGene -v mm9 -s 0 -e 1
+mm9 -- nscanGene loaded
+loading mm9 -- orfeomeGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_orfeomeGenes_11-2014 -a orfeomeGenes -v mm9 -s 0 -e 1
+mm9 -- orfeomeGenes loaded
+loading mm9 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_refGene_11-2014 -a refGene -v mm9 -s 0 -e 1
+mm9 -- refGene loaded
+loading mm9 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_xenoRefGene_11-2014 -a xenoRefGene -v mm9 -s 0 -e 1
+mm9 -- xenoRefGene loaded
+loading mm9 -- vegaGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_vegaGene_11-2014 -a vegaGene -v mm9 -s 0 -e 1
+mm9 -- vegaGene loaded
+loading mm9 -- sgpGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_sgpGene_11-2014 -a sgpGene -v mm9 -s 0 -e 1
+mm9 -- sgpGene loaded
+loading mm9 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_all_mrna_11-2014 -a all_mrna -v mm9 -s 0 -e 1
+mm9 -- all_mrna loaded
+loading mm9 -- NIAGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/mouse -f /scratch/data/ucsc/mammal/mouse/mm9_NIAGene_11-2014 -a NIAGene -v mm9 -s 0 -e 1
+mm9 -- NIAGene loaded
+loading rn5 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn5_mgcGenes_11-2014 -a mgcGenes -v rn5 -s 0 -e 1
+rn5 -- mgcGenes loaded
+loading rn5 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn5_refGene_11-2014 -a refGene -v rn5 -s 0 -e 1
+rn5 -- refGene loaded
+loading rn5 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn5_xenoRefGene_11-2014 -a xenoRefGene -v rn5 -s 0 -e 1
+rn5 -- xenoRefGene loaded
+loading rn5 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn5_all_mrna_11-2014 -a all_mrna -v rn5 -s 0 -e 1
+rn5 -- all_mrna loaded
+loading rn4 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn4_mgcGenes_11-2014 -a mgcGenes -v rn4 -s 0 -e 1
+rn4 -- mgcGenes loaded
+loading rn4 -- nscanGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn4_nscanGene_11-2014 -a nscanGene -v rn4 -s 0 -e 1
+rn4 -- nscanGene loaded
+loading rn4 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn4_refGene_11-2014 -a refGene -v rn4 -s 0 -e 1
+rn4 -- refGene loaded
+loading rn4 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn4_xenoRefGene_11-2014 -a xenoRefGene -v rn4 -s 0 -e 1
+rn4 -- xenoRefGene loaded
+loading rn4 -- sgpGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn4_sgpGene_11-2014 -a sgpGene -v rn4 -s 0 -e 1
+rn4 -- sgpGene loaded
+loading rn4 -- contrastGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn4_contrastGene_11-2014 -a contrastGene -v rn4 -s 0 -e 1
+rn4 -- contrastGene loaded
+loading rn4 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn4_all_mrna_11-2014 -a all_mrna -v rn4 -s 0 -e 1
+rn4 -- all_mrna loaded
+loading danRer7 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer7_mgcGenes_11-2014 -a mgcGenes -v danRer7 -s 0 -e 1
+danRer7 -- mgcGenes loaded
+loading danRer7 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer7_refGene_11-2014 -a refGene -v danRer7 -s 0 -e 1
+danRer7 -- refGene loaded
+loading danRer7 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer7_xenoRefGene_11-2014 -a xenoRefGene -v danRer7 -s 0 -e 1
+danRer7 -- xenoRefGene loaded
+loading danRer7 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer7_all_mrna_11-2014 -a all_mrna -v danRer7 -s 0 -e 1
+danRer7 -- all_mrna loaded
+loading danRer6 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer6_mgcGenes_11-2014 -a mgcGenes -v danRer6 -s 0 -e 1
+danRer6 -- mgcGenes loaded
+loading danRer6 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer6_refGene_11-2014 -a refGene -v danRer6 -s 0 -e 1
+danRer6 -- refGene loaded
+loading danRer6 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer6_xenoRefGene_11-2014 -a xenoRefGene -v danRer6 -s 0 -e 1
+danRer6 -- xenoRefGene loaded
+loading danRer6 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebrafish -f /scratch/data/ucsc/vertebrate/zebrafish/danRer6_all_mrna_11-2014 -a all_mrna -v danRer6 -s 0 -e 1
+danRer6 -- all_mrna loaded
+loading dm3 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm3_refGene_11-2014 -a refGene -v dm3 -s 0 -e 1
+dm3 -- refGene loaded
+loading dm3 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm3_xenoRefGene_11-2014 -a xenoRefGene -v dm3 -s 0 -e 1
+dm3 -- xenoRefGene loaded
+loading dm3 -- contrastGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm3_contrastGene_11-2014 -a contrastGene -v dm3 -s 0 -e 1
+dm3 -- contrastGene loaded
+loading dm3 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm3_all_mrna_11-2014 -a all_mrna -v dm3 -s 0 -e 1
+dm3 -- all_mrna loaded
+loading dm2 -- nscanGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm2_nscanGene_11-2014 -a nscanGene -v dm2 -s 0 -e 1
+dm2 -- nscanGene loaded
+loading dm2 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm2_refGene_11-2014 -a refGene -v dm2 -s 0 -e 1
+dm2 -- refGene loaded
+loading dm2 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm2_xenoRefGene_11-2014 -a xenoRefGene -v dm2 -s 0 -e 1
+dm2 -- xenoRefGene loaded
+loading dm2 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/insect/d.melanogaster -f /scratch/data/ucsc/insect/d.melanogaster/dm2_all_mrna_11-2014 -a all_mrna -v dm2 -s 0 -e 1
+dm2 -- all_mrna loaded
+loading ce10 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/worm/c.elegans -f /scratch/data/ucsc/worm/c.elegans/ce10_refGene_11-2014 -a refGene -v ce10 -s 0 -e 1
+ce10 -- refGene loaded
+loading ce10 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/worm/c.elegans -f /scratch/data/ucsc/worm/c.elegans/ce10_xenoRefGene_11-2014 -a xenoRefGene -v ce10 -s 0 -e 1
+ce10 -- xenoRefGene loaded
+loading ce10 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/worm/c.elegans -f /scratch/data/ucsc/worm/c.elegans/ce10_all_mrna_11-2014 -a all_mrna -v ce10 -s 0 -e 1
+ce10 -- all_mrna loaded
+loading ce6 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/worm/c.elegans -f /scratch/data/ucsc/worm/c.elegans/ce6_refGene_11-2014 -a refGene -v ce6 -s 0 -e 1
+ce6 -- refGene loaded
+loading ce6 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/worm/c.elegans -f /scratch/data/ucsc/worm/c.elegans/ce6_xenoRefGene_11-2014 -a xenoRefGene -v ce6 -s 0 -e 1
+ce6 -- xenoRefGene loaded
+loading ce6 -- sangerGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/worm/c.elegans -f /scratch/data/ucsc/worm/c.elegans/ce6_sangerGene_11-2014 -a sangerGene -v ce6 -s 0 -e 1
+ce6 -- sangerGene loaded
+loading ce6 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/worm/c.elegans -f /scratch/data/ucsc/worm/c.elegans/ce6_all_mrna_11-2014 -a all_mrna -v ce6 -s 0 -e 1
+ce6 -- all_mrna loaded
+loading sacCer3 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/other/s.cerevisiae -f /scratch/data/ucsc/other/s.cerevisiae/sacCer3_xenoRefGene_11-2014 -a xenoRefGene -v sacCer3 -s 0 -e 1
+sacCer3 -- xenoRefGene loaded
+loading sacCer3 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/other/s.cerevisiae -f /scratch/data/ucsc/other/s.cerevisiae/sacCer3_all_mrna_11-2014 -a all_mrna -v sacCer3 -s 0 -e 1
+sacCer3 -- all_mrna loaded
+loading sacCer2 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/other/s.cerevisiae -f /scratch/data/ucsc/other/s.cerevisiae/sacCer2_xenoRefGene_11-2014 -a xenoRefGene -v sacCer2 -s 0 -e 1
+sacCer2 -- xenoRefGene loaded
+loading sacCer2 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/other/s.cerevisiae -f /scratch/data/ucsc/other/s.cerevisiae/sacCer2_all_mrna_11-2014 -a all_mrna -v sacCer2 -s 0 -e 1
+sacCer2 -- all_mrna loaded
+loading hg38 -- ccdsGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg38_ccdsGene_11-2014 -a ccdsGene -v hg38 -s 0 -e 1
+hg38 -- ccdsGene loaded
+loading hg38 -- knownGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg38_knownGene_11-2014 -a knownGene -v hg38 -s 0 -e 1
+hg38 -- knownGene loaded
+loading hg38 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg38_mgcGenes_11-2014 -a mgcGenes -v hg38 -s 0 -e 1
+hg38 -- mgcGenes loaded
+loading hg38 -- orfeomeGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg38_orfeomeGenes_11-2014 -a orfeomeGenes -v hg38 -s 0 -e 1
+hg38 -- orfeomeGenes loaded
+loading hg38 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg38_refGene_11-2014 -a refGene -v hg38 -s 0 -e 1
+hg38 -- refGene loaded
+loading hg38 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg38_xenoRefGene_11-2014 -a xenoRefGene -v hg38 -s 0 -e 1
+hg38 -- xenoRefGene loaded
+loading hg38 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/human -f /scratch/data/ucsc/mammal/human/hg38_all_mrna_11-2014 -a all_mrna -v hg38 -s 0 -e 1
+hg38 -- all_mrna loaded
+loading rn6 -- mgcGenes
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn6_mgcGenes_11-2014 -a mgcGenes -v rn6 -s 0 -e 1
+rn6 -- mgcGenes loaded
+loading rn6 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn6_refGene_11-2014 -a refGene -v rn6 -s 0 -e 1
+rn6 -- refGene loaded
+loading rn6 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn6_xenoRefGene_11-2014 -a xenoRefGene -v rn6 -s 0 -e 1
+rn6 -- xenoRefGene loaded
+loading rn6 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/mammal/rat -f /scratch/data/ucsc/mammal/rat/rn6_all_mrna_11-2014 -a all_mrna -v rn6 -s 0 -e 1
+rn6 -- all_mrna loaded
+loading taeGut2 -- refGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebra-finch -f /scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_refGene_11-2014 -a refGene -v taeGut2 -s 0 -e 1
+taeGut2 -- refGene loaded
+loading taeGut2 -- xenoRefGene
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebra-finch -f /scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_xenoRefGene_11-2014 -a xenoRefGene -v taeGut2 -s 0 -e 1
+taeGut2 -- xenoRefGene loaded
+loading taeGut2 -- all_mrna
+perl /home/lnh/work/projects/graber_transcriptdb/src/pl/txutils/ucscpipeline/load_annotations.pl -d /scratch/data/ucsc/vertebrate/zebra-finch -f /scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_all_mrna_11-2014 -a all_mrna -v taeGut2 -s 0 -e 1
+taeGut2 -- all_mrna loaded
+
+*************************************************************
+Program Ends:  4/12/2014 @ 15:7:1 
+
+*************************************************************

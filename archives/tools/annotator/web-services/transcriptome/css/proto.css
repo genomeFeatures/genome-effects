@@ -1,0 +1,155 @@
+  html{
+   overflow-y: scroll;
+   overflow-x: auto;
+ }
+body {
+  font-size: 80.0%;
+  margin:auto; 
+  padding: 0px; 
+  background:#D3BF7A; 
+  background:#fff url(background.jpg) repeat;
+  background:#d0d0d0;
+  font-family: arial, sans-serif;
+  color:#5A4719;
+  color:#556B2F;
+  padding-bottom:1em;
+}
+table, tr {margin:0;padding:0;}
+
+/*#sidebar-right {margin-top:25px;}*/
+#sidebar-right .title{display:none;}
+#sidebar-right ul{margin:0;padding:0;margin-right:0;padding-top:0.2em;padding-bottom:0.5em;}
+#rt{width:100%;padding:0;margin:0;}
+ul{list-style:none;margin:0;}
+.lid{padding-left:0.9em;font-size:0.90em;color:#804000;}
+.lih{padding:0.8em;padding-top:0.4em;padding-left:0.3em;font-weight:bold;}
+.lip {padding-top:0.4em;padding-bottom:0.5em;}
+.lip a, .lip a:link,.lip a:visited,.textlink{color:navy;}
+.lip a:hover,.textlink:hover{color:#804000;}
+hr {color:#eee; padding:0;margin:0;}
+#hd{background:#333; height:40px;}
+#rt .hfs{background:#333;width:100%;color:#eee;height:20px;font-weight:bold;}
+.hf{border-bottom:solid 1px #556B2F; width:96%;color:#804000;padding:0.8em;float:left; font-size:1.2em; margin-right:4em; font-weight:bold;}
+.leftv,.rightv,#logo{ margin:0.4em;}
+/*#sidebar-right{width:200px;}*/
+#logo{width:99%; background:#333; text-align:center;margin:0;padding:0;}
+.leftv a,.leftv a:link, .leftv a:hover,.leftv a:visited{color:#eee;}
+#main_t{ margin:auto;background:#333;padding:0;}
+#main_t tr,#main_t td{margin:0;padding:0;}
+#main { width:93%;margin:auto;}
+/* Top Navigation menue starts here */
+#navb {
+  background:#333 url(http://harlequin.jax.org/headerGradient.jpg) repeat-x;font-size:0.96em;
+  padding-top:0.4em; 
+  height: 40px;
+  z-index:1;
+}
+#navb table{background:transparent;width:92%;margin:auto;padding:0;}
+
+#filter ul{list-style:square;}
+#filter ul,#filter p{width:80%;margin:auto;margin-bottom:1em;}
+#filter h4{color:#804000;}
+.tool #qhint {background:#333; color:#eee;position:absolute;z-index:4;display:none;
+     border:dotted 1px #eee;font-size:0.9em; padding:0.4em; padding:0.4em;}
+#qhint span{margin-top:0.4em;padding:0.3em;font-size:1.1em;white-space:nowrap;}
+.qhint{color:#333;font-weight:bold;cursor:pointer;}
+#sidebar-right .content,#sidebar-left .content{width:91%;float:left;}
+#sidebar-right .content{padding-top:4.5em;}
+#rBackg {background:#eee url(/images/informatics1.jpg) no-repeat; width:250px;height:174px;}
+#sidebar-left li{
+  font-size: 1em;}
+.block .title h3 {
+  border-bottom:solid 1px #556B2F; width:96%;color:#804000;float:left; font-size:1.2em; margin-right:4em; font-weight:bold;
+  padding:0.8em;
+}
+.rul{background:#eee;}
+.espace{height:10px;background:#fff;}
+.res{width:100%;margin:auto;font-size:0.9em;}
+.res td{padding-left:0.3em;}
+#total {clear:both;background:#fff;height:auto; margin-bottom:2em;}
+.total{width:99%;margin:auto;}
+.sh{clear:both;font-size:1.2em;color:#800;padding-left:2em;}
+#tsum{font-weight:normal;border-bottom:solid 1px #eee;margin-bottom:1em;margin-right:30px;}
+#sour,#str-list{font-size:0.87em;border-bottom:solid 1px #eee;}
+#sour li{float:left;padding:0.3em;}
+#str-list{clear:both;height:150px; overflow:scroll;}
+#str-list ul{float:left;}
+#opt{border-top:solid 1px #eee;}
+#pubnav {width: 100%;float:right;}
+#pubnav li {float:left;}
+.strainlabel{display:block;}
+
+#footer-message {
+  padding: 15px 100px 30px 100px;
+  font-size: 0.85em;
+  text-align: center;
+  color: #aaa;
+}
+/**************************************/
+.strainlabel{background:rgb(218,233,218);}
+fieldset p,.tdata,.sectionName,.strainlabel{font-size:0.85em;}
+  .sr{padding:0.0em; margin:0em; height:auto; overflow:auto; width:auto;}
+  .sr h2{color:#3F2C6D; margin:0; padding:0;font-size:1.1em;white-space: nowrap;}
+  .sr span{font-size:0.95em; margin:0;}
+  .ah,.am,.al,.th,.tm,.tl,.ch,.cm,.cl,
+  .gh,.gm,.gl,.h,.n{margin:0;padding:0.1e; font-size:0.85em;}
+  .strainlabel{background:rgb(218,233,218);}
+  .ah,.am,.al,.th,.tm,.tl,.ch,.cm,.cl,.gh,.gm,.gl{color:#fff;}
+  /***** Yellows *****************/
+  .gh{background:rgb(215,215,0); } 
+  .gm{background:rgb(215,215,150);} 
+  .gl{background:rgb(215,215,200);}
+  
+  /***** Blues ********************/
+  .ch{background:rgb(0,51,204);} 
+  .cm{background:rgb(153,173,235);}
+  .cl{background:rgb(204,214,245);}
+  
+  /***** Black ********************/
+  .ah{background:rgb(51,51,51);} 
+  .am{background:rgb(102,102,102);} 
+  .al,.sectionName{background:rgb(204, 204, 204);}
+  
+  /***** Red ********************/
+  .th{background:rgb(255,0,0);} 
+  .tm{background:rgb(255,128,128);} 
+  .tl{background:rgb(255,204,204);}
+  
+   .h,.n,{background:#fff;}
+   .h{rgb(0,51,204);}
+   .n,.strainlabel{color:#333;}
+   .strainlabel{padding-left:0.5em;padding-right:0.5em;padding-bottom:0.6em;}
+   .strainlabel ul{margin:0;padding:0;list-style:none;}
+   .strainlabel li{margin:0;padding:0;float:left;clear:both;height:0.9em;}
+   #snptable {margin-left:1em;}
+/****************************/
+#annot-list{width:70%;}
+#annot-list .annotd{float:left;margin:0;}
+#agg li,#seq-option li{float:left;margin:0.4em;}
+#seq-option{margin-left:30px;}
+table#footer-menu {
+  background-color: #369;
+  background:#eee url(/headerGradient.jpg) repeat-x;
+  height:40px;
+  color: #e4e9eb;
+}
+#snptable .strainlabel{height:100px;overflow:hidden;display:none;}
+#snptable {width:1000px;overflow:scroll;}
+#snptable th{text-align:left;padding-left:0.4em;}
+#footer-menu td {
+  padding: 5px;
+  font-size: 0.75em;
+}
+#footer-menu .primary-links, #footer-menu a:link, #footer-menu a:visited {
+  color: #e4e9eb;
+}
+#footer-menu a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.sort{background:url(http://countrycode.org/styles/images/sort_icon.gif);background-repeat:no-repeat;}
+.sort div{width:100px;}
+.sort #log{width:22px;height:18px;float:left;}
+.sort #tex{float:right;}
+#footer-menu .primary-links h1, #footer-menu .primary-links h2, #footer-menu .primary-links h3 {
+

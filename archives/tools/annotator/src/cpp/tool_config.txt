@@ -1,0 +1,24 @@
+#Remote server setting
+#### I should actually have this on the web server##################  Web server url
+WEBSERVER=http://demon.jax.org
+## transcript web service path -- relative to WEBSERVER
+TRANSCRIPT_SERVICE=/transcriptdb/web-services/
+#MGI_ANNOT_SERVER=ftp://ftp.informatics.jax.org/pub/mgigff/
+#MGI_ANNOT_FILE=MGI.gff3.gz
+*********************************# Local server setting
+## Set the absolute path to the tool root directory, where the tool will be writing and reading
+##   default to current working directory
+TOOL_BASE=
+################################################################ Set the path to the base directory of genome indexes.
+## The base directory is called 'genomes' and is created under
+## TOOL_BASE. Genomes indexes are stored here by organism assembly version. When you download the tool,it comes with Mouse and Human genomes## (hg19,hg18,mm10,mm9).If you want to use another organism assembly version from UCSC, run the annotator with the --download option.
+## If you want to use you local genome, run the annotator first with the --indexLocalGenome path2localGenome -v mm9 --strain localgenomeName ## for example: mm9/AJ_genome  will store indexes of AJ genome## The tool will create this directory if this does not exists under the tool base directory
+GENOME_BASE=genomes
+## Set the path to where to/you store a copy of genome with chromosome data config file localy -- relative to TOOL_BASE
+## Make sure you have write permissions on TOOL_BASE
+## each chromosome is a fasta file with the filename format *.fa
+## the chromsome file name format is specified in the tool config file
+##set up chromosome file name format . Example chr2.fa , the prefix will be chr, the suffix will be .fa
+ ## Example 2.fa, the prefix is empty
+CHROM_PREFIX=
+CHROM_SUFFIX=.fa

@@ -1,0 +1,100 @@
+1	Putative transcription factor 001R
+2	Poly-Arg
+3	Uncharacterized protein 002L
+4	Helical; (Potential)
+5	Pro-rich
+6	Uncharacterized protein 002R
+7	Uncharacterized protein 003L
+8	Potential
+9	Uncharacterized protein 3R
+10	Uncharacterized protein 004R
+11	Uncharacterized protein 005L
+12	Uncharacterized protein 005R
+13	Putative KilA-N domain-containing protein 006L
+14	KilA-N
+15	Uncharacterized protein 006R
+16	Uncharacterized protein 007R
+17	Uncharacterized protein 008L
+18	Putative helicase 009L
+19	Helicase ATP-binding
+20	Helicase C-terminal
+21	ATP (By similarity)
+22	DEAH box
+23	Uncharacterized protein 009R
+24	Uncharacterized protein 010R
+25	Uncharacterized protein 011L
+26	Uncharacterized protein 011R
+27	Uncharacterized protein 012L
+28	Uncharacterized protein IIV3-013L
+29	Uncharacterized protein 013R
+30	Uncharacterized protein 014R
+31	Uncharacterized protein 015R
+32	Uncharacterized protein 017L
+33	Poly-Ala
+34	Uncharacterized protein 018L
+35	Putative serine/threonine-protein kinase 019R
+36	Protein kinase
+37	Proton acceptor (By similarity)
+38	Uncharacterized protein 020R
+39	Uncharacterized protein 021L
+40	Transmembrane protein 022L
+41	Uncharacterized protein 023R
+42	Uncharacterized protein 024R
+43	Uncharacterized protein 025R
+44	Uncharacterized protein 026R
+45	Uncharacterized protein 027R
+46	Uncharacterized protein 028R
+47	Uncharacterized protein 029L
+48	Uncharacterized protein 029R
+49	uncharacterized protein 030L
+50	Uncharacterized protein 030R
+51	Uncharacterized protein 031R
+52	Uncharacterized protein 032R
+53	Ser-rich
+54	Transmembrane protein 033R
+55	Uncharacterized protein 034R
+56	Uncharacterized protein 035L
+57	Uncharacterized protein 036L
+58	Uncharacterized protein 037L
+59	uncharacterized protein 037R
+60	FCP1 homology
+61	Uncharacterized protein 039R
+62	Uncharacterized protein 040R
+63	Poly-Thr
+64	Uncharacterized protein 041L
+65	Uncharacterized protein 041R
+66	Uncharacterized protein 042L
+67	Uncharacterized protein 042R
+68	Uncharacterized protein 043L
+69	Uncharacterized protein 043R
+70	Trp-rich
+71	Cys-rich
+72	Putative serine/threonine-protein kinase 040L
+73	Uncharacterized protein 044R
+74	Uncharacterized protein 045L
+75	Uncharacterized protein 045R
+76	Uncharacterized protein 046L
+77	Uncharacterized protein 047L
+78	Uncharacterized protein 048L
+79	Putative SAP domain-containing protein 049L
+80	SAP
+81	Transmembrane protein 049L
+82	Uncharacterized protein 049R
+83	Poly-Ser
+84	Thr-rich
+85	Uncharacterized protein 050L
+86	Glu-rich
+87	Gln-rich
+88	Uncharacterized protein 051R
+89	Uncharacterized protein 052L
+90	Uncharacterized protein 053L
+91	Removed (Potential)
+92	Putative myristoylated protein 053R
+93	N-myristoyl glycine; by host (Potential)
+94	Uncharacterized protein 054L
+95	Putative helicase 055L
+96	Uncharacterized protein 055R
+97	Uncharacterized protein 056R
+98	Uncharacterized protein 057L
+99	Putative phosphotransferase 057R
+100	Uncharacterized protein 058R

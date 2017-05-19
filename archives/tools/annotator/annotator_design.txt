@@ -1,0 +1,294 @@
+#Genome Annotator documentation
+Note: 
+For generic genome features manipulation tasks wouldn't it be nice to have a single Bioinformatic tool acting as a multiplexer
+that run the appropriate program based on the task at hand - instead of having different tools for every single task?
+Think of the idea of having a single tool that can be used for
+   genome variation annotation and validation,
+   genome features sequence extraction (ex,dna,cds,aa,ie,ei,tss,tts,intron,ex-utr), 
+   file type conversion,genome downloads, gene annotation coordinates extraction,gene annotation download,...
+
+Genome Annotator mission is to provide
+
+Note: TSS: Transcription Start Site (exon1 start)
+      TTS: Terminal Transcription Site TTS (last exon end)
+
+Note:you can run genome Annotator/Validator without a reference genome
+1. run validator without the reference genome to validate your SNPs calls against other SNPs sources and features (microsat, simple repeats,miRNA)
+2. run annotator without the reference genome to tag gene annotations that overlap with your SNPs calls and other features
+
+Note: organismVersion in combination with gene annotation source are used to extract gene annotations from a remote database server
+Example: -v mm9 -a ensGene --host ucsc  ==> tells the annotator the extract Ensembl gene annotations for mouse assembly mm9 from UCSC database
+genomeEffects database which caches gene annotations, and genomes from various public databases plays the role of a proxy server and host
+web-services. These webservices are used by genomeAnnotator clients to extract data from the server when a local copy is out of date.
+Each genomeAnnotator client has the following data structure:
+1.The root directory
+2.The tools_data directory
+
+
+Note: For local genome/strains, the strain name should have no space - Note: the "/" character will be raplaced with 
+Note: you can index your local reference genome using the annotator.
+by default the reference genome index (by chromosome) of a given organism version is stored under
+/tools_data/genomes/organismVersion/  for example /tools_data/genomes/mm9/ or /tools_data/genomes/hg19/
+If you have a genome for a different strain for a fiven organism version for example you want to use
+A/J genome 
+
+Users: 
+Notes - mm9 is used in the following examples for simplicity
+      - All gene annotations files should be in Bed/genePrediction format (http://genome.ucsc.edu/FAQ/FAQformat.html#format9)
+      - By default the annotator assumes SNP location coordinates in the SNPs file to follow 1-base standard
+      - By default the annotator assumes annotation coordinates in the genePrediction file to follow 0-base starts and 1-base ends standard
+      - By default if no input SNP file is provided, the annotator will be reading SNPs lines from standard input
+      - By default if no output file is provided, the annotator will be writing results lines to standard output
+           if you want the result to be stored in an output file, add the option -F outputfilename
+      - By default if no organism version is provided, the annotator will use the current version of mouse (we can have user set default organism)
+      - If coordinate starts in the genePrediction file follow 1-base standard, add the --oneBaseStart flag to the program command line
+      - If SNP location coordinates in the SNPs file to follow 0-base standard, add the --snpZeroBaseStart flag to the program command line
+      - You can run the progran as:
+        i.  SNP Annotator 
+        ii. SNP Validator 
+        ii. getSNPFlanking sequence
+        ii. getTranscriptSequence
+      -annotator talks to web-services via perl calls,I should probably change this to use wget instead for portability
+ 
+I) - Running Genome Annotator as SNP Annotator 
+
+Scenario 1: you have a downloaded/generated gene annotations file [annotationsfilename]
+   a. you have downloaded a gene annotations file (genePrediction format - 0-base starts and 1-base ends) for mm9
+   b. you have a SNPs file [snpfilename] (bed, vcf,..) for mm9 
+   c. you have the genome for mm9 for example
+ 
+   Program usage:
+    cmd:  ./genomeAnnotator -v mm9 -f snpfilename -A annotationsfilename for the simple version of the annotator. 
+    If you want to include the codon and amino acid implication then run the annotator as
+    cmd:  ./genomeAnnotator -v mm9 -f snpfilename -A annotationsfilename --coding
+    If  coordinate starts in the genePrediction file follow 1-base standard then run the annotator as follow:
+    cmd:  ./genomeAnnotator -v mm9 -f snpfilename -A annotationsfilename --coding --oneBaseStart
+
+Senario 2: You do not have a gene annotations file but you want to annotate your SNPs using a remote server:Ensembl, UCSC,Graber,MGI
+  a. you have a SNPs file for mm9
+  b. you have the genome for mm9 for example
+  c. but you do not have gene annotations file for mm9
+
+ Program usage:
+  i. First step check which gene annotations are available for mm9 on the remote server by running the annotator as follow:
+     cmd: ./genomeAnnotator -v mm9 --annotList
+          The above command will display all the gene annotations we currently have for mm9 in our integrated database
+     cmd: ./genomeAnnotator -v mm9 --annotList --host ucsc
+          The above command will display all the gene annotations UCSC currently has for mm9  
+  ii. copy one of the gene annotation name say mm9-ensGene
+     cmd: ./genomeAnnotator -v mm9 -a mm9-ensGene -f snpfilename  -F resultFineName
+            for the simple version of the annotator.If you want to include the codon and
+            amino acid implication then run the annotator as follow:
+     cmd: ./genomeAnnotator -v mm9 -a mm9-ensGene -f snpfilename --coding -F resultFineName
+     If you want to use UCSC annotations, for example refGene then run as follow:
+      cmd: ./genomeAnnotator -v mm9 -a refGene -f snpfilename -F resultFineName --host ucsc
+            for the simple version of the annotator. 
+            If you want to include the codon and amino acid implication then run the annotator as follow:
+     cmd: ./genomeAnnotator -v mm9 -a refGene -f snpfilename --coding -F resultFineName --host ucsc
+     
+Senario 3: You want the annotator to use/download the genome from a remote server
+  a. you have a SNPs file for mm9
+  b. you do not have local index for mm9 genome
+  c. you want the annotator to use Ensembl annotations for mm9
+
+Program usage:
+  i. First step check which genomes are available :
+     a. on our server by running the annotator as follow:
+         cmd: ./genomeAnnotator -v mm9 --genomeList
+         The above command will display all the organism versions we currently have chromosome data
+       OR
+     b. on our server by running the annotator as follow:
+         cmd: ./genomeAnnotator -v mm9 --genomeList --host ucsc
+         The above command will display all the organism versions UCSC currently has chromosome data for
+  ii. copy one of the Assembly Versions say mm9
+     then run the annotator as follow: ./genomeAnnotator -v mm9 --host ucsc --download
+     The program will download and index mm9 genome in the genomes directory under the program working directory 
+
+II) - Running Genome Annotator as SNP Validator 
+ The scenarios are similar to the SNP Annotator's with the exception that the validator only uses the genome to run QA
+ tests. We do not use gene annotations  
+ This program will validate all single position SNPs (novel and existing) from an input against the specified  reference genome assembly build.
+ The program will also check for reference allele  and snp allele consistency and sets the flags accordingly.
+ The program Also tags CpG Sites, and Mutation types (transition or transversion).
+ cmd: ./cpp/genomeAnnotator -v mm9  -f snpfilename --validate
+ The result include  Conflict,prog_refAllele/prog_concensusAllele,Is_CpG,MutationType,FieldCountMatch,OrganismAssemblyVersion, in addition to the original fields
+
+III) - Running Genome Annotator to extract SNPs flanking sequences
+Gets the flanking sequence updtream and downstream from the specified position
+and returns a sequence s such that s= upstream_seq_offset_len -pos-downstream_seq_offset_len
+cmd: ./cpp/genomeAnnotator -v mm9  -f snpfilename --flanking -o 50 
+WHERE -o stands for the offset (in this case it is 50 base pairs up and down the SNP)
+If the offset is not specified, the program returns a sequence that includes one basepair upstream and downstream of the SNP
+The result include  Flanking Coordinates,Flanking Sequence,OrganismAssemblyVersion, in addition to the original fields
+
+III) - Running Genome Annotator to extract Transcript features fasta sequences
+Generates fasta sequences for genome features. You can use this to extract:
+1. The CDS sequence of coding transcripts from the specified annotation source or from your local annotation file
+ cmd: 
+  a.) ./genomeAnnotator -v mm9 -a ensGene --sequence -T cds  
+  b.) ./genomeAnnotator -v mm9 -F refGenes.txt --sequence -T cds  
+2. The amino acid sequence of coding transcripts from the specified annotation source or from your local annotation file
+ cmd: 
+  a.) ./genomeAnnotator -v mm9 -a ensGene --sequence -T aa 
+  b.) ./genomeAnnotator -v mm9 -F refGenes.txt --sequence -T aa  
+3. The exon sequence of transcripts from the specified annotation source or from your local annotation file
+   Exon sequences of a given transcript are concatenated
+ cmd: 
+  a.) ./genomeAnnotator -v mm9 -a ensGene --sequence -T ex 
+  b.) ./genomeAnnotator -v mm9 -F refGenes.txt --sequence -T ex 
+4. The Exon by exon sequence of transcripts from the specified annotation source or from your local annotation file
+   Exon sequences are display separately -
+ cmd: 
+  a.) ./genomeAnnotator -v mm9 -a ensGene --sequence -T exon
+  b.) ./genomeAnnotator -v mm9 -F refGenes.txt --sequence -T exon  
+5. The Intron by intron sequence of transcripts from the specified annotation source or from your local annotation file
+   intron sequences are display separately -
+ cmd: 
+  a.) ./genomeAnnotator -v mm9 -a ensGene --sequence -T intron
+  b.) ./genomeAnnotator -v mm9 -F refGenes.txt --sequence -T intron  
+
+
+1. Data sources description
+
+  a. Variation input file
+
+   The annotator takes the variation file as one of the arguments. Currently,the program expects
+   the first line of the input file to be the header line with some program recognizable field names.
+   As it is implemented, the program will work fine with variation files from the following sources:
+    i.   Infinium SNP support file   -> SNP        CHROMOSOME   POSITION     STRAND   ALLELES
+    ii.  Affymetrix SNP support file -> SNP      CHROMOSOME POSITION STRAND  ALLELE ...
+    iii. any file                    -> RSID  CHROMOSOME pos   AlleleA AlleleB ...
+    iv.  any file                    -> ID  CHROM pos   REF ALT ...
+
+   The program will detect some variations in the field names. For example, chromosome field name can be on of chr,chrom, or chromosome. 
+    SNP position field name can be one of position,pos.bppos,bpposition,location,or loc ...
+   The new version of the annotator detects VCF files. I've created a function that given a variation file , will
+   return the header line.This implementation guarantees that files that include additional lines before the real
+   header line are parsed correctly. The VCF has many lines in the header before the real header line. So as it was implemented,
+   the annotator could not work properly on VCF files.The following is a brief example of a VCF file
+   http://www.1000genomes.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-40
+
+   b.Gene annotations
+   
+   The previous implementation of the annotator uses Ensembl database to annotate variations.The default Ensembl schema is
+   the latest version of the specified organism assembly version.The program cached Ensembl gene annotations locally until
+   one of these events occurs:
+   1. Ensembl has a new schema version for the user specified organism assembly version
+   2. The local copy modification date is more than 14 days old
+  
+   The program has been modified to accept two more inputs:
+    i. the gene annotation file, and  --> optional
+    ii. gene Prediction source/version --> optional
+   Gene annotation file is expected to have a header and be in gene Prediction format.
+   The program uses gene Prediction source/version input only when there is no annotation file specified. In that case,
+   the program will extract the annotations from our database server.
+   The user can browse the list of available gene annotations for a given organism version using some features of the annotator
+
+ Note: Allowing the annotation file to become an input to the program forces us to require some additional 
+       input flags from the user.Given that the annotator was originally implemented to use Ensembl annotations,
+       the default genomic coordinates is 1-base coordinates standard. But data from the user does not guarantee that assumption.
+       The user should be able to specify the coordinates base of the annotations using the appropriate flag. If no
+       flag is set then the default will be 1-base coordinate standard
+ Note: We specify cordinate standards of both SNPs and gene annotations -
+       by default gene annotations coordinates follow 0-base start and 1-base end standard
+       by default SNPs coordinates follow 1-base standard
+  
+  c. The genome
+
+   The annotator takes the organism assembly version as one of the inputs. The program
+   will then use the chromosome data associated with the specified organism version to validate/get
+   the reference allele call. For coding SNPs (synonymous and non synonymous),the program also 
+   uses the chromosome data to get the codon sequence associated with the SNP,to extract the flanking sequence of SNPs,
+   or to extract gene annotations (exons,CDS,protein,..). 
+
+   Currently, the annotator expects each chromosome file to be a one-liner where the chromosome file
+   name has the format xx.dat - xx is the chromosome name (example X.dat, 1.dat). 
+   The format is generated by our in house script that takes the chromosome 
+   fasta file and converts it into a *.dat file.
+   
+   The program is being modified to accept the standard fasta format instead of the local dat.
+   In addition, a configuration file will allow the user to specify the following information
+   regarding the genome:
+   1. a path to where chromosome data is stored locally (relative to the tool base directory)
+   2. the chromosome file format - [mm]xx.fa where mm is the file prefix if any
+   3. a path to where to download a copy of the genome if not exists locally
+      This path is defaulted to where the genomes are store on our public web server 
+   The user can browse the list of organism versions for every organism on our public using some features of the annotator
+
+   Note:
+    A configuration file (tool_config.txt) has been created. The config file sets both the local path 
+    and the remote path of where the genome data can be found locally and remotely.
+    if a copy of the genome is not set locally, the system should create and download a copy
+    from the server ---- Implemented but not tested yet ---
+
+*********************** I'm here *****************************************************************
+2. Algorithm
+current:
+a.Index gene annotations into memory using genomic region uniq id.
+  Generates an id for every uniq genomic region and stores into a map
+  called transcriptIds <pair(chrom,start),<pair(strand,end),id>>. 
+  These ids will be used to build transcript networks called transcripts <id,listTx>.
+  transcriptIds is used to get overlapping transcripts for a given SNP.
+  The transcriptIds data structures speed up key lookup using the map lower and upper bound functions on pair(chrom,start)
+  and pair(strand,end).Transcripts is use to get the list of transcripts for a given txid
+
+The SNPs annotator validates and annotates single polymorphism variation using the gene annotations and the organism genome.
+a. Data structures
+- indexing gene annotations
+ We Index gene annotations into memory using genomic region uniq id. Unlike the previous implementation
+ that relied on Ensembl local ids for transcripts and exons, the new version generates local transcript ids on the fly.
+ four structures index the annotations: featureIndexMap,featureList,featuresVec,and tabularData
+   The featureIndexMap object (format:map <pair(chrom,start),<pair(strand,end),id>) stores ids generated for every uniq genomic region.
+   Uniq here means same chromosome, strand, chromStart, and chromEnd- Two or more transcripts with different exons set can share the same
+   local region id. 
+   This data structure will speed up SNP base pair position lookup using map upper bound function on pair(chrom,start) key.
+
+   Note: I could optimize the storage by storing annotations by chromosme-strand -end-start , that way when
+   I use the upper bound function, it would return the first location where txEnd> snp.pos
+    and because data is sorted by txEnd, we can then user map lower to get location of first tx whose txEnd <=snp.pos
+
+   These ids will be used to build the transcript network featureList.
+   The featureList object (format: map<id,featuresVec> stores a list of all the transcripts that share the same genomic region.
+   featuresVec (format: vector<struct tabularData> is a vector of transripts where transcripts are structs of type tabularData.
+   tabularData is a structure that stores transcript data parsed from the input annotations file. This structure has some
+   easy data access functions associated with it.
+- input file data line
+Both the annotations and SNPs lines are parsed and stored into a struct data structure for easy data access
+We use a maps,combined with pairs, and vector to take advantage of build-in functions associated with these containers. 
+
+b. Design
+   i. Current design
+    foreach SNP do: 
+     get list of genes that contain this SNP   
+     if geneList empty then: intergenic SNP, getNearestExon();display data
+     else{
+       foreach gene in geneList{
+          get transcriptlist of this gene that contain the SNP;
+          foreach returned transcript {
+              if no exon contains the SNP then: intronic SNP,getNearestExon();display data
+              else{
+                  get the exon id/rank, compute SNP location
+                  get codon,amino acid,position relative to CDS,if this SNP in coding region
+              }
+          }
+        }
+     }
+   ii. Design modifications
+   foreach SNP do: 
+     validate SNP and set flags
+     display SNP AND GET next if user only wants validation
+     else{
+       get list of transcripts that contain this SNP   
+       if transcriptlist empty then: intergenic SNP, getNearestExon();display data
+       else{
+          foreach transcript in transcriptlist {
+            if no exon contains the SNP then: intronic SNP,getNearestExon();display data
+            else{
+                get the exon id/rank, compute SNP location
+                get codon,amino acid,position relative to CDS,if this SNP in coding region
+                display data
+            }
+          }
+       }}
+
+

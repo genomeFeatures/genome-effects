@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<glossary>
+<hint name="Good Practices">
+ <note><list>
+ We would appreciate if all your input files contain a header line</list></note>
+ <note name="Your input files header fields name should follow our naming standard (case incensitive)" id="ul">
+  <list>Chromosome       -> acceptable names are:chromosome,chrom, and chr</list>
+  <list>Chromosome Start -> acceptable names are:
+                          chromstart,chrom_start,chrstart,chr_start,locationstart,location_start,locstart,loc_start,start</list>
+  <list>Chromosome End   -> acceptable names are:
+                          chromend,chrom_end,chrend,chr_end,locationend,location_end,locend,loc_end,end</list>
+  <list>Single Base Pair Position -> acceptable names are:  position,pos,bppos,location,bpposition</list>
+  <list>Strand     -> acceptable names are: strand</list>
+  <list>ExonStarts -> acceptable names are:exonstarts</list>
+  <list>ExonEnds   -> acceptable names are:exonends</list>
+  <list>CDS start  -> acceptable names are:cdsstart</list>
+  <list>CDS end    ->acceptable names are:cdsend</list>
+  <list>SNP alleles:The reference allele and the other allele are in one field (ref_allele/consensus_allele): alleles </list>
+  <list>SNP alleles: In two fields ->The reference allele field:  reference_base,referencebase,ref_base,reference_allele,ref_allele</list>
+  <list>SNP alleles: In two fields ->The other allele field:  consensus_base,consensusbase,snpallele,snp_allele,other_allele</list>
+ </note>
+  <note><list>
+ There is a limitation on the size and the format of the input data files . The maximum file size is 5.0MB on data uploads.</list></note>
+
+</hint>
+<tool name="ssnp" title="Overlap SNPs Coding Synonymous codons">
+ <note name="Summary">
+  <list>This query will return all the overlapping  SNPs within a coding sequence that do not change the amino acid sequence of the protein that is produced, due to degeneracy of the genetic code.
+  The result will include: SNP accession(s),chrom,bp position,SNP function class,transcript,gene,SNP position within CDS/protein,exon rank
+    ,mutation type (transition/transversion),CpG site info,codon and amino acid info</list>
+ </note>
+  <note name="The input format spicification" id="ul">
+  <ulist>The input  can be either a file or a single genomic region.If input is a file, it must be a tab-delimitted file
+      and have the following  fields:</ulist>
+  <ulist>Chromosome</ulist>
+  <ulist>ChromStart</ulist>
+  <ulist>ChromEnd </ulist>
+  <ulist>strand  (optional, default all strands)</ulist>
+ </note>
+  <note name="Note">
+ <list>The feature cordinates (starts and ends) are expected to be in one-base </list>
+ </note>
+</tool>
+<tool name="nssnp" title="Overlap SNPs Coding Non Synonymous codons">
+ <note name="Summary">
+  <list>This query will return all the overlapping  SNPs within a coding sequence that do change the amino acid sequence of the protein that is produced, due to degeneracy of the genetic code.
+  The result will include: SNP accession(s),chrom,bp position,SNP function class,transcript,gene,SNP position within CDS/protein,exon rank
+    ,mutation type (transition/transversion),CpG site info,codon and amino acid info</list>
+ </note>
+  <note name="The input format spicification" id="ul">
+  <ulist>The input  can be either a file or a single genomic region.If input is a file, it must be a tab-delimitted file
+      and have the following  fields:</ulist>
+  <ulist>Chromosome</ulist>
+  <ulist>ChromStart</ulist>
+  <ulist>ChromEnd </ulist>
+  <ulist>strand  (optional, default all strands)</ulist>
+ </note>
+  <note name="Note">
+ <list>The feature cordinates (starts and ends) are expected to be in one-base </list>
+ </note>
+</tool>
+
+<tool name="txsnp" title="Overlap SNPs On Transcripts">
+ <note name="Summary">
+  <list>This query will return all the overlapping  SNPs located on gene transcripts.
+  The result will include: SNP accession(s),chrom,bp position,SNP function class,transcript,gene,SNP position within CDS/protein,exon rank
+    ,mutation type (transition/transversion),CpG site info,codon and amino acid info</list>
+ </note>
+  <note name="The input format spicification" id="ul">
+  <ulist>The input  can be either a file or a single genomic region.If input is a file, it must be a tab-delimitted file
+      and have the following  fields:</ulist>
+  <ulist>Chromosome</ulist>
+  <ulist>ChromStart</ulist>
+  <ulist>ChromEnd </ulist>
+  <ulist>strand  (optional, default all strands)</ulist>
+ </note>
+  <note name="Note">
+ <list>The feature cordinates (starts and ends) are expected to be in one-base </list>
+ </note>
+</tool>
+<tool name="fsnp" title="Overlap Functional SNPs">
+ <note name="Summary">
+  <list>This query will return all the SNPs located within the coding region that overlap the user specified genomic locations.
+  The result will include: SNP accession(s),chrom,bp position,SNP function class,transcript,gene,SNP position within CDS/protein,exon rank
+    ,mutation type (transition/transversion),CpG site info,codon and amino acid info</list>
+ </note>
+  <note name="The input format spicification" id="ul">
+  <ulist>The input  can be either a file or a single genomic region.If input is a file, it must be a tab-delimitted file
+      and have the following  fields:</ulist>
+  <ulist>Chromosome</ulist>
+  <ulist>ChromStart</ulist>
+  <ulist>ChromEnd </ulist>
+  <ulist>strand  (optional, default all strands)</ulist>
+ </note>
+  <note name="Note">
+ <list>The feature cordinates (starts and ends) are expected to be in one-base </list>
+ </note>
+
+</tool>
+<tool name="genomeSNPValidator" title="Genome SNPs Validator">
+ <note name="Summary">
+  <list>
+    This program will validate all single position SNPs (novel and existing) from an input stream
+       against the specified  reference genome assembly build. The default organism is mouse and the default
+       organism version is the most current version of a given organism.
+  </list>
+  <list>
+   The program will also check for reference allele  and snp allele consistency and sets the 
+   flags accordingly. Also the program tags CpG Sites, and Mutation types (transition or transversion).
+  </list>
+ </note>
+ <note name="The input format spicification, must have a header line" id="ul">
+  <ulist>snpid [optional]</ulist>
+  <ulist>Chromosome [required]</ulist>  
+  <ulist>Position  [required]</ulist>  
+  <ulist>ref_allele  [required]</ulist>
+  <ulist>other_allele [optional]</ulist>
+  <ulist>strand [optional]</ulist>
+ </note>
+ <note name="Note">
+ <list> Your file can have more or less fields but some of the above fields are
+necessary to run some functionalities. For example if you want to do more QA
+on your SNPs file, then your should include the following fields:Chromosome, Position, ref_allele,other_allele
+ </list>
+ </note>
+</tool>
+<tool name="getFastaSeq" title="Get Fasta Seqeuence">
+  <note name="Summary">
+  <list>
+     Given the genomic cordinates,this program extracts the fasta sequence data 
+       from the specified  reference genome assembly build. The default organism is mouse and the default
+       organism version is the most current version of a given organism.
+  </list>
+ </note>
+  <note name="The input format spicification" id="ul">
+  <ulist>The input  can be either a file or a single genomic region.If input is a file, it must be a tab-delimitted file
+      and have the following  fields:</ulist>
+  <ulist>Chromosome</ulist>      
+  <ulist>ChromStart</ulist>      
+  <ulist>ChromEnd </ulist>
+  <ulist>strand  (optional, default is + strand)</ulist>
+ </note>
+  <note name="Note">
+ <list>The feature cordinates (starts and ends) are expected to be in one-base </list>
+ </note>
+</tool>
+<tool name="getTxFastaSeq" title="Get Transcript Sequence">
+ <note name="Summary">
+  <list>
+    Given a bedGraph file (UCSC format) containing transcript data for a given gene prediction source,
+       this program extracts the fasta sequence data from the specified reference genome assembly build. 
+       The default organism is mouse and the default organism version is the most current version of a given organism.
+  </list>
+  <list>Users can specify the type of sequence they want using the -t option:
+        -t cds -> CDS sequence,-t tx -> exons+introns, -t ex -> exons only  sequence default.
+  If the user wants the CDS sequence, they can use the -c option to further specify the codon type
+          -c dna -> DNA sequence default, -c rna -> RNA sequence, -c aa -> one letter amino acids sequence
+             the -c aa option is not implemented yet.
+  </list>
+ </note>
+  <note name="The input format spicification" id="ul">
+    <ulist>The input  is a file and must be a tab-delimitted file and have a header line with the following  fields (the order is not important):</ulist>
+    <ulist>chrom,</ulist>
+   <ulist>chromStart,</ulist>
+   <ulist>chromEnd,</ulist>
+   <ulist>strand,</ulist>
+   <ulist>cdsStart</ulist>
+   <ulist>cdsEnd</ulist>
+   <ulist>exonStarts,</ulist>
+   <ulist>exonEnds,</ulist>
+   <ulist>featureType</ulist>
+   <ulist>name</ulist><list>name2</list>
+  </note>
+ <note name="Note" id="ul">
+  <list>The feature cordinates (starts and ends) are expected to be in one-base </list>
+  <list>The feature file is alway a tabular file following UCSC format</list>
+ <list>Your file can have more or less fields but some of the above fields are
+necessary to run some functionalities. For example if you want to get the coding
+region of the features in your file using annotations provided in your file 
+(not Graber transcript database annotations), then your file should include the following fields:
+  chrom,chromStart,chromEnd,strand,cdsStart,cdsEnd,exonStarts,and exonEnds</list>
+ </note>
+</tool>
+</glossary>

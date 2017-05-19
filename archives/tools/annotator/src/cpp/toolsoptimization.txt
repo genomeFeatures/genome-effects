@@ -1,0 +1,12 @@
+Tools optimization:
+
+Run genome sequence data extraction tools by chromosome
+1. rearrange input query by chromosome
+2. genome indexing
+   a. get the chromosme fasta file and convert it to oneliner
+   b. index it into a memory structure char* chrom= content of the fasta chromosome file
+3. index gene annotations
+  a. index annotations by genomic region [chr,strand,start]
+  b. index annotations by transcript name
+  c. index annotations by gene name
+

@@ -1,0 +1,7 @@
+Steps for SNPEffects software package
+
+1. Data sources description
+Done:
+a.Gene annotations supporting arguments 
+
+

@@ -1,0 +1,135 @@
+mammal,Human,hg38,ccdsGene:knownGene:mgcGenes:orfeomeGenes:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Human,hg19,ccdsGene:ensGene:knownGene:mgcGenes:nscanGene:orfeomeGenes:refGene:xenoRefGene:vegaGene:sgpGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Chimp,panTro4,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Chimp,panTro3,nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Gorilla,gorGor3,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Orangutan,ponAbe2,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Gibbon,nomLeu3,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Gibbon,nomLeu2,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Rhesus,rheMac3,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Rhesus,rheMac2,ensGene:nscanGene:refGene:xenoRefGene:sgpGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Baboon,papAnu2,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Baboon,papHam1,refGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Squirrel monkey,saiBol1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Marmoset,calJac3,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Marmoset,calJac1,nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Tarsier,tarSyr1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Mouse lemur,micMur1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Bushbaby,otoGar3,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Tree shrew,tupBel1,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Mouse,mm10,ccdsGene:ensGene:knownGene:mgcGenes:orfeomeGenes:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Mouse,mm9,ccdsGene:ensGene:knownGene:mgcGenes:nscanGene:orfeomeGenes:refGene:xenoRefGene:vegaGene:sgpGene:chromInfo:all_est:estOrientInfo:refFlatSquishMulti:all_mrna:NIAGene:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Rat,rn6,mgcGenes:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Rat,rn5,ensGene:mgcGenes:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Kangaroo rat,dipOrd1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Chinese hamster,criGri1,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Naked mole-rat,hetGla2,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Naked mole-rat,hetGla1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Guinea pig,cavPor3,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Rabbit,oryCun2,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Squirrel,speTri2,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Pika,ochPri3,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Pika,ochPri2,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Pig,susScr3,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Pig,susScr2,ensGene:nscanGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Alpaca,vicPac2,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Alpaca,vicPac1,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Minke whale,balAcu1,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Dolphin,turTru2,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Sheep,oviAri3,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Sheep,oviAri1,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Cow,bosTau7,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Cow,bosTau6,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Horse,equCab2,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Horse,equCab1,nscanGene:refGene:xenoRefGene:sgpGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,White rhinoceros,cerSim1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Cat,felCat5,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Cat,felCat4,nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Ferret ,musFur1,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Dog,canFam3,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Dog,canFam2,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Panda,ailMel1,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Microbat,myoLuc2,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Megabat,pteVam1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Hedgehog,eriEur2,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Hedgehog,eriEur1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Shrew,sorAra2,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Shrew,sorAra1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Elephant,loxAfr3,ensGene:refGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Rock hyrax,proCap1,ensGene:xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Tenrec,echTel2,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Tenrec,echTel1,ensGene:xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Manatee,triMan1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Armadillo,dasNov3,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Sloth,choHof1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Opossum,monDom5,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Opossum,monDom4,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Tasmanian devil,sarHar1,ensGene:refGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Wallaby,macEug2,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+mammal,Platypus,ornAna1,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Chicken,galGal4,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Chicken,galGal3,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Turkey,melGal1,ensGene:nscanGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Zebra finch,taeGut2,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Zebra finch,taeGut1,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Medium ground finch,geoFor1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Budgerigar,melUnd1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,American alligator,allMis1,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Lizard,anoCar2,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Lizard,anoCar1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Painted turtle,chrPic1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,X.tropicalis,xenTro3,ensGene:mgcGenes:refGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,X.tropicalis,xenTro2,ensGene:mgcGenes:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Coelacanth,latCha1,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Tetraodon,tetNig2,ensGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Tetraodon,tetNig1,ensGene:nscanGene:xenoRefGene:chromInfo:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Fugu,fr3,ensGene:refGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Fugu,fr2,ensGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Nile tilapia,oreNil2,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Stickleback,gasAcu1,ensGene:nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Medaka,oryLat2,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Atlantic cod,gadMor1,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Zebrafish,danRer7,ensGene:mgcGenes:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Zebrafish,danRer6,ensGene:mgcGenes:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Elephant shark,calMil1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Lamprey,petMar2,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+vertebrate,Lamprey,petMar1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+deuterostome,Lancelet,braFlo1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+deuterostome,C.intestinalis,ci2,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+deuterostome,C.intestinalis,ci1,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+deuterostome,S.purpuratus,strPur2,refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+deuterostome,S.purpuratus,strPur1,refGene:xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.melanogaster,dm3,ensGene:refGene:xenoRefGene:contrastGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.melanogaster,dm2,nscanGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.simulans,droSim1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.sechellia,droSec1,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.yakuba,droYak2,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.yakuba,droYak1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.erecta,droEre1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.ananassae,droAna2,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.ananassae,droAna1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.pseudoobscura,dp3,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.pseudoobscura,dp2,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.persimilis,droPer1,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.virilis,droVir2,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.virilis,droVir1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.mojavensis,droMoj2,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.mojavensis,droMoj1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,D.grimshawi,droGri1,xenoRefGene:chromInfo:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,A.gambiae,anoGam1,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,A.mellifera,apiMel2,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+insect,A.mellifera,apiMel1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.elegans,ce10,ensGene:refGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.elegans,ce6,ensGene:refGene:xenoRefGene:sangerGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.brenneri,caePb2,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.brenneri,caePb1,xenoRefGene:chromInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.briggsae,cb3,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.briggsae,cb1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.remanei,caeRem3,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.remanei,caeRem2,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,C.japonica,caeJap1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+worm,P.pacificus,priPac1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+other,Sea hare,aplCal1,xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+other,S.cerevisiae,sacCer3,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+other,S.cerevisiae,sacCer2,ensGene:xenoRefGene:chromInfo:all_est:estOrientInfo:all_mrna:sex:source:library:mrnaClone:tissue:development:cell:description:geneName:author:gbCdnaInfo
+virus,Ebola virus,eboVir3,chromInfo

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <title>Cape Results</title>
+    <style>
+    html {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    #inputDiv {
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    </style>
+    <body>
+        <div id="inputDiv">
+            p = <input type="range" id="pVal" min="0" autocomplete="off" step=".001">
+        </div>
+        <script src="d3.v3.js" charset="utf-8"></script>
+        <!--<script src="fisheye.js" charset="utf-8"></script>-->
+        <script src="polarChromosomes.js" charset="utf-8"></script>
+        <table>
+            <tr>
+                <td id="iris"></td>
+                <td id="cartBar"></td>
+                <td id="effectPlot"></td>
+                <td id="net"></td>
+            </tr>
+        </table>
+    </body>
+</html>

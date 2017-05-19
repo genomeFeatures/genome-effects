@@ -1,0 +1,41 @@
+cpp caviar
+1. When building base classes
+   a. Do not implement a class contructor in the base class if you want the derived classes to have their own implemented constructors
+   b. derived classes do not implement parametrized constructors when the base class has an implemented parametrized constructor
+      They call the base class constructor as follow:
+      genomeFeature::genomeFeature(string toolBaseDir):ggenome(toolBaseDir){}
+      where ggenome is the constructor of the base class.
+     Otherwise you get an error "undefined reference to 'condtructor of base class'"
+2. A derived class can not instantiate an object of another derived class of the same base class.
+   For example: I have two derived classes features and files from the same base class ggenome
+   In features, I have a member function parseFile that parses lines of a file.But files class already
+   knows how to do this so I created files fileObject and tried to access these functionalites but 
+  got  undefined reference to `ggenome::ggenome()'. It only works when I pass fileObject as an argument 
+  to class features's function
+
+3. One disadvantage of implementing a contructor in the base class
+   is that you to explicitly implement constructor(s) in the derived class
+
+4. Rule of thumb:  functions
+   a. pass single-value variable by value, 
+   b. container-type variable by reference
+   c. use void for container-types and pass the result storage by reference
+   
+5. Finding the shortest path in the graph between nodes n1 and n2
+  a. find all the children of n1
+  b. (n2 is the child of n1)?done:get the parent of n2
+  c. (n2 has no parent)?done:compare n2 parents with n1 children
+  d. (
+  
+/*curl is a client to get documents/files from or send documents to a server, using any of the supported protocols (HTTP, HTTPS, FTP, GOPHER, DICT, TELNET, LDAP or FILE). The command is designed to work without user interaction or any kind of interactivity.
+curl offers a busload of useful tricks like proxy support, user authentication, ftp upload, HTTP post, SSL (https:) connections, cookies, file transfer resume and more.
+URL
+The URL syntax is protocol dependent. You'll find a detailed description in RFC 2396. 
+-s/--silent
+    Silent mode. Don't show progress meter or error messages. Makes Curl mute.
+
+    If this option is used twice, the second will again disable mute.
+
+*/
+  
+

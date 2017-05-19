@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<about>
+<img>http://www.house.gov/content/cao/io/images/dome-night2.jpg</img>
+<note><![CDATA[Voting is the essence of democracy.Voting in the United States is voluntary. Some people vote in person at the polls, while others vote by mail days or weeks before the actual election date. <b>It's important that all U.S. citizens who qualify o vote participate in the democratic process of electing public officials.</b>]]></note>
+<note><![CDATA[When you register to vote,your voter registrations are linked to your residential address.When registered voters move, they are supposed to update their registration records with election officials before voting]]></note>
+<note><![CDATA[Under federal law, if you move within 30 days of a presidential election, you are allowed to vote for President and Vice President in your former state of residence, either in person or by absentee ballot.]]></note>
+</about>
+<potus control="D">
+<img>http://www.whitehouse.gov/sites/default/files/imagecache/page_masthead/the_white_house_0.jpg?itok=Ihf1hmss</img>
+<note><![CDATA[
+Established by Article II of the Constitution,The President of the United States is both the head of state and the head of government, as well as the military commander-in-chief and chief diplomat.The President is responsible for implementing and enforcing the laws written by Congress and,to that end, appoints the heads of the federal agencies, including the Cabinet.
+The Constitution lists only three qualifications for the Presidency — the President must be 35 years of age, be a natural born citizen, and must have lived in the United States for at least 14 years.
+]]>
+</note>
+<note><![CDATA[The primary responsibility of the Vice President of the United States is to be ready at a moment's notice to assume the Presidency if the President is unable to perform his duties. This can be because of the President's death, resignation, or temporary incapacitation, or if the Vice President and a majority of the Cabinet judge that the President is no longer able to discharge the duties of the presidency.
+The Vice President also serves as the President of the United States Senate, where he or she casts the deciding vote in the case of a tie.]]>
+</note>
+</potus>
+<congress senate="D:51%,R:45%,I:" house="D:45%,R:55%,I:">
+<img>http://www.whitehouse.gov/sites/default/files/imagecache/page_masthead/capitol3.jpg?itok=-xQiH33B</img>
+<note><![CDATA[
+Established by Article I of the Constitution,the United States Congress consists of the House of Representatives and the Senate. The Constitution grants Congress the sole authority to enact legislation and declare war, the right to confirm or reject many Presidential appointments, and substantial investigative powers.
+]]></note>
+<note><![CDATA[ The House of Representatives is made up of 435 elected members.In addition, there are 6 non-voting members, representing the District of Columbia, the Commonwealth of Puerto Rico, and four other territories of the United States. The presiding officer of the chamber is the Speaker of the House, elected by the Representatives.Members of the House are elected every two years and must be 25 years of age, a U.S. citizen for at least seven years, and a resident of the state (but not necessarily the district) they represent.]]></note>
+<note><![CDATA[The Senate is composed of 100 Senators, 2 for each state. Senators are elected to six-year terms by the people of each state. Senator's terms are staggered so that about one-third of the Senate is up for reelection every two years. Senators must be 30 years of age, U.S. citizens for at least nine years, and residents of the state they represent.]]></note>
+</congress>
+<scotus>
+<img>http://www.whitehouse.gov/sites/default/files/imagecache/page_masthead/supreme_court_building.jpg?itok=EUU3rLVX</img>
+<note><![CDATA[Established by Article III of the Constitution,members of the Judicial Branch are appointed by the President and confirmed by the Senate.Congress has the discretion to determine the shape,number of Supreme Court Justices,and structure of the federal judiciary.
+There have been as few as six Supreme Court Justices, but since 1869 there have been nine Justices, including one Chief Justice.
+Federal courts enjoy the sole power to interpret the law, determine the constitutionality of the law, and apply it to individual cases.]]></note>
+<note><![CDATA[Federal judges can only be removed through impeachment by the House of Representatives and conviction in the Senate. Judges and justices serve no fixed term — they serve until their death, retirement, or conviction by the Senate.]]></note>
+</scotus>
+<constitution>
+</constitution>
+
+<governor>
+</governor>
+<statecongress>
+</statecongress>
+<statesc>
+</statesc>
+<stateconstitution>
+</stateconstitution>
+

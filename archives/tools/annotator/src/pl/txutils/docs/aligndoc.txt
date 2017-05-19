@@ -1,0 +1,27 @@
+generating partial transcripts using the internal exon and the junction files
+Terminal exons of a partial transcript only have one coordinate.
+The first exon only has exonEnd and the last exon will only have exonStart
+For example:
+a. 16	-	15848729,15862398-15862543,15862748-15862932,15863223
+b. 16	-	15848729,15862748
+c. 2	-	32981539,32981721-32981883,32981958
+The examples show three partial transcripts a,b, and c. 
+Exons of a partial transcript are separated by a commas.Exon coordinates,exonStart and exonEnd,
+are separated by a "-". Transcript a. has four exons, transcript b has two exons, transcript c. has three exons
+
+
+Descriptions of the output files:
+
+    file ending .cig has the true alignments in several formats for easy parsing
+    file ending in .fa has the actual reads, forward are the "a" reads, reverse the "b" reads. 10,000,000 pairs.
+    simulated_reads_junctions-crossed.txt
+        this file has the information for each read which crossed a junction
+        you need this because when calculating the false negative rate, it's not fair to any algorithm to use junctions that weren't actually crossed by any reads. 
+    simulated_reads_transcripts.txt
+        this file has the full transcript info for each simulated transcript (basically the same as refseq with some redundancy issues fixed and zero length introns removed). You need this to calculate the false positive rates.
+
+
+ Being a sequence based technology, alignment algorithms are critical for most applications. Genome alignment algorithms such as Bowtie and BWA rely on Burrows–Wheeler indexing for very fast genome alignment, but they have difficulties with transcriptome alignment due to splicing, RNA editing and variations from the reference such as substitutions, insertions and deletions (Burrows and Wheeler, 1994; Langmead et al., 2009; Li and Durbin, 2009). Additional complications arise from poorly annotated genomes, or from samples with significant polymorphisms from the sequenced organism or from aberrant splicing found in cells with mutations in components of the spliceosome (Meyerson et al., 2010).
+
+Top post:
+

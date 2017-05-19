@@ -1,0 +1,110 @@
+The path is /home/lnh/docs/tools/annotator/src/pl/txutils
+ccdsGene annotations already loaded
+knownGene annotations already loaded
+mgcGenes annotations already loaded
+nscanGene annotations already loaded
+orfeomeGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+vegaGene annotations already loaded
+sgpGene annotations already loaded
+Processing hg19:all_mrna
+Porgram complete
+ccdsGene annotations already loaded
+knownGene annotations already loaded
+mgcGenes annotations already loaded
+nscanGene annotations already loaded
+orfeomeGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+vegaGene annotations already loaded
+sgpGene annotations already loaded
+contrastGene annotations already loaded
+Processing hg18:all_mrna
+Porgram complete
+ccdsGene annotations already loaded
+knownGene annotations already loaded
+mgcGenes annotations already loaded
+orfeomeGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing mm10:all_mrna
+Porgram complete
+ccdsGene annotations already loaded
+knownGene annotations already loaded
+mgcGenes annotations already loaded
+nscanGene annotations already loaded
+orfeomeGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+vegaGene annotations already loaded
+sgpGene annotations already loaded
+Processing mm9:all_mrna
+Porgram complete
+NIAGene annotations already loaded
+mgcGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing rn5:all_mrna
+Porgram complete
+mgcGenes annotations already loaded
+nscanGene annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+sgpGene annotations already loaded
+contrastGene annotations already loaded
+Processing rn4:all_mrna
+Porgram complete
+mgcGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing danRer7:all_mrna
+Porgram complete
+mgcGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing danRer6:all_mrna
+Porgram complete
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+contrastGene annotations already loaded
+Processing dm3:all_mrna
+Porgram complete
+nscanGene annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing dm2:all_mrna
+Porgram complete
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing ce10:all_mrna
+Porgram complete
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+sangerGene annotations already loaded
+Processing ce6:all_mrna
+Porgram complete
+xenoRefGene annotations already loaded
+Processing sacCer3:all_mrna
+Porgram complete
+xenoRefGene annotations already loaded
+Processing sacCer2:all_mrna
+Porgram complete
+ccdsGene annotations already loaded
+knownGene annotations already loaded
+mgcGenes annotations already loaded
+orfeomeGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing hg38:all_mrna
+Porgram complete
+mgcGenes annotations already loaded
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing rn6:all_mrna
+Porgram complete
+refGene annotations already loaded
+xenoRefGene annotations already loaded
+Processing taeGut2:all_mrna
+Porgram complete
+Program complete

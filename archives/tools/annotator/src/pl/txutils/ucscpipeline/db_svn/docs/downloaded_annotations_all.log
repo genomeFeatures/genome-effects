@@ -1,0 +1,770 @@
+mammal,human,hg19,ccdsGene,/scratch/data/ucsc/mammal/human/hg19_ccdsGene_11-2014
+mammal,human,hg19,ensGene,/scratch/data/ucsc/mammal/human/hg19_ensGene_11-2014
+mammal,human,hg19,knownGene,/scratch/data/ucsc/mammal/human/hg19_knownGene_11-2014
+mammal,human,hg19,mgcGenes,/scratch/data/ucsc/mammal/human/hg19_mgcGenes_11-2014
+mammal,human,hg19,nscanGene,/scratch/data/ucsc/mammal/human/hg19_nscanGene_11-2014
+mammal,human,hg19,orfeomeGenes,/scratch/data/ucsc/mammal/human/hg19_orfeomeGenes_11-2014
+mammal,human,hg19,refGene,/scratch/data/ucsc/mammal/human/hg19_refGene_11-2014
+mammal,human,hg19,xenoRefGene,/scratch/data/ucsc/mammal/human/hg19_xenoRefGene_11-2014
+mammal,human,hg19,vegaGene,/scratch/data/ucsc/mammal/human/hg19_vegaGene_11-2014
+mammal,human,hg19,sgpGene,/scratch/data/ucsc/mammal/human/hg19_sgpGene_11-2014
+mammal,human,hg19,chromInfo,/scratch/data/ucsc/mammal/human/hg19_chromInfo_11-2014
+mammal,human,hg19,all_est,/scratch/data/ucsc/mammal/human/hg19_all_est_11-2014
+mammal,human,hg19,estOrientInfo,/scratch/data/ucsc/mammal/human/hg19_estOrientInfo_11-2014
+mammal,human,hg19,all_mrna,/scratch/data/ucsc/mammal/human/hg19_all_mrna_11-2014
+mammal,human,hg18,ccdsGene,/scratch/data/ucsc/mammal/human/hg18_ccdsGene_11-2014
+mammal,human,hg18,ensGene,/scratch/data/ucsc/mammal/human/hg18_ensGene_11-2014
+mammal,human,hg18,knownGene,/scratch/data/ucsc/mammal/human/hg18_knownGene_11-2014
+mammal,human,hg18,mgcGenes,/scratch/data/ucsc/mammal/human/hg18_mgcGenes_11-2014
+mammal,human,hg18,nscanGene,/scratch/data/ucsc/mammal/human/hg18_nscanGene_11-2014
+mammal,human,hg18,orfeomeGenes,/scratch/data/ucsc/mammal/human/hg18_orfeomeGenes_11-2014
+mammal,human,hg18,refGene,/scratch/data/ucsc/mammal/human/hg18_refGene_11-2014
+mammal,human,hg18,xenoRefGene,/scratch/data/ucsc/mammal/human/hg18_xenoRefGene_11-2014
+mammal,human,hg18,vegaGene,/scratch/data/ucsc/mammal/human/hg18_vegaGene_11-2014
+mammal,human,hg18,sgpGene,/scratch/data/ucsc/mammal/human/hg18_sgpGene_11-2014
+mammal,human,hg18,contrastGene,/scratch/data/ucsc/mammal/human/hg18_contrastGene_11-2014
+mammal,human,hg18,chromInfo,/scratch/data/ucsc/mammal/human/hg18_chromInfo_11-2014
+mammal,human,hg18,all_est,/scratch/data/ucsc/mammal/human/hg18_all_est_11-2014
+mammal,human,hg18,estOrientInfo,/scratch/data/ucsc/mammal/human/hg18_estOrientInfo_11-2014
+mammal,human,hg18,all_mrna,/scratch/data/ucsc/mammal/human/hg18_all_mrna_11-2014
+mammal,chimp,panTro4,ensGene,/scratch/data/ucsc/mammal/chimp/panTro4_ensGene_11-2014
+mammal,chimp,panTro4,refGene,/scratch/data/ucsc/mammal/chimp/panTro4_refGene_11-2014
+mammal,chimp,panTro4,xenoRefGene,/scratch/data/ucsc/mammal/chimp/panTro4_xenoRefGene_11-2014
+mammal,chimp,panTro4,chromInfo,/scratch/data/ucsc/mammal/chimp/panTro4_chromInfo_11-2014
+mammal,chimp,panTro4,all_est,/scratch/data/ucsc/mammal/chimp/panTro4_all_est_11-2014
+mammal,chimp,panTro4,estOrientInfo,/scratch/data/ucsc/mammal/chimp/panTro4_estOrientInfo_11-2014
+mammal,chimp,panTro4,all_mrna,/scratch/data/ucsc/mammal/chimp/panTro4_all_mrna_11-2014
+mammal,chimp,panTro3,nscanGene,/scratch/data/ucsc/mammal/chimp/panTro3_nscanGene_11-2014
+mammal,chimp,panTro3,refGene,/scratch/data/ucsc/mammal/chimp/panTro3_refGene_11-2014
+mammal,chimp,panTro3,xenoRefGene,/scratch/data/ucsc/mammal/chimp/panTro3_xenoRefGene_11-2014
+mammal,chimp,panTro3,chromInfo,/scratch/data/ucsc/mammal/chimp/panTro3_chromInfo_11-2014
+mammal,chimp,panTro3,all_est,/scratch/data/ucsc/mammal/chimp/panTro3_all_est_11-2014
+mammal,chimp,panTro3,estOrientInfo,/scratch/data/ucsc/mammal/chimp/panTro3_estOrientInfo_11-2014
+mammal,chimp,panTro3,all_mrna,/scratch/data/ucsc/mammal/chimp/panTro3_all_mrna_11-2014
+mammal,gorilla,gorGor3,ensGene,/scratch/data/ucsc/mammal/gorilla/gorGor3_ensGene_11-2014
+mammal,gorilla,gorGor3,xenoRefGene,/scratch/data/ucsc/mammal/gorilla/gorGor3_xenoRefGene_11-2014
+mammal,gorilla,gorGor3,chromInfo,/scratch/data/ucsc/mammal/gorilla/gorGor3_chromInfo_11-2014
+mammal,gorilla,gorGor3,all_mrna,/scratch/data/ucsc/mammal/gorilla/gorGor3_all_mrna_11-2014
+mammal,orangutan,ponAbe2,ensGene,/scratch/data/ucsc/mammal/orangutan/ponAbe2_ensGene_11-2014
+mammal,orangutan,ponAbe2,nscanGene,/scratch/data/ucsc/mammal/orangutan/ponAbe2_nscanGene_11-2014
+mammal,orangutan,ponAbe2,refGene,/scratch/data/ucsc/mammal/orangutan/ponAbe2_refGene_11-2014
+mammal,orangutan,ponAbe2,xenoRefGene,/scratch/data/ucsc/mammal/orangutan/ponAbe2_xenoRefGene_11-2014
+mammal,orangutan,ponAbe2,chromInfo,/scratch/data/ucsc/mammal/orangutan/ponAbe2_chromInfo_11-2014
+mammal,orangutan,ponAbe2,all_est,/scratch/data/ucsc/mammal/orangutan/ponAbe2_all_est_11-2014
+mammal,orangutan,ponAbe2,estOrientInfo,/scratch/data/ucsc/mammal/orangutan/ponAbe2_estOrientInfo_11-2014
+mammal,orangutan,ponAbe2,all_mrna,/scratch/data/ucsc/mammal/orangutan/ponAbe2_all_mrna_11-2014
+mammal,gibbon,nomLeu2,xenoRefGene,/scratch/data/ucsc/mammal/gibbon/nomLeu2_xenoRefGene_11-2014
+mammal,gibbon,nomLeu2,chromInfo,/scratch/data/ucsc/mammal/gibbon/nomLeu2_chromInfo_11-2014
+mammal,gibbon,nomLeu1,ensGene,/scratch/data/ucsc/mammal/gibbon/nomLeu1_ensGene_11-2014
+mammal,gibbon,nomLeu1,xenoRefGene,/scratch/data/ucsc/mammal/gibbon/nomLeu1_xenoRefGene_11-2014
+mammal,gibbon,nomLeu1,chromInfo,/scratch/data/ucsc/mammal/gibbon/nomLeu1_chromInfo_11-2014
+mammal,gibbon,nomLeu1,all_mrna,/scratch/data/ucsc/mammal/gibbon/nomLeu1_all_mrna_11-2014
+mammal,rhesus,rheMac3,refGene,/scratch/data/ucsc/mammal/rhesus/rheMac3_refGene_11-2014
+mammal,rhesus,rheMac3,xenoRefGene,/scratch/data/ucsc/mammal/rhesus/rheMac3_xenoRefGene_11-2014
+mammal,rhesus,rheMac3,chromInfo,/scratch/data/ucsc/mammal/rhesus/rheMac3_chromInfo_11-2014
+mammal,rhesus,rheMac3,all_est,/scratch/data/ucsc/mammal/rhesus/rheMac3_all_est_11-2014
+mammal,rhesus,rheMac3,estOrientInfo,/scratch/data/ucsc/mammal/rhesus/rheMac3_estOrientInfo_11-2014
+mammal,rhesus,rheMac3,all_mrna,/scratch/data/ucsc/mammal/rhesus/rheMac3_all_mrna_11-2014
+mammal,rhesus,rheMac2,ensGene,/scratch/data/ucsc/mammal/rhesus/rheMac2_ensGene_11-2014
+mammal,rhesus,rheMac2,nscanGene,/scratch/data/ucsc/mammal/rhesus/rheMac2_nscanGene_11-2014
+mammal,rhesus,rheMac2,refGene,/scratch/data/ucsc/mammal/rhesus/rheMac2_refGene_11-2014
+mammal,rhesus,rheMac2,xenoRefGene,/scratch/data/ucsc/mammal/rhesus/rheMac2_xenoRefGene_11-2014
+mammal,rhesus,rheMac2,sgpGene,/scratch/data/ucsc/mammal/rhesus/rheMac2_sgpGene_11-2014
+mammal,rhesus,rheMac2,chromInfo,/scratch/data/ucsc/mammal/rhesus/rheMac2_chromInfo_11-2014
+mammal,rhesus,rheMac2,all_est,/scratch/data/ucsc/mammal/rhesus/rheMac2_all_est_11-2014
+mammal,rhesus,rheMac2,estOrientInfo,/scratch/data/ucsc/mammal/rhesus/rheMac2_estOrientInfo_11-2014
+mammal,rhesus,rheMac2,all_mrna,/scratch/data/ucsc/mammal/rhesus/rheMac2_all_mrna_11-2014
+mammal,baboon,papHam1,xenoRefGene,/scratch/data/ucsc/mammal/baboon/papHam1_xenoRefGene_11-2014
+mammal,baboon,papHam1,chromInfo,/scratch/data/ucsc/mammal/baboon/papHam1_chromInfo_11-2014
+mammal,baboon,papHam1,all_mrna,/scratch/data/ucsc/mammal/baboon/papHam1_all_mrna_11-2014
+mammal,baboon,papAnu2,refGene,/scratch/data/ucsc/mammal/baboon/papAnu2_refGene_11-2014
+mammal,baboon,papAnu2,xenoRefGene,/scratch/data/ucsc/mammal/baboon/papAnu2_xenoRefGene_11-2014
+mammal,baboon,papAnu2,chromInfo,/scratch/data/ucsc/mammal/baboon/papAnu2_chromInfo_11-2014
+mammal,baboon,papAnu2,all_est,/scratch/data/ucsc/mammal/baboon/papAnu2_all_est_11-2014
+mammal,baboon,papAnu2,estOrientInfo,/scratch/data/ucsc/mammal/baboon/papAnu2_estOrientInfo_11-2014
+mammal,baboon,papAnu2,all_mrna,/scratch/data/ucsc/mammal/baboon/papAnu2_all_mrna_11-2014
+mammal,squirrel monkey,saiBol1,xenoRefGene,/scratch/data/ucsc/mammal/squirrel-monkey/saiBol1_xenoRefGene_11-2014
+mammal,squirrel monkey,saiBol1,chromInfo,/scratch/data/ucsc/mammal/squirrel-monkey/saiBol1_chromInfo_11-2014
+mammal,squirrel monkey,saiBol1,all_mrna,/scratch/data/ucsc/mammal/squirrel-monkey/saiBol1_all_mrna_11-2014
+mammal,marmoset,calJac3,ensGene,/scratch/data/ucsc/mammal/marmoset/calJac3_ensGene_11-2014
+mammal,marmoset,calJac3,nscanGene,/scratch/data/ucsc/mammal/marmoset/calJac3_nscanGene_11-2014
+mammal,marmoset,calJac3,refGene,/scratch/data/ucsc/mammal/marmoset/calJac3_refGene_11-2014
+mammal,marmoset,calJac3,xenoRefGene,/scratch/data/ucsc/mammal/marmoset/calJac3_xenoRefGene_11-2014
+mammal,marmoset,calJac3,chromInfo,/scratch/data/ucsc/mammal/marmoset/calJac3_chromInfo_11-2014
+mammal,marmoset,calJac3,all_est,/scratch/data/ucsc/mammal/marmoset/calJac3_all_est_11-2014
+mammal,marmoset,calJac3,estOrientInfo,/scratch/data/ucsc/mammal/marmoset/calJac3_estOrientInfo_11-2014
+mammal,marmoset,calJac3,all_mrna,/scratch/data/ucsc/mammal/marmoset/calJac3_all_mrna_11-2014
+mammal,marmoset,calJac1,nscanGene,/scratch/data/ucsc/mammal/marmoset/calJac1_nscanGene_11-2014
+mammal,marmoset,calJac1,refGene,/scratch/data/ucsc/mammal/marmoset/calJac1_refGene_11-2014
+mammal,marmoset,calJac1,xenoRefGene,/scratch/data/ucsc/mammal/marmoset/calJac1_xenoRefGene_11-2014
+mammal,marmoset,calJac1,chromInfo,/scratch/data/ucsc/mammal/marmoset/calJac1_chromInfo_11-2014
+mammal,marmoset,calJac1,all_est,/scratch/data/ucsc/mammal/marmoset/calJac1_all_est_11-2014
+mammal,marmoset,calJac1,estOrientInfo,/scratch/data/ucsc/mammal/marmoset/calJac1_estOrientInfo_11-2014
+mammal,marmoset,calJac1,all_mrna,/scratch/data/ucsc/mammal/marmoset/calJac1_all_mrna_11-2014
+mammal,tarsier,tarSyr1,ensGene,/scratch/data/ucsc/mammal/tarsier/tarSyr1_ensGene_11-2014
+mammal,tarsier,tarSyr1,xenoRefGene,/scratch/data/ucsc/mammal/tarsier/tarSyr1_xenoRefGene_11-2014
+mammal,tarsier,tarSyr1,chromInfo,/scratch/data/ucsc/mammal/tarsier/tarSyr1_chromInfo_11-2014
+mammal,tarsier,tarSyr1,all_mrna,/scratch/data/ucsc/mammal/tarsier/tarSyr1_all_mrna_11-2014
+mammal,mouse lemur,micMur1,ensGene,/scratch/data/ucsc/mammal/mouse-lemur/micMur1_ensGene_11-2014
+mammal,mouse lemur,micMur1,xenoRefGene,/scratch/data/ucsc/mammal/mouse-lemur/micMur1_xenoRefGene_11-2014
+mammal,mouse lemur,micMur1,chromInfo,/scratch/data/ucsc/mammal/mouse-lemur/micMur1_chromInfo_11-2014
+mammal,mouse lemur,micMur1,all_mrna,/scratch/data/ucsc/mammal/mouse-lemur/micMur1_all_mrna_11-2014
+mammal,bushbaby,otoGar3,ensGene,/scratch/data/ucsc/mammal/bushbaby/otoGar3_ensGene_11-2014
+mammal,bushbaby,otoGar3,xenoRefGene,/scratch/data/ucsc/mammal/bushbaby/otoGar3_xenoRefGene_11-2014
+mammal,bushbaby,otoGar3,chromInfo,/scratch/data/ucsc/mammal/bushbaby/otoGar3_chromInfo_11-2014
+mammal,bushbaby,otoGar3,all_mrna,/scratch/data/ucsc/mammal/bushbaby/otoGar3_all_mrna_11-2014
+mammal,tree shrew,tupBel1,ensGene,/scratch/data/ucsc/mammal/tree-shrew/tupBel1_ensGene_11-2014
+mammal,tree shrew,tupBel1,xenoRefGene,/scratch/data/ucsc/mammal/tree-shrew/tupBel1_xenoRefGene_11-2014
+mammal,tree shrew,tupBel1,chromInfo,/scratch/data/ucsc/mammal/tree-shrew/tupBel1_chromInfo_11-2014
+mammal,tree shrew,tupBel1,all_est,/scratch/data/ucsc/mammal/tree-shrew/tupBel1_all_est_11-2014
+mammal,tree shrew,tupBel1,estOrientInfo,/scratch/data/ucsc/mammal/tree-shrew/tupBel1_estOrientInfo_11-2014
+mammal,tree shrew,tupBel1,all_mrna,/scratch/data/ucsc/mammal/tree-shrew/tupBel1_all_mrna_11-2014
+mammal,mouse,mm10,ccdsGene,/scratch/data/ucsc/mammal/mouse/mm10_ccdsGene_11-2014
+mammal,mouse,mm10,ensGene,/scratch/data/ucsc/mammal/mouse/mm10_ensGene_11-2014
+mammal,mouse,mm10,knownGene,/scratch/data/ucsc/mammal/mouse/mm10_knownGene_11-2014
+mammal,mouse,mm10,mgcGenes,/scratch/data/ucsc/mammal/mouse/mm10_mgcGenes_11-2014
+mammal,mouse,mm10,orfeomeGenes,/scratch/data/ucsc/mammal/mouse/mm10_orfeomeGenes_11-2014
+mammal,mouse,mm10,refGene,/scratch/data/ucsc/mammal/mouse/mm10_refGene_11-2014
+mammal,mouse,mm10,xenoRefGene,/scratch/data/ucsc/mammal/mouse/mm10_xenoRefGene_11-2014
+mammal,mouse,mm10,chromInfo,/scratch/data/ucsc/mammal/mouse/mm10_chromInfo_11-2014
+mammal,mouse,mm10,all_est,/scratch/data/ucsc/mammal/mouse/mm10_all_est_11-2014
+mammal,mouse,mm10,estOrientInfo,/scratch/data/ucsc/mammal/mouse/mm10_estOrientInfo_11-2014
+mammal,mouse,mm10,all_mrna,/scratch/data/ucsc/mammal/mouse/mm10_all_mrna_11-2014
+mammal,mouse,mm9,ccdsGene,/scratch/data/ucsc/mammal/mouse/mm9_ccdsGene_11-2014
+mammal,mouse,mm9,ensGene,/scratch/data/ucsc/mammal/mouse/mm9_ensGene_11-2014
+mammal,mouse,mm9,knownGene,/scratch/data/ucsc/mammal/mouse/mm9_knownGene_11-2014
+mammal,mouse,mm9,mgcGenes,/scratch/data/ucsc/mammal/mouse/mm9_mgcGenes_11-2014
+mammal,mouse,mm9,nscanGene,/scratch/data/ucsc/mammal/mouse/mm9_nscanGene_11-2014
+mammal,mouse,mm9,orfeomeGenes,/scratch/data/ucsc/mammal/mouse/mm9_orfeomeGenes_11-2014
+mammal,mouse,mm9,refGene,/scratch/data/ucsc/mammal/mouse/mm9_refGene_11-2014
+mammal,mouse,mm9,xenoRefGene,/scratch/data/ucsc/mammal/mouse/mm9_xenoRefGene_11-2014
+mammal,mouse,mm9,vegaGene,/scratch/data/ucsc/mammal/mouse/mm9_vegaGene_11-2014
+mammal,mouse,mm9,sgpGene,/scratch/data/ucsc/mammal/mouse/mm9_sgpGene_11-2014
+mammal,mouse,mm9,chromInfo,/scratch/data/ucsc/mammal/mouse/mm9_chromInfo_11-2014
+mammal,mouse,mm9,all_est,/scratch/data/ucsc/mammal/mouse/mm9_all_est_11-2014
+mammal,mouse,mm9,estOrientInfo,/scratch/data/ucsc/mammal/mouse/mm9_estOrientInfo_11-2014
+mammal,mouse,mm9,all_mrna,/scratch/data/ucsc/mammal/mouse/mm9_all_mrna_11-2014
+mammal,mouse,mm9,NIAGene,/scratch/data/ucsc/mammal/mouse/mm9_NIAGene_11-2014
+mammal,rat,rn5,mgcGenes,/scratch/data/ucsc/mammal/rat/rn5_mgcGenes_11-2014
+mammal,rat,rn5,refGene,/scratch/data/ucsc/mammal/rat/rn5_refGene_11-2014
+mammal,rat,rn5,xenoRefGene,/scratch/data/ucsc/mammal/rat/rn5_xenoRefGene_11-2014
+mammal,rat,rn5,chromInfo,/scratch/data/ucsc/mammal/rat/rn5_chromInfo_11-2014
+mammal,rat,rn5,all_est,/scratch/data/ucsc/mammal/rat/rn5_all_est_11-2014
+mammal,rat,rn5,estOrientInfo,/scratch/data/ucsc/mammal/rat/rn5_estOrientInfo_11-2014
+mammal,rat,rn5,all_mrna,/scratch/data/ucsc/mammal/rat/rn5_all_mrna_11-2014
+mammal,rat,rn4,ensGene,/scratch/data/ucsc/mammal/rat/rn4_ensGene_11-2014
+mammal,rat,rn4,mgcGenes,/scratch/data/ucsc/mammal/rat/rn4_mgcGenes_11-2014
+mammal,rat,rn4,nscanGene,/scratch/data/ucsc/mammal/rat/rn4_nscanGene_11-2014
+mammal,rat,rn4,refGene,/scratch/data/ucsc/mammal/rat/rn4_refGene_11-2014
+mammal,rat,rn4,xenoRefGene,/scratch/data/ucsc/mammal/rat/rn4_xenoRefGene_11-2014
+mammal,rat,rn4,sgpGene,/scratch/data/ucsc/mammal/rat/rn4_sgpGene_11-2014
+mammal,rat,rn4,contrastGene,/scratch/data/ucsc/mammal/rat/rn4_contrastGene_11-2014
+mammal,rat,rn4,chromInfo,/scratch/data/ucsc/mammal/rat/rn4_chromInfo_11-2014
+mammal,rat,rn4,all_est,/scratch/data/ucsc/mammal/rat/rn4_all_est_11-2014
+mammal,rat,rn4,estOrientInfo,/scratch/data/ucsc/mammal/rat/rn4_estOrientInfo_11-2014
+mammal,rat,rn4,all_mrna,/scratch/data/ucsc/mammal/rat/rn4_all_mrna_11-2014
+mammal,kangaroo rat,dipOrd1,ensGene,/scratch/data/ucsc/mammal/kangaroo-rat/dipOrd1_ensGene_11-2014
+mammal,kangaroo rat,dipOrd1,xenoRefGene,/scratch/data/ucsc/mammal/kangaroo-rat/dipOrd1_xenoRefGene_11-2014
+mammal,kangaroo rat,dipOrd1,chromInfo,/scratch/data/ucsc/mammal/kangaroo-rat/dipOrd1_chromInfo_11-2014
+mammal,kangaroo rat,dipOrd1,all_mrna,/scratch/data/ucsc/mammal/kangaroo-rat/dipOrd1_all_mrna_11-2014
+mammal,naked mole-rat,hetGla2,xenoRefGene,/scratch/data/ucsc/mammal/naked-mole-rat/hetGla2_xenoRefGene_11-2014
+mammal,naked mole-rat,hetGla2,chromInfo,/scratch/data/ucsc/mammal/naked-mole-rat/hetGla2_chromInfo_11-2014
+mammal,naked mole-rat,hetGla1,xenoRefGene,/scratch/data/ucsc/mammal/naked-mole-rat/hetGla1_xenoRefGene_11-2014
+mammal,naked mole-rat,hetGla1,chromInfo,/scratch/data/ucsc/mammal/naked-mole-rat/hetGla1_chromInfo_11-2014
+mammal,naked mole-rat,hetGla1,all_mrna,/scratch/data/ucsc/mammal/naked-mole-rat/hetGla1_all_mrna_11-2014
+mammal,guinea pig,cavPor3,ensGene,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_ensGene_11-2014
+mammal,guinea pig,cavPor3,nscanGene,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_nscanGene_11-2014
+mammal,guinea pig,cavPor3,refGene,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_refGene_11-2014
+mammal,guinea pig,cavPor3,xenoRefGene,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_xenoRefGene_11-2014
+mammal,guinea pig,cavPor3,chromInfo,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_chromInfo_11-2014
+mammal,guinea pig,cavPor3,all_est,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_all_est_11-2014
+mammal,guinea pig,cavPor3,estOrientInfo,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_estOrientInfo_11-2014
+mammal,guinea pig,cavPor3,all_mrna,/scratch/data/ucsc/mammal/guinea-pig/cavPor3_all_mrna_11-2014
+mammal,rabbit,oryCun2,ensGene,/scratch/data/ucsc/mammal/rabbit/oryCun2_ensGene_11-2014
+mammal,rabbit,oryCun2,refGene,/scratch/data/ucsc/mammal/rabbit/oryCun2_refGene_11-2014
+mammal,rabbit,oryCun2,xenoRefGene,/scratch/data/ucsc/mammal/rabbit/oryCun2_xenoRefGene_11-2014
+mammal,rabbit,oryCun2,chromInfo,/scratch/data/ucsc/mammal/rabbit/oryCun2_chromInfo_11-2014
+mammal,rabbit,oryCun2,all_est,/scratch/data/ucsc/mammal/rabbit/oryCun2_all_est_11-2014
+mammal,rabbit,oryCun2,estOrientInfo,/scratch/data/ucsc/mammal/rabbit/oryCun2_estOrientInfo_11-2014
+mammal,rabbit,oryCun2,all_mrna,/scratch/data/ucsc/mammal/rabbit/oryCun2_all_mrna_11-2014
+mammal,squirrel,speTri2,ensGene,/scratch/data/ucsc/mammal/squirrel/speTri2_ensGene_11-2014
+mammal,squirrel,speTri2,xenoRefGene,/scratch/data/ucsc/mammal/squirrel/speTri2_xenoRefGene_11-2014
+mammal,squirrel,speTri2,chromInfo,/scratch/data/ucsc/mammal/squirrel/speTri2_chromInfo_11-2014
+mammal,squirrel,speTri2,all_est,/scratch/data/ucsc/mammal/squirrel/speTri2_all_est_11-2014
+mammal,squirrel,speTri2,estOrientInfo,/scratch/data/ucsc/mammal/squirrel/speTri2_estOrientInfo_11-2014
+mammal,squirrel,speTri2,all_mrna,/scratch/data/ucsc/mammal/squirrel/speTri2_all_mrna_11-2014
+mammal,pika,ochPri2,ensGene,/scratch/data/ucsc/mammal/pika/ochPri2_ensGene_11-2014
+mammal,pika,ochPri2,xenoRefGene,/scratch/data/ucsc/mammal/pika/ochPri2_xenoRefGene_11-2014
+mammal,pika,ochPri2,chromInfo,/scratch/data/ucsc/mammal/pika/ochPri2_chromInfo_11-2014
+mammal,pika,ochPri2,all_mrna,/scratch/data/ucsc/mammal/pika/ochPri2_all_mrna_11-2014
+mammal,pig,susScr3,ensGene,/scratch/data/ucsc/mammal/pig/susScr3_ensGene_11-2014
+mammal,pig,susScr3,refGene,/scratch/data/ucsc/mammal/pig/susScr3_refGene_11-2014
+mammal,pig,susScr3,xenoRefGene,/scratch/data/ucsc/mammal/pig/susScr3_xenoRefGene_11-2014
+mammal,pig,susScr3,chromInfo,/scratch/data/ucsc/mammal/pig/susScr3_chromInfo_11-2014
+mammal,pig,susScr3,all_est,/scratch/data/ucsc/mammal/pig/susScr3_all_est_11-2014
+mammal,pig,susScr3,estOrientInfo,/scratch/data/ucsc/mammal/pig/susScr3_estOrientInfo_11-2014
+mammal,pig,susScr3,all_mrna,/scratch/data/ucsc/mammal/pig/susScr3_all_mrna_11-2014
+mammal,pig,susScr2,ensGene,/scratch/data/ucsc/mammal/pig/susScr2_ensGene_11-2014
+mammal,pig,susScr2,nscanGene,/scratch/data/ucsc/mammal/pig/susScr2_nscanGene_11-2014
+mammal,pig,susScr2,xenoRefGene,/scratch/data/ucsc/mammal/pig/susScr2_xenoRefGene_11-2014
+mammal,pig,susScr2,chromInfo,/scratch/data/ucsc/mammal/pig/susScr2_chromInfo_11-2014
+mammal,pig,susScr2,all_est,/scratch/data/ucsc/mammal/pig/susScr2_all_est_11-2014
+mammal,pig,susScr2,estOrientInfo,/scratch/data/ucsc/mammal/pig/susScr2_estOrientInfo_11-2014
+mammal,pig,susScr2,all_mrna,/scratch/data/ucsc/mammal/pig/susScr2_all_mrna_11-2014
+mammal,alpaca,vicPac1,ensGene,/scratch/data/ucsc/mammal/alpaca/vicPac1_ensGene_11-2014
+mammal,alpaca,vicPac1,xenoRefGene,/scratch/data/ucsc/mammal/alpaca/vicPac1_xenoRefGene_11-2014
+mammal,alpaca,vicPac1,chromInfo,/scratch/data/ucsc/mammal/alpaca/vicPac1_chromInfo_11-2014
+mammal,alpaca,vicPac1,all_est,/scratch/data/ucsc/mammal/alpaca/vicPac1_all_est_11-2014
+mammal,alpaca,vicPac1,estOrientInfo,/scratch/data/ucsc/mammal/alpaca/vicPac1_estOrientInfo_11-2014
+mammal,dolphin,turTru2,xenoRefGene,/scratch/data/ucsc/mammal/dolphin/turTru2_xenoRefGene_11-2014
+mammal,dolphin,turTru2,chromInfo,/scratch/data/ucsc/mammal/dolphin/turTru2_chromInfo_11-2014
+mammal,sheep,oviAri1,refGene,/scratch/data/ucsc/mammal/sheep/oviAri1_refGene_11-2014
+mammal,sheep,oviAri1,xenoRefGene,/scratch/data/ucsc/mammal/sheep/oviAri1_xenoRefGene_11-2014
+mammal,sheep,oviAri1,chromInfo,/scratch/data/ucsc/mammal/sheep/oviAri1_chromInfo_11-2014
+mammal,sheep,oviAri1,all_est,/scratch/data/ucsc/mammal/sheep/oviAri1_all_est_11-2014
+mammal,sheep,oviAri1,estOrientInfo,/scratch/data/ucsc/mammal/sheep/oviAri1_estOrientInfo_11-2014
+mammal,sheep,oviAri1,all_mrna,/scratch/data/ucsc/mammal/sheep/oviAri1_all_mrna_11-2014
+mammal,cow,bosTau7,refGene,/scratch/data/ucsc/mammal/cow/bosTau7_refGene_11-2014
+mammal,cow,bosTau7,xenoRefGene,/scratch/data/ucsc/mammal/cow/bosTau7_xenoRefGene_11-2014
+mammal,cow,bosTau7,chromInfo,/scratch/data/ucsc/mammal/cow/bosTau7_chromInfo_11-2014
+mammal,cow,bosTau7,all_est,/scratch/data/ucsc/mammal/cow/bosTau7_all_est_11-2014
+mammal,cow,bosTau7,estOrientInfo,/scratch/data/ucsc/mammal/cow/bosTau7_estOrientInfo_11-2014
+mammal,cow,bosTau7,all_mrna,/scratch/data/ucsc/mammal/cow/bosTau7_all_mrna_11-2014
+mammal,cow,bosTau6,ensGene,/scratch/data/ucsc/mammal/cow/bosTau6_ensGene_11-2014
+mammal,cow,bosTau6,refGene,/scratch/data/ucsc/mammal/cow/bosTau6_refGene_11-2014
+mammal,cow,bosTau6,xenoRefGene,/scratch/data/ucsc/mammal/cow/bosTau6_xenoRefGene_11-2014
+mammal,cow,bosTau6,chromInfo,/scratch/data/ucsc/mammal/cow/bosTau6_chromInfo_11-2014
+mammal,cow,bosTau6,all_est,/scratch/data/ucsc/mammal/cow/bosTau6_all_est_11-2014
+mammal,cow,bosTau6,estOrientInfo,/scratch/data/ucsc/mammal/cow/bosTau6_estOrientInfo_11-2014
+mammal,cow,bosTau6,all_mrna,/scratch/data/ucsc/mammal/cow/bosTau6_all_mrna_11-2014
+mammal,horse,equCab2,ensGene,/scratch/data/ucsc/mammal/horse/equCab2_ensGene_11-2014
+mammal,horse,equCab2,nscanGene,/scratch/data/ucsc/mammal/horse/equCab2_nscanGene_11-2014
+mammal,horse,equCab2,refGene,/scratch/data/ucsc/mammal/horse/equCab2_refGene_11-2014
+mammal,horse,equCab2,xenoRefGene,/scratch/data/ucsc/mammal/horse/equCab2_xenoRefGene_11-2014
+mammal,horse,equCab2,chromInfo,/scratch/data/ucsc/mammal/horse/equCab2_chromInfo_11-2014
+mammal,horse,equCab2,all_est,/scratch/data/ucsc/mammal/horse/equCab2_all_est_11-2014
+mammal,horse,equCab2,estOrientInfo,/scratch/data/ucsc/mammal/horse/equCab2_estOrientInfo_11-2014
+mammal,horse,equCab2,all_mrna,/scratch/data/ucsc/mammal/horse/equCab2_all_mrna_11-2014
+mammal,horse,equCab1,nscanGene,/scratch/data/ucsc/mammal/horse/equCab1_nscanGene_11-2014
+mammal,horse,equCab1,refGene,/scratch/data/ucsc/mammal/horse/equCab1_refGene_11-2014
+mammal,horse,equCab1,xenoRefGene,/scratch/data/ucsc/mammal/horse/equCab1_xenoRefGene_11-2014
+mammal,horse,equCab1,sgpGene,/scratch/data/ucsc/mammal/horse/equCab1_sgpGene_11-2014
+mammal,horse,equCab1,chromInfo,/scratch/data/ucsc/mammal/horse/equCab1_chromInfo_11-2014
+mammal,horse,equCab1,all_est,/scratch/data/ucsc/mammal/horse/equCab1_all_est_11-2014
+mammal,horse,equCab1,estOrientInfo,/scratch/data/ucsc/mammal/horse/equCab1_estOrientInfo_11-2014
+mammal,horse,equCab1,all_mrna,/scratch/data/ucsc/mammal/horse/equCab1_all_mrna_11-2014
+mammal,white rhinoceros,cerSim1,xenoRefGene,/scratch/data/ucsc/mammal/white-rhinoceros/cerSim1_xenoRefGene_11-2014
+mammal,white rhinoceros,cerSim1,chromInfo,/scratch/data/ucsc/mammal/white-rhinoceros/cerSim1_chromInfo_11-2014
+mammal,white rhinoceros,cerSim1,all_mrna,/scratch/data/ucsc/mammal/white-rhinoceros/cerSim1_all_mrna_11-2014
+mammal,cat,felCat5,refGene,/scratch/data/ucsc/mammal/cat/felCat5_refGene_11-2014
+mammal,cat,felCat5,xenoRefGene,/scratch/data/ucsc/mammal/cat/felCat5_xenoRefGene_11-2014
+mammal,cat,felCat5,chromInfo,/scratch/data/ucsc/mammal/cat/felCat5_chromInfo_11-2014
+mammal,cat,felCat5,all_est,/scratch/data/ucsc/mammal/cat/felCat5_all_est_11-2014
+mammal,cat,felCat5,estOrientInfo,/scratch/data/ucsc/mammal/cat/felCat5_estOrientInfo_11-2014
+mammal,cat,felCat5,all_mrna,/scratch/data/ucsc/mammal/cat/felCat5_all_mrna_11-2014
+mammal,cat,felCat4,nscanGene,/scratch/data/ucsc/mammal/cat/felCat4_nscanGene_11-2014
+mammal,cat,felCat4,refGene,/scratch/data/ucsc/mammal/cat/felCat4_refGene_11-2014
+mammal,cat,felCat4,xenoRefGene,/scratch/data/ucsc/mammal/cat/felCat4_xenoRefGene_11-2014
+mammal,cat,felCat4,chromInfo,/scratch/data/ucsc/mammal/cat/felCat4_chromInfo_11-2014
+mammal,cat,felCat4,all_est,/scratch/data/ucsc/mammal/cat/felCat4_all_est_11-2014
+mammal,cat,felCat4,estOrientInfo,/scratch/data/ucsc/mammal/cat/felCat4_estOrientInfo_11-2014
+mammal,cat,felCat4,all_mrna,/scratch/data/ucsc/mammal/cat/felCat4_all_mrna_11-2014
+mammal,dog,canFam3,ensGene,/scratch/data/ucsc/mammal/dog/canFam3_ensGene_11-2014
+mammal,dog,canFam3,refGene,/scratch/data/ucsc/mammal/dog/canFam3_refGene_11-2014
+mammal,dog,canFam3,xenoRefGene,/scratch/data/ucsc/mammal/dog/canFam3_xenoRefGene_11-2014
+mammal,dog,canFam3,chromInfo,/scratch/data/ucsc/mammal/dog/canFam3_chromInfo_11-2014
+mammal,dog,canFam3,all_est,/scratch/data/ucsc/mammal/dog/canFam3_all_est_11-2014
+mammal,dog,canFam3,estOrientInfo,/scratch/data/ucsc/mammal/dog/canFam3_estOrientInfo_11-2014
+mammal,dog,canFam3,all_mrna,/scratch/data/ucsc/mammal/dog/canFam3_all_mrna_11-2014
+mammal,dog,canFam2,ensGene,/scratch/data/ucsc/mammal/dog/canFam2_ensGene_11-2014
+mammal,dog,canFam2,nscanGene,/scratch/data/ucsc/mammal/dog/canFam2_nscanGene_11-2014
+mammal,dog,canFam2,refGene,/scratch/data/ucsc/mammal/dog/canFam2_refGene_11-2014
+mammal,dog,canFam2,xenoRefGene,/scratch/data/ucsc/mammal/dog/canFam2_xenoRefGene_11-2014
+mammal,dog,canFam2,chromInfo,/scratch/data/ucsc/mammal/dog/canFam2_chromInfo_11-2014
+mammal,dog,canFam2,all_est,/scratch/data/ucsc/mammal/dog/canFam2_all_est_11-2014
+mammal,dog,canFam2,estOrientInfo,/scratch/data/ucsc/mammal/dog/canFam2_estOrientInfo_11-2014
+mammal,dog,canFam2,all_mrna,/scratch/data/ucsc/mammal/dog/canFam2_all_mrna_11-2014
+mammal,panda,ailMel1,ensGene,/scratch/data/ucsc/mammal/panda/ailMel1_ensGene_11-2014
+mammal,panda,ailMel1,xenoRefGene,/scratch/data/ucsc/mammal/panda/ailMel1_xenoRefGene_11-2014
+mammal,panda,ailMel1,chromInfo,/scratch/data/ucsc/mammal/panda/ailMel1_chromInfo_11-2014
+mammal,panda,ailMel1,all_est,/scratch/data/ucsc/mammal/panda/ailMel1_all_est_11-2014
+mammal,panda,ailMel1,estOrientInfo,/scratch/data/ucsc/mammal/panda/ailMel1_estOrientInfo_11-2014
+mammal,panda,ailMel1,all_mrna,/scratch/data/ucsc/mammal/panda/ailMel1_all_mrna_11-2014
+mammal,microbat,myoLuc2,ensGene,/scratch/data/ucsc/mammal/microbat/myoLuc2_ensGene_11-2014
+mammal,microbat,myoLuc2,xenoRefGene,/scratch/data/ucsc/mammal/microbat/myoLuc2_xenoRefGene_11-2014
+mammal,microbat,myoLuc2,chromInfo,/scratch/data/ucsc/mammal/microbat/myoLuc2_chromInfo_11-2014
+mammal,microbat,myoLuc2,all_mrna,/scratch/data/ucsc/mammal/microbat/myoLuc2_all_mrna_11-2014
+mammal,megabat,pteVam1,ensGene,/scratch/data/ucsc/mammal/megabat/pteVam1_ensGene_11-2014
+mammal,megabat,pteVam1,xenoRefGene,/scratch/data/ucsc/mammal/megabat/pteVam1_xenoRefGene_11-2014
+mammal,megabat,pteVam1,chromInfo,/scratch/data/ucsc/mammal/megabat/pteVam1_chromInfo_11-2014
+mammal,megabat,pteVam1,all_mrna,/scratch/data/ucsc/mammal/megabat/pteVam1_all_mrna_11-2014
+mammal,hedgehog,eriEur1,ensGene,/scratch/data/ucsc/mammal/hedgehog/eriEur1_ensGene_11-2014
+mammal,hedgehog,eriEur1,xenoRefGene,/scratch/data/ucsc/mammal/hedgehog/eriEur1_xenoRefGene_11-2014
+mammal,hedgehog,eriEur1,chromInfo,/scratch/data/ucsc/mammal/hedgehog/eriEur1_chromInfo_11-2014
+mammal,hedgehog,eriEur1,all_mrna,/scratch/data/ucsc/mammal/hedgehog/eriEur1_all_mrna_11-2014
+mammal,shrew,sorAra1,ensGene,/scratch/data/ucsc/mammal/shrew/sorAra1_ensGene_11-2014
+mammal,shrew,sorAra1,xenoRefGene,/scratch/data/ucsc/mammal/shrew/sorAra1_xenoRefGene_11-2014
+mammal,shrew,sorAra1,chromInfo,/scratch/data/ucsc/mammal/shrew/sorAra1_chromInfo_11-2014
+mammal,shrew,sorAra1,all_mrna,/scratch/data/ucsc/mammal/shrew/sorAra1_all_mrna_11-2014
+mammal,elephant,loxAfr3,ensGene,/scratch/data/ucsc/mammal/elephant/loxAfr3_ensGene_11-2014
+mammal,elephant,loxAfr3,xenoRefGene,/scratch/data/ucsc/mammal/elephant/loxAfr3_xenoRefGene_11-2014
+mammal,elephant,loxAfr3,chromInfo,/scratch/data/ucsc/mammal/elephant/loxAfr3_chromInfo_11-2014
+mammal,elephant,loxAfr3,all_mrna,/scratch/data/ucsc/mammal/elephant/loxAfr3_all_mrna_11-2014
+mammal,rock hyrax,proCap1,ensGene,/scratch/data/ucsc/mammal/rock-hyrax/proCap1_ensGene_11-2014
+mammal,rock hyrax,proCap1,xenoRefGene,/scratch/data/ucsc/mammal/rock-hyrax/proCap1_xenoRefGene_11-2014
+mammal,rock hyrax,proCap1,chromInfo,/scratch/data/ucsc/mammal/rock-hyrax/proCap1_chromInfo_11-2014
+mammal,tenrec,echTel1,ensGene,/scratch/data/ucsc/mammal/tenrec/echTel1_ensGene_11-2014
+mammal,tenrec,echTel1,xenoRefGene,/scratch/data/ucsc/mammal/tenrec/echTel1_xenoRefGene_11-2014
+mammal,tenrec,echTel1,chromInfo,/scratch/data/ucsc/mammal/tenrec/echTel1_chromInfo_11-2014
+mammal,manatee,triMan1,xenoRefGene,/scratch/data/ucsc/mammal/manatee/triMan1_xenoRefGene_11-2014
+mammal,manatee,triMan1,chromInfo,/scratch/data/ucsc/mammal/manatee/triMan1_chromInfo_11-2014
+mammal,manatee,triMan1,all_mrna,/scratch/data/ucsc/mammal/manatee/triMan1_all_mrna_11-2014
+mammal,armadillo,dasNov3,xenoRefGene,/scratch/data/ucsc/mammal/armadillo/dasNov3_xenoRefGene_11-2014
+mammal,armadillo,dasNov3,chromInfo,/scratch/data/ucsc/mammal/armadillo/dasNov3_chromInfo_11-2014
+mammal,armadillo,dasNov3,all_mrna,/scratch/data/ucsc/mammal/armadillo/dasNov3_all_mrna_11-2014
+mammal,sloth,choHof1,ensGene,/scratch/data/ucsc/mammal/sloth/choHof1_ensGene_11-2014
+mammal,sloth,choHof1,xenoRefGene,/scratch/data/ucsc/mammal/sloth/choHof1_xenoRefGene_11-2014
+mammal,sloth,choHof1,chromInfo,/scratch/data/ucsc/mammal/sloth/choHof1_chromInfo_11-2014
+mammal,sloth,choHof1,all_mrna,/scratch/data/ucsc/mammal/sloth/choHof1_all_mrna_11-2014
+mammal,opossum,monDom5,ensGene,/scratch/data/ucsc/mammal/opossum/monDom5_ensGene_11-2014
+mammal,opossum,monDom5,nscanGene,/scratch/data/ucsc/mammal/opossum/monDom5_nscanGene_11-2014
+mammal,opossum,monDom5,refGene,/scratch/data/ucsc/mammal/opossum/monDom5_refGene_11-2014
+mammal,opossum,monDom5,xenoRefGene,/scratch/data/ucsc/mammal/opossum/monDom5_xenoRefGene_11-2014
+mammal,opossum,monDom5,chromInfo,/scratch/data/ucsc/mammal/opossum/monDom5_chromInfo_11-2014
+mammal,opossum,monDom5,all_est,/scratch/data/ucsc/mammal/opossum/monDom5_all_est_11-2014
+mammal,opossum,monDom5,estOrientInfo,/scratch/data/ucsc/mammal/opossum/monDom5_estOrientInfo_11-2014
+mammal,opossum,monDom5,all_mrna,/scratch/data/ucsc/mammal/opossum/monDom5_all_mrna_11-2014
+mammal,opossum,monDom4,ensGene,/scratch/data/ucsc/mammal/opossum/monDom4_ensGene_11-2014
+mammal,opossum,monDom4,nscanGene,/scratch/data/ucsc/mammal/opossum/monDom4_nscanGene_11-2014
+mammal,opossum,monDom4,refGene,/scratch/data/ucsc/mammal/opossum/monDom4_refGene_11-2014
+mammal,opossum,monDom4,xenoRefGene,/scratch/data/ucsc/mammal/opossum/monDom4_xenoRefGene_11-2014
+mammal,opossum,monDom4,chromInfo,/scratch/data/ucsc/mammal/opossum/monDom4_chromInfo_11-2014
+mammal,opossum,monDom4,all_est,/scratch/data/ucsc/mammal/opossum/monDom4_all_est_11-2014
+mammal,opossum,monDom4,estOrientInfo,/scratch/data/ucsc/mammal/opossum/monDom4_estOrientInfo_11-2014
+mammal,opossum,monDom4,all_mrna,/scratch/data/ucsc/mammal/opossum/monDom4_all_mrna_11-2014
+mammal,tasmanian devil,sarHar1,ensGene,/scratch/data/ucsc/mammal/tasmanian-devil/sarHar1_ensGene_11-2014
+mammal,tasmanian devil,sarHar1,xenoRefGene,/scratch/data/ucsc/mammal/tasmanian-devil/sarHar1_xenoRefGene_11-2014
+mammal,tasmanian devil,sarHar1,chromInfo,/scratch/data/ucsc/mammal/tasmanian-devil/sarHar1_chromInfo_11-2014
+mammal,tasmanian devil,sarHar1,all_mrna,/scratch/data/ucsc/mammal/tasmanian-devil/sarHar1_all_mrna_11-2014
+mammal,wallaby,macEug2,xenoRefGene,/scratch/data/ucsc/mammal/wallaby/macEug2_xenoRefGene_11-2014
+mammal,wallaby,macEug2,chromInfo,/scratch/data/ucsc/mammal/wallaby/macEug2_chromInfo_11-2014
+mammal,wallaby,macEug2,all_est,/scratch/data/ucsc/mammal/wallaby/macEug2_all_est_11-2014
+mammal,wallaby,macEug2,estOrientInfo,/scratch/data/ucsc/mammal/wallaby/macEug2_estOrientInfo_11-2014
+mammal,wallaby,macEug2,all_mrna,/scratch/data/ucsc/mammal/wallaby/macEug2_all_mrna_11-2014
+mammal,platypus,ornAna1,ensGene,/scratch/data/ucsc/mammal/platypus/ornAna1_ensGene_11-2014
+mammal,platypus,ornAna1,refGene,/scratch/data/ucsc/mammal/platypus/ornAna1_refGene_11-2014
+mammal,platypus,ornAna1,xenoRefGene,/scratch/data/ucsc/mammal/platypus/ornAna1_xenoRefGene_11-2014
+mammal,platypus,ornAna1,chromInfo,/scratch/data/ucsc/mammal/platypus/ornAna1_chromInfo_11-2014
+mammal,platypus,ornAna1,all_est,/scratch/data/ucsc/mammal/platypus/ornAna1_all_est_11-2014
+mammal,platypus,ornAna1,estOrientInfo,/scratch/data/ucsc/mammal/platypus/ornAna1_estOrientInfo_11-2014
+mammal,platypus,ornAna1,all_mrna,/scratch/data/ucsc/mammal/platypus/ornAna1_all_mrna_11-2014
+vertebrate,chicken,galGal4,refGene,/scratch/data/ucsc/vertebrate/chicken/galGal4_refGene_11-2014
+vertebrate,chicken,galGal4,xenoRefGene,/scratch/data/ucsc/vertebrate/chicken/galGal4_xenoRefGene_11-2014
+vertebrate,chicken,galGal4,chromInfo,/scratch/data/ucsc/vertebrate/chicken/galGal4_chromInfo_11-2014
+vertebrate,chicken,galGal4,all_est,/scratch/data/ucsc/vertebrate/chicken/galGal4_all_est_11-2014
+vertebrate,chicken,galGal4,estOrientInfo,/scratch/data/ucsc/vertebrate/chicken/galGal4_estOrientInfo_11-2014
+vertebrate,chicken,galGal4,all_mrna,/scratch/data/ucsc/vertebrate/chicken/galGal4_all_mrna_11-2014
+vertebrate,chicken,galGal3,ensGene,/scratch/data/ucsc/vertebrate/chicken/galGal3_ensGene_11-2014
+vertebrate,chicken,galGal3,nscanGene,/scratch/data/ucsc/vertebrate/chicken/galGal3_nscanGene_11-2014
+vertebrate,chicken,galGal3,refGene,/scratch/data/ucsc/vertebrate/chicken/galGal3_refGene_11-2014
+vertebrate,chicken,galGal3,xenoRefGene,/scratch/data/ucsc/vertebrate/chicken/galGal3_xenoRefGene_11-2014
+vertebrate,chicken,galGal3,chromInfo,/scratch/data/ucsc/vertebrate/chicken/galGal3_chromInfo_11-2014
+vertebrate,chicken,galGal3,all_est,/scratch/data/ucsc/vertebrate/chicken/galGal3_all_est_11-2014
+vertebrate,chicken,galGal3,estOrientInfo,/scratch/data/ucsc/vertebrate/chicken/galGal3_estOrientInfo_11-2014
+vertebrate,chicken,galGal3,all_mrna,/scratch/data/ucsc/vertebrate/chicken/galGal3_all_mrna_11-2014
+vertebrate,turkey,melGal1,ensGene,/scratch/data/ucsc/vertebrate/turkey/melGal1_ensGene_11-2014
+vertebrate,turkey,melGal1,nscanGene,/scratch/data/ucsc/vertebrate/turkey/melGal1_nscanGene_11-2014
+vertebrate,turkey,melGal1,xenoRefGene,/scratch/data/ucsc/vertebrate/turkey/melGal1_xenoRefGene_11-2014
+vertebrate,turkey,melGal1,chromInfo,/scratch/data/ucsc/vertebrate/turkey/melGal1_chromInfo_11-2014
+vertebrate,turkey,melGal1,all_est,/scratch/data/ucsc/vertebrate/turkey/melGal1_all_est_11-2014
+vertebrate,turkey,melGal1,estOrientInfo,/scratch/data/ucsc/vertebrate/turkey/melGal1_estOrientInfo_11-2014
+vertebrate,turkey,melGal1,all_mrna,/scratch/data/ucsc/vertebrate/turkey/melGal1_all_mrna_11-2014
+vertebrate,zebra finch,taeGut1,ensGene,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_ensGene_11-2014
+vertebrate,zebra finch,taeGut1,nscanGene,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_nscanGene_11-2014
+vertebrate,zebra finch,taeGut1,refGene,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_refGene_11-2014
+vertebrate,zebra finch,taeGut1,xenoRefGene,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_xenoRefGene_11-2014
+vertebrate,zebra finch,taeGut1,chromInfo,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_chromInfo_11-2014
+vertebrate,zebra finch,taeGut1,all_est,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_all_est_11-2014
+vertebrate,zebra finch,taeGut1,estOrientInfo,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_estOrientInfo_11-2014
+vertebrate,zebra finch,taeGut1,all_mrna,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut1_all_mrna_11-2014
+vertebrate,medium ground finch,geoFor1,xenoRefGene,/scratch/data/ucsc/vertebrate/medium-ground-finch/geoFor1_xenoRefGene_11-2014
+vertebrate,medium ground finch,geoFor1,chromInfo,/scratch/data/ucsc/vertebrate/medium-ground-finch/geoFor1_chromInfo_11-2014
+vertebrate,medium ground finch,geoFor1,all_mrna,/scratch/data/ucsc/vertebrate/medium-ground-finch/geoFor1_all_mrna_11-2014
+vertebrate,budgerigar,melUnd1,xenoRefGene,/scratch/data/ucsc/vertebrate/budgerigar/melUnd1_xenoRefGene_11-2014
+vertebrate,budgerigar,melUnd1,chromInfo,/scratch/data/ucsc/vertebrate/budgerigar/melUnd1_chromInfo_11-2014
+vertebrate,budgerigar,melUnd1,all_mrna,/scratch/data/ucsc/vertebrate/budgerigar/melUnd1_all_mrna_11-2014
+vertebrate,lizard,anoCar2,ensGene,/scratch/data/ucsc/vertebrate/lizard/anoCar2_ensGene_11-2014
+vertebrate,lizard,anoCar2,xenoRefGene,/scratch/data/ucsc/vertebrate/lizard/anoCar2_xenoRefGene_11-2014
+vertebrate,lizard,anoCar2,chromInfo,/scratch/data/ucsc/vertebrate/lizard/anoCar2_chromInfo_11-2014
+vertebrate,lizard,anoCar2,all_est,/scratch/data/ucsc/vertebrate/lizard/anoCar2_all_est_11-2014
+vertebrate,lizard,anoCar2,estOrientInfo,/scratch/data/ucsc/vertebrate/lizard/anoCar2_estOrientInfo_11-2014
+vertebrate,lizard,anoCar2,all_mrna,/scratch/data/ucsc/vertebrate/lizard/anoCar2_all_mrna_11-2014
+vertebrate,lizard,anoCar1,ensGene,/scratch/data/ucsc/vertebrate/lizard/anoCar1_ensGene_11-2014
+vertebrate,lizard,anoCar1,xenoRefGene,/scratch/data/ucsc/vertebrate/lizard/anoCar1_xenoRefGene_11-2014
+vertebrate,lizard,anoCar1,chromInfo,/scratch/data/ucsc/vertebrate/lizard/anoCar1_chromInfo_11-2014
+vertebrate,lizard,anoCar1,all_mrna,/scratch/data/ucsc/vertebrate/lizard/anoCar1_all_mrna_11-2014
+vertebrate,painted turtle,chrPic1,xenoRefGene,/scratch/data/ucsc/vertebrate/painted-turtle/chrPic1_xenoRefGene_11-2014
+vertebrate,painted turtle,chrPic1,chromInfo,/scratch/data/ucsc/vertebrate/painted-turtle/chrPic1_chromInfo_11-2014
+vertebrate,painted turtle,chrPic1,all_mrna,/scratch/data/ucsc/vertebrate/painted-turtle/chrPic1_all_mrna_11-2014
+vertebrate,x.tropicalis,xenTro3,ensGene,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro3_ensGene_11-2014
+vertebrate,x.tropicalis,xenTro3,mgcGenes,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro3_mgcGenes_11-2014
+vertebrate,x.tropicalis,xenTro3,refGene,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro3_refGene_11-2014
+vertebrate,x.tropicalis,xenTro3,chromInfo,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro3_chromInfo_11-2014
+vertebrate,x.tropicalis,xenTro3,all_est,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro3_all_est_11-2014
+vertebrate,x.tropicalis,xenTro3,estOrientInfo,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro3_estOrientInfo_11-2014
+vertebrate,x.tropicalis,xenTro3,all_mrna,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro3_all_mrna_11-2014
+vertebrate,x.tropicalis,xenTro2,ensGene,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_ensGene_11-2014
+vertebrate,x.tropicalis,xenTro2,mgcGenes,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_mgcGenes_11-2014
+vertebrate,x.tropicalis,xenTro2,refGene,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_refGene_11-2014
+vertebrate,x.tropicalis,xenTro2,xenoRefGene,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_xenoRefGene_11-2014
+vertebrate,x.tropicalis,xenTro2,chromInfo,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_chromInfo_11-2014
+vertebrate,x.tropicalis,xenTro2,all_est,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_all_est_11-2014
+vertebrate,x.tropicalis,xenTro2,estOrientInfo,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_estOrientInfo_11-2014
+vertebrate,x.tropicalis,xenTro2,all_mrna,/scratch/data/ucsc/vertebrate/x.tropicalis/xenTro2_all_mrna_11-2014
+vertebrate,coelacanth,latCha1,ensGene,/scratch/data/ucsc/vertebrate/coelacanth/latCha1_ensGene_11-2014
+vertebrate,coelacanth,latCha1,xenoRefGene,/scratch/data/ucsc/vertebrate/coelacanth/latCha1_xenoRefGene_11-2014
+vertebrate,coelacanth,latCha1,chromInfo,/scratch/data/ucsc/vertebrate/coelacanth/latCha1_chromInfo_11-2014
+vertebrate,coelacanth,latCha1,all_mrna,/scratch/data/ucsc/vertebrate/coelacanth/latCha1_all_mrna_11-2014
+vertebrate,tetraodon,tetNig2,ensGene,/scratch/data/ucsc/vertebrate/tetraodon/tetNig2_ensGene_11-2014
+vertebrate,tetraodon,tetNig2,xenoRefGene,/scratch/data/ucsc/vertebrate/tetraodon/tetNig2_xenoRefGene_11-2014
+vertebrate,tetraodon,tetNig2,chromInfo,/scratch/data/ucsc/vertebrate/tetraodon/tetNig2_chromInfo_11-2014
+vertebrate,tetraodon,tetNig2,all_mrna,/scratch/data/ucsc/vertebrate/tetraodon/tetNig2_all_mrna_11-2014
+vertebrate,tetraodon,tetNig1,ensGene,/scratch/data/ucsc/vertebrate/tetraodon/tetNig1_ensGene_11-2014
+vertebrate,tetraodon,tetNig1,nscanGene,/scratch/data/ucsc/vertebrate/tetraodon/tetNig1_nscanGene_11-2014
+vertebrate,tetraodon,tetNig1,xenoRefGene,/scratch/data/ucsc/vertebrate/tetraodon/tetNig1_xenoRefGene_11-2014
+vertebrate,tetraodon,tetNig1,chromInfo,/scratch/data/ucsc/vertebrate/tetraodon/tetNig1_chromInfo_11-2014
+vertebrate,tetraodon,tetNig1,estOrientInfo,/scratch/data/ucsc/vertebrate/tetraodon/tetNig1_estOrientInfo_11-2014
+vertebrate,tetraodon,tetNig1,all_mrna,/scratch/data/ucsc/vertebrate/tetraodon/tetNig1_all_mrna_11-2014
+vertebrate,fugu,fr3,ensGene,/scratch/data/ucsc/vertebrate/fugu/fr3_ensGene_11-2014
+vertebrate,fugu,fr3,refGene,/scratch/data/ucsc/vertebrate/fugu/fr3_refGene_11-2014
+vertebrate,fugu,fr3,chromInfo,/scratch/data/ucsc/vertebrate/fugu/fr3_chromInfo_11-2014
+vertebrate,fugu,fr3,all_est,/scratch/data/ucsc/vertebrate/fugu/fr3_all_est_11-2014
+vertebrate,fugu,fr3,estOrientInfo,/scratch/data/ucsc/vertebrate/fugu/fr3_estOrientInfo_11-2014
+vertebrate,fugu,fr3,all_mrna,/scratch/data/ucsc/vertebrate/fugu/fr3_all_mrna_11-2014
+vertebrate,fugu,fr2,ensGene,/scratch/data/ucsc/vertebrate/fugu/fr2_ensGene_11-2014
+vertebrate,fugu,fr2,chromInfo,/scratch/data/ucsc/vertebrate/fugu/fr2_chromInfo_11-2014
+vertebrate,fugu,fr2,all_est,/scratch/data/ucsc/vertebrate/fugu/fr2_all_est_11-2014
+vertebrate,fugu,fr2,estOrientInfo,/scratch/data/ucsc/vertebrate/fugu/fr2_estOrientInfo_11-2014
+vertebrate,fugu,fr2,all_mrna,/scratch/data/ucsc/vertebrate/fugu/fr2_all_mrna_11-2014
+vertebrate,nile tilapia,oreNil2,xenoRefGene,/scratch/data/ucsc/vertebrate/nile-tilapia/oreNil2_xenoRefGene_11-2014
+vertebrate,nile tilapia,oreNil2,chromInfo,/scratch/data/ucsc/vertebrate/nile-tilapia/oreNil2_chromInfo_11-2014
+vertebrate,nile tilapia,oreNil2,all_est,/scratch/data/ucsc/vertebrate/nile-tilapia/oreNil2_all_est_11-2014
+vertebrate,nile tilapia,oreNil2,estOrientInfo,/scratch/data/ucsc/vertebrate/nile-tilapia/oreNil2_estOrientInfo_11-2014
+vertebrate,nile tilapia,oreNil2,all_mrna,/scratch/data/ucsc/vertebrate/nile-tilapia/oreNil2_all_mrna_11-2014
+vertebrate,stickleback,gasAcu1,ensGene,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_ensGene_11-2014
+vertebrate,stickleback,gasAcu1,nscanGene,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_nscanGene_11-2014
+vertebrate,stickleback,gasAcu1,refGene,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_refGene_11-2014
+vertebrate,stickleback,gasAcu1,xenoRefGene,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_xenoRefGene_11-2014
+vertebrate,stickleback,gasAcu1,chromInfo,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_chromInfo_11-2014
+vertebrate,stickleback,gasAcu1,all_est,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_all_est_11-2014
+vertebrate,stickleback,gasAcu1,estOrientInfo,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_estOrientInfo_11-2014
+vertebrate,stickleback,gasAcu1,all_mrna,/scratch/data/ucsc/vertebrate/stickleback/gasAcu1_all_mrna_11-2014
+vertebrate,medaka,oryLat2,ensGene,/scratch/data/ucsc/vertebrate/medaka/oryLat2_ensGene_11-2014
+vertebrate,medaka,oryLat2,refGene,/scratch/data/ucsc/vertebrate/medaka/oryLat2_refGene_11-2014
+vertebrate,medaka,oryLat2,xenoRefGene,/scratch/data/ucsc/vertebrate/medaka/oryLat2_xenoRefGene_11-2014
+vertebrate,medaka,oryLat2,chromInfo,/scratch/data/ucsc/vertebrate/medaka/oryLat2_chromInfo_11-2014
+vertebrate,medaka,oryLat2,all_est,/scratch/data/ucsc/vertebrate/medaka/oryLat2_all_est_11-2014
+vertebrate,medaka,oryLat2,estOrientInfo,/scratch/data/ucsc/vertebrate/medaka/oryLat2_estOrientInfo_11-2014
+vertebrate,medaka,oryLat2,all_mrna,/scratch/data/ucsc/vertebrate/medaka/oryLat2_all_mrna_11-2014
+vertebrate,atlantic cod,gadMor1,xenoRefGene,/scratch/data/ucsc/vertebrate/atlantic-cod/gadMor1_xenoRefGene_11-2014
+vertebrate,atlantic cod,gadMor1,chromInfo,/scratch/data/ucsc/vertebrate/atlantic-cod/gadMor1_chromInfo_11-2014
+vertebrate,atlantic cod,gadMor1,all_est,/scratch/data/ucsc/vertebrate/atlantic-cod/gadMor1_all_est_11-2014
+vertebrate,atlantic cod,gadMor1,estOrientInfo,/scratch/data/ucsc/vertebrate/atlantic-cod/gadMor1_estOrientInfo_11-2014
+vertebrate,atlantic cod,gadMor1,all_mrna,/scratch/data/ucsc/vertebrate/atlantic-cod/gadMor1_all_mrna_11-2014
+vertebrate,zebrafish,danRer7,ensGene,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_ensGene_11-2014
+vertebrate,zebrafish,danRer7,mgcGenes,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_mgcGenes_11-2014
+vertebrate,zebrafish,danRer7,refGene,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_refGene_11-2014
+vertebrate,zebrafish,danRer7,xenoRefGene,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_xenoRefGene_11-2014
+vertebrate,zebrafish,danRer7,chromInfo,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_chromInfo_11-2014
+vertebrate,zebrafish,danRer7,all_est,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_all_est_11-2014
+vertebrate,zebrafish,danRer7,estOrientInfo,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_estOrientInfo_11-2014
+vertebrate,zebrafish,danRer7,all_mrna,/scratch/data/ucsc/vertebrate/zebrafish/danRer7_all_mrna_11-2014
+vertebrate,zebrafish,danRer6,ensGene,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_ensGene_11-2014
+vertebrate,zebrafish,danRer6,mgcGenes,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_mgcGenes_11-2014
+vertebrate,zebrafish,danRer6,refGene,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_refGene_11-2014
+vertebrate,zebrafish,danRer6,xenoRefGene,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_xenoRefGene_11-2014
+vertebrate,zebrafish,danRer6,chromInfo,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_chromInfo_11-2014
+vertebrate,zebrafish,danRer6,all_est,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_all_est_11-2014
+vertebrate,zebrafish,danRer6,estOrientInfo,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_estOrientInfo_11-2014
+vertebrate,zebrafish,danRer6,all_mrna,/scratch/data/ucsc/vertebrate/zebrafish/danRer6_all_mrna_11-2014
+vertebrate,lamprey,petMar2,xenoRefGene,/scratch/data/ucsc/vertebrate/lamprey/petMar2_xenoRefGene_11-2014
+vertebrate,lamprey,petMar2,chromInfo,/scratch/data/ucsc/vertebrate/lamprey/petMar2_chromInfo_11-2014
+vertebrate,lamprey,petMar2,all_est,/scratch/data/ucsc/vertebrate/lamprey/petMar2_all_est_11-2014
+vertebrate,lamprey,petMar2,estOrientInfo,/scratch/data/ucsc/vertebrate/lamprey/petMar2_estOrientInfo_11-2014
+vertebrate,lamprey,petMar2,all_mrna,/scratch/data/ucsc/vertebrate/lamprey/petMar2_all_mrna_11-2014
+vertebrate,lamprey,petMar1,xenoRefGene,/scratch/data/ucsc/vertebrate/lamprey/petMar1_xenoRefGene_11-2014
+vertebrate,lamprey,petMar1,chromInfo,/scratch/data/ucsc/vertebrate/lamprey/petMar1_chromInfo_11-2014
+vertebrate,lamprey,petMar1,all_est,/scratch/data/ucsc/vertebrate/lamprey/petMar1_all_est_11-2014
+vertebrate,lamprey,petMar1,estOrientInfo,/scratch/data/ucsc/vertebrate/lamprey/petMar1_estOrientInfo_11-2014
+vertebrate,lamprey,petMar1,all_mrna,/scratch/data/ucsc/vertebrate/lamprey/petMar1_all_mrna_11-2014
+deuterostome,lancelet,braFlo1,xenoRefGene,/scratch/data/ucsc/deuterostome/lancelet/braFlo1_xenoRefGene_11-2014
+deuterostome,lancelet,braFlo1,chromInfo,/scratch/data/ucsc/deuterostome/lancelet/braFlo1_chromInfo_11-2014
+deuterostome,lancelet,braFlo1,all_est,/scratch/data/ucsc/deuterostome/lancelet/braFlo1_all_est_11-2014
+deuterostome,lancelet,braFlo1,estOrientInfo,/scratch/data/ucsc/deuterostome/lancelet/braFlo1_estOrientInfo_11-2014
+deuterostome,lancelet,braFlo1,all_mrna,/scratch/data/ucsc/deuterostome/lancelet/braFlo1_all_mrna_11-2014
+deuterostome,c.intestinalis,ci2,ensGene,/scratch/data/ucsc/deuterostome/c.intestinalis/ci2_ensGene_11-2014
+deuterostome,c.intestinalis,ci2,refGene,/scratch/data/ucsc/deuterostome/c.intestinalis/ci2_refGene_11-2014
+deuterostome,c.intestinalis,ci2,xenoRefGene,/scratch/data/ucsc/deuterostome/c.intestinalis/ci2_xenoRefGene_11-2014
+deuterostome,c.intestinalis,ci2,chromInfo,/scratch/data/ucsc/deuterostome/c.intestinalis/ci2_chromInfo_11-2014
+deuterostome,c.intestinalis,ci2,all_est,/scratch/data/ucsc/deuterostome/c.intestinalis/ci2_all_est_11-2014
+deuterostome,c.intestinalis,ci2,estOrientInfo,/scratch/data/ucsc/deuterostome/c.intestinalis/ci2_estOrientInfo_11-2014
+deuterostome,c.intestinalis,ci2,all_mrna,/scratch/data/ucsc/deuterostome/c.intestinalis/ci2_all_mrna_11-2014
+deuterostome,c.intestinalis,ci1,refGene,/scratch/data/ucsc/deuterostome/c.intestinalis/ci1_refGene_11-2014
+deuterostome,c.intestinalis,ci1,xenoRefGene,/scratch/data/ucsc/deuterostome/c.intestinalis/ci1_xenoRefGene_11-2014
+deuterostome,c.intestinalis,ci1,chromInfo,/scratch/data/ucsc/deuterostome/c.intestinalis/ci1_chromInfo_11-2014
+deuterostome,c.intestinalis,ci1,all_est,/scratch/data/ucsc/deuterostome/c.intestinalis/ci1_all_est_11-2014
+deuterostome,c.intestinalis,ci1,estOrientInfo,/scratch/data/ucsc/deuterostome/c.intestinalis/ci1_estOrientInfo_11-2014
+deuterostome,c.intestinalis,ci1,all_mrna,/scratch/data/ucsc/deuterostome/c.intestinalis/ci1_all_mrna_11-2014
+deuterostome,s.purpuratus,strPur2,refGene,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur2_refGene_11-2014
+deuterostome,s.purpuratus,strPur2,xenoRefGene,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur2_xenoRefGene_11-2014
+deuterostome,s.purpuratus,strPur2,chromInfo,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur2_chromInfo_11-2014
+deuterostome,s.purpuratus,strPur2,all_est,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur2_all_est_11-2014
+deuterostome,s.purpuratus,strPur2,estOrientInfo,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur2_estOrientInfo_11-2014
+deuterostome,s.purpuratus,strPur2,all_mrna,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur2_all_mrna_11-2014
+deuterostome,s.purpuratus,strPur1,refGene,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur1_refGene_11-2014
+deuterostome,s.purpuratus,strPur1,xenoRefGene,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur1_xenoRefGene_11-2014
+deuterostome,s.purpuratus,strPur1,chromInfo,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur1_chromInfo_11-2014
+deuterostome,s.purpuratus,strPur1,all_mrna,/scratch/data/ucsc/deuterostome/s.purpuratus/strPur1_all_mrna_11-2014
+insect,d.melanogaster,dm3,ensGene,/scratch/data/ucsc/insect/d.melanogaster/dm3_ensGene_11-2014
+insect,d.melanogaster,dm3,refGene,/scratch/data/ucsc/insect/d.melanogaster/dm3_refGene_11-2014
+insect,d.melanogaster,dm3,xenoRefGene,/scratch/data/ucsc/insect/d.melanogaster/dm3_xenoRefGene_11-2014
+insect,d.melanogaster,dm3,contrastGene,/scratch/data/ucsc/insect/d.melanogaster/dm3_contrastGene_11-2014
+insect,d.melanogaster,dm3,chromInfo,/scratch/data/ucsc/insect/d.melanogaster/dm3_chromInfo_11-2014
+insect,d.melanogaster,dm3,all_est,/scratch/data/ucsc/insect/d.melanogaster/dm3_all_est_11-2014
+insect,d.melanogaster,dm3,estOrientInfo,/scratch/data/ucsc/insect/d.melanogaster/dm3_estOrientInfo_11-2014
+insect,d.melanogaster,dm3,all_mrna,/scratch/data/ucsc/insect/d.melanogaster/dm3_all_mrna_11-2014
+insect,d.melanogaster,dm2,nscanGene,/scratch/data/ucsc/insect/d.melanogaster/dm2_nscanGene_11-2014
+insect,d.melanogaster,dm2,refGene,/scratch/data/ucsc/insect/d.melanogaster/dm2_refGene_11-2014
+insect,d.melanogaster,dm2,xenoRefGene,/scratch/data/ucsc/insect/d.melanogaster/dm2_xenoRefGene_11-2014
+insect,d.melanogaster,dm2,chromInfo,/scratch/data/ucsc/insect/d.melanogaster/dm2_chromInfo_11-2014
+insect,d.melanogaster,dm2,all_est,/scratch/data/ucsc/insect/d.melanogaster/dm2_all_est_11-2014
+insect,d.melanogaster,dm2,estOrientInfo,/scratch/data/ucsc/insect/d.melanogaster/dm2_estOrientInfo_11-2014
+insect,d.melanogaster,dm2,all_mrna,/scratch/data/ucsc/insect/d.melanogaster/dm2_all_mrna_11-2014
+insect,d.simulans,droSim1,xenoRefGene,/scratch/data/ucsc/insect/d.simulans/droSim1_xenoRefGene_11-2014
+insect,d.simulans,droSim1,chromInfo,/scratch/data/ucsc/insect/d.simulans/droSim1_chromInfo_11-2014
+insect,d.simulans,droSim1,all_est,/scratch/data/ucsc/insect/d.simulans/droSim1_all_est_11-2014
+insect,d.simulans,droSim1,estOrientInfo,/scratch/data/ucsc/insect/d.simulans/droSim1_estOrientInfo_11-2014
+insect,d.simulans,droSim1,all_mrna,/scratch/data/ucsc/insect/d.simulans/droSim1_all_mrna_11-2014
+insect,d.sechellia,droSec1,xenoRefGene,/scratch/data/ucsc/insect/d.sechellia/droSec1_xenoRefGene_11-2014
+insect,d.sechellia,droSec1,chromInfo,/scratch/data/ucsc/insect/d.sechellia/droSec1_chromInfo_11-2014
+insect,d.yakuba,droYak2,xenoRefGene,/scratch/data/ucsc/insect/d.yakuba/droYak2_xenoRefGene_11-2014
+insect,d.yakuba,droYak2,chromInfo,/scratch/data/ucsc/insect/d.yakuba/droYak2_chromInfo_11-2014
+insect,d.yakuba,droYak2,all_est,/scratch/data/ucsc/insect/d.yakuba/droYak2_all_est_11-2014
+insect,d.yakuba,droYak2,estOrientInfo,/scratch/data/ucsc/insect/d.yakuba/droYak2_estOrientInfo_11-2014
+insect,d.yakuba,droYak2,all_mrna,/scratch/data/ucsc/insect/d.yakuba/droYak2_all_mrna_11-2014
+insect,d.yakuba,droYak1,xenoRefGene,/scratch/data/ucsc/insect/d.yakuba/droYak1_xenoRefGene_11-2014
+insect,d.yakuba,droYak1,chromInfo,/scratch/data/ucsc/insect/d.yakuba/droYak1_chromInfo_11-2014
+insect,d.yakuba,droYak1,all_est,/scratch/data/ucsc/insect/d.yakuba/droYak1_all_est_11-2014
+insect,d.yakuba,droYak1,estOrientInfo,/scratch/data/ucsc/insect/d.yakuba/droYak1_estOrientInfo_11-2014
+insect,d.yakuba,droYak1,all_mrna,/scratch/data/ucsc/insect/d.yakuba/droYak1_all_mrna_11-2014
+insect,d.erecta,droEre1,xenoRefGene,/scratch/data/ucsc/insect/d.erecta/droEre1_xenoRefGene_11-2014
+insect,d.erecta,droEre1,chromInfo,/scratch/data/ucsc/insect/d.erecta/droEre1_chromInfo_11-2014
+insect,d.erecta,droEre1,all_mrna,/scratch/data/ucsc/insect/d.erecta/droEre1_all_mrna_11-2014
+insect,d.ananassae,droAna2,xenoRefGene,/scratch/data/ucsc/insect/d.ananassae/droAna2_xenoRefGene_11-2014
+insect,d.ananassae,droAna2,chromInfo,/scratch/data/ucsc/insect/d.ananassae/droAna2_chromInfo_11-2014
+insect,d.ananassae,droAna2,all_mrna,/scratch/data/ucsc/insect/d.ananassae/droAna2_all_mrna_11-2014
+insect,d.ananassae,droAna1,xenoRefGene,/scratch/data/ucsc/insect/d.ananassae/droAna1_xenoRefGene_11-2014
+insect,d.ananassae,droAna1,chromInfo,/scratch/data/ucsc/insect/d.ananassae/droAna1_chromInfo_11-2014
+insect,d.ananassae,droAna1,all_mrna,/scratch/data/ucsc/insect/d.ananassae/droAna1_all_mrna_11-2014
+insect,d.pseudoobscura,dp3,xenoRefGene,/scratch/data/ucsc/insect/d.pseudoobscura/dp3_xenoRefGene_11-2014
+insect,d.pseudoobscura,dp3,chromInfo,/scratch/data/ucsc/insect/d.pseudoobscura/dp3_chromInfo_11-2014
+insect,d.pseudoobscura,dp3,all_est,/scratch/data/ucsc/insect/d.pseudoobscura/dp3_all_est_11-2014
+insect,d.pseudoobscura,dp3,estOrientInfo,/scratch/data/ucsc/insect/d.pseudoobscura/dp3_estOrientInfo_11-2014
+insect,d.pseudoobscura,dp3,all_mrna,/scratch/data/ucsc/insect/d.pseudoobscura/dp3_all_mrna_11-2014
+insect,d.pseudoobscura,dp2,xenoRefGene,/scratch/data/ucsc/insect/d.pseudoobscura/dp2_xenoRefGene_11-2014
+insect,d.pseudoobscura,dp2,chromInfo,/scratch/data/ucsc/insect/d.pseudoobscura/dp2_chromInfo_11-2014
+insect,d.pseudoobscura,dp2,all_est,/scratch/data/ucsc/insect/d.pseudoobscura/dp2_all_est_11-2014
+insect,d.pseudoobscura,dp2,estOrientInfo,/scratch/data/ucsc/insect/d.pseudoobscura/dp2_estOrientInfo_11-2014
+insect,d.pseudoobscura,dp2,all_mrna,/scratch/data/ucsc/insect/d.pseudoobscura/dp2_all_mrna_11-2014
+insect,d.persimilis,droPer1,xenoRefGene,/scratch/data/ucsc/insect/d.persimilis/droPer1_xenoRefGene_11-2014
+insect,d.persimilis,droPer1,chromInfo,/scratch/data/ucsc/insect/d.persimilis/droPer1_chromInfo_11-2014
+insect,d.virilis,droVir2,xenoRefGene,/scratch/data/ucsc/insect/d.virilis/droVir2_xenoRefGene_11-2014
+insect,d.virilis,droVir2,chromInfo,/scratch/data/ucsc/insect/d.virilis/droVir2_chromInfo_11-2014
+insect,d.virilis,droVir2,all_est,/scratch/data/ucsc/insect/d.virilis/droVir2_all_est_11-2014
+insect,d.virilis,droVir2,estOrientInfo,/scratch/data/ucsc/insect/d.virilis/droVir2_estOrientInfo_11-2014
+insect,d.virilis,droVir2,all_mrna,/scratch/data/ucsc/insect/d.virilis/droVir2_all_mrna_11-2014
+insect,d.virilis,droVir1,xenoRefGene,/scratch/data/ucsc/insect/d.virilis/droVir1_xenoRefGene_11-2014
+insect,d.virilis,droVir1,chromInfo,/scratch/data/ucsc/insect/d.virilis/droVir1_chromInfo_11-2014
+insect,d.virilis,droVir1,all_mrna,/scratch/data/ucsc/insect/d.virilis/droVir1_all_mrna_11-2014
+insect,d.mojavensis,droMoj2,xenoRefGene,/scratch/data/ucsc/insect/d.mojavensis/droMoj2_xenoRefGene_11-2014
+insect,d.mojavensis,droMoj2,chromInfo,/scratch/data/ucsc/insect/d.mojavensis/droMoj2_chromInfo_11-2014
+insect,d.mojavensis,droMoj2,all_mrna,/scratch/data/ucsc/insect/d.mojavensis/droMoj2_all_mrna_11-2014
+insect,d.mojavensis,droMoj1,xenoRefGene,/scratch/data/ucsc/insect/d.mojavensis/droMoj1_xenoRefGene_11-2014
+insect,d.mojavensis,droMoj1,chromInfo,/scratch/data/ucsc/insect/d.mojavensis/droMoj1_chromInfo_11-2014
+insect,d.mojavensis,droMoj1,all_mrna,/scratch/data/ucsc/insect/d.mojavensis/droMoj1_all_mrna_11-2014
+insect,d.grimshawi,droGri1,xenoRefGene,/scratch/data/ucsc/insect/d.grimshawi/droGri1_xenoRefGene_11-2014
+insect,d.grimshawi,droGri1,chromInfo,/scratch/data/ucsc/insect/d.grimshawi/droGri1_chromInfo_11-2014
+insect,a.gambiae,anoGam1,ensGene,/scratch/data/ucsc/insect/a.gambiae/anoGam1_ensGene_11-2014
+insect,a.gambiae,anoGam1,xenoRefGene,/scratch/data/ucsc/insect/a.gambiae/anoGam1_xenoRefGene_11-2014
+insect,a.gambiae,anoGam1,chromInfo,/scratch/data/ucsc/insect/a.gambiae/anoGam1_chromInfo_11-2014
+insect,a.gambiae,anoGam1,all_est,/scratch/data/ucsc/insect/a.gambiae/anoGam1_all_est_11-2014
+insect,a.gambiae,anoGam1,estOrientInfo,/scratch/data/ucsc/insect/a.gambiae/anoGam1_estOrientInfo_11-2014
+insect,a.gambiae,anoGam1,all_mrna,/scratch/data/ucsc/insect/a.gambiae/anoGam1_all_mrna_11-2014
+insect,a.mellifera,apiMel2,ensGene,/scratch/data/ucsc/insect/a.mellifera/apiMel2_ensGene_11-2014
+insect,a.mellifera,apiMel2,xenoRefGene,/scratch/data/ucsc/insect/a.mellifera/apiMel2_xenoRefGene_11-2014
+insect,a.mellifera,apiMel2,chromInfo,/scratch/data/ucsc/insect/a.mellifera/apiMel2_chromInfo_11-2014
+insect,a.mellifera,apiMel2,all_est,/scratch/data/ucsc/insect/a.mellifera/apiMel2_all_est_11-2014
+insect,a.mellifera,apiMel2,estOrientInfo,/scratch/data/ucsc/insect/a.mellifera/apiMel2_estOrientInfo_11-2014
+insect,a.mellifera,apiMel2,all_mrna,/scratch/data/ucsc/insect/a.mellifera/apiMel2_all_mrna_11-2014
+insect,a.mellifera,apiMel1,xenoRefGene,/scratch/data/ucsc/insect/a.mellifera/apiMel1_xenoRefGene_11-2014
+insect,a.mellifera,apiMel1,chromInfo,/scratch/data/ucsc/insect/a.mellifera/apiMel1_chromInfo_11-2014
+insect,a.mellifera,apiMel1,all_est,/scratch/data/ucsc/insect/a.mellifera/apiMel1_all_est_11-2014
+insect,a.mellifera,apiMel1,estOrientInfo,/scratch/data/ucsc/insect/a.mellifera/apiMel1_estOrientInfo_11-2014
+insect,a.mellifera,apiMel1,all_mrna,/scratch/data/ucsc/insect/a.mellifera/apiMel1_all_mrna_11-2014
+worm,c.elegans,ce10,ensGene,/scratch/data/ucsc/worm/c.elegans/ce10_ensGene_11-2014
+worm,c.elegans,ce10,refGene,/scratch/data/ucsc/worm/c.elegans/ce10_refGene_11-2014
+worm,c.elegans,ce10,xenoRefGene,/scratch/data/ucsc/worm/c.elegans/ce10_xenoRefGene_11-2014
+worm,c.elegans,ce10,chromInfo,/scratch/data/ucsc/worm/c.elegans/ce10_chromInfo_11-2014
+worm,c.elegans,ce10,all_est,/scratch/data/ucsc/worm/c.elegans/ce10_all_est_11-2014
+worm,c.elegans,ce10,estOrientInfo,/scratch/data/ucsc/worm/c.elegans/ce10_estOrientInfo_11-2014
+worm,c.elegans,ce10,all_mrna,/scratch/data/ucsc/worm/c.elegans/ce10_all_mrna_11-2014
+worm,c.elegans,ce6,ensGene,/scratch/data/ucsc/worm/c.elegans/ce6_ensGene_11-2014
+worm,c.elegans,ce6,refGene,/scratch/data/ucsc/worm/c.elegans/ce6_refGene_11-2014
+worm,c.elegans,ce6,xenoRefGene,/scratch/data/ucsc/worm/c.elegans/ce6_xenoRefGene_11-2014
+worm,c.elegans,ce6,sangerGene,/scratch/data/ucsc/worm/c.elegans/ce6_sangerGene_11-2014
+worm,c.elegans,ce6,chromInfo,/scratch/data/ucsc/worm/c.elegans/ce6_chromInfo_11-2014
+worm,c.elegans,ce6,all_est,/scratch/data/ucsc/worm/c.elegans/ce6_all_est_11-2014
+worm,c.elegans,ce6,estOrientInfo,/scratch/data/ucsc/worm/c.elegans/ce6_estOrientInfo_11-2014
+worm,c.elegans,ce6,all_mrna,/scratch/data/ucsc/worm/c.elegans/ce6_all_mrna_11-2014
+worm,c.brenneri,caePb2,xenoRefGene,/scratch/data/ucsc/worm/c.brenneri/caePb2_xenoRefGene_11-2014
+worm,c.brenneri,caePb2,chromInfo,/scratch/data/ucsc/worm/c.brenneri/caePb2_chromInfo_11-2014
+worm,c.brenneri,caePb2,all_est,/scratch/data/ucsc/worm/c.brenneri/caePb2_all_est_11-2014
+worm,c.brenneri,caePb2,estOrientInfo,/scratch/data/ucsc/worm/c.brenneri/caePb2_estOrientInfo_11-2014
+worm,c.brenneri,caePb2,all_mrna,/scratch/data/ucsc/worm/c.brenneri/caePb2_all_mrna_11-2014
+worm,c.brenneri,caePb1,xenoRefGene,/scratch/data/ucsc/worm/c.brenneri/caePb1_xenoRefGene_11-2014
+worm,c.brenneri,caePb1,chromInfo,/scratch/data/ucsc/worm/c.brenneri/caePb1_chromInfo_11-2014
+worm,c.brenneri,caePb1,all_mrna,/scratch/data/ucsc/worm/c.brenneri/caePb1_all_mrna_11-2014
+worm,c.briggsae,cb3,xenoRefGene,/scratch/data/ucsc/worm/c.briggsae/cb3_xenoRefGene_11-2014
+worm,c.briggsae,cb3,chromInfo,/scratch/data/ucsc/worm/c.briggsae/cb3_chromInfo_11-2014
+worm,c.briggsae,cb3,all_est,/scratch/data/ucsc/worm/c.briggsae/cb3_all_est_11-2014
+worm,c.briggsae,cb3,estOrientInfo,/scratch/data/ucsc/worm/c.briggsae/cb3_estOrientInfo_11-2014
+worm,c.briggsae,cb3,all_mrna,/scratch/data/ucsc/worm/c.briggsae/cb3_all_mrna_11-2014
+worm,c.briggsae,cb1,xenoRefGene,/scratch/data/ucsc/worm/c.briggsae/cb1_xenoRefGene_11-2014
+worm,c.briggsae,cb1,chromInfo,/scratch/data/ucsc/worm/c.briggsae/cb1_chromInfo_11-2014
+worm,c.briggsae,cb1,all_est,/scratch/data/ucsc/worm/c.briggsae/cb1_all_est_11-2014
+worm,c.briggsae,cb1,estOrientInfo,/scratch/data/ucsc/worm/c.briggsae/cb1_estOrientInfo_11-2014
+worm,c.briggsae,cb1,all_mrna,/scratch/data/ucsc/worm/c.briggsae/cb1_all_mrna_11-2014
+worm,c.remanei,caeRem3,xenoRefGene,/scratch/data/ucsc/worm/c.remanei/caeRem3_xenoRefGene_11-2014
+worm,c.remanei,caeRem3,chromInfo,/scratch/data/ucsc/worm/c.remanei/caeRem3_chromInfo_11-2014
+worm,c.remanei,caeRem3,all_est,/scratch/data/ucsc/worm/c.remanei/caeRem3_all_est_11-2014
+worm,c.remanei,caeRem3,estOrientInfo,/scratch/data/ucsc/worm/c.remanei/caeRem3_estOrientInfo_11-2014
+worm,c.remanei,caeRem3,all_mrna,/scratch/data/ucsc/worm/c.remanei/caeRem3_all_mrna_11-2014
+worm,c.remanei,caeRem2,xenoRefGene,/scratch/data/ucsc/worm/c.remanei/caeRem2_xenoRefGene_11-2014
+worm,c.remanei,caeRem2,chromInfo,/scratch/data/ucsc/worm/c.remanei/caeRem2_chromInfo_11-2014
+worm,c.remanei,caeRem2,all_est,/scratch/data/ucsc/worm/c.remanei/caeRem2_all_est_11-2014
+worm,c.remanei,caeRem2,estOrientInfo,/scratch/data/ucsc/worm/c.remanei/caeRem2_estOrientInfo_11-2014
+worm,c.remanei,caeRem2,all_mrna,/scratch/data/ucsc/worm/c.remanei/caeRem2_all_mrna_11-2014
+worm,c.japonica,caeJap1,xenoRefGene,/scratch/data/ucsc/worm/c.japonica/caeJap1_xenoRefGene_11-2014
+worm,c.japonica,caeJap1,chromInfo,/scratch/data/ucsc/worm/c.japonica/caeJap1_chromInfo_11-2014
+worm,c.japonica,caeJap1,all_est,/scratch/data/ucsc/worm/c.japonica/caeJap1_all_est_11-2014
+worm,c.japonica,caeJap1,estOrientInfo,/scratch/data/ucsc/worm/c.japonica/caeJap1_estOrientInfo_11-2014
+worm,c.japonica,caeJap1,all_mrna,/scratch/data/ucsc/worm/c.japonica/caeJap1_all_mrna_11-2014
+worm,p.pacificus,priPac1,xenoRefGene,/scratch/data/ucsc/worm/p.pacificus/priPac1_xenoRefGene_11-2014
+worm,p.pacificus,priPac1,chromInfo,/scratch/data/ucsc/worm/p.pacificus/priPac1_chromInfo_11-2014
+worm,p.pacificus,priPac1,all_est,/scratch/data/ucsc/worm/p.pacificus/priPac1_all_est_11-2014
+worm,p.pacificus,priPac1,estOrientInfo,/scratch/data/ucsc/worm/p.pacificus/priPac1_estOrientInfo_11-2014
+worm,p.pacificus,priPac1,all_mrna,/scratch/data/ucsc/worm/p.pacificus/priPac1_all_mrna_11-2014
+other,sea hare,aplCal1,xenoRefGene,/scratch/data/ucsc/other/sea-hare/aplCal1_xenoRefGene_11-2014
+other,sea hare,aplCal1,chromInfo,/scratch/data/ucsc/other/sea-hare/aplCal1_chromInfo_11-2014
+other,sea hare,aplCal1,all_est,/scratch/data/ucsc/other/sea-hare/aplCal1_all_est_11-2014
+other,sea hare,aplCal1,estOrientInfo,/scratch/data/ucsc/other/sea-hare/aplCal1_estOrientInfo_11-2014
+other,sea hare,aplCal1,all_mrna,/scratch/data/ucsc/other/sea-hare/aplCal1_all_mrna_11-2014
+other,s.cerevisiae,sacCer3,ensGene,/scratch/data/ucsc/other/s.cerevisiae/sacCer3_ensGene_11-2014
+other,s.cerevisiae,sacCer3,xenoRefGene,/scratch/data/ucsc/other/s.cerevisiae/sacCer3_xenoRefGene_11-2014
+other,s.cerevisiae,sacCer3,chromInfo,/scratch/data/ucsc/other/s.cerevisiae/sacCer3_chromInfo_11-2014
+other,s.cerevisiae,sacCer3,all_est,/scratch/data/ucsc/other/s.cerevisiae/sacCer3_all_est_11-2014
+other,s.cerevisiae,sacCer3,estOrientInfo,/scratch/data/ucsc/other/s.cerevisiae/sacCer3_estOrientInfo_11-2014
+other,s.cerevisiae,sacCer3,all_mrna,/scratch/data/ucsc/other/s.cerevisiae/sacCer3_all_mrna_11-2014
+other,s.cerevisiae,sacCer2,ensGene,/scratch/data/ucsc/other/s.cerevisiae/sacCer2_ensGene_11-2014
+other,s.cerevisiae,sacCer2,xenoRefGene,/scratch/data/ucsc/other/s.cerevisiae/sacCer2_xenoRefGene_11-2014
+other,s.cerevisiae,sacCer2,chromInfo,/scratch/data/ucsc/other/s.cerevisiae/sacCer2_chromInfo_11-2014
+other,s.cerevisiae,sacCer2,all_est,/scratch/data/ucsc/other/s.cerevisiae/sacCer2_all_est_11-2014
+other,s.cerevisiae,sacCer2,estOrientInfo,/scratch/data/ucsc/other/s.cerevisiae/sacCer2_estOrientInfo_11-2014
+other,s.cerevisiae,sacCer2,all_mrna,/scratch/data/ucsc/other/s.cerevisiae/sacCer2_all_mrna_11-2014
+mammal,human,hg38,ccdsGene,/scratch/data/ucsc/mammal/human/hg38_ccdsGene_11-2014
+mammal,human,hg38,knownGene,/scratch/data/ucsc/mammal/human/hg38_knownGene_11-2014
+mammal,human,hg38,mgcGenes,/scratch/data/ucsc/mammal/human/hg38_mgcGenes_11-2014
+mammal,human,hg38,orfeomeGenes,/scratch/data/ucsc/mammal/human/hg38_orfeomeGenes_11-2014
+mammal,human,hg38,refGene,/scratch/data/ucsc/mammal/human/hg38_refGene_11-2014
+mammal,human,hg38,xenoRefGene,/scratch/data/ucsc/mammal/human/hg38_xenoRefGene_11-2014
+mammal,human,hg38,chromInfo,/scratch/data/ucsc/mammal/human/hg38_chromInfo_11-2014
+mammal,human,hg38,all_est,/scratch/data/ucsc/mammal/human/hg38_all_est_11-2014
+mammal,human,hg38,estOrientInfo,/scratch/data/ucsc/mammal/human/hg38_estOrientInfo_11-2014
+mammal,human,hg38,all_mrna,/scratch/data/ucsc/mammal/human/hg38_all_mrna_11-2014
+mammal,gibbon,nomLeu3,xenoRefGene,/scratch/data/ucsc/mammal/gibbon/nomLeu3_xenoRefGene_11-2014
+mammal,gibbon,nomLeu3,chromInfo,/scratch/data/ucsc/mammal/gibbon/nomLeu3_chromInfo_11-2014
+mammal,baboon,papAnu2,ensGene,/scratch/data/ucsc/mammal/baboon/papAnu2_ensGene_11-2014
+mammal,baboon,papHam1,refGene,/scratch/data/ucsc/mammal/baboon/papHam1_refGene_11-2014
+mammal,rat,rn6,mgcGenes,/scratch/data/ucsc/mammal/rat/rn6_mgcGenes_11-2014
+mammal,rat,rn6,refGene,/scratch/data/ucsc/mammal/rat/rn6_refGene_11-2014
+mammal,rat,rn6,xenoRefGene,/scratch/data/ucsc/mammal/rat/rn6_xenoRefGene_11-2014
+mammal,rat,rn6,chromInfo,/scratch/data/ucsc/mammal/rat/rn6_chromInfo_11-2014
+mammal,rat,rn6,all_est,/scratch/data/ucsc/mammal/rat/rn6_all_est_11-2014
+mammal,rat,rn6,estOrientInfo,/scratch/data/ucsc/mammal/rat/rn6_estOrientInfo_11-2014
+mammal,rat,rn6,all_mrna,/scratch/data/ucsc/mammal/rat/rn6_all_mrna_11-2014
+mammal,rat,rn5,ensGene,/scratch/data/ucsc/mammal/rat/rn5_ensGene_11-2014
+mammal,chinese hamster,criGri1,refGene,/scratch/data/ucsc/mammal/chinese-hamster/criGri1_refGene_11-2014
+mammal,chinese hamster,criGri1,xenoRefGene,/scratch/data/ucsc/mammal/chinese-hamster/criGri1_xenoRefGene_11-2014
+mammal,chinese hamster,criGri1,chromInfo,/scratch/data/ucsc/mammal/chinese-hamster/criGri1_chromInfo_11-2014
+mammal,chinese hamster,criGri1,all_est,/scratch/data/ucsc/mammal/chinese-hamster/criGri1_all_est_11-2014
+mammal,chinese hamster,criGri1,estOrientInfo,/scratch/data/ucsc/mammal/chinese-hamster/criGri1_estOrientInfo_11-2014
+mammal,chinese hamster,criGri1,all_mrna,/scratch/data/ucsc/mammal/chinese-hamster/criGri1_all_mrna_11-2014
+mammal,pika,ochPri3,xenoRefGene,/scratch/data/ucsc/mammal/pika/ochPri3_xenoRefGene_11-2014
+mammal,pika,ochPri3,chromInfo,/scratch/data/ucsc/mammal/pika/ochPri3_chromInfo_11-2014
+mammal,pika,ochPri3,all_mrna,/scratch/data/ucsc/mammal/pika/ochPri3_all_mrna_11-2014
+mammal,alpaca,vicPac2,refGene,/scratch/data/ucsc/mammal/alpaca/vicPac2_refGene_11-2014
+mammal,alpaca,vicPac2,xenoRefGene,/scratch/data/ucsc/mammal/alpaca/vicPac2_xenoRefGene_11-2014
+mammal,alpaca,vicPac2,chromInfo,/scratch/data/ucsc/mammal/alpaca/vicPac2_chromInfo_11-2014
+mammal,alpaca,vicPac2,all_est,/scratch/data/ucsc/mammal/alpaca/vicPac2_all_est_11-2014
+mammal,alpaca,vicPac2,estOrientInfo,/scratch/data/ucsc/mammal/alpaca/vicPac2_estOrientInfo_11-2014
+mammal,alpaca,vicPac2,all_mrna,/scratch/data/ucsc/mammal/alpaca/vicPac2_all_mrna_11-2014
+mammal,minke whale,balAcu1,xenoRefGene,/scratch/data/ucsc/mammal/minke-whale/balAcu1_xenoRefGene_11-2014
+mammal,minke whale,balAcu1,chromInfo,/scratch/data/ucsc/mammal/minke-whale/balAcu1_chromInfo_11-2014
+mammal,sheep,oviAri3,ensGene,/scratch/data/ucsc/mammal/sheep/oviAri3_ensGene_11-2014
+mammal,sheep,oviAri3,refGene,/scratch/data/ucsc/mammal/sheep/oviAri3_refGene_11-2014
+mammal,sheep,oviAri3,xenoRefGene,/scratch/data/ucsc/mammal/sheep/oviAri3_xenoRefGene_11-2014
+mammal,sheep,oviAri3,chromInfo,/scratch/data/ucsc/mammal/sheep/oviAri3_chromInfo_11-2014
+mammal,sheep,oviAri3,all_est,/scratch/data/ucsc/mammal/sheep/oviAri3_all_est_11-2014
+mammal,sheep,oviAri3,estOrientInfo,/scratch/data/ucsc/mammal/sheep/oviAri3_estOrientInfo_11-2014
+mammal,sheep,oviAri3,all_mrna,/scratch/data/ucsc/mammal/sheep/oviAri3_all_mrna_11-2014
+mammal,cat,felCat5,ensGene,/scratch/data/ucsc/mammal/cat/felCat5_ensGene_11-2014
+mammal,ferret ,musFur1,ensGene,/scratch/data/ucsc/mammal/ferret-/musFur1_ensGene_11-2014
+mammal,ferret ,musFur1,refGene,/scratch/data/ucsc/mammal/ferret-/musFur1_refGene_11-2014
+mammal,ferret ,musFur1,xenoRefGene,/scratch/data/ucsc/mammal/ferret-/musFur1_xenoRefGene_11-2014
+mammal,ferret ,musFur1,chromInfo,/scratch/data/ucsc/mammal/ferret-/musFur1_chromInfo_11-2014
+mammal,ferret ,musFur1,all_est,/scratch/data/ucsc/mammal/ferret-/musFur1_all_est_11-2014
+mammal,ferret ,musFur1,estOrientInfo,/scratch/data/ucsc/mammal/ferret-/musFur1_estOrientInfo_11-2014
+mammal,ferret ,musFur1,all_mrna,/scratch/data/ucsc/mammal/ferret-/musFur1_all_mrna_11-2014
+mammal,hedgehog,eriEur2,xenoRefGene,/scratch/data/ucsc/mammal/hedgehog/eriEur2_xenoRefGene_11-2014
+mammal,hedgehog,eriEur2,chromInfo,/scratch/data/ucsc/mammal/hedgehog/eriEur2_chromInfo_11-2014
+mammal,hedgehog,eriEur2,all_mrna,/scratch/data/ucsc/mammal/hedgehog/eriEur2_all_mrna_11-2014
+mammal,shrew,sorAra2,xenoRefGene,/scratch/data/ucsc/mammal/shrew/sorAra2_xenoRefGene_11-2014
+mammal,shrew,sorAra2,chromInfo,/scratch/data/ucsc/mammal/shrew/sorAra2_chromInfo_11-2014
+mammal,shrew,sorAra2,all_mrna,/scratch/data/ucsc/mammal/shrew/sorAra2_all_mrna_11-2014
+mammal,elephant,loxAfr3,refGene,/scratch/data/ucsc/mammal/elephant/loxAfr3_refGene_11-2014
+mammal,tenrec,echTel2,xenoRefGene,/scratch/data/ucsc/mammal/tenrec/echTel2_xenoRefGene_11-2014
+mammal,tenrec,echTel2,chromInfo,/scratch/data/ucsc/mammal/tenrec/echTel2_chromInfo_11-2014
+mammal,armadillo,dasNov3,ensGene,/scratch/data/ucsc/mammal/armadillo/dasNov3_ensGene_11-2014
+mammal,tasmanian devil,sarHar1,refGene,/scratch/data/ucsc/mammal/tasmanian-devil/sarHar1_refGene_11-2014
+vertebrate,chicken,galGal4,ensGene,/scratch/data/ucsc/vertebrate/chicken/galGal4_ensGene_11-2014
+vertebrate,zebra finch,taeGut2,refGene,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_refGene_11-2014
+vertebrate,zebra finch,taeGut2,xenoRefGene,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_xenoRefGene_11-2014
+vertebrate,zebra finch,taeGut2,chromInfo,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_chromInfo_11-2014
+vertebrate,zebra finch,taeGut2,all_est,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_all_est_11-2014
+vertebrate,zebra finch,taeGut2,estOrientInfo,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_estOrientInfo_11-2014
+vertebrate,zebra finch,taeGut2,all_mrna,/scratch/data/ucsc/vertebrate/zebra-finch/taeGut2_all_mrna_11-2014
+vertebrate,american alligator,allMis1,refGene,/scratch/data/ucsc/vertebrate/american-alligator/allMis1_refGene_11-2014
+vertebrate,american alligator,allMis1,xenoRefGene,/scratch/data/ucsc/vertebrate/american-alligator/allMis1_xenoRefGene_11-2014
+vertebrate,american alligator,allMis1,chromInfo,/scratch/data/ucsc/vertebrate/american-alligator/allMis1_chromInfo_11-2014
+vertebrate,american alligator,allMis1,all_est,/scratch/data/ucsc/vertebrate/american-alligator/allMis1_all_est_11-2014
+vertebrate,american alligator,allMis1,estOrientInfo,/scratch/data/ucsc/vertebrate/american-alligator/allMis1_estOrientInfo_11-2014
+vertebrate,american alligator,allMis1,all_mrna,/scratch/data/ucsc/vertebrate/american-alligator/allMis1_all_mrna_11-2014
+vertebrate,nile tilapia,oreNil2,refGene,/scratch/data/ucsc/vertebrate/nile-tilapia/oreNil2_refGene_11-2014
+vertebrate,atlantic cod,gadMor1,ensGene,/scratch/data/ucsc/vertebrate/atlantic-cod/gadMor1_ensGene_11-2014
+vertebrate,elephant shark,calMil1,xenoRefGene,/scratch/data/ucsc/vertebrate/elephant-shark/calMil1_xenoRefGene_11-2014
+vertebrate,elephant shark,calMil1,chromInfo,/scratch/data/ucsc/vertebrate/elephant-shark/calMil1_chromInfo_11-2014
+vertebrate,elephant shark,calMil1,all_est,/scratch/data/ucsc/vertebrate/elephant-shark/calMil1_all_est_11-2014
+vertebrate,elephant shark,calMil1,estOrientInfo,/scratch/data/ucsc/vertebrate/elephant-shark/calMil1_estOrientInfo_11-2014
+vertebrate,elephant shark,calMil1,all_mrna,/scratch/data/ucsc/vertebrate/elephant-shark/calMil1_all_mrna_11-2014
+vertebrate,lamprey,petMar2,ensGene,/scratch/data/ucsc/vertebrate/lamprey/petMar2_ensGene_11-2014
+virus,ebola virus,eboVir3,chromInfo,/scratch/data/ucsc/virus/ebola-virus/eboVir3_chromInfo_11-2014
