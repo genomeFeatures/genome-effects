@@ -1,0 +1,169 @@
+ body {
+  background: #B2B4B6; 
+ /* background: #808080;*/
+  padding: 0;margin:0;
+  font-size:84%;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  line-height: 1.3em; color: #675F5E;
+}
+img {border:0;}
+.mainWindow{width:1024px;background:#fff;margin:auto;padding:0;}
+.mainWindow2{width:95%;background:#fff;margin:auto;padding:0;}
+.cgdbutton {background: #675F5E; color:#fff;}
+ a:link, a:visited{color:#675F5E;}
+.espace{height:1em;}
+/* page header section */
+#pheader {
+	background:#E0ccf5 url("../cgdgradient2.jpg");
+	background-repeat: no-repeat;
+	height:6.35em;width: 100%; padding:0;
+	margin:0;color:#3F2C6D;
+	border-bottom:solid 4px #3F2C6D;
+        white-space: nowrap;
+}
+#pheader table{width:100%; height:100%; padding:0; margin:0;}
+#pheader #logo{width:190px;  padding:3px; margin:0;padding-top:0;}
+#pagetitle{ padding-top:10px; padding-left:30px;text-align:left; color:#3F2C6D;}
+#pagetitle h1{font-size:1.8em;}
+#footer{width:100%;margin:0;padding:0;}
+ul{margin:0;padding:0;list-style:none;}
+/* header section ends here ****/
+/********************************* nav band **********************/
+.topnav{ margin:0;padding:0; width:100%; background:#3F2C6D; height:2.6em;
+ border-top:solid 10px #eee;}
+.topnav ul{width:auto; margin:auto; position: relative;}
+.topnav ul,#footer ul{list-style:none;}
+.topnav ul li,#footer ul li{
+   float:left;
+}
+.topnav ul li{ padding:0.4em 0.4em 0.8em 0.8em; color:#eee; font-weight:bold;}
+.lborder_w{border-left:solid 2px #eee;}
+.rborder_w{border-right:solid 2px #eee;}
+/*#topnav li a
+{
+  
+}*/
+.topnav a:link,.topnav a:visited{color:#73AA73; text-decoration:none;}
+
+#maintable{width:100%;margin:0;padding:0;}
+#maintable #leftp,#maintable #rightp{padding:0.4em;margin:0.3em;}
+#middlep #mptable{ float:left;margin-left:1em;margin-top:1em;padding:0.4em;}
+#middlep fieldset legend {padding:0.2em; color: #3F2C6D;font-weight:bold;}
+#middlep fieldset table{width:99%; float:left;margin-left:1em;margin-top:1em;}
+#middlep #itable{width:99%;float:left;margin-left:0.5em;margin-top:0.5em;background:#fff;}
+#maintable #leftp{width:250px;}
+#leftp #news{width:95%; float:right;margin-top:1em; background:#eee;}
+#leftp fieldset{width:95%; float:right;margin-top:1em; background:#eee;padding:0;}
+#leftp #announce{width:95%; float:right;margin-top:0.5em;background:#eee;}
+#leftp fieldset legend {padding:0.4em; background: #3F2C6D; color:#eee;font-weight:bold; width:8em;}
+#leftp #itable{width:95%; float:right;margin-top:0.5em; background:#fff;}
+#itable table{width:99%;font-size:0.8em;}
+#rightp #itable{width:90%;}
+/*#itable .sectionOptions{width:100%;}*/
+#itable tr{background:#eee;padding:0.2em;}
+#itable .sectionName{font-weight:bold;margin-right:0.2em;}
+#itable td,#slist li,fieldset legend{white-space: nowrap;}
+fieldset #sls{font-size: 0.90em;margin:0; padding:0;
+    margin-left:2em;}
+
+#leftp fieldset,#middlep fieldset
+{ 
+    border:dotted #83A4C3 1px; 
+    background-color:#F4F8FD;
+    vertical-align:top; 
+}
+fieldset{
+    -moz-border-radius: 5px;    /* For Mozilla Firefox */
+    -khtml-border-radius: 5px;  /* For Konqueror */
+    -webkit-border-radius: 5px; /* For Safari */
+    border-radius: 5px;         /* For future native implementations */
+}
+
+#setFilter table{width:99%;}
+#middlep #requiref{background:#696969 ;background:#3F2C6D ;vertical-align:top;color:#73AA73;
+width:100%;margin:0;padding-bottom:1em;}
+ #requiref table{margin:0; }
+#requiref #qhint {background:#3F2C6D; color:#eee;position:absolute;z-index:4;display:none;
+     border:dotted 1px #eee;font-size:0.9em; padding:0.4em; width:30em;}
+#qhint h2{font-size:1.1em;}
+#qhint ul{font-size:0.75em;}
+
+#middlep #summary {padding:1em; background: #eee;}
+.optionnal{padding:0; vertical-align:top; }
+.optionnal table { margin-top:0.1em;padding:0;}
+.optionnal #stc{width:92%; height:200px; overflow: auto;margin:0;padding:0;padding-right:0.4em;}
+.optionnal .cgdselect{ margin:0;padding:0;font-size:0.8em;}
+.sectionOptions label{font-size:0.9em;}
+.sectionOptions td{padding:0.6em;}
+#middlep table td legend {font-size:0.9em; color:#675F5E;}
+#stc table{width:100%;}
+.osp {color:#804000;}
+#maf,#gannot{width:700px;padding:0;margin:0;background:#fff;}
+#gannot{margin-top:1em;}
+#gannot select{width:99%;border-bottom:solid 1px #eee;}
+.res-format{clear:both;padding:0.4em;background:#fff;border-top:solid 1px #3f2c6d;
+  margin-bottom:1em;}
+.res-format span{font-weight:bold;}
+ span #title{clear:right;}
+#sopt{display:none;}
+#srclist{width:90%;margin:auto;margin-bottom:2em;}
+#srclist td{text-align:left;}
+#maf table{width:99%;margin:0; padding:0.1em;}
+#rightp #Straintable,
+#rightp #itable,#rightp #showStrain {width:85%; border:dotted 1px #3F2C6D;
+    float:left;
+    -moz-border-radius: 5px;      /* For Mozilla Firefox */
+    -khtml-border-radius: 5px;   /* For Konqueror */
+    -webkit-border-radius: 5px; /* For Safari */
+    border-radius: 5px;        /* For future native implementations */
+     }
+
+#showStrain a,#hc a {width:100%; height:20; background:#3F2C6D; color:#eee;
+       cursor: pointer; }
+fieldset #outf, fieldset #gannot,fieldset .optionnal{border:0;background:#fff;}
+#Straintable .inbred{background:#ddd; color: #3F2C6D; width:99%;}
+#Straintable .ninbred{color:#3F2C6D; background:#eee;width:99%;}
+#rightp #Straintable,#rightp #itable{margin-top:1em;}
+.fheader{width:100%;font-size:1.1em; background:#3F2C6D; color:#73AA73;height:30;margin:0;padding-top:0.4em;font-weight:bold;}
+#itable {font-size:0.9em;}
+#news .lcornertop {padding:0; margin:0; float:left;clear:left;width:2em;}
+#news .rcornertop{padding:0; margin:0; float:right;clear:right; width:2em; }
+#news ul,#arc ul,#announce ul{width:90%;}
+#mlist h3 {font-size:1.2em;color:#3F2C6D; background:#eee;}
+#maf input{font-size:0.85em;color:#804000;}
+#mlist li{font-size:0.9em;}
+#bottomR {padding-top:0.0em;}
+#outf{width:95%;margin:0;padding:0;}
+#outf td{display:inline;}
+
+#requiref{padding:0; margin:0;text-align:left;}
+#requiref .lcornertop {padding:0; margin:0; float:left;clear:left;width:2em;}
+#requiref .rcornertop{padding:0; margin:0; float:right;clear:right; width:2em; }
+#bottomR {padding-top:0.0em;}
+
+.L12p{width:12px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L11p{width:11px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L10p{width:10px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L9p{width:9px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L8p{width:8px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L7p{width:7px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L6p{width:6px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L5p{width:5px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L4p{width:4px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L3p{width:3px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L2p{width:2px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+.L1p{width:1px;height:2px;background:#fff; float:left;clear:left;margin:0; padding:0;}
+
+.R12p{width:12px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R11p{width:11px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R10p{width:10px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R9p{width:9px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R8p{width:8px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R7p{width:7px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R6p{width:6px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R5p{width:5px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R4p{width:4px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R3p{width:3px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R2p{width:2px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+.R1p{width:1px;height:2px;background:#fff; float:right;clear:right;margin:0; padding:0;}
+
