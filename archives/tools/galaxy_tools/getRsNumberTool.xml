@@ -1,0 +1,56 @@
+<tool id="gb_get_rs_1" name="RsNumberLookup" >
+  <description>This script returns the RS number of a given SNP if the SNP
+    exists in NCBI dbSNP. The organism is mouse build 37 (mm9)
+  </description>
+  <command interpreter="perl">getSNPsRsNumber.pl -o $outfile -i $inputfile </command>
+  <inputs>
+       <!--<param name="organismVersion" type="genomebuild" label="Genome"/>
+        <param  name="genomeBaseDir" type="hidden" value="/raid/seq"/>-->
+       <param format="tabular" name="inputfile" type="data" label="Source file"/>
+       <!-- <conditional name="inputype">
+              <param name="inputselect" type="select" label="Input type">
+                     <option value="file">A file</option>
+                     <option value="chr">Base pair position</option>
+              </param>
+              <when value="file">
+                       <param format="tabular" name="inputfile" type="data" label="Source file"/>
+              </when>
+              <when value="chr">
+                   <param name="chrom" type="text"  size="10" label="Chromosome(example chr1 or 1)" />
+                   <param name="pos" type="text" size="20" label="Base Pair Position" />
+             </when> 
+        </conditional>-->
+  </inputs>
+  <outputs>
+     <data format="tabular" name="outfile"></data>
+  </outputs>
+
+  <tests>
+     <test>
+         <param name="input" value="snp_list.bed.txt"  ftype="tabular" />
+         <output name="outfile" file="getRs_result.txt" />
+    </test>
+   <!-- <test>
+         <param name="inputselect" value="chr"/>
+         <output name="outfile" file="getRs_result.txt" />
+    </test>-->
+ </tests>
+  <help>
+
+.. class:: warningmark
+
+The input data is a file,it should be a tabular format input with at least the following two
+columns and labels: Chromosome,Position
+
+**What it does**
+
+This tool requires  data to be a tabular format file.
+Data is extracted from Mouse assembly build 37 (mm9). SNPs coordinates are in base pair (bp)
+
+-----
+
+** RsNumberLookup contact**
+
+For questions or suggestions about this tool, please send an email to lucie.hutchins@jax.org
+  </help>
+</tool>

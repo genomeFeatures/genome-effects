@@ -1,0 +1,162 @@
+<tool id="gb_snp_annotator_1" name="SNP Annotator" >
+  <description>This tool returns annotations that overlap with a given SNP location.These include: 
+          genes, transcripts, exons annotations,codon, amino acid information, 
+          SNP position within the codon,SNP position in CDS,codon position in the protein.
+ 
+  </description>
+  <command>
+       #if $inputselect=="Simple" #snpAnnotator -F $outfile -f $inputfile -v $organismVersion -d $genomeBaseDir
+       #else                      #snpAnnotator -F $outfile -f $inputfile -v $organismVersion  --coding -d $genomeBaseDir
+       #end if# ${GALAXY_DATA_INDEX_DIR}
+  </command>
+  <inputs>
+       <param name="organismVersion" type="genomebuild" label="Genome"/>
+       <param format="tabular" name="inputfile" type="data" label="SNPs file"/>
+       <param  name="genomeBaseDir" type="hidden" value="/data/seq"/>
+       <param name="inputselect" type="select" label="Annotator type">
+                     <option value="Simple">Simple </option>
+                     <option value="Coding">Include coding data</option>
+        </param>
+  </inputs>
+  <outputs>
+     <data format="tabular" name="outfile"></data>
+  </outputs>
+
+  <tests>
+     <test>
+         <param name="input" value="snp_list.txt"  ftype="tabular" />
+        <param name="inputselect" value="Coding"/>
+        <output name="outfile" file="snpAnnotator_result.txt" />
+    </test>
+    <test>
+        <param name="input" value="snp_list.txt"  ftype="tabular" />
+        <param name="inputselect" value="Simple"/>
+        <output name="outfile" file="snpAnnotator_result.txt" />
+    </test>
+
+ </tests>
+  <help>
+.. class:: warningmark
+
+This version of the tool finds annotations for only the most current version of a given organism and the organism
+must be in Ensembl db.The "Include coding data" option under "Annotator type" returns codon and amino acid info only
+when we have a local copy of a given genome (chromosome data)(all the organisms listed under our genome list)
+
+.. class:: warningmark
+
+This tool requires tabular format input with at least the following two
+columns and labels: Chromosome/Chrom/CHROM/CHROMOSOME/chromosome/Chr/chr/CHR, Position/POSITION/Pos/pos/Location/location/bpPos/ 
+
+.. class:: warningmark
+
+All of the following will cause a line from the input dataset to be skipped. 
+ - Any lines that do not contain a valid chromosome name for the selected organism
+ - Any lines that contain invalid base pair Position.
+
+
+.. class:: infomark
+
+**What it does**
+
+This tool returns annotations that overlap with a given SNP location.These include: genes, transcripts, exons annotations,codon, amino acid information, position of the SNP within the codon,position of the SNP in the CDS,position of the codon in the protein.
+
+If you want to include the coding information (the "Annotator type" option set to "Include coding data"),
+your input file must contain, in addition to the Chromosome and position fields, the genotype alleles for both
+the reference and the consensus strains (reference_base, consensus_base). The genotype alleles can be in one field
+labeled "Alleles" with the format reference_base/consensus_base, or in two separate fields labeled reference_base and consensus_base
+
+.. class:: infomark
+
+**Note:**
+a.) The result of the simple version (the "Annotator type" option set to "Simple") will have the following fields appended to it: Exon,ExonID(s),Intron,Intergenic,Function_class,TranscriptID(s),GeneSymbol,geneStrand,ensemblDbSchema
+
+Where:
+ - Exon: Yes/No -- Yes if SNP is located on exon
+ - ExonID(s): a commas separated list of all the exons of this gene containing the SNP
+ - Intron: Yes/No -- Yes if SNP is located on intron
+ - Intergenic: Yes/No -- Yes if SNP is located on intergenic region
+ - Function_class: a commas separated list of all the functional implications of this SNP on this gene 
+ - TranscriptID(s): a commas separated list of all the transcripts of this gene containing the SNP
+ - GeneSymbol: gene symbol
+
+b.) The result of the SNP coding version (the "Annotator type" option set to "Include coding data") will have the following fields appended to it:Exon,ExonID(s),Intron,Intergenic,Function_class,TranscriptID(s),GeneSymbol,geneStrand,ensemblDbSchema
+
+Where:
+ - Exon: Yes/No -- Yes if SNP is located on exon
+ - ExonID(s): a commas separated list of all the exons of this gene containing the SNP
+    - where each exon has additional information including: snpFrame,CDS_len,snpPosInCDS,codonPosInProtein     
+ - Intron: Yes/No -- Yes if SNP is located on intron
+ - Intergenic: Yes/No -- Yes if SNP is located on intergenic region
+ - Function_class: a commas separated list of all the functional implications of this SNP on this gene
+ - TranscriptID(s): a commas separated list of all the transcripts of this gene containing the SNP
+ - GeneSymbol: gene symbol 
+
+-----
+
+**Program Examples**
+  
+***Example 1 *** -- Option "Annotator type" is set to "Simple" and the Genome set to mouse-mm9
+
+Input:
+
+  Chromosome	Position	Strand	snipid Alleles
+
+  11      3044277 +       rs33327049      C/A
+
+  11      3044307 +       rs33756355      C/G 
+
+Output:
+
+  Chromosome      Position        strand  snipid Alleles Exon    ExonID(s)       Intron  Intergenic      functionClass   TranscriptID(s) Gene_Symbol     gene_strand	EnsemblVersion  
+
+  11      3044277 +       rs33327049      C/A	Yes     ENSMUSE00000595496:3'UTR=:No protein product,ENSMUSE00000595513:Exon coding,ENSMUSE00000780982:No protein product     Yes     No  ,3'UTR,Exon coding,Intronic ENSMUST00000101655,ENSMUST00000081318,ENSMUST00000066391,ENSMUST00000153425,ENSMUST00000140846,ENSMUST00000144778,ENSMUST00000126746,ENSMUST00000144359,ENSMUST00000132893,ENSMUST00000138126,ENSMUST00000133882,ENSMUST00000101649,ENSMUST00000072704,ENSMUST00000093407 Sfi1    -       mus_musculus_core_64_37
+                                     
+  11      3044307 +       rs33756355      C/G     No      ---     Yes     No      Intronic        ENSMUST00000101655,ENSMUST00000081318,ENSMUST00000066391,ENSMUST00000153425,ENSMUST00000140846,ENSMUST00000144778,ENSMUST00000126746,ENSMUST00000144359,ENSMUST00000132893,ENSMUST00000138126,ENSMUST00000133882,ENSMUST00000101649,ENSMUST00000072704,ENSMUST00000093407 Sfi1    -       mus_musculus_core_64_37
+
+
+***Example 2 *** -- Option "Annotator type" is set to "Simple" and the Genome set to mouse-mm9
+
+Input:
+
+  Chromosome	Position	Strand	snpid
+
+  11      3044277 +       rs33327049
+
+  11      3044307 +       rs33756355
+
+Output:
+
+  Chromosome      Position        strand  snipid Exon    ExonID(s)       Intron  Intergenic      functionClass   TranscriptID(s) Gene_Symbol     gene_strand	EnsemblVersion  
+  11      3044277 +       rs33327049      Yes     ENSMUSE00000595496:3'UTR=:No protein product,ENSMUSE00000595513:Exon coding,ENSMUSE00000780982:No protein product     Yes     No  ,3'UTR,Exon coding,Intronic ENSMUST00000101655,ENSMUST00000081318,ENSMUST00000066391,ENSMUST00000153425,ENSMUST00000140846,ENSMUST00000144778,ENSMUST00000126746,ENSMUST00000144359,ENSMUST00000132893,ENSMUST00000138126,ENSMUST00000133882,ENSMUST00000101649,ENSMUST00000072704,ENSMUST00000093407 Sfi1    -       mus_musculus_core_64_37
+                                    
+  11      3044307 +       rs33756355      No      ---     Yes     No      Intronic        ENSMUST00000101655,ENSMUST00000081318,ENSMUST00000066391,ENSMUST00000153425,ENSMUST00000140846,ENSMUST00000144778,ENSMUST00000126746,ENSMUST00000144359,ENSMUST00000132893,ENSMUST00000138126,ENSMUST00000133882,ENSMUST00000101649,ENSMUST00000072704,ENSMUST00000093407 Sfi1    -       mus_musculus_core_64_37  
+    
+   
+***Example 3 *** -- Option "Annotator type" is set to "Include coding data" and the Genome set to mouse-mm9
+
+Input:
+
+Chromosome	Position	Strand	snipid reference_base	consensus_base 
+
+11      3044277 +       rs33327049      C	A
+
+11      3044307 +       rs33756355      C	G 
+
+Output:
+
+Chromosome      Position        strand  snipid reference_base	consensus_base Exon    ExonID(s)       Intron  Intergenic      functionClass   TranscriptID(s) Gene_Symbol     gene_strand	EnsemblVersion  
+                                                                                                              
+11      3044277 +       rs33327049      C	A Yes     ENSMUSE00000595496:No protein product=:3'UTR,ENSMUSE00000595513:Coding nonsynonymous:CAG/CAT-Gln/His- snpFrame 3 -CDS_len:3618 - snpLocOnCDS 1752 - codonPos 584 =:Coding nonsynonymous:CAG/CAT-Gln/His- snpFrame 3 -CDS_len:3651 - snpLocOnCDS 1752 - codonPos 584 =:Coding nonsynonymous:CAG/CAT-Gln/His- snpFrame 3 -CDS_len:3555 - snpLocOnCDS 1752 - codonPos 584 =:Coding nonsynonymous:CAG/CAT-Gln/His- snpFrame 3 -CDS_len:3525 - snpLocOnCDS 1659 - codonPos 553 =:Coding nonsynonymous:CAG/CAT-Gln/His- snpFrame 3 -CDS_len:3375 - snpLocOnCDS 1509 - codonPos 503 =:Coding nonsynonymous:CAG/CAT-Gln/His- snpFrame 3 -CDS_len:3558 - snpLocOnCDS 1659 - codonPos 553 =:Coding nonsynonymous:CAG/CAT-Gln/His- snpFrame 3 -CDS_len:2148 - snpLocOnCDS 1068 - codonPos 356 ,ENSMUSE00000780982:No protein product     Yes     No      ,3'UTR,:Coding nonsynonymous,Intronic   ENSMUST00000101655,ENSMUST00000081318,ENSMUST00000066391,ENSMUST00000153425,ENSMUST00000140846,ENSMUST00000144778,ENSMUST00000126746,ENSMUST00000144359,ENSMUST00000132893,ENSMUST00000138126,ENSMUST00000133882,ENSMUST00000101649,ENSMUST00000072704,ENSMUST00000093407      Sfi1    -       mus_musculus_core_64_37                                                                              
+
+11      3044307 +       rs33756355      C	G  No      ---     Yes     No      Intronic       
+ENSMUST00000101655,ENSMUST00000081318,ENSMUST00000066391,ENSMUST00000153425,ENSMUST00000140846,ENSMUST00000144778,ENSMUST00000126746,ENSMUST00000144359,ENSMUST00000132893,ENSMUST00000138126,ENSMUST00000133882,ENSMUST00000101649,ENSMUST00000072704,ENSMUST00000093407 
+Sfi1    -       mus_musculus_core_64_37 
+
+-----
+
+**snpAnnotator contact**
+
+For questions or suggestions about this tool, please send an email to lucie.hutchins@jax.org
+
+  </help>
+</tool>

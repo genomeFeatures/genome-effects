@@ -1,0 +1,102 @@
+<tool id="gb_get_seq_1" name="Get Fasta Sequence" >
+  <description>Returns the genome sequence for the specified genomic region coordinates.
+               The Input can be either a file (tabular format) containing multiple genomic regions,or a single genomic region
+        (In the format -c chromName -s chromStart -e chromEnd)
+  </description>
+  <command>
+       #if $inputype.inputselect=="file" #getFastaSeq -o $outformat -F $outfile -f $inputfile $chunksH -l $seqlen -v $organismVersion -u $unit -d $genomeBaseDir
+       #else                 #getFastaSeq -o $outformat -F $outfile -c $inputype.chrom -s $inputype.chrStart -e $inputype.chrEnd $chunksH -l $seqlen -v $organismVersion -t $inputype.strand -u $unit -d$genomeBaseDir
+       #end if# ${GALAXY_DATA_INDEX_DIR}
+  </command>
+  <inputs>
+       <param name="organismVersion" type="genomebuild" label="Genome"/>
+        <param  name="genomeBaseDir" type="hidden" value="/data/seq"/>
+       <conditional name="inputype">
+              <param name="inputselect" type="select" label="Input type">
+                     <option value="file">A file</option>
+                     <option value="chr">Genomic region</option>
+              </param>
+              <when value="file">
+                       <param format="tabular" name="inputfile" type="data" label="Source file"/>
+              </when>
+              <when value="chr">
+                      <param name="chrom" type="text"  size="10" label="Chromosome (example chr1 or 1)" />
+                      <param name="chrStart" type="text" size="20" label="Chromosome Start" />
+                      <param name="chrEnd" type="text" size="20" label="Chromosome End" />
+                      <param name="strand" type="select" label="Genome strand">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                      </param>
+             </when> 
+        </conditional>
+       <param name="unit" type="select" label="Cordinates Unit">
+              <option value="0">bp</option>
+              <option value="1">mbp</option>
+        </param>
+        <param name="outformat" type="select" label="Output format">
+                <option value="0">Fasta</option>
+                <option value="1" >Tab-delimitted</option>
+                <option value="2" >Commas-separated</option>
+         </param>
+        <param name="seqlen" type="select" label="Sequence segments Length" help="Here you may specify the length of sequence chunks.">
+          <option value="0">Entire Length</option>
+          <option value="60">60 bp</option>
+           <option value="90">90 bp</option>
+          <option value="120">120 bp</option>
+           <option value="150">150 bp</option>
+           <option value="200">200 bp </option> 
+       </param>
+       <param name="chunksH" type="select" label="Seqeunce segments display" help="Specify how you want sequence segments to be displayed. One header per segment or one header for all the segments">
+          <option value="--singleH">One header</option>
+          <option value="">Multiple headers</option>
+       </param> 
+  </inputs>
+  <outputs>
+     <data format="tabular" name="outfile">
+      <change_format>
+        <when input="outformat" value="0" format="fasta" />
+      </change_format>
+      <change_format>
+        <when input="outformat" value="2" format="text" />
+      </change_format>
+    </data>
+  </outputs>
+
+  <tests>
+     <test>
+        <param name="input" value="gene_list.txt_utrCord2.bed.txt"  ftype="tabular" />
+        <param name="outformat" value="0"/>
+        <output name="outfile" file="getSeq_result.fasta" />
+    </test>
+    <test>
+        <param name="input" value="gene_list.txt_utrCord2.bed.txt"  ftype="tabular" />
+        <param name="outformat" value="1"/>
+        <output name="outfile" file="getSeq_result.txt" />
+    </test>
+
+ </tests>
+  <help>
+.. class:: warningmark
+
+If your input data is a file,it should be a tabular format input with at least the following three
+columns and labels: Chromosome,chromStart,chromEnd
+
+.. class:: warningmark
+
+All of the following will cause a line from the input dataset to be skipped. 
+ - Any lines that do not contain a valid chromosome name for the selected organism
+ - Any lines that contain invalid genomic coordinates (chromStart, chromEnd).
+
+**What it does**
+
+This tool requires  data to be a tabular format  if input is a file, if not a file, specify data as a genomic range.
+Data is extracted from the specified assembly build of a given genome. The default is mouse(mm9) and the default coordinates
+are in base pair (bp)
+
+-----
+
+** getFastaSeq contact**
+
+For questions or suggestions about this tool, please send an email to lucie.hutchins@jax.org
+  </help>
+</tool>
