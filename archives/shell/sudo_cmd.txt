@@ -1,3 +1,0 @@
- sudo su -c "mkdir js"  // will  create a directory called "js" under the current working directory
- sudo su -c "cp ~lnh/prototype/lnh_cgd/cgdsnpdb_wi/js/estpipeline.js ." 
- 
